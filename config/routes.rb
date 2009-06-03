@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :teams
   map.resources :users
-  map.resources :users_sessions
+  map.resources :user_sessions
   
   map.login 'login', :controller => 'user_sessions', :action => "create"
   map.logout 'logout', :controller => 'user_sessions', :action => "destroy"

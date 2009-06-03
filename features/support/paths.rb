@@ -16,6 +16,9 @@ module NavigationHelpers
     
     when /the user account page/
       users_path
+      
+    when /the login page/
+      login_path
     # Add more mappings here.
     # Here is a more fancy example:
     #

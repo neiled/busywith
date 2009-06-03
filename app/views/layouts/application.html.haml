@@ -11,4 +11,6 @@
 %body{:class => body_class}
   #header
     = render :partial => 'layouts/flashes'
+    - if current_user
+      = link_to "Log out", :logout
   .container= yield

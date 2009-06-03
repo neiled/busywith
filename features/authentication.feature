@@ -11,6 +11,25 @@ Feature: Authentication
     And I press "Create Account"
     Then I should be on the user account page
     And there should be 1 user
+    
+  Scenario: Logging in
+    Given I have a user with the username "neiled" and the password "secret"
+    And I am on the login page
+    When I fill in "login" with "neiled"
+    And I fill in "password" with "secret"
+    And I press "Login"
+    Then I should be on the user account page
+    And I should see "Logged in"
+    And I should see "Log out"
+    
+  Scenario: Logging out
+    Given I am logged in as the user "neiled" with the password "secret"
+    And I am on the homepage
+    When I follow "Log out"
+    Then I should be logged out
+    
+  
+  
   
   
   
