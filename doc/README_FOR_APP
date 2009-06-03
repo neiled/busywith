@@ -1,2 +1,81 @@
-Use this README file to introduce your application and point to useful places in the API for learning more.
-Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+I'm Busy With
+
+Worker:
+Describe current task on current project with estimated amount complete and estimated completion date. All parts are optional. Can subscribe to other workers' details.
+
+Subscriber:
+Can see project/task/progress information of workers that they subscribe to.
+
+Ideas:
+* Status can be a partial, would make it easier to embed it elsewhere.
+* Allow ordering of subscriptions.
+
+Use Cases
+---------
+Worker:
+Can set their current active project
+Can set their current task within the project [Free Text]
+Can join a project
+Can withdraw from a project
+Can update the current percentage complete of their task
+Can update the estimated end date of their task
+Can accept an invite to join multiple teams
+Can see the status of everyone else in their team
+Can see the status of everyone in a particular project
+Can group the status by project or by person
+Can see a timeline of any team members history
+Can see an overview of any team (members)
+Can change their preferences
+  Can other non team-members see your status? [Decided on team by team basis]
+Maybe Can:
+  Add a new project
+  Delete a project
+  Set the percent complete of a project
+  Rename a project
+  Rename a team
+  See the status of a team they're not a member of
+
+Team Leader:
+Can change the team name
+Can add a new project
+Can delete a project
+Can invite new team members
+Can remove team members
+Can give ownership of the team to another member
+Can change the settings of the team
+  Can members add new projects?
+  Can members delete projects?
+  Can members rename a project?
+  Can users rename the team?
+  Can non-members see the team's status?
+  Can members set the percent complete of a project?
+Can disband the team
+
+Models
+--------
+User:
+Task_Name
+Active_Project_ID
+Percent_Complete
+Estimate_CompleteDate
+
+Team:
+Name
+Owner_ID
+Users can add new projects?
+Users can delete projects?
+Users can rename the team?
+
+
+Team_Membership:
+Team_ID
+User_ID
+
+Project_Membership:
+Project_ID
+User_ID
+
+Project:
+Team_ID
+Name
+Percent Complete
