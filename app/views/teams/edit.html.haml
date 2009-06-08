@@ -1,0 +1,21 @@
+%h1
+  = @team.name
+  
+- form_for @team do |f|
+  = f.error_messages
+  = f.label :name, "Name"
+  = f.text_field :name
+  = f.submit "Change Name", :disable_with => 'Changing Name...'
+
+%h2 Projects
+
+- @team.projects.each do | project|
+  = project.name
+
+Add Project
+
+- form_for @new_project do |f|
+  = f.error_messages
+  = f.label :name, "Project Name"
+  = f.text_field :name
+  = f.submit "Add Project", :disable_with => 'Adding Project...'

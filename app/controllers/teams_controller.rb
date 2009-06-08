@@ -24,7 +24,7 @@ class TeamsController < ApplicationController
   # GET /teams/new
   # GET /teams/new.xml
   def new
-    @team = Team.new
+    @team = current_user.teams.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +35,7 @@ class TeamsController < ApplicationController
   # GET /teams/1/edit
   def edit
     @team = Team.find(params[:id])
+    @new_project = @team.projects.new
   end
 
   # POST /teams
@@ -45,7 +46,7 @@ class TeamsController < ApplicationController
     respond_to do |format|
       if @team.save
         flash[:notice] = 'Team was successfully created.'
-        format.html { redirect_to(@team) }
+        format.html { redirect_to(current_user) }
         format.xml  { render :xml => @team, :status => :created, :location => @team }
       else
         format.html { render :action => "new" }

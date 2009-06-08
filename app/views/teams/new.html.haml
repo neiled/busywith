@@ -1,0 +1,8 @@
+%h1 New Team
+
+
+- form_for @team do |f|
+  = f.error_messages
+  = f.label :name, "Team Name"
+  = f.text_field :name
+  = f.submit "Create Team", :disable_with => 'Creating Team...'
