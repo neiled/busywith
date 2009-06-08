@@ -1,7 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :teams
+  map.resources :teams, :has_many => :projects, :shallow => true 
   map.resources :users
-  map.resources :projects
   map.resources :user_sessions
   
   map.login 'login', :controller => 'user_sessions', :action => "create"

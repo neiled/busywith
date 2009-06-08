@@ -7,10 +7,11 @@ Feature: Team owner tasks
     Given I am logged in as the user "neiled" with the password "password"
     And I have a team called "Neil's team"
     And I am on the edit team page for "Neil's team"
-    When I fill in "Project Name" with "A Project"
+    When I follow "Add Project"
+    And I fill in "Project Name" with "A Project"
     And I press "Add Project"
     Then I should see "Project Added"
-    And I should see "Project Name"
+    And I should see "A Project"
   
   
   

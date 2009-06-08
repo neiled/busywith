@@ -12,10 +12,5 @@
 - @team.projects.each do | project|
   = project.name
 
-Add Project
+= link_to "Add Project", new_team_project_path(@team)
 
-- form_for @new_project do |f|
-  = f.error_messages
-  = f.label :name, "Project Name"
-  = f.text_field :name
-  = f.submit "Add Project", :disable_with => 'Adding Project...'

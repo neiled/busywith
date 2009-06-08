@@ -1,0 +1,7 @@
+Add Project
+
+- form_for [@team, @project] do |f|
+  = f.error_messages
+  = f.label :name, "Project Name"
+  = f.text_field :name
+  = f.submit "Add Project", :disable_with => 'Adding Project...'
