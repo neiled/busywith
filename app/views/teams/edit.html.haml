@@ -1,5 +1,5 @@
 %h1
-  = @team.name
+  = h(@team.name)
   
 - form_for @team do |f|
   = f.error_messages
@@ -10,7 +10,8 @@
 %h2 Projects
 
 - @team.projects.each do | project|
-  = project.name
+  = h(project.name)
+  = link_to "Delete Project", project_url(project), :method => "delete"
 
 = link_to "Add Project", new_team_project_path(@team)
 

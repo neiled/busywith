@@ -9,7 +9,7 @@ Feature: Authentication
     And I fill in "password" with "password"
     And I fill in "password confirmation" with "password"
     And I press "Create Account"
-    Then I should be on the user account page
+    Then I should be on the user account page for "neiled"
     And there should be 1 user
     
   Scenario: Logging in
@@ -18,7 +18,7 @@ Feature: Authentication
     When I fill in "login" with "neiled"
     And I fill in "password" with "secret"
     And I press "Login"
-    Then I should be on the user account page
+    Then I should be on the user account page for "neiled"
     And I should see "Logged in"
     And I should see "Log out"
     

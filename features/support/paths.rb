@@ -14,8 +14,8 @@ module NavigationHelpers
     when /the registration page/
       new_user_path
     
-    when /the user account page/
-      users_path
+    when /the user account page for "(.*)"/
+      user_path(:login => $1)
       
     when /the login page/
       login_path

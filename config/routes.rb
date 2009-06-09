@@ -1,10 +1,13 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :teams, :has_many => :projects, :shallow => true 
-  map.resources :users
+  map.resources :users, :except => ["index"] 
   map.resources :user_sessions
   
-  map.login 'login', :controller => 'user_sessions', :action => "create"
+  map.login 'login', :controller => 'user_sessions', :action => "new"
   map.logout 'logout', :controller => 'user_sessions', :action => "destroy"
+  
+  map.user '/user/:login', :controller => 'users', :action => 'show',
+                                                :login => /.*/
 
   # The priority is based upon order of creation: first created -> highest priority.
 

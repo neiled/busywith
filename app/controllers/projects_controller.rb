@@ -16,5 +16,12 @@ class ProjectsController < ApplicationController
       render :action => "new"
     end      
   end
+  
+  def destroy
+    @project = Project.find(params[:id])
+    @project.destroy
+    flash[:notice] = "Project Deleted."
+    redirect_to :controller => "teams", :action => "edit"
+  end
 
 end
