@@ -1,5 +1,14 @@
-This is your account page
+This is the account page for
+= @user.login
 
 - if current_user.nil? == false and current_user.login == @user.login
-  = "You own this account"
+  = "Update your status"
+  - form_for @user do |f|
+    = f.label :current_task, "Current Task"
+    = text_field :user, :current_task
+    - unless @user.project.nil?
+      = f.label :project_id
+      = f.collection_select :project_id, @user.project, :id, :name unless @user.project.nil?
+    = f.submit "Update", :disable_with => 'Updating Status...'  
+  
   

@@ -15,7 +15,7 @@ module NavigationHelpers
       new_user_path
     
     when /the user account page for "(.*)"/
-      user_path(:login => $1)
+      profile_path(:login => $1)
       
     when /the login page/
       login_path
