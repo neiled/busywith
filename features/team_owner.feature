@@ -15,8 +15,7 @@ Feature: Team owner tasks
     
   Scenario: Delete an existing project
     Given I am logged in as the user "neiled" with the password "password"
-    And I have a team called "Neil's team"
-    And I have a project called "A Project"
+    And I have a team called "Neil's team" with a project called "A Project"
     And I am on the edit team page for "Neil's team"
     And I follow "Delete Project"
     Then I should see "Project Deleted"

@@ -6,9 +6,9 @@ This is the account page for
   - form_for @user do |f|
     = f.label :current_task, "Current Task"
     = text_field :user, :current_task
-    - unless @user.project.nil?
+    - if  @user.teams.count > 0 
       = f.label :project_id
-      = f.collection_select :project_id, @user.project, :id, :name unless @user.project.nil?
+      = f.collection_select :project_id, @user.projects, :id, :name
     = f.submit "Update", :disable_with => 'Updating Status...'  
   
   

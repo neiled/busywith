@@ -3,5 +3,9 @@ Given /^I own ([0-9]+) teams*$/ do |number|
 end
 
 Then /^I should have a team called "([^\"]*)"$/ do |name|
-  User.first(:conditions => {:login => "neiled"}).teams.first(:conditions => {:name => "Neil's team"}).nil? == false
+  UserSession.find.user.teams.first(:conditions => {:name => name}).nil? == false
+end
+
+Then /^"([^"]*)" should be selected for "([^"]*)"$/ do |value, field|
+  field_labeled(field).element.search(".//option[@selected = 'selected']").inner_html.should =~ /#{value}/
 end

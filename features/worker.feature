@@ -12,12 +12,13 @@ Feature: Workers should be able to create a team
     
   Scenario: Update my status when in a team
     Given I am logged in as the user "neiled" with the password "secret"
-    And I am on the user account page for "neiled"
-    And I have a team called "Neil's team"
-    And I have a project called "Test Project"
+    And I have a team called "Neil's team" with a project called "Test Project"
+    And I am on the user account page for "neiled"    
     When I fill in "Current Task" with "Performing a test"
+    And I select "Test Project" from "Project"
     And I press "Update"
     Then the "Current Task" field should contain "Performing a test"
+    And "Test Project" should be selected for "Project"
     And I should see "Status Updated"
   
   
