@@ -1,3 +1,13 @@
 %h1
   = h(@team.name)
   
+  - form_tag(:action => "create", :controller => "memberships") do
+    = label_tag "Username"
+    = text_field_tag "username"
+    = hidden_field_tag "team_id", @team.id
+    = submit_tag "Invite"
+    
+  
+    
+  
+  

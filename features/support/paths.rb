@@ -25,6 +25,9 @@ module NavigationHelpers
       
     when /the edit team page for "(.*)"/
       edit_team_path(Team.find_by_name($1))
+      
+    when /the team page for "(.*)"/
+      team_path(Team.find_by_name($1))
     # Add more mappings here.
     # Here is a more fancy example:
     #

@@ -23,7 +23,8 @@ Feature: Authentication
     And I should see "Log out"
     
   Scenario: Logging out
-    Given I am logged in as the user "neiled" with the password "secret"
+    Given I have a user with the username "neiled" and the password "secret"
+    And I am logged in as the user "neiled"
     And I am on the homepage
     When I follow "Log out"
     Then I should be logged out

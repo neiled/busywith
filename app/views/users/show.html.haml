@@ -10,5 +10,14 @@ This is the account page for
       = f.label :project_id
       = f.collection_select :project_id, @user.projects, :id, :name
     = f.submit "Update", :disable_with => 'Updating Status...'  
+    
+%h2 Teams
+- unless @user.teams.count == 0
+  - @user.teams.each  do |team|
+    = team.name
+    = link_to "Delete Team", (team_path team), :method => "delete"
+- else
+  = "This user is not a member of any teams"
+
   
   

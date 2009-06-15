@@ -13,13 +13,12 @@ Ideas:
 Use Cases
 ---------
 Worker:
-Can set their current active project
-Can set their current task within the project [Free Text]
-Can join a project
-Can withdraw from a project
+*Can set their current active project
+*Can set their current task within the project [Free Text]
 Can update the current percentage complete of their task
 Can update the estimated end date of their task
-Can accept an invite to join multiple teams
+Can accept an invite to join a teams
+Can withdraw from a team
 Can see the status of everyone else in their team
 Can see the status of everyone in a particular project
 Can group the status by project or by person
@@ -37,8 +36,8 @@ Maybe Can:
 
 Team Leader:
 Can change the team name
-Can add a new project
-Can delete a project
+*Can add a new project
+*Can delete a project
 Can invite new team members
 Can remove team members
 Can give ownership of the team to another member

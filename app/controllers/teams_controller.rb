@@ -45,7 +45,7 @@ class TeamsController < ApplicationController
     respond_to do |format|
       if @team.save
         flash[:notice] = 'Team was successfully created.'
-        format.html { redirect_to(profile_path(current_user.login)) }
+        format.html { redirect_to(edit_team_path(@team)) }
         format.xml  { render :xml => @team, :status => :created, :location => @team }
       else
         format.html { render :action => "new" }
@@ -78,7 +78,8 @@ class TeamsController < ApplicationController
     @team.destroy
 
     respond_to do |format|
-      format.html { redirect_to(teams_url) }
+      flash[:notice] = "Team Deleted."
+      format.html { redirect_to(profile_path(current_user.login)) }
       format.xml  { head :ok }
     end
   end
