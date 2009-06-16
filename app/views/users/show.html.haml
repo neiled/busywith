@@ -11,13 +11,23 @@ This is the account page for
       = f.collection_select :project_id, @user.projects, :id, :name
     = f.submit "Update", :disable_with => 'Updating Status...'  
     
-%h2 Teams
+%h2 Teams that you own
 - unless @user.teams.count == 0
   - @user.teams.each  do |team|
     = team.name
     = link_to "Delete Team", (team_path team), :method => "delete"
 - else
   = "This user is not a member of any teams"
+  
+%h2 Teams that you are a member of
+- unless @user.memberships.count == 0
+  - @user.memberships.each  do |membership|
+    = membership.team.name
+    - if membership.accepted_at.nil?
+      = link_to "Accept", :controller => "memberships", :action => "accept", :membership_id => membership
+      = link_to "Ignore"
+    - else
+      = link_to "Remove"
 
   
   
