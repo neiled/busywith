@@ -36,5 +36,24 @@ class MembershipsController < ApplicationController
     end
     redirect_to :back        
   end
+  
+  def delete
+    @membership = current_user.memberships.find_by_id(params[:membership_id])
+    # If I didn't find a membership, then look to see if the membership_id is a membership of a team that the user owns
+    # this way the user can remove someone from their team
+    @membership ||= Membership.first(:joins => :team,
+                  :conditions => {:id => params[:membership_id], :teams => {:owner_id => current_user}})
+    unless @membership.nil?
+      flash[:notice] = @membership.accepted_at.nil? ?
+      "Invite Ignored." :
+      current_user.teams.find_by_id(@membership.team) ?
+      "#{@membership.user.login.capitalize} has been removed from the team" :
+      "You are no longer a member of the team #{@membership.team.name}"
+      @membership.destroy      
+    else
+      flash[:error] = "That invite does not exist"
+    end
+    redirect_to :back
+  end
 
 end

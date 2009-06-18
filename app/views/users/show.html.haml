@@ -14,7 +14,7 @@ This is the account page for
 %h2 Teams that you own
 - unless @user.teams.count == 0
   - @user.teams.each  do |team|
-    = team.name
+    = link_to team.name, team
     = link_to "Delete Team", (team_path team), :method => "delete"
 - else
   = "This user is not a member of any teams"
@@ -25,9 +25,9 @@ This is the account page for
     = membership.team.name
     - if membership.accepted_at.nil?
       = link_to "Accept", :controller => "memberships", :action => "accept", :membership_id => membership
-      = link_to "Ignore"
+      = link_to "Ignore", :controller => "memberships", :action => "delete", :membership_id => membership
     - else
-      = link_to "Remove"
+      = link_to "Remove", :controller => "memberships", :action => "delete", :membership_id => membership
 
   
   

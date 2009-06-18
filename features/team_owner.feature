@@ -37,13 +37,23 @@ Feature: Team owner tasks
     And I am on the user account page for "neiled"
     Then I should see "not a member of any team"
     
-  Scenario: Delete an existing team
+  Scenario: Change the team name
     Given I am logged in as the user "neiled"
-    And I have a team called "Neil's team"
-    And I am on the user account page for "neiled"
-    And I follow "Delete Team"
-    Then I should see "Team Deleted"
-    And I should see "not a member of any team"
+    And I have a team called "neils"
+    And I am on the edit team page for "neils"
+    When I fill in "Name" with "another name"
+    And I press "Change Name"
+    Then I should see "Team updated."
+    And I should see "another name"
+  
+    
+  # Scenario: Delete an existing team
+  #   Given I am logged in as the user "neiled"
+  #   And I have a team called "Neil's team"
+  #   And I am on the user account page for "neiled"
+  #   And I follow "Delete Team"
+  #   Then I should see "Team Deleted"
+  #   And I should see "not a member of any team"
   
   
       

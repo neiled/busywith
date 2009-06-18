@@ -32,6 +32,32 @@ Feature: Manage teams
     Then I should see "Invite Accepted"
     And the user "bob" should be a member of the team "neils"
     
+  Scenario: Decline an invite to a team
+    Given I am logged in as the user "bob"
+    And the user "bob" has an invite for the team "neils"
+    When I am on the user account page for "bob"
+    And I follow "Ignore"
+    Then I should see "Invite Ignored"
+    And the user "bob" should not be a member of the team "neils"
+    And the user "bob" should not have an invite to for the team "neils"
+    
+  Scenario: Leave a team
+    Given I am logged in as the user "bob"
+    And the user "bob" is a member of the team "neils"
+    When I am on the user account page for "bob"
+    And I follow "Remove"
+    Then I should see "You are no longer a member of the team neils"
+    And the user "bob" should not be a member of the team "neils"
+    And the user "bob" should not have an invite to for the team "neils"
+    
+  Scenario: Remove someone from the team
+    Given I am logged in as the user "neiled"
+    And I have a team called "neils"
+    And the user "bob" is a member of the team "neils"
+    And I am on the team page for "neils"
+    When I follow "Remove"
+    Then I should see "Bob has been removed from the team"
+    And the user "bob" should not be a member of the team "neils"
     
   Scenario: Invite someone who does not exist
     Given I am logged in as the user "neiled"

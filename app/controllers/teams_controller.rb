@@ -61,12 +61,10 @@ class TeamsController < ApplicationController
 
     respond_to do |format|
       if @team.update_attributes(params[:team])
-        flash[:notice] = 'Team was successfully updated.'
-        format.html { redirect_to(@team) }
-        format.xml  { head :ok }
+        flash[:notice] = 'Team updated.'
+        format.html { redirect_to :back }
       else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @team.errors, :status => :unprocessable_entity }
+        format.html { redirect_to :back }
       end
     end
   end

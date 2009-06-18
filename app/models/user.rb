@@ -4,4 +4,5 @@ class User < ActiveRecord::Base
   belongs_to :active_project, :class_name => "Project", :foreign_key => "project_id"
   has_many :projects, :through => :teams
   has_many :memberships
+
 end

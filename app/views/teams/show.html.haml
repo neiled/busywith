@@ -1,13 +1,20 @@
 %h1
   = h(@team.name)
+%h2
+  = "Owner - #{@team.team_administrator.login}"
   
-  - form_tag(:action => "create", :controller => "memberships") do
-    = label_tag "Username"
-    = text_field_tag "username"
-    = hidden_field_tag "team_id", @team.id
-    = submit_tag "Invite"
-    
-  
-    
-  
-  
+%h2 Members
+
+- @team.memberships.each do |membership|
+  = membership.user.login
+  = link_to "Remove", :action => "delete", :controller => "memberships", :membership_id => membership
+
+%br
+
+%h2 Invite a new member
+
+- form_tag(:action => "create", :controller => "memberships") do
+  = label_tag "Username"
+  = text_field_tag "username"
+  = hidden_field_tag "team_id", @team.id
+  = submit_tag "Invite"
