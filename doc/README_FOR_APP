@@ -10,6 +10,9 @@ Ideas:
 * Status can be a partial, would make it easier to embed it elsewhere.
 * Allow ordering of subscriptions.
 
+IMPORTANT TODO:
+* Stop the bulk_assigns thing from the models.
+
 Use Cases
 ---------
 Worker:

@@ -6,14 +6,14 @@ This is the account page for
   - form_for @user do |f|
     = f.label :current_task, "Current Task"
     = text_field :user, :current_task
-    - if  @user.teams.count > 0 
+    - if  @user.owned_teams.count > 0 
       = f.label :project_id
       = f.collection_select :project_id, @user.projects, :id, :name
     = f.submit "Update", :disable_with => 'Updating Status...'  
     
 %h2 Teams that you own
-- unless @user.teams.count == 0
-  - @user.teams.each  do |team|
+- unless @user.owned_teams.count == 0
+  - @user.owned_teams.each  do |team|
     = link_to team.name, team
     = link_to "Delete Team", (team_path team), :method => "delete"
 - else

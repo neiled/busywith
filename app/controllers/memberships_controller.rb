@@ -1,6 +1,6 @@
 class MembershipsController < ApplicationController
   def create
-    @team = current_user.teams.find_by_id(params[:team_id])
+    @team = current_user.owned_teams.find_by_id(params[:team_id])
     if @team.nil?
       flash[:error] = "You do not own that team."
       redirect_to :back
@@ -46,7 +46,7 @@ class MembershipsController < ApplicationController
     unless @membership.nil?
       flash[:notice] = @membership.accepted_at.nil? ?
       "Invite Ignored." :
-      current_user.teams.find_by_id(@membership.team) ?
+      current_user.owned_teams.find_by_id(@membership.team) ?
       "#{@membership.user.login.capitalize} has been removed from the team" :
       "You are no longer a member of the team #{@membership.team.name}"
       @membership.destroy      

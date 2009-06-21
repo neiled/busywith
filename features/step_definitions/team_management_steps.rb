@@ -2,7 +2,7 @@ Given /^the following users$/ do |table|
   # table is a Cucumber::Ast::Table
   table.hashes.each do |hash|
     user = Factory.create(:user, :login => hash[:login])
-    user.teams.create(:name => hash[:team]) unless hash[:team].nil?
+    user.owned_teams.create(:name => hash[:team]) unless hash[:team].nil?
   end
 end
 

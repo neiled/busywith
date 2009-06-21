@@ -24,7 +24,7 @@ class TeamsController < ApplicationController
   # GET /teams/new
   # GET /teams/new.xml
   def new
-    @team = current_user.teams.build
+    @team = current_user.owned_teams.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,7 +41,7 @@ class TeamsController < ApplicationController
   # POST /teams
   # POST /teams.xml
   def create
-    @team = current_user.teams.build(params[:team])
+    @team = current_user.owned_teams.build(params[:team])
     respond_to do |format|
       if @team.save
         flash[:notice] = 'Team was successfully created.'
