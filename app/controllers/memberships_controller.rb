@@ -41,8 +41,12 @@ class MembershipsController < ApplicationController
     @membership = current_user.memberships.find_by_id(params[:membership_id])
     # If I didn't find a membership, then look to see if the membership_id is a membership of a team that the user owns
     # this way the user can remove someone from their team
-    @membership ||= Membership.first(:joins => :team,
-                  :conditions => {:id => params[:membership_id], :teams => {:owner_id => current_user}})
+    if @membership.nil?
+      found_membership = Membership.find(params[:membership_id])
+      unless found_membership.nil?
+        @membership ||= current_user.owned_teams.find_by_id(found_membership.team_id).nil? ? nil : found_membership
+      end
+    end
     unless @membership.nil?
       flash[:notice] = @membership.accepted_at.nil? ?
       "Invite Ignored." :

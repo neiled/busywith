@@ -8,7 +8,7 @@ Feature: Manage teams
     | login  | team  |
     | neiled | neils |
     | bob    |       |
-  
+
   Scenario: Invite new members
     Given I am logged in as the user "neiled"
     And I am on the team page for "neils"
@@ -50,6 +50,7 @@ Feature: Manage teams
     And the user "bob" should not be a member of the team "neils"
     And the user "bob" should not have an invite to for the team "neils"
     
+  @error  
   Scenario: Remove someone from the team
     Given I am logged in as the user "neiled"
     And I have a team called "neils"

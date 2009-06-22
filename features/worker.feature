@@ -13,7 +13,7 @@ Feature: Workers should be able to create a team
     And I am on the new team page
     When I fill in "Team Name" with "Neil's team"
     And I press "Create Team"
-    Then I should have a team called "Neil's team"
+    Then the user "neiled" should be an administrator of a team called "Neil's team"
     
   Scenario: Update my status when in a team
     Given I am logged in as the user "neiled"

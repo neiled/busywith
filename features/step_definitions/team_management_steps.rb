@@ -1,8 +1,11 @@
 Given /^the following users$/ do |table|
   # table is a Cucumber::Ast::Table
   table.hashes.each do |hash|
-    user = Factory.create(:user, :login => hash[:login])
-    user.owned_teams.create(:name => hash[:team]) unless hash[:team].nil?
+    Given "I have a user with the username \"#{hash[:login]}\" and the password \"password\""
+    unless hash[:team].nil?
+      Given "I have a team called \"#{hash[:team]}\""
+    end
+    click_link "log out"
   end
 end
 

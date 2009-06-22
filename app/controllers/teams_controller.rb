@@ -24,7 +24,7 @@ class TeamsController < ApplicationController
   # GET /teams/new
   # GET /teams/new.xml
   def new
-    @team = current_user.owned_teams.build
+    @team = Team.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,17 +41,16 @@ class TeamsController < ApplicationController
   # POST /teams
   # POST /teams.xml
   def create
-    @team = current_user.owned_teams.build(params[:team])
-    respond_to do |format|
-      if @team.save
+    @team = Team.new(params[:team])
+    if @team.save
+      @membership = Membership.new(:user_id => current_user, :team_id => @team, :is_administrator => true, :accepted_at => DateTime.now)
+      if @membership.save        
         flash[:notice] = 'Team was successfully created.'
-        format.html { redirect_to(edit_team_path(@team)) }
-        format.xml  { render :xml => @team, :status => :created, :location => @team }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @team.errors, :status => :unprocessable_entity }
+        redirect_to(edit_team_path(@team))
+        return
       end
     end
+    render :action => "new"
   end
 
   # PUT /teams/1

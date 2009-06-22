@@ -1,14 +1,11 @@
 %h1
   = h(@team.name)
-%h2
-  = "Owner - #{@team.team_administrator.login}"
   
 %h2 Members
 
 - @team.memberships.each do |membership|
   = membership.user.login
-  = link_to "Remove", :action => "delete", :controller => "memberships", :membership_id => membership
-
+  = link_to "Remove", :action => "delete", :controller => "memberships", :membership_id => membership unless membership.is_administrator
 %br
 
 %h2 Invite a new member
