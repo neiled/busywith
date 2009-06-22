@@ -1,5 +1,5 @@
 Then /^there should be ([0-9]+) users*$/ do |count|
-  User.find(:all).count == count
+  User.find(:all).size == count
 end
 
 Given /^I am logged in as the user "([^\"]*)"$/ do |login|

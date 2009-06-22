@@ -10,8 +10,22 @@
   /[if IE]
     = stylesheet_link_tag 'compiled/ie.css', :media => 'screen, projection'
 %body{:class => body_class}
-  #header
-    = render :partial => 'layouts/flashes'
-    - if current_user
-      = link_to "Log out", :logout
-  .container= yield
+  #container
+    #header
+      %h1
+        = link_to "I'm Busy With...", root_url
+      #navbar
+        %ul
+          - unless current_user
+            %li
+              = link_to "Login", login_path
+            %li
+              = link_to "Register", new_user_path 
+          - else
+            %li
+              = link_to current_user.login, profile_path(current_user.login)
+            %li
+              = link_to "Log out", logout_path  
+      = render :partial => 'layouts/flashes'
+    #content
+      = yield

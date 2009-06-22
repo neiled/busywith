@@ -1,7 +1,29 @@
-/*
-  Welcome to Compass.
-  In this file you should write your main styles. (or centralize your imports)
-  Import this file using the following HTML or equivalent:
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-
+@import blueprint.sass
+@import blueprint/modules/scaffolding.sass
 @import compass/reset.sass
+@import compass/utilities.sass
+
++blueprint
+// Remove the scaffolding when you're ready to start doing visual design.
+// Or leave it in if you're happy with how blueprint looks out-of-the-box
++blueprint-scaffolding
+
+#container
+  +container
+  
+#header
+  #navbar
+    +float-right
+    +horizontal-list
+    :position absolute
+    :top 1em
+    :right 0px
+    
+#header
+  +column(24)
+  
+#content
+  +column(20, true)
+  
+#flash_notice
+  +notice

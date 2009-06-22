@@ -1,5 +1,9 @@
 %h1
   = h(@team.name)
+
+- if true
+  //= link_to "Edit", edit_team @team
+  = link_to "Edit", edit_team_url(@team)
   
 %h2 Members
 
