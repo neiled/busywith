@@ -43,7 +43,7 @@ Team Leader:
 *Can add a new project
 *Can delete a project
 *Can invite new team members
-Can remove team members
+*Can remove team members
 Can give ownership of the team to another member
 Can change the settings of the team
   Can members add new projects?
@@ -57,6 +57,8 @@ Can disband the team
 Models
 --------
 User:
+login
+email
 Task_Name
 Active_Project_ID
 Percent_Complete

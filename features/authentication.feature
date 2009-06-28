@@ -6,6 +6,7 @@ Feature: Authentication
   Scenario: Create a new account
     Given I am on the registration page
     When I fill in "login" with "neiled"
+    And I fill in "email" with "neil@plasticwater.com"
     And I fill in "password" with "password"
     And I fill in "password confirmation" with "password"
     And I press "Create Account"

@@ -41,10 +41,10 @@ Feature: Team owner tasks
     Given I am logged in as the user "neiled"
     And I have a team called "neils"
     And I am on the edit team page for "neils"
-    When I fill in "Name" with "another name"
+    When I fill in "Name" with "Another name"
     And I press "Change Name"
     Then I should see "Team updated."
-    And I should see "another name"
+    And I should see "Another name"
   
     
   # Scenario: Delete an existing team
