@@ -12,7 +12,6 @@ Feature: Authentication
     Then I should be on the user account page for "neiled"
     And there should be 1 user
 
-  @error  
   Scenario: Logging in
     Given I have a user with the username "neiled" and the password "secret"
     And I am on the login page

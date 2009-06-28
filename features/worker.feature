@@ -15,6 +15,7 @@ Feature: Workers should be able to create a team
     And I press "Create Team"
     Then the user "neiled" should be an administrator of a team called "Neil's team"
     
+  @error  
   Scenario: Update my status when in a team
     Given I am logged in as the user "neiled"
     And I have a team called "Neil's team" with a project called "Test Project"
