@@ -19,11 +19,29 @@
     :top 1em
     :right 0px
     
+    
 #header
   +column(24)
   
 #content
-  +column(20, true)
+  +column(24, true)
+  :background-color rgb(66,194,231)
+  :padding-left 20px
+  :padding-top 20px
+  :padding-bottom 20px
+  li
+    :margin-left 5px
+  h2
+    :margin-bottom 0px
+  
+  
   
 #flash_notice
   +notice
+
+#flash_error
+  +error
+  
+.edit_user
+  :background-color lightblue
+  :width 400px

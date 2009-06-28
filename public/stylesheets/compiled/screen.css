@@ -685,17 +685,29 @@ hr.space { background: #ddd; color: #ddd; clear: both; float: none; width: 100%;
 /* line 42, ../../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.6.15/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal_list.sass */
 #header #navbar li.last { padding-right: 0px; }
 
-/* line 22, ../../../app/stylesheets/screen.sass */
+/* line 23, ../../../app/stylesheets/screen.sass */
 #header { display: inline; float: left; margin-right: 10px; width: 950px; }
 /* line 97, ../../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.6.15/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
 * html #header { overflow-x: hidden; }
 
-/* line 25, ../../../app/stylesheets/screen.sass */
-#content { display: inline; float: left; margin-right: 0; width: 790px; }
+/* line 26, ../../../app/stylesheets/screen.sass */
+#content { display: inline; float: left; margin-right: 0; width: 950px; background-color: rgb(66,194,231); padding-left: 20px; padding-top: 20px; padding-bottom: 20px; }
 /* line 97, ../../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.6.15/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
 * html #content { overflow-x: hidden; }
+/* line 32, ../../../app/stylesheets/screen.sass */
+#content li { margin-left: 5px; }
+/* line 34, ../../../app/stylesheets/screen.sass */
+#content h2 { margin-bottom: 0px; }
 
-/* line 28, ../../../app/stylesheets/screen.sass */
+/* line 39, ../../../app/stylesheets/screen.sass */
 #flash_notice { padding: .8em; margin-bottom: 1em; border: 2px solid #dddddd; background: #fff6bf; color: #514721; border-color: #ffd324; }
 /* line 38, ../../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.6.15/frameworks/blueprint/stylesheets/blueprint/modules/_interaction.sass */
 #flash_notice a { color: #514721; }
+
+/* line 42, ../../../app/stylesheets/screen.sass */
+#flash_error { padding: .8em; margin-bottom: 1em; border: 2px solid #dddddd; background: #fbe3e4; color: #8a1f11; border-color: #fbc2c4; }
+/* line 30, ../../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.6.15/frameworks/blueprint/stylesheets/blueprint/modules/_interaction.sass */
+#flash_error a { color: #8a1f11; }
+
+/* line 45, ../../../app/stylesheets/screen.sass */
+.edit_user { background-color: lightblue; width: 400px; }

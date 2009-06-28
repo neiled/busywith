@@ -1,6 +1,6 @@
-This is the account page for
-= @user.login
-%br
+#owner_name
+  This is the account page for
+  = @user.login
 
 #status_update
   - if current_user.nil? == false and current_user.login == @user.login
@@ -8,9 +8,11 @@ This is the account page for
     - form_for @user do |f|
       = f.label :current_task, "Current Task"
       = text_field :user, :current_task
+      %br
       - if  @user.owned_teams.count > 0 
         = f.label :project_id
         = f.collection_select :project_id, @user.projects, :id, :name
+      %br
       = f.submit "Update", :disable_with => 'Updating Status...'  
     
 #owned_teams

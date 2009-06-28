@@ -1,15 +1,14 @@
 %h1
-  = h(@team.name)
-
-- if true
-  //= link_to "Edit", edit_team @team
-  = link_to "Edit", edit_team_url(@team)
+  = h(@team.name.capitalize)
+  - if true
+    = link_to "Edit", edit_team_url(@team)
   
 %h2 Members
-
+%ul
 - @team.memberships.each do |membership|
-  = membership.user.login
-  = link_to "Remove", :action => "delete", :controller => "memberships", :membership_id => membership unless membership.is_administrator
+  %li
+    = h(membership.user.login)
+    = link_to "Remove", :action => "delete", :controller => "memberships", :membership_id => membership unless membership.is_administrator
 %br
 
 %h2 Invite a new member
