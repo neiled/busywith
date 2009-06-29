@@ -15,12 +15,12 @@
         = f.label :project_id
         = f.collection_select :project_id, @user.projects, :id, :name
       %br
-      %br
-      = f.label :percent_complete, "Percent Complete"      
+      = f.label :percent_complete, "Percent Complete"
       #progress_slider
-      = text_field :user, :percent_complete, :id => :percent_complete
+      = text_field :user, :percent_complete, :id => :percent_complete, :value => @user.percent_complete.to_i.to_s + "%"
       %br
-      = f.submit "Update", :disable_with => 'Updating Status...'  
+      .submit
+        = f.submit "Update", :disable_with => 'Updating Status...'  
 
 - unless @user.invites.count == 0
   #invites
@@ -31,7 +31,7 @@
           = invite.team.name
           = link_to "Accept", :controller => "memberships", :action => "accept", :membership_id => invite, :class => "accept_membership"
           = link_to "Ignore", :controller => "memberships", :action => "delete", :membership_id => invite, :class => "remove_membership"
-    
+
 #owned_teams
   %h2 Teams that you own
   - unless @user.owned_teams.count == 0

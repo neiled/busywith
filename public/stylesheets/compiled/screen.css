@@ -457,13 +457,18 @@ h2 { font-size: 1.2em; }
 #content li { margin-left: 5px; }
 #content h2 { margin-bottom: 0px; }
 
-.edit_user { background-color: lightblue; width: 400px; }
+.edit_user { background-color: lightblue; width: 500px; padding: 0.5em; }
+.edit_user label { font-size: 0.7em; width: 10em; float: left; text-align: right; margin-right: 0.5em; display: block; }
+.edit_user input, .edit_user select { margin-left: 4.5em; }
+.edit_user .submit { margin-left: 7.2em; }
 
-#status_update, #owned_teams, #memberships, #invites { padding: 1em; border-style: solid; border-color: black; border-width: 1px; margin-bottom: 1em; width: 800px; }
+#progress_slider { width: 20em; margin-left: 1em; font-size: 0.5em; float: left; margin-left: 4.5em; margin-top: 0.5em; }
+
+#percent_complete { border-style: none; background-color: inherit; float: left; width: 3em; margin-left: 1em; font-size: 0.8em; }
+
+#status_update, #owned_teams, #memberships, #invites { padding: 1em; border-style: solid; border-color: black; border-width: 1px; margin-bottom: 1em; width: 600px; }
 
 #invites { padding: .8em; margin-bottom: 1em; border: 2px solid #dddddd; background: #fff6bf; color: #514721; border-color: #ffd324; }
 #invites a { color: #514721; }
 
 .remove_membership { font-size: 0.5em; font-style: italic; color: #CCCCCC; }
-
-#progress_slider { width: 10em; margin-left: 1em; }

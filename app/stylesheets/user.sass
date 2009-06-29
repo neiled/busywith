@@ -1,6 +1,34 @@
 .edit_user
   :background-color lightblue
-  :width 400px
+  :width 500px
+  :padding 0.5em
+  label
+    :font-size 0.7em
+    :width 10em
+    :float left
+    :text-align right
+    :margin-right 0.5em
+    :display block
+  input, select
+    :margin-left 4.5em
+  .submit
+    :margin-left 7.2em
+
+#progress_slider
+  :width 20em
+  :margin-left 1em
+  :font-size 0.5em
+  :float left
+  :margin-left 4.5em
+  :margin-top 0.5em
+
+#percent_complete
+  :border-style none
+  :background-color inherit
+  :float left
+  :width 3em
+  :margin-left 1em
+  :font-size 0.8em
 
 #status_update, #owned_teams, #memberships, #invites
   :padding 1em
@@ -8,7 +36,7 @@
   :border-color = black
   :border-width 1px
   :margin-bottom 1em
-  :width 800px
+  :width 600px
 
 #invites
   +notice
@@ -17,7 +45,3 @@
   :font-size 0.5em
   :font-style italic
   :color #CCCCCC
-  
-#progress_slider
-  :width 10em
-  :margin-left 1em

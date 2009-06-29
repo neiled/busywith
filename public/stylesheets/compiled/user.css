@@ -1,22 +1,21 @@
 /*
 Sass::SyntaxError: Undefined mixin 'notice'.
-on line 14 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/user.sass
+on line 42 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/user.sass
 
-10:   :margin-bottom 1em
-11:   :width 800px
-12: 
-13: #invites
-14:   +notice
-15:   
-16: .remove_membership
-17:   :font-size 0.5em
-18:   :font-style italic
-19:   :color #CCCCCC
-20:   
+38:   :margin-bottom 1em
+39:   :width 600px
+40: 
+41: #invites
+42:   +notice
+43:   
+44: .remove_membership
+45:   :font-size 0.5em
+46:   :font-style italic
+47:   :color #CCCCCC
 
 
 Backtrace:
-/Users/neil/Development/Rails/Projects/busywith/app/stylesheets/user.sass:14
+/Users/neil/Development/Rails/Projects/busywith/app/stylesheets/user.sass:42
 /usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.24/lib/sass/tree/mixin_node.rb:27:in `_perform'
 /usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.24/lib/sass/tree/node.rb:154:in `perform'
 /usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.24/lib/sass/tree/node.rb:198:in `perform_children'
@@ -73,14 +72,14 @@ Backtrace:
 /usr/local/lib/ruby/gems/1.8/gems/webrat-0.4.4/lib/webrat/rails.rb:35:in `get'
 /usr/local/lib/ruby/gems/1.8/gems/webrat-0.4.4/lib/webrat/core/session.rb:106:in `send'
 /usr/local/lib/ruby/gems/1.8/gems/webrat-0.4.4/lib/webrat/core/session.rb:106:in `request_page'
-/usr/local/lib/ruby/gems/1.8/gems/webrat-0.4.4/lib/webrat/core/elements/link.rb:19:in `click'
-/usr/local/lib/ruby/gems/1.8/gems/webrat-0.4.4/lib/webrat/core/scope.rb:260:in `click_link'
+/usr/local/lib/ruby/gems/1.8/gems/webrat-0.4.4/lib/webrat/core/session.rb:120:in `request_page'
+/usr/local/lib/ruby/gems/1.8/gems/webrat-0.4.4/lib/webrat/core/elements/form.rb:20:in `submit'
+/usr/local/lib/ruby/gems/1.8/gems/webrat-0.4.4/lib/webrat/core/elements/field.rb:203:in `click'
+/usr/local/lib/ruby/gems/1.8/gems/webrat-0.4.4/lib/webrat/core/scope.rb:275:in `click_button'
 (__FORWARDABLE__):3:in `__send__'
-(__FORWARDABLE__):3:in `click_link'
-(eval):2:in `click_link'
-./features/step_definitions/team_management_steps.rb:8
-./features/step_definitions/team_management_steps.rb:3:in `each'
-./features/step_definitions/team_management_steps.rb:3
+(__FORWARDABLE__):3:in `click_button'
+(eval):2:in `click_button'
+./features/step_definitions/team_owner_steps.rb:4
 /usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/core_ext/instance_exec.rb:20:in `instance_exec'
 /usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/core_ext/instance_exec.rb:20:in `cucumber_instance_exec'
 /usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/core_ext/instance_exec.rb:38:in `cucumber_run_with_backtrace_filtering'
@@ -118,4 +117,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Sass::SyntaxError: Undefined mixin 'notice'.\A on line 14 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/user.sass\A \A 10:   :margin-bottom 1em\A 11:   :width 800px\A 12: \A 13: #invites\A 14:   +notice\A 15:   \A 16: .remove_membership\A 17:   :font-size 0.5em\A 18:   :font-style italic\A 19:   :color #CCCCCC\A 20:   \A "; }
+  content: "Sass::SyntaxError: Undefined mixin 'notice'.\A on line 42 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/user.sass\A \A 38:   :margin-bottom 1em\A 39:   :width 600px\A 40: \A 41: #invites\A 42:   +notice\A 43:   \A 44: .remove_membership\A 45:   :font-size 0.5em\A 46:   :font-style italic\A 47:   :color #CCCCCC\A "; }

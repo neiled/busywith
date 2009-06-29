@@ -3,7 +3,7 @@ $(document).ready(function(){
     min: 0,
     max: 100,
     step: 5,
-    slide: function(event, ui) {$("#percent_complete").val(ui.value);}
+    slide: function(event, ui) {$("#percent_complete").val(ui.value+"%");}
   });
-  $("#progress_slider").slider("value") = $("#percent_complete").val();
+  $("#progress_slider").slider("value", $("#percent_complete").val().split("%")[0]);
 });
