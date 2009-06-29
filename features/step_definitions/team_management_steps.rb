@@ -23,7 +23,7 @@ end
 
 
 Then /^the user "([^\"]*)" should have an invite to the team "([^\"]*)"$/ do |login, team|
-  User.find_by_login(login).memberships.find_by_team_id(Team.find_by_name(team)).should_not be_nil
+  User.find_by_login(login).invites.find_by_team_id(Team.find_by_name(team)).should_not be_nil
 end
 
 Then /^the user "([^\"]*)" should be a member of the team "([^\"]*)"$/ do |login, team_name|

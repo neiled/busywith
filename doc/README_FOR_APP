@@ -13,6 +13,10 @@ Ideas:
 IMPORTANT TODO:
 * Stop the bulk_assigns thing from the models.
 
+TODO:
+* Make the number of invitations appear in brackets after a user's name
+
+
 Use Cases
 ---------
 Worker:

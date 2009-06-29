@@ -1,0 +1,39 @@
+
+h1
+  :font-size 2em
+
+h2
+  :font-size 1.2em
+
+
+#container
+  +container
+
+#flash_notice
+  +notice
+
+#flash_error
+  +error
+
+  
+#header
+  +column(24)
+  #navbar
+    +float-right
+    +horizontal-list
+    :position absolute
+    :top 1em
+    :right 0px
+  
+#content
+  +column(24, true)
+  :padding-left 20px
+  :padding-top 20px
+  :padding-bottom 20px
+  li
+    :margin-left 5px
+  h2
+    :margin-bottom 0px
+  :font-size 1.8em
+  
+  

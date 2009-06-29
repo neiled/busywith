@@ -1,11 +1,13 @@
 #owner_name
-  This is the account page for
-  = @user.login
+  - unless current_user == @user
+    This is the account page for
+    = @user.login
 
 #status_update
   - if current_user.nil? == false and current_user.login == @user.login
     %h3 Update your status
     - form_for @user do |f|
+      = error_messages_for :user
       = f.label :current_task, "Current Task"
       = text_field :user, :current_task
       %br
@@ -13,31 +15,46 @@
         = f.label :project_id
         = f.collection_select :project_id, @user.projects, :id, :name
       %br
+      %br
+      = f.label :percent_complete, "Percent Complete"      
+      #progress_slider
+      = text_field :user, :percent_complete, :id => :percent_complete
+      %br
       = f.submit "Update", :disable_with => 'Updating Status...'  
+
+- unless @user.invites.count == 0
+  #invites
+    %h2 Invitations
+    %ul
+      - @user.invites.each do |invite|
+        %li
+          = invite.team.name
+          = link_to "Accept", :controller => "memberships", :action => "accept", :membership_id => invite, :class => "accept_membership"
+          = link_to "Ignore", :controller => "memberships", :action => "delete", :membership_id => invite, :class => "remove_membership"
     
 #owned_teams
   %h2 Teams that you own
   - unless @user.owned_teams.count == 0
     %ul
-    - @user.owned_teams.each  do |team|
-      %li
-        = link_to team.name, team
-        = link_to "Delete Team", (team_path team), :method => "delete"
+      - @user.owned_teams.each  do |team| 
+        %li
+          = link_to team.name, team
+          = link_to "Delete Team", (team_path team), :method => "delete", :class => "remove_membership"
   - else
     = "This user is is not an administrator of any teams"
     %br
   = link_to "Create a new team", new_team_url
 
-#membership  
+#memberships
   %h2 Teams that you are a member of
   - unless @user.memberships.count == 0
-    - @user.memberships.each  do |membership|
-      - unless membership.is_administrator
-        = membership.team.name
-        - if membership.accepted_at.nil?
-          = link_to "Accept", :controller => "memberships", :action => "accept", :membership_id => membership
-          = link_to "Ignore", :controller => "memberships", :action => "delete", :membership_id => membership
-        - else
-          = link_to "Remove", :controller => "memberships", :action => "delete", :membership_id => membership
+    %ul
+      - @user.memberships.each  do |membership|
+        %li
+          = membership.team.name
+          &nbsp;
+          - unless membership.is_administrator
+            = link_to "Remove", :controller => "memberships", :action => "delete", :membership_id => membership, :class => "remove_membership"
   - else
-    = "This user is not a member of any teams"
+    You're not a member of any team
+    

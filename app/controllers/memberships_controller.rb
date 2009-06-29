@@ -23,7 +23,7 @@ class MembershipsController < ApplicationController
   end
 
   def accept
-    @membership = current_user.memberships.find_by_id(params[:membership_id])
+    @membership = current_user.invites.find_by_id(params[:membership_id])
     unless @membership.nil?
       @membership.accepted_at = DateTime.now
       if @membership.save
@@ -38,12 +38,17 @@ class MembershipsController < ApplicationController
   end
   
   def delete
+    #see if the membership id is a membership that the current user has
     @membership = current_user.memberships.find_by_id(params[:membership_id])
-    # If I didn't find a membership, then look to see if the membership_id is a membership of a team that the user owns
-    # this way the user can remove someone from their team
+    #if it's not, see if it's an invite they have
+    @membership ||= current_user.invites.find_by_id(params[:membership_id])
+    # If we still didn't find a membership, then look to see if the membership_id relates a membership of a team that the current user owns
+    # this way the current user can remove someone from their team
     if @membership.nil?
+      #does the membership exist at all?
       found_membership = Membership.find(params[:membership_id])
       unless found_membership.nil?
+        #if it does, see if the current user owns a team with that the membership points to
         @membership ||= current_user.owned_teams.find_by_id(found_membership.team_id).nil? ? nil : found_membership
       end
     end

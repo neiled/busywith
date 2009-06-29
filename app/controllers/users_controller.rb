@@ -28,10 +28,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
       flash[:notice] = "Status Updated"
-      redirect_to(profile_path(:login => @user.login))
     else
-      render :action => "show"
+      flash[:error] = "Unable to update status"
     end    
+    redirect_to :back
   end
 
 end
