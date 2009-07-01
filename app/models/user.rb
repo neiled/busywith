@@ -8,6 +8,13 @@ class User < ActiveRecord::Base
                                       JOIN memberships ON memberships.team_id = teams.id
                                       JOIN users ON users.id = memberships.user_id
                                       WHERE users.id = #{id}'
+                                      
+  has_many :collegues, :class_name => "User", :finder_sql => 'SELECT users.*
+                                       FROM users
+                                       JOIN memberships ON memberships.user_id = users.id
+                                       JOIN teams ON teams.id = memberships.team_id
+                                       JOIN memberships mine ON mine.team_id = teams.id
+                                       WHERE mine.user_id = #{id} and users.id <> #{id}'
 
   has_many :memberships, :conditions => "accepted_at IS NOT NULL"
   
@@ -20,4 +27,6 @@ class User < ActiveRecord::Base
 
   has_many :owned_teams, :through => :memberships, :source => "team", :class_name => "Team",
     :conditions => { :memberships => {:is_administrator => true} }
+    
+  validates_numericality_of :percent_complete, :on => :update, :message => "is not a number"
 end

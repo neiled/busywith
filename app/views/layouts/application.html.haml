@@ -12,6 +12,7 @@
   = javascript_include_tag 'application'
   /[if IE]
     = stylesheet_link_tag 'compiled/ie.css', :media => 'screen, projection'
+  = yield :unobtrusive_javascript
 %body{:class => body_class}
   #container
     #header

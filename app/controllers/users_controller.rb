@@ -26,10 +26,10 @@ class UsersController < ApplicationController
   
   def update
     @user = User.find(params[:id])
-    if @user.update_attributes!(params[:user])
+    if @user.update_attributes(params[:user])
       flash[:notice] = "Status Updated"
     else
-      flash[:error] = "Unable to update status"
+      flash[:error] = "Unable to update status: #{@user.errors.full_messages}"
     end    
     redirect_to :back
   end

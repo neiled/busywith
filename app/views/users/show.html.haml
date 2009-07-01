@@ -1,3 +1,7 @@
+= content_for :unobtrusive_javascript do
+  %script{ 'type' => "text/javascript", :src   => "/javascripts/users.js" }
+  
+
 #owner_name
   - unless current_user == @user
     This is the account page for
@@ -7,7 +11,6 @@
   - if current_user.nil? == false and current_user.login == @user.login
     %h3 Update your status
     - form_for @user do |f|
-      = error_messages_for :user
       = f.label :current_task, "Current Task"
       = text_field :user, :current_task
       %br
@@ -17,7 +20,7 @@
       %br
       = f.label :percent_complete, "Percent Complete"
       #progress_slider
-      = text_field :user, :percent_complete, :id => :percent_complete, :value => @user.percent_complete.to_i.to_s + "%"
+      = text_field :user, :percent_complete, :id => :percent_complete, :value => @user.percent_complete.to_i.to_s
       %br
       .submit
         = f.submit "Update", :disable_with => 'Updating Status...'  
