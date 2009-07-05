@@ -1,0 +1,12 @@
+#history
+  %h2
+    = link_to image_tag("/images/feed_icon.jpg", :border=>0), history_url(user.login)
+    Recent Updates
+  %ul
+    - user.histories.each do |current_history|
+      %li
+        %div{:class => "history_#{current_history.message_type}"}
+          = link_to user.login, profile_url(user.login)
+          = " " + h(current_history.message)
+        .history_time
+          = time_ago_in_words(current_history.created_at) + " ago"
