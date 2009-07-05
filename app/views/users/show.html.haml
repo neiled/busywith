@@ -7,8 +7,8 @@
     This is the account page for
     = @user.login
 
-#status_update
-  - if current_user.nil? == false and current_user.login == @user.login
+- if current_user.nil? == false and current_user.login == @user.login
+  #status_update
     %h3 Update your status
     - form_for @user do |f|
       = f.label :current_task, "Current Task"
@@ -25,6 +25,9 @@
       .submit
         = f.submit "Update", :disable_with => 'Updating Status...'  
 
+= render :partial => "history", :locals => {:user => @user}
+
+
 - unless @user.invites.count == 0
   #invites
     %h2 Invitations
@@ -36,28 +39,37 @@
           = link_to "Ignore", :controller => "memberships", :action => "delete", :membership_id => invite, :class => "remove_membership"
 
 #owned_teams
-  %h2 Teams that you own
+  - if current_user == @user
+    %h2= "Teams that you own"
+  - else
+    %h2
+      = "Teams that #{@user.login} owns"
+
   - unless @user.owned_teams.count == 0
     %ul
       - @user.owned_teams.each  do |team| 
         %li
           = link_to team.name, team
-          = link_to "Delete Team", (team_path team), :method => "delete", :class => "remove_membership"
+          = link_to "Delete Team", (team_path team), :method => "delete", :class => "remove_membership" unless current_user != @user
   - else
-    = "This user is is not an administrator of any teams"
+    - if current_user == @user
+      = "You're not an administrator of any teams"
+    - else
+      = "This user is is not an administrator of any teams"
     %br
-  = link_to "Create a new team", new_team_url
+  = link_to "Create a new team", new_team_url unless current_user != @user
 
-#memberships
-  %h2 Teams that you are a member of
-  - unless @user.memberships.count == 0
+- unless @user.memberships.count == 0
+  #memberships
+    - if current_user == @user
+      %h2= "Teams that you are a member of"
+    - else
+      %h2
+        = "Teams that #{@user.login} is a member of"  
     %ul
       - @user.memberships.each  do |membership|
         %li
-          = membership.team.name
+          = link_to membership.team.name, team_url(membership.team)
           &nbsp;
           - unless membership.is_administrator
-            = link_to "Remove", :controller => "memberships", :action => "delete", :membership_id => membership, :class => "remove_membership"
-  - else
-    You're not a member of any team
-    
+            = link_to "Remove", {:controller => "memberships", :action => "delete", :membership_id => membership}, :class => "remove_membership"    

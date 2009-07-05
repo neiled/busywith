@@ -1,20 +1,23 @@
 %h1
   = h(@team.name.capitalize)
-  - if true
+  - if current_user.owned_teams.include?(@team)
     = link_to "Edit", edit_team_url(@team)
-  
+
+
 %h2 Members
 %ul
-- @team.memberships.each do |membership|
-  %li
-    = h(membership.user.login)
-    = link_to "Remove", :action => "delete", :controller => "memberships", :membership_id => membership unless membership.is_administrator
+  - @team.memberships.each do |membership|
+    %li
+      = link_to h(membership.user.login), profile_url(membership.user.login)
+      - if current_user.owned_teams.include?(@team) and not membership.is_administrator
+        = link_to "Remove", :action => "delete", :controller => "memberships", :membership_id => membership
 %br
 
-%h2 Invite a new member
+-if current_user.owned_teams.include?(@team)
+  %h2 Invite a new member
 
-- form_tag(:action => "create", :controller => "memberships") do
-  = label_tag "Username"
-  = text_field_tag "username"
-  = hidden_field_tag "team_id", @team.id
-  = submit_tag "Invite"
+  - form_tag(:action => "create", :controller => "memberships") do
+    = label_tag "Username"
+    = text_field_tag "username"
+    = hidden_field_tag "team_id", @team.id
+    = submit_tag "Invite"

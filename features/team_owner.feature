@@ -32,10 +32,10 @@ Feature: Team owner tasks
     And I am on the user account page for "neiled"
     Then I should see "Neil's team"
     
-  Scenario: Show if I'm not a member of any team
-    Given I am logged in as the user "neiled"
-    And I am on the user account page for "neiled"
-    Then I should see "not a member of any team"
+  # Scenario: Show if I'm not a member of any team
+  #   Given I am logged in as the user "neiled"
+  #   And I am on the user account page for "neiled"
+  #   Then I should see "not a member of any team"
     
   Scenario: Change the team name
     Given I am logged in as the user "neiled"

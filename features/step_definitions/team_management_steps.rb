@@ -20,6 +20,12 @@ Given /^the user "([^\"]*)" is a member of the team "([^\"]*)"$/ do |login, team
   User.find_by_login(login).memberships.create(:team_id => Team.find_by_name(team_name), :accepted_at => DateTime.now)
 end
 
+Given /^the user "([^\"]*)" has the status "([^\"]*)"$/ do |login, status|
+  user = User.find_by_login(login)
+  user.update_attribute(:current_task,status)
+end
+
+
 
 
 Then /^the user "([^\"]*)" should have an invite to the team "([^\"]*)"$/ do |login, team|

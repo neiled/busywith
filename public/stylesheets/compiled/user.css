@@ -1,21 +1,21 @@
 /*
 Sass::SyntaxError: Undefined mixin 'notice'.
-on line 46 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/user.sass
+on line 54 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/user.sass
 
-42:   :margin-bottom 1em
-43:   :width 600px
-44: 
-45: #invites
-46:   +notice
-47:   
-48: .remove_membership
-49:   :font-size 0.5em
-50:   :font-style italic
-51:   :color #CCCCCC
+50:   :margin-bottom 1em
+51:   :width 600px
+52: 
+53: #invites
+54:   +notice
+55:   
+56: .remove_membership
+57:   :font-size 0.5em
+58:   :font-style italic
+59:   :color #CCCCCC
 
 
 Backtrace:
-/Users/neil/Development/Rails/Projects/busywith/app/stylesheets/user.sass:46
+/Users/neil/Development/Rails/Projects/busywith/app/stylesheets/user.sass:54
 /usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.24/lib/sass/tree/mixin_node.rb:27:in `_perform'
 /usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.24/lib/sass/tree/node.rb:154:in `perform'
 /usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.24/lib/sass/tree/node.rb:198:in `perform_children'
@@ -45,9 +45,9 @@ Backtrace:
 /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
 /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
 /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
-/usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.2/vendor/rack-1.0.0-git/lib/rack/head.rb:9:in `call'
-/usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.2/vendor/rack-1.0.0-git/lib/rack/head.rb:9:in `call'
-/usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.2/vendor/rack-1.0.0-git/lib/rack/methodoverride.rb:24:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
 /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
 /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
 /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/abstract_store.rb:122:in `call'
@@ -56,37 +56,70 @@ Backtrace:
 /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
 /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
 /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
-/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
 /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
-/usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.2/vendor/rack-1.0.0-git/lib/rack/lock.rb:11:in `call'
-/usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.2/vendor/rack-1.0.0-git/lib/rack/lock.rb:11:in `synchronize'
-/usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.2/vendor/rack-1.0.0-git/lib/rack/lock.rb:11:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
 /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
-/usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.2/lib/phusion_passenger/rack/request_handler.rb:81:in `process_request'
-/usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.2/lib/phusion_passenger/abstract_request_handler.rb:203:in `main_loop'
-/usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.2/lib/phusion_passenger/railz/application_spawner.rb:340:in `start_request_handler'
-/usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.2/lib/phusion_passenger/railz/application_spawner.rb:298:in `handle_spawn_application'
-/usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.2/lib/phusion_passenger/utils.rb:181:in `safe_fork'
-/usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.2/lib/phusion_passenger/railz/application_spawner.rb:296:in `handle_spawn_application'
-/usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.2/lib/phusion_passenger/abstract_server.rb:337:in `__send__'
-/usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.2/lib/phusion_passenger/abstract_server.rb:337:in `main_loop'
-/usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.2/lib/phusion_passenger/abstract_server.rb:187:in `start_synchronously'
-/usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.2/lib/phusion_passenger/abstract_server.rb:154:in `start'
-/usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.2/lib/phusion_passenger/railz/application_spawner.rb:192:in `start'
-/usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.2/lib/phusion_passenger/spawn_manager.rb:257:in `spawn_rails_application'
-/usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.2/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
-/usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.2/lib/phusion_passenger/spawn_manager.rb:251:in `spawn_rails_application'
-/usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.2/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
-/usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.2/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
-/usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.2/lib/phusion_passenger/spawn_manager.rb:250:in `spawn_rails_application'
-/usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.2/lib/phusion_passenger/spawn_manager.rb:153:in `spawn_application'
-/usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.2/lib/phusion_passenger/spawn_manager.rb:282:in `handle_spawn_application'
-/usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.2/lib/phusion_passenger/abstract_server.rb:337:in `__send__'
-/usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.2/lib/phusion_passenger/abstract_server.rb:337:in `main_loop'
-/usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.2/lib/phusion_passenger/abstract_server.rb:187:in `start_synchronously'
-/usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.2/bin/passenger-spawn-server:61
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lint.rb:47:in `_call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lint.rb:35:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/integration.rb:320:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/integration.rb:196:in `get'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/integration.rb:498:in `__send__'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/integration.rb:498:in `get'
+/usr/local/lib/ruby/gems/1.8/gems/webrat-0.4.4/lib/webrat/rails.rb:70:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/webrat-0.4.4/lib/webrat/rails.rb:70:in `do_request'
+/usr/local/lib/ruby/gems/1.8/gems/webrat-0.4.4/lib/webrat/rails.rb:35:in `get'
+/usr/local/lib/ruby/gems/1.8/gems/webrat-0.4.4/lib/webrat/core/session.rb:106:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/webrat-0.4.4/lib/webrat/core/session.rb:106:in `request_page'
+/usr/local/lib/ruby/gems/1.8/gems/webrat-0.4.4/lib/webrat/core/session.rb:205:in `visit'
+(eval):2:in `visit'
+./features/step_definitions/team_owner_steps.rb:2
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/core_ext/instance_exec.rb:20:in `instance_exec'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/core_ext/instance_exec.rb:20:in `cucumber_instance_exec'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/core_ext/instance_exec.rb:38:in `cucumber_run_with_backtrace_filtering'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/core_ext/instance_exec.rb:10:in `cucumber_instance_exec'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/step_definition.rb:105:in `invoke'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/step_match.rb:16:in `invoke'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/world.rb:16:in `Given'
+./features/step_definitions/team_management_steps.rb:6
+./features/step_definitions/team_management_steps.rb:3:in `each'
+./features/step_definitions/team_management_steps.rb:3
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/core_ext/instance_exec.rb:20:in `instance_exec'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/core_ext/instance_exec.rb:20:in `cucumber_instance_exec'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/core_ext/instance_exec.rb:38:in `cucumber_run_with_backtrace_filtering'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/core_ext/instance_exec.rb:10:in `cucumber_instance_exec'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/step_definition.rb:105:in `invoke'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/step_match.rb:16:in `invoke'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/ast/step_invocation.rb:36:in `invoke'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/ast/step_invocation.rb:22:in `accept'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/ast/visitor.rb:78:in `visit_step'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/ast/step_collection.rb:14:in `accept'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/ast/step_collection.rb:13:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/ast/step_collection.rb:13:in `accept'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/ast/visitor.rb:74:in `visit_steps'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/ast/scenario.rb:31:in `accept'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/step_mother.rb:260:in `before_and_after'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/ast/scenario.rb:30:in `accept'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/ast/visitor.rb:45:in `visit_feature_element'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/ast/feature.rb:24:in `accept'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/ast/feature.rb:23:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/ast/feature.rb:23:in `accept'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/ast/visitor.rb:23:in `visit_feature'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/ast/features.rb:24:in `accept'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/ast/features.rb:23:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/ast/features.rb:23:in `accept'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/ast/visitor.rb:19:in `visit_features'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/formatter/progress.rb:15:in `visit_features'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/broadcaster.rb:9:in `__send__'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/broadcaster.rb:9:in `method_missing'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/broadcaster.rb:8:in `map'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/broadcaster.rb:8:in `method_missing'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/cli/main.rb:54:in `execute!'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/cli/main.rb:25:in `execute'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/cucumber:9
 */
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Sass::SyntaxError: Undefined mixin 'notice'.\A on line 46 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/user.sass\A \A 42:   :margin-bottom 1em\A 43:   :width 600px\A 44: \A 45: #invites\A 46:   +notice\A 47:   \A 48: .remove_membership\A 49:   :font-size 0.5em\A 50:   :font-style italic\A 51:   :color #CCCCCC\A "; }
+  content: "Sass::SyntaxError: Undefined mixin 'notice'.\A on line 54 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/user.sass\A \A 50:   :margin-bottom 1em\A 51:   :width 600px\A 52: \A 53: #invites\A 54:   +notice\A 55:   \A 56: .remove_membership\A 57:   :font-size 0.5em\A 58:   :font-style italic\A 59:   :color #CCCCCC\A "; }

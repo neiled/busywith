@@ -12,11 +12,11 @@ class MembershipsController < ApplicationController
       flash[:error] = "Unknown user."
       redirect_to(@team)
     else
-      @membership = @user.memberships.build(:team_id => @team, :user_id => @user)
+      @membership = @user.memberships.build(:team_id => @team.id, :user_id => @user.id)
       if @membership.save
         flash[:notice] = "Invited user."
       else
-        flash[:error] = @membership.errors
+        flash[:error] = @membership.errors.full_messages
       end
         redirect_to @team
     end
@@ -25,12 +25,8 @@ class MembershipsController < ApplicationController
   def accept
     @membership = current_user.invites.find_by_id(params[:membership_id])
     unless @membership.nil?
-      @membership.accepted_at = DateTime.now
-      if @membership.save
-        flash[:notice] = "Invite Accepted"
-      else
-        flash[:error] = @membership.errors
-      end
+      @membership.update_attribute(:accepted_at, DateTime.now)
+      flash[:notice] = "Invite Accepted"
     else
       flash[:error] = "That invite does not exist"
     end

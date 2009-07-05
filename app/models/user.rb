@@ -28,5 +28,15 @@ class User < ActiveRecord::Base
   has_many :owned_teams, :through => :memberships, :source => "team", :class_name => "Team",
     :conditions => { :memberships => {:is_administrator => true} }
     
+  has_many :histories, :order => "created_at desc", :limit => 5
+    
   validates_numericality_of :percent_complete, :on => :update, :message => "is not a number"
+  
+  before_create :setup_defaults
+  
+  private
+  
+  def setup_defaults
+    self.percent_complete = 0
+  end
 end

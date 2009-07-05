@@ -1,3 +1,3 @@
 #flash
-- flash.each do |key, value|
-  %div{:id => "flash_#{key}"}= value
+  - flash.each do |key, value|
+    %div{:id => "flash_#{key}", :class => "flash_message"}= value

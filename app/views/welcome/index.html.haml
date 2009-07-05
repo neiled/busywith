@@ -6,3 +6,5 @@
   
 #status
   Here we will have a list of statuses for the teams the user is a member of, as long as they're logged in.
+  
+  =render :partial => "status", :collection => current_user.collegues unless current_user.nil?
