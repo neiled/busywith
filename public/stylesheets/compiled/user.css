@@ -1,21 +1,22 @@
 /*
-Sass::SyntaxError: Undefined mixin 'notice'.
-on line 53 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/user.sass
+Sass::SyntaxError: Undefined mixin 'quiet'.
+on line 65 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/user.sass
 
-49:   :margin-bottom 1em
-50:   :width 600px
-51: 
-52: #invites
-53:   +notice
-54:   
-55: .remove_membership
-56:   :font-size 0.5em
-57:   :font-style italic
-58:   :color #CCCCCC
+61:   ::display inline
+62:   
+63: .history_time
+64:   :font-size 0.7em
+65:   +quiet
+66: 
+67: #status_update, #owned_teams, #memberships, #invites
+68:   :padding 1em
+69:   :border-style solid 
+70:   :border-color = black
+71:   :border-width 1px
 
 
 Backtrace:
-/Users/neil/Development/Rails/Projects/busywith/app/stylesheets/user.sass:53
+/Users/neil/Development/Rails/Projects/busywith/app/stylesheets/user.sass:65
 /usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.53/lib/sass/tree/mixin_node.rb:27:in `_perform'
 /usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.53/lib/sass/tree/node.rb:156:in `perform'
 /usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.53/lib/sass/tree/node.rb:200:in `perform_children'
@@ -73,9 +74,14 @@ Backtrace:
 /usr/local/lib/ruby/gems/1.8/gems/webrat-0.4.4/lib/webrat/rails.rb:35:in `get'
 /usr/local/lib/ruby/gems/1.8/gems/webrat-0.4.4/lib/webrat/core/session.rb:106:in `send'
 /usr/local/lib/ruby/gems/1.8/gems/webrat-0.4.4/lib/webrat/core/session.rb:106:in `request_page'
-/usr/local/lib/ruby/gems/1.8/gems/webrat-0.4.4/lib/webrat/core/session.rb:205:in `visit'
-(eval):2:in `visit'
-./features/step_definitions/team_owner_steps.rb:10
+/usr/local/lib/ruby/gems/1.8/gems/webrat-0.4.4/lib/webrat/core/session.rb:120:in `request_page'
+/usr/local/lib/ruby/gems/1.8/gems/webrat-0.4.4/lib/webrat/core/elements/form.rb:20:in `submit'
+/usr/local/lib/ruby/gems/1.8/gems/webrat-0.4.4/lib/webrat/core/elements/field.rb:203:in `click'
+/usr/local/lib/ruby/gems/1.8/gems/webrat-0.4.4/lib/webrat/core/scope.rb:275:in `click_button'
+(__FORWARDABLE__):3:in `__send__'
+(__FORWARDABLE__):3:in `click_button'
+(eval):2:in `click_button'
+./features/step_definitions/team_owner_steps.rb:16
 /usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/core_ext/instance_exec.rb:20:in `instance_exec'
 /usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/core_ext/instance_exec.rb:20:in `cucumber_instance_exec'
 /usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/core_ext/instance_exec.rb:38:in `cucumber_run_with_backtrace_filtering'
@@ -113,4 +119,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Sass::SyntaxError: Undefined mixin 'notice'.\A on line 53 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/user.sass\A \A 49:   :margin-bottom 1em\A 50:   :width 600px\A 51: \A 52: #invites\A 53:   +notice\A 54:   \A 55: .remove_membership\A 56:   :font-size 0.5em\A 57:   :font-style italic\A 58:   :color #CCCCCC\A "; }
+  content: "Sass::SyntaxError: Undefined mixin 'quiet'.\A on line 65 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/user.sass\A \A 61:   ::display inline\A 62:   \A 63: .history_time\A 64:   :font-size 0.7em\A 65:   +quiet\A 66: \A 67: #status_update, #owned_teams, #memberships, #invites\A 68:   :padding 1em\A 69:   :border-style solid \A 70:   :border-color = black\A 71:   :border-width 1px\A "; }

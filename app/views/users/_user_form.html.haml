@@ -7,13 +7,14 @@
       %br
       - if  @user.all_teams.count > 0 
         = f.label :project_id
-        = f.collection_select :project_id, @user.projects, :id, :name
+        = f.collection_select :project_id, @user.projects, :id, :name, {:include_blank => true}
       %br
       = f.label :percent_complete, "Percent Complete"
       #progress_slider
       = text_field :user, :percent_complete, :id => :percent_complete, :value => @user.percent_complete.to_i.to_s
-      / = f.label :estimated_completion
-      / = text_field :user, :estimated_completion, :id => :estimated_completion, :value => @user.estimated_completion
+      %br
+      = f.label :estimated_completion, "Due"
+      = text_field :user, :estimated_completion, :value => due_date(@user)#.estimated_completion.nil? ? "" : @user.estimated_completion.strftime("%m/%d/%Y") 
       %br
       .submit
         = f.submit "Update", :disable_with => 'Updating Status...'  

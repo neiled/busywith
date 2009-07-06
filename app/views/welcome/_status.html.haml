@@ -3,13 +3,19 @@
     .user_name
       = link_to status.login, profile_url(status.login)
     .user_task
-      = status.current_task
+      = status.current_task || "No task set"
     .user_project
       - unless status.active_project.nil?
         = status.active_project.name
       - else
-        = "No project chosen"
+        = "No project set"
     - unless status.percent_complete.nil?
       .user_percent_complete
         %img{:class => "percentImage", :src => "/images/percentImage.png", :alt => "#{status.percent_complete}", :style => "background-position: -#{((123/100)*(100-(status.percent_complete)))}px 0pt"}
         = number_to_percentage(status.percent_complete.to_i, :precision => 0)
+    .user_estimated_completion
+      - unless status.estimated_completion.nil?
+        = due_date(status)
+      -else
+        = "No due date"
+        

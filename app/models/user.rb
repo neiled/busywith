@@ -31,6 +31,10 @@ class User < ActiveRecord::Base
   has_many :histories, :order => "created_at desc", :limit => 5
     
   validates_numericality_of :percent_complete, :on => :update, :message => "is not a number"
+  validates_date :estimated_completion, :on_or_after => Proc.new {DateTime.now.to_date},
+                                        :on_or_after_message => 'must be in the future',
+                                        :allow_blank => true
+  validates_length_of :current_task, :maximum => 50, :allow_blank => true
   
   before_create :setup_defaults
   

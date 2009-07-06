@@ -1,45 +1,46 @@
 /*
 Sass::SyntaxError: Undefined mixin 'notice'.
-on line 9 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/home.sass
+on line 6 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/home.sass
 
-5:   :padding 1em
-6:   :width 15em
-7:   :font-size 0.7em
-8:   :margin-top 1em
-9:   +notice
-10:   
-11: .user_project
-12:   :font-style italic
-13:   
-14: img.percentImage
-15:   :background white url(/images/percentImage_back.png) top left no-repeat
+2:   :font-size 0.7em
+3:   :width 15em
+4:   :padding 1em
+5:   :margin-top 1em
+6:   +notice
+7: 
+8: 
+9:   
+10: .user_project
+11:   :font-style italic
+12:   
 
 
 Backtrace:
-/Users/neil/Development/Rails/Projects/busywith/app/stylesheets/home.sass:9
-/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.24/lib/sass/tree/mixin_node.rb:27:in `_perform'
-/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.24/lib/sass/tree/node.rb:154:in `perform'
-/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.24/lib/sass/tree/node.rb:198:in `perform_children'
-/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.24/lib/sass/tree/node.rb:198:in `map'
-/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.24/lib/sass/tree/node.rb:198:in `perform_children'
-/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.24/lib/sass/tree/node.rb:189:in `perform!'
-/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.24/lib/sass/tree/rule_node.rb:156:in `perform!'
-/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.24/lib/sass/tree/node.rb:177:in `_perform'
-/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.24/lib/sass/tree/node.rb:154:in `perform'
-/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.24/lib/sass/tree/node.rb:198:in `perform_children'
-/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.24/lib/sass/tree/node.rb:198:in `map'
-/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.24/lib/sass/tree/node.rb:198:in `perform_children'
-/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.24/lib/sass/tree/node.rb:189:in `perform!'
-/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.24/lib/sass/tree/node.rb:177:in `_perform'
-/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.24/lib/sass/tree/node.rb:154:in `perform'
-/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.24/lib/sass/tree/node.rb:103:in `render'
-/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.24/lib/sass/plugin.rb:83:in `update_stylesheet'
-/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.24/lib/sass/plugin.rb:69:in `update_stylesheets'
-/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.24/lib/sass/plugin.rb:64:in `each'
-/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.24/lib/sass/plugin.rb:64:in `update_stylesheets'
-/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.24/lib/sass/plugin.rb:62:in `each'
-/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.24/lib/sass/plugin.rb:62:in `update_stylesheets'
-/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.24/lib/sass/plugin/rails.rb:16:in `process'
+/Users/neil/Development/Rails/Projects/busywith/app/stylesheets/home.sass:6
+/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.53/lib/sass/tree/mixin_node.rb:27:in `_perform'
+/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.53/lib/sass/tree/node.rb:156:in `perform'
+/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.53/lib/sass/tree/node.rb:200:in `perform_children'
+/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.53/lib/sass/tree/node.rb:200:in `map'
+/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.53/lib/sass/tree/node.rb:200:in `perform_children'
+/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.53/lib/sass/tree/node.rb:191:in `perform!'
+/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.53/lib/sass/tree/rule_node.rb:156:in `perform!'
+/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.53/lib/sass/tree/node.rb:179:in `_perform'
+/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.53/lib/sass/tree/node.rb:156:in `perform'
+/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.53/lib/sass/tree/node.rb:200:in `perform_children'
+/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.53/lib/sass/tree/node.rb:200:in `map'
+/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.53/lib/sass/tree/node.rb:200:in `perform_children'
+/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.53/lib/sass/tree/node.rb:191:in `perform!'
+/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.53/lib/sass/tree/node.rb:179:in `_perform'
+/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.53/lib/sass/tree/node.rb:156:in `perform'
+/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.53/lib/sass/tree/node.rb:103:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.53/lib/sass/plugin.rb:83:in `update_stylesheet'
+/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.53/lib/sass/plugin.rb:69:in `update_stylesheets'
+/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.53/lib/sass/plugin.rb:64:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.53/lib/sass/plugin.rb:64:in `update_stylesheets'
+/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.53/lib/sass/plugin.rb:62:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.53/lib/sass/plugin.rb:62:in `update_stylesheets'
+/usr/local/lib/ruby/gems/1.8/gems/haml-edge-2.1.53/lib/sass/plugin/rails.rb:16:in `process_without_compass'
+/usr/local/lib/ruby/gems/1.8/gems/chriseppstein-compass-0.8.2/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
 /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
 /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
 /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
@@ -80,7 +81,17 @@ Backtrace:
 (__FORWARDABLE__):3:in `__send__'
 (__FORWARDABLE__):3:in `click_button'
 (eval):2:in `click_button'
-./features/step_definitions/webrat_steps.rb:15
+./features/step_definitions/team_owner_steps.rb:4
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/core_ext/instance_exec.rb:20:in `instance_exec'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/core_ext/instance_exec.rb:20:in `cucumber_instance_exec'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/core_ext/instance_exec.rb:38:in `cucumber_run_with_backtrace_filtering'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/core_ext/instance_exec.rb:10:in `cucumber_instance_exec'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/step_definition.rb:105:in `invoke'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/step_match.rb:16:in `invoke'
+/usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/world.rb:16:in `Given'
+./features/step_definitions/team_management_steps.rb:6
+./features/step_definitions/team_management_steps.rb:3:in `each'
+./features/step_definitions/team_management_steps.rb:3
 /usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/core_ext/instance_exec.rb:20:in `instance_exec'
 /usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/core_ext/instance_exec.rb:20:in `cucumber_instance_exec'
 /usr/local/lib/ruby/gems/1.8/gems/cucumber-0.3.11/bin/../lib/cucumber/core_ext/instance_exec.rb:38:in `cucumber_run_with_backtrace_filtering'
@@ -118,4 +129,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Sass::SyntaxError: Undefined mixin 'notice'.\A on line 9 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/home.sass\A \A 5:   :padding 1em\A 6:   :width 15em\A 7:   :font-size 0.7em\A 8:   :margin-top 1em\A 9:   +notice\A 10:   \A 11: .user_project\A 12:   :font-style italic\A 13:   \A 14: img.percentImage\A 15:   :background white url(/images/percentImage_back.png) top left no-repeat\A "; }
+  content: "Sass::SyntaxError: Undefined mixin 'notice'.\A on line 6 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/home.sass\A \A 2:   :font-size 0.7em\A 3:   :width 15em\A 4:   :padding 1em\A 5:   :margin-top 1em\A 6:   +notice\A 7: \A 8: \A 9:   \A 10: .user_project\A 11:   :font-style italic\A 12:   \A "; }

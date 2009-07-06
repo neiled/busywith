@@ -16,3 +16,4 @@ public/stylesheets/*_[0-9]*.css
 public/attachments
 coverage.data
 .sass-cache/
+tmp/restart.txt

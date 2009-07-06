@@ -15,16 +15,30 @@ Feature: Workers should be able to create a team
     And I press "Create Team"
     Then the user "neiled" should be an administrator of a team called "Neil's team"
 
-  Scenario: Update my status when in a team
+  Scenario: Update current task
     Given I am logged in as the user "neiled"
     And I have a team called "Neil's team" with a project called "Test Project"
     And I am on the user account page for "neiled"    
     When I fill in "Current Task" with "Performing a test"
-    And I select "Test Project" from "Project"
     And I press "Update"
     Then the "Current Task" field should contain "Performing a test"
-    And "Test Project" should be selected for "Project"
     And I should see "Status Updated"
 
-  
+  Scenario: Update current project
+    Given I am logged in as the user "neiled"
+    And I have a team called "Neil's team" with a project called "Test Project"
+    And I am on the user account page for "neiled"    
+    When I select "Test Project" from "Project"
+    And I press "Update"
+    Then "Test Project" should be selected for "Project"
+    And I should see "Status Updated"
+
+  Scenario: Update estimated completion
+    Given I am logged in as the user "neiled"
+    And I have a team called "Neil's team" with a project called "Test Project"
+    And I am on the user account page for "neiled"    
+    When I fill in "Due" with "01/01/2010"
+    And I press "Update"
+    Then the "Due" field should contain "01/01/2010"    
+    And I should see "Status Updated"  
   

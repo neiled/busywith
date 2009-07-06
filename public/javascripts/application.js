@@ -1,3 +1,4 @@
+Date.format = 'mm/dd/yyyy';
 $(document).ready(function() {
   var current_color = $(".flash_message").css("color");
   //alert("here");

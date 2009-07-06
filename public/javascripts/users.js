@@ -9,4 +9,6 @@ $(document).ready(function(){
     slide: function(event, ui) {$("#percent_complete").val(ui.value);}
   });
   $("#progress_slider").slider("value", $("#percent_complete").val());
+  
+  $("#user_estimated_completion").datePicker();
 });

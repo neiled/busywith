@@ -426,20 +426,11 @@ input.text, input.title { width: 300px; }
 
 textarea { width: 390px; height: 250px; }
 
-
-.box { padding: 1.5em; margin-bottom: 1.5em; background: #E5ECF9; }
-
-div.border { padding-right: 4px; margin-right: 5px; border-right: 1px solid #eeeeee; }
-
-div.colborder { padding-right: 4px; margin-right: 5px; border-right: 1px solid #eeeeee; }
-
-hr { background: #ddd; color: #ddd; clear: both; float: none; width: 100%; height: .1em; margin: 0 0 1.45em; border: none; }
-
-hr.space { background: #ddd; color: #ddd; clear: both; float: none; width: 100%; height: .1em; margin: 0 0 1.45em; border: none; background: #fff; color: #fff; }
-
 h1 { font-size: 2em; }
 
 h2 { font-size: 1.2em; }
+
+input.text, input.title, input[type="text"] { margin: 0em; }
 
 #container { width: 950px; margin: 0 auto; overflow: hidden; display: inline-block; }
 #container { display: block; }
@@ -468,17 +459,22 @@ h2 { font-size: 1.2em; }
 
 .edit_user { background-color: lightblue; width: 500px; padding: 0.5em; }
 .edit_user label { font-size: 0.7em; width: 10em; float: left; text-align: right; margin-right: 0.5em; display: block; }
-.edit_user input, .edit_user select { margin-left: 4.5em; }
-.edit_user .submit { margin-left: 7.2em; }
+.edit_user select { font-size: 0.7em; width: 10em; margin-left: 3.2em; }
+.edit_user input { margin-left: 4.5em; }
+.edit_user .submit { margin-left: 7.2em; margin-top: 1em; }
 
 #progress_slider { width: 20em; margin-left: 1em; font-size: 0.5em; float: left; margin-left: 4.5em; margin-top: 0.5em; }
 
-#percent_complete { width: 3em; float: left; margin-left: 1em; border-style: none; font-size: 0.8em; background-color: inherit; }
+#percent_complete { width: 3em; float: left; margin: 0em 0em 0em 1em; padding: 0px; border-style: none; background-color: inherit; font-size: 0.8em; }
+
+#user_estimated_completion { width: 10em; float: left; }
+
+a.dp-choose-date { float: left; font-size: 0.5em; background-image: url('/images/calendar.png'); text-indent: -2000px; overflow: hidden; margin-top: 0.5em; margin-left: 1em; display: block; height: 16px; width: 16px; }
 
 #history { font-size: 0.7em; }
 
 
-.history_time { font-size: 0.7em; font-style: italic; color: #CCCCCC; }
+.history_time { font-size: 0.7em; color: #666666; }
 
 #status_update, #owned_teams, #memberships, #invites { padding: 1em; border-style: solid; border-color: black; border-width: 1px; margin-bottom: 1em; width: 600px; }
 
@@ -487,9 +483,11 @@ h2 { font-size: 1.2em; }
 
 .remove_membership { font-size: 0.5em; font-style: italic; color: #CCCCCC; }
 
-.user_status { border-style: solid; border-color: black; border-width: 1px; padding: 1em; width: 15em; font-size: 0.7em; margin-top: 1em; padding: .8em; margin-bottom: 1em; border: 2px solid #dddddd; background: #fff6bf; color: #514721; border-color: #ffd324; }
+.user_status { font-size: 0.7em; width: 15em; padding: 1em; margin-top: 1em; padding: .8em; margin-bottom: 1em; border: 2px solid #dddddd; background: #fff6bf; color: #514721; border-color: #ffd324; }
 .user_status a { color: #514721; }
 
 .user_project { font-style: italic; }
+
+.user_estimated_completion { font-size: 0.8em; font-style: italic; color: #666666; }
 
 img.percentImage { background: white url(/images/percentImage_back.png) top left no-repeat; padding: 0; margin: 5px 0 0 0; background-position: 1px 0; }
