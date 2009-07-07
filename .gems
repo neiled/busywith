@@ -1,5 +1,5 @@
 authlogic --version 2.1.1
-chriseppstein-compass --version 0.8.2 --source http://gems.github.com
 ham-edge --version 2.1.53
+chriseppstein-compass --version 0.8.2 --source http://gems.github.com
 newrelic_rpm --version 2.9.2
 validates_timeliness --version 2.1.0
