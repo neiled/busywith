@@ -2,12 +2,6 @@
   %script{ 'type' => "text/javascript", :src   => "/javascripts/users.js" }
   
 
-#owner_name
-  - unless current_user == @user
-    This is the account page for
-    = @user.login
-
-
 = render :partial => 'user_form'
 
 
