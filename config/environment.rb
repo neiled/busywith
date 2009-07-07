@@ -9,10 +9,7 @@ require File.join(File.dirname(__FILE__), 'boot')
 Rails::Initializer.run do |config|
   config.gem 'authlogic'
   config.gem 'chriseppstein-compass', :lib => 'compass', :source => 'http://gems.github.com'
-  config.gem 'haml-edge', :lib => 'haml'
-  config.gem "justinfrench-formtastic", 
-    :lib     => 'formtastic', 
-    :source  => 'http://gems.github.com'
+  config.gem 'haml', :lib => 'haml'
   config.gem "newrelic_rpm"
   config.gem 'validates_timeliness'
   # Settings in config/environments/* take precedence over those specified here.
