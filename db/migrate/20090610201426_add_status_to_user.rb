@@ -2,7 +2,7 @@ class AddStatusToUser < ActiveRecord::Migration
   def self.up
     add_column :users, :current_task, :string
     add_column :users, :project_id, :integer
-    add_column :users, :percent_complete, :double
+    add_column :users, :percent_complete, :float
   end
 
   def self.down
