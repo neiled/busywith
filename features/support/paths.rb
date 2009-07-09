@@ -18,7 +18,7 @@ module NavigationHelpers
       profile_path(:login => $1)
       
     when /the login page/
-      login_path
+      signin_path
       
     when /the new team page/
       new_team_path

@@ -3,8 +3,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users, :except => ["index"]
   map.resources :user_sessions
   
-  map.login 'login', :controller => 'user_sessions', :action => "new"
-  map.logout 'logout', :controller => 'user_sessions', :action => "destroy"
+  map.signin 'signin', :controller => 'user_sessions', :action => "new"
+  map.signout 'signout', :controller => 'user_sessions', :action => "destroy"
   
   map.profile '/profile/:login', :controller => 'users', :action => 'show', :login => /.*/
                                                 

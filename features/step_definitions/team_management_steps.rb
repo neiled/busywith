@@ -5,7 +5,7 @@ Given /^the following users$/ do |table|
     unless hash[:team].nil?
       Given "I have a team called \"#{hash[:team]}\""
     end
-    click_link "log out"
+    click_link "Sign out"
   end
 end
 

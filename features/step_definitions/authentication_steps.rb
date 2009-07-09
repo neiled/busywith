@@ -3,10 +3,10 @@ Then /^there should be ([0-9]+) users*$/ do |count|
 end
 
 Given /^I am logged in as the user "([^\"]*)"$/ do |login|
-  visit login_url
+  visit signin_url
   fill_in "login", :with => login
   fill_in "password", :with => "password"
-  click_button "Login"
+  click_button "Sign in"
 end
 
 Then /^I should be logged out$/ do
@@ -19,5 +19,5 @@ Given /^I have a user with the username "([^\"]*)" and the password "([^\"]*)"$/
   fill_in "email", :with => login + "@plasticwater.com"
   fill_in "password", :with => password
   fill_in "password confirmation", :with => password
-  click_button "Create Account"
+  click_button "Sign up"
 end

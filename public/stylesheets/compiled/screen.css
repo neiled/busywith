@@ -430,7 +430,9 @@ h1 { font-size: 2em; }
 
 h2 { font-size: 1.2em; }
 
-input.text, input.title, input[type="text"] { margin: 0em; }
+input.text, input.title, input[type="text"], input[type="password"] { margin: 0em; padding: 5px; }
+
+input { border-style: solid; border-color: black; border-width: 1px; }
 
 #container { width: 950px; margin: 0 auto; overflow: hidden; display: inline-block; }
 #container { display: block; }
@@ -457,6 +459,14 @@ input.text, input.title, input[type="text"] { margin: 0em; }
 .rss_feed { display: inline; float: left; margin-right: 10px; width: 590px; float: right; }
 * html .rss_feed { overflow-x: hidden; }
 
+.errorExplanation { padding: .8em; margin-bottom: 1em; border: 2px solid #dddddd; background: #fbe3e4; color: #8a1f11; border-color: #fbc2c4; }
+.errorExplanation a { color: #8a1f11; }
+.errorExplanation p { margin: 0 0 0.5em; }
+.errorExplanation h2 { font-size: 1em; }
+.errorExplanation li { font-size: 0.8em; }
+
+.fieldWithErrors input { background-color: rgb(251, 227, 228); }
+
 .edit_user { background-color: lightblue; width: 500px; padding: 0.5em; }
 .edit_user label { font-size: 0.7em; width: 10em; float: left; text-align: right; margin-right: 0.5em; display: block; }
 .edit_user select { font-size: 0.7em; width: 10em; margin-left: 3.2em; }
@@ -482,6 +492,12 @@ a.dp-choose-date { float: left; font-size: 0.5em; background-image: url('/images
 #invites a { color: #514721; }
 
 .remove_membership { font-size: 0.5em; font-style: italic; color: #CCCCCC; }
+
+fieldset.signup, fieldset.signin { width: 30em; margin: 0; padding: 0; border-style: none; }
+fieldset.signup ul, fieldset.signin ul { list-style: none; margin: 0; padding: 0; }
+fieldset.signup li, fieldset.signin li { margin-bottom: 1em; }
+fieldset.signup label, fieldset.signin label { float: left; width: 10em; text-align: right; padding-right: 1em; }
+fieldset.signup p.submit, fieldset.signin p.submit { text-align: right; margin-right: 9em; }
 
 .user_status { font-size: 0.7em; width: 15em; padding: 1em; margin-top: 1em; padding: .8em; margin-bottom: 1em; border: 2px solid #dddddd; background: #fff6bf; color: #514721; border-color: #ffd324; }
 .user_status a { color: #514721; }

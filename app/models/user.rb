@@ -1,6 +1,10 @@
 class User < ActiveRecord::Base
-  acts_as_authentic # for options see documentation: Authlogic::ORMAdapters::ActiveRecordAdapter::ActsAsAuthentic::Config
-  #has_many :owned_teams, :foreign_key => "owner_id", :class_name => "Team"
+  acts_as_authentic do |c|
+
+    c.validates_format_of_login_field_options = {:with => /\A\w[\w\.+\-_@]+\z/, :message => I18n.t('error_messages.login_invalid', :default => "should use only letters, numbers and .-_@ please.")}
+
+  end
+
   belongs_to :active_project, :class_name => "Project", :foreign_key => "project_id"
   has_many :projects, :finder_sql => 'SELECT projects.*
                                       FROM projects

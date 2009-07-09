@@ -3,3 +3,4 @@ haml --version 2.2.0
 chriseppstein-compass --version 0.8.5 --source http://gems.github.com
 newrelic_rpm --version 2.9.2
 validates_timeliness --version 2.1.0
+rubaidh-google_analytics --version 1.1.4 --source http://gems.github.com

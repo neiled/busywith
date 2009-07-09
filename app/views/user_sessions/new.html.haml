@@ -2,5 +2,7 @@
  
 - form_for @user_session do |f|
   = f.error_messages
-  = render :partial => "form", :object => f
-  = f.submit "Login"
+  %fieldset.signin
+    = render :partial => "form", :object => f
+    %p.submit
+      = f.submit "Sign in"

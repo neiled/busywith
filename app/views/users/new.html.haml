@@ -2,5 +2,7 @@
  
 - form_for @user do |f|
   = f.error_messages
-  = render :partial => "form", :object => f
-  = f.submit "Create Account"
+  %fieldset.signup  
+    = render :partial => "form", :object => f
+    %p.submit
+      = f.submit "Sign up"

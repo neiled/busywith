@@ -6,7 +6,7 @@ class UserSessionsController < ApplicationController
   def create
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
-      flash[:notice] = "Logged in"
+      flash[:notice] = "You are now signed in"
       redirect_to(profile_path(:login => @user_session.user.login))
     else
       render :action => "new"
@@ -17,7 +17,7 @@ class UserSessionsController < ApplicationController
     @user_session = UserSession.find
     if @user_session
       @user_session.destroy
-      flash[:notice] = "Logged out."
+      flash[:notice] = "Signed out"
       redirect_to(root_path)
     end
   end
