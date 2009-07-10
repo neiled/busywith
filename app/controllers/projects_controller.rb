@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
-
+  before_filter :require_user
+  
   def new
     @team = Team.find(params[:team_id])
     @project = @team.projects.new

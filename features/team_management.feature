@@ -81,6 +81,12 @@ Feature: Manage teams
     And I press "Invite"
     Then I should see "You do not own that team"     
   
+  Scenario: See a team whilst not logged in
+    Given I am on the team page for "neils"
+    Then I should see "must be signed in"
+  
+  
+  
   
   
 

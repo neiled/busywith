@@ -7,7 +7,7 @@ class UserSessionsController < ApplicationController
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
       flash[:notice] = "You are now signed in"
-      redirect_to(profile_path(:login => @user_session.user.login))
+      redirect_back_or_default(profile_path(:login => @user_session.user.login))
     else
       render :action => "new"
     end

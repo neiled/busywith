@@ -15,8 +15,8 @@
       - @user.invites.each do |invite|
         %li
           = invite.team.name
-          = link_to "Accept", :controller => "memberships", :action => "accept", :membership_id => invite, :class => "accept_membership"
-          = link_to "Ignore", :controller => "memberships", :action => "delete", :membership_id => invite, :class => "remove_membership"
+          = link_to "Accept", invite, :method => "put", :class => "accept_membership"#:controller => "memberships", :action => "accept", :membership_id => invite, :class => "accept_membership"
+          = link_to "Ignore", invite, :method => "delete", :class => "remove_membership"#:membership_id => invite, :class => "remove_membership"
 
 #owned_teams
   - if current_user == @user
@@ -52,4 +52,4 @@
           = link_to membership.team.name, team_url(membership.team)
           &nbsp;
           - unless membership.is_administrator
-            = link_to "Remove", {:controller => "memberships", :action => "delete", :membership_id => membership}, :class => "remove_membership"    
+            = link_to "Remove", membership, :method => "delete", :class => "remove_membership"#{:controller => "memberships", :action => "delete", :membership_id => membership}, :class => "remove_membership"    

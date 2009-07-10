@@ -1,17 +1,6 @@
 class TeamsController < ApplicationController
-  # GET /teams
-  # GET /teams.xml
-  def index
-    @teams = Team.all
+  before_filter :require_user
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @teams }
-    end
-  end
-
-  # GET /teams/1
-  # GET /teams/1.xml
   def show
     @team = Team.find(params[:id])
 
@@ -21,8 +10,6 @@ class TeamsController < ApplicationController
     end
   end
 
-  # GET /teams/new
-  # GET /teams/new.xml
   def new
     @team = Team.new
 
@@ -32,20 +19,17 @@ class TeamsController < ApplicationController
     end
   end
 
-  # GET /teams/1/edit
   def edit
     @team = Team.find(params[:id])
     @new_project = @team.projects.new
   end
 
-  # POST /teams
-  # POST /teams.xml
   def create
     @team = Team.new(params[:team])
     if @team.save
       @membership = Membership.new(:user_id => current_user.id, :team_id => @team.id, :is_administrator => true, :accepted_at => DateTime.now)
       if @membership.save        
-        flash[:notice] = "Team was successfully created for user id #{@team.name} #{@team.id}."
+        flash[:notice] = "Team was successfully created"
         redirect_to(edit_team_path(@team))
         return
       end
@@ -53,8 +37,6 @@ class TeamsController < ApplicationController
     render :action => "new"
   end
 
-  # PUT /teams/1
-  # PUT /teams/1.xml
   def update
     @team = Team.find(params[:id])
 
@@ -68,8 +50,6 @@ class TeamsController < ApplicationController
     end
   end
 
-  # DELETE /teams/1
-  # DELETE /teams/1.xml
   def destroy
     @team = Team.find(params[:id])
     @team.destroy
