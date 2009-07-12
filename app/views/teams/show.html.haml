@@ -1,3 +1,6 @@
+= content_for :unobtrusive_javascript do
+  %script{ 'type' => "text/javascript", :src   => "/javascripts/teams.js" }
+
 %h1
   = h(@team.name.capitalize)
   - if current_user and current_user.owned_teams.include?(@team)
@@ -10,10 +13,18 @@
     %li
       = link_to h(membership.user.login), profile_url(membership.user.login)
       - if current_user.owned_teams.include?(@team) and not membership.is_administrator
-        = link_to "Remove", membership, :method => "delete"#, :controller => "memberships", :membership_id => membership
-%br
-
+        = link_to "Remove", membership, :method => "delete", :class => "remove_membership"
 -if current_user and current_user.owned_teams.include?(@team)
+  %h2 Projects
+  = render :partial => "projects/project_list", :locals => {:team => @team}
+
+  - form_for [@team, @project] do |f|
+    = f.error_messages
+    = f.label :name, "Project Name"
+    = f.text_field :name
+    = f.submit "Add New Project"
+
+  = link_to "Add Project", new_team_project_path(@team)
   %h2 Invite a new member
 
   - form_tag(:action => "create", :controller => "memberships") do

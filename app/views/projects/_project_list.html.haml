@@ -1,0 +1,7 @@
+#project_list
+  %ul
+    - team.projects.each do | project|
+      - if project.id.nil? == false
+        %li
+          = h(project.name)
+          = link_to "Delete Project", project_url(project), :method => "delete", :class => "remove_project"

@@ -1,0 +1,5 @@
+$("#flash_notice").remove()
+$("#flash_error").remove()
+$("#project_list").html("<%= escape_javascript(render :partial => 'project_list', :locals => { :team => @team}) %>");
+$("#project_list").after('<%= if flash[:notice] then "<div id=\"flash_notice\">#{escape_javascript(flash.delete(:notice))}</div>" end %>');
+$("#project_list").after('<%= if flash[:error] then "<div id=\"flash_error\">#{escape_javascript(flash.delete(:error))}</div>" end %>');

@@ -491,7 +491,7 @@ a.dp-choose-date { float: left; font-size: 0.5em; background-image: url('/images
 #invites { padding: .8em; margin-bottom: 1em; border: 2px solid #dddddd; background: #fff6bf; color: #514721; border-color: #ffd324; }
 #invites a { color: #514721; }
 
-.remove_membership { font-size: 0.5em; font-style: italic; color: #CCCCCC; }
+.remove_membership, .remove_project { font-size: 0.5em; font-style: italic; color: #CCCCCC; }
 
 fieldset.signup, fieldset.signin { width: 30em; margin: 0; padding: 0; border-style: none; }
 fieldset.signup ul, fieldset.signin ul { list-style: none; margin: 0; padding: 0; }

@@ -3,6 +3,7 @@ class TeamsController < ApplicationController
 
   def show
     @team = Team.find(params[:id])
+    @project = @team.projects.new
 
     respond_to do |format|
       format.html # show.html.erb
