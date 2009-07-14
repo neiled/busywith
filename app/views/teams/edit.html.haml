@@ -7,11 +7,37 @@
   = f.text_field :name
   = f.submit "Change Name", :disable_with => 'Changing Name...'
 
-%h2 Projects
+/ %h2 Projects
+/ 
+/ - @team.projects.each do | project|
+/   = h(project.name)
+/   = link_to "Delete Project", project_url(project), :method => "delete"
+/ 
+/ = link_to "Add Project", new_team_project_path(@team)
 
-- @team.projects.each do | project|
-  = h(project.name)
-  = link_to "Delete Project", project_url(project), :method => "delete"
+%h2 Members
+%ul
+  - @team.memberships.each do |membership|
+    %li
+      = link_to h(membership.user.login), profile_url(membership.user.login)
+      - if current_user.owned_teams.include?(@team) and not membership.is_administrator
+        = link_to "Remove", membership, :method => "delete", :class => "remove_membership"
 
-= link_to "Add Project", new_team_project_path(@team)
+-if current_user and current_user.owned_teams.include?(@team)
+  %h2 Projects
+  = render :partial => "projects/project_list", :locals => {:team => @team}
 
+  - form_for [@team, @new_project] do |f|
+    = f.error_messages
+    = f.label :name, "Project Name"
+    = f.text_field :name
+    = f.submit "Add New Project"
+
+  = link_to "Add Project", new_team_project_path(@team)
+  %h2 Invite a new member
+
+  - form_tag(:action => "create", :controller => "memberships") do
+    = label_tag "Username"
+    = text_field_tag "username"
+    = hidden_field_tag "team_id", @team.id
+    = submit_tag "Invite"

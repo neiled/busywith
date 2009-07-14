@@ -1,7 +1,7 @@
 -unless status.nil?
   .user_status
     .user_name
-      = link_to status.login, profile_url(status.login)
+      = link_to "#{status.first_name} #{status.last_name} (#{status.login})" , profile_url(status.login)
     .user_task
       = status.current_task || "No task set"
     .user_project

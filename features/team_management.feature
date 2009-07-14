@@ -11,7 +11,7 @@ Feature: Manage teams
 
   Scenario: Invite new members
     Given I am logged in as the user "neiled"
-    And I am on the team page for "neils"
+    And I am on the edit team page for "neils"
     When I fill in "username" with "bob"
     And I press "Invite"
     Then the user "bob" should have an invite to the team "neils"
@@ -53,7 +53,7 @@ Feature: Manage teams
   Scenario: Remove someone from the team
     Given I am logged in as the user "neiled"    
     And the user "bob" is a member of the team "neils"
-    And I am on the team page for "neils"
+    And I am on the edit team page for "neils"
     When I follow "Remove"
     Then I should see "Bob has been removed from the team"
     And the user "bob" should not be a member of the team "neils"
@@ -62,27 +62,27 @@ Feature: Manage teams
     Given the user "bob" is a member of the team "neils"
     And the user "bob" has the status "just testing"
     And I am logged in as the user "neiled"
-    When I follow "I'm Busy With..."
+    When I follow "My Team"
     Then I should see "just testing"
 
     
   Scenario: Invite someone who does not exist
     Given I am logged in as the user "neiled"
-    And I am on the team page for "neils"
+    And I am on the edit team page for "neils"
     When I fill in "username" with "foo"
     And I press "Invite"
     Then I should see "Unknown user"
       
   Scenario: Hack the team_id field
     Given I am logged in as the user "neiled"
-    And I am on the team page for "neils"
+    And I am on the edit team page for "neils"
     When I fill in "username" with "foo"
     And I change the hidden field "team_id" to "0"
     And I press "Invite"
     Then I should see "You do not own that team"     
   
   Scenario: See a team whilst not logged in
-    Given I am on the team page for "neils"
+    Given I am on the edit team page for "neils"
     Then I should see "must be signed in"
   
   

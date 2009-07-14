@@ -23,7 +23,7 @@
   #container
     #header
       %h1
-        = link_to "I'm Busy With...", root_url
+        = link_to "Busywith.com", root_url
       #navbar
         %ul
           - unless current_user
@@ -32,6 +32,8 @@
             %li
               = link_to "Sign up", new_user_path 
           - else
+            %li
+              = link_to "My Team", root_url          
             %li
               = link_to "My Status", profile_path(current_user.login)
             %li

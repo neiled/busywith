@@ -507,3 +507,5 @@ fieldset.signup p.submit, fieldset.signin p.submit { text-align: right; margin-r
 .user_estimated_completion { font-size: 0.8em; font-style: italic; color: #666666; }
 
 img.percentImage { background: white url(/images/percentImage_back.png) top left no-repeat; padding: 0; margin: 5px 0 0 0; background-position: 1px 0; }
+
+.edit_team { color: #666666; }

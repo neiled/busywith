@@ -1,8 +1,6 @@
 class User < ActiveRecord::Base
   acts_as_authentic do |c|
-
     c.validates_format_of_login_field_options = {:with => /\A\w[\w\.+\-_@]+\z/, :message => I18n.t('error_messages.login_invalid', :default => "should use only letters, numbers and .-_@ please.")}
-
   end
 
   belongs_to :active_project, :class_name => "Project", :foreign_key => "project_id"
@@ -38,7 +36,11 @@ class User < ActiveRecord::Base
   validates_date :estimated_completion, :on_or_after => Proc.new {DateTime.now.to_date},
                                         :on_or_after_message => 'must be in the future',
                                         :allow_blank => true
+                                        
   validates_length_of :current_task, :maximum => 50, :allow_blank => true
+  
+  validates_length_of :first_name, :within => 1..50, :on => :create, :message => "must be present"
+  validates_length_of :last_name, :within => 1..50, :on => :create, :message => "must be present"
   
   before_create :setup_defaults
   
