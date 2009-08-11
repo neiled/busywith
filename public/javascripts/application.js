@@ -4,5 +4,3 @@ $(document).ready(function() {
   //alert("here");
   $(".flash_message").animate({color:"#3C3"}, 1000).animate({color:current_color}, 1000);
 });
-
-

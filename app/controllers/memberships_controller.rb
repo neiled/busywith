@@ -10,7 +10,7 @@ class MembershipsController < ApplicationController
       return
     end
     
-    @user = User.find_by_login(params[:username])
+    @user = User.find_by_login(params[:username].downcase)
     if @user.nil?
       flash[:error] = "Unknown user."
       redirect_to(@team)

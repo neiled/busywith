@@ -48,5 +48,6 @@ class User < ActiveRecord::Base
   
   def setup_defaults
     self.percent_complete = 0
+    self.login = self.login.downcase
   end
 end

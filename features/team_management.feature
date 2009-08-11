@@ -12,7 +12,7 @@ Feature: Manage teams
   Scenario: Invite new members
     Given I am logged in as the user "neiled"
     And I am on the edit team page for "neils"
-    When I fill in "username" with "bob"
+    When I fill in "username" with "Bob"
     And I press "Invite"
     Then the user "bob" should have an invite to the team "neils"
     
@@ -58,14 +58,6 @@ Feature: Manage teams
     Then I should see "Bob has been removed from the team"
     And the user "bob" should not be a member of the team "neils"
 
-  Scenario: See other team members status
-    Given the user "bob" is a member of the team "neils"
-    And the user "bob" has the status "just testing"
-    And I am logged in as the user "neiled"
-    When I follow "My Team"
-    Then I should see "just testing"
-
-    
   Scenario: Invite someone who does not exist
     Given I am logged in as the user "neiled"
     And I am on the edit team page for "neils"

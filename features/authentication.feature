@@ -60,4 +60,5 @@ Feature: Authentication
     And I fill in "password confirmation" with "password"
     And I press "Sign up"
     Then I should see "Login is too short"
+
     
