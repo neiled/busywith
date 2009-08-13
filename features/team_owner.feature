@@ -12,9 +12,8 @@ Feature: Team owner tasks
     Given I am logged in as the user "neiled"
     And I have a team called "Neil's team"
     And I am on the edit team page for "Neil's team"
-    When I follow "Add Project"
-    And I fill in "Project Name" with "A Project"
-    And I press "Add Project"
+    When I fill in "Project Name" with "A Project"
+    And I press "Add New Project"
     Then I should see "Project Added"
     And I should see "A Project"
     
@@ -23,19 +22,13 @@ Feature: Team owner tasks
     And I have a team called "Neil's team" with a project called "A Project"
     And I am on the edit team page for "Neil's team"
     And I follow "Delete Project"
-    Then I should see "Project Deleted"
-    And I should not see "A Project"
+    Then I should not see "A Project"
   
   Scenario: See the list of teams I'm a member of
     Given I am logged in as the user "neiled"
     And I have a team called "Neil's team"
     And I am on the user account page for "neiled"
     Then I should see "Neil's team"
-    
-  # Scenario: Show if I'm not a member of any team
-  #   Given I am logged in as the user "neiled"
-  #   And I am on the user account page for "neiled"
-  #   Then I should see "not a member of any team"
     
   Scenario: Change the team name
     Given I am logged in as the user "neiled"

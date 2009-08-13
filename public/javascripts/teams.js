@@ -7,4 +7,22 @@ $(document).ready(function() {
     // has been received; here we apply a fade-in effect to the new content 
     //success: function() { $('#project_list').fadeIn('slow'); }
   })
+  
+  //There's already an onclick so we want to get rid of it...
+  $('.remove_project').removeAttr('onClick');
+  
+  $('.remove_project').live('click', function(event) {
+    var deleteLink = $(this);
+    if ( confirm("Are you sure you want to delete this project?") )
+      $.ajax({
+        url: this.href,
+        type: 'post',
+        dataType: 'script',
+        data: { '_method' : 'delete'},      
+        success: function(){deleteLink.parent().remove()}
+      });
+    return false;
+  })  
 });
+
+

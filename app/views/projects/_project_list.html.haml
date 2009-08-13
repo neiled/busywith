@@ -4,4 +4,4 @@
       - if project.id.nil? == false
         %li
           = h(project.name)
-          = link_to "Delete Project", project_url(project), :method => "delete", :class => "remove_project"
+          = link_to "Delete Project", project_url(project), :class => "remove_project", :method => "delete"

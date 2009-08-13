@@ -11,7 +11,6 @@ Given /^I have a team called "([^\"]*)" with a project called "([^\"]*)"$/ do |t
   fill_in("Team Name", :with => team_name)
   click_button("Create Team")
   visit(edit_team_url Team.find_by_name(team_name))
-  click_link("Add Project")
   fill_in("Project Name", :with => project)
-  click_button("Add Project")
+  click_button("Add New Project")
 end

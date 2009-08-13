@@ -17,19 +17,20 @@ class ProjectsController < ApplicationController
     end
       
     respond_to do |wants|
-      wants.html do
-        redirect_to team_path(@team)
-      end
+      wants.html { redirect_to team_path(@team) }
       wants.js { }
     end
   end
-  
+
   def destroy
     @project = Project.find(params[:id])
     @team = @project.team
     @project.destroy
-    flash[:notice] = "Project Deleted."
-    redirect_to team_url(@team)
+    respond_to do |format|
+        format.html { redirect_to edit_team_url(@team) }
+        format.js { render :nothing => true }
+    end
+    
   end
 
 end
