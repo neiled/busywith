@@ -26,6 +26,7 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
     @team = @project.team
     @project.destroy
+    
     respond_to do |format|
         format.html { redirect_to edit_team_url(@team) }
         format.js { render :nothing => true }
