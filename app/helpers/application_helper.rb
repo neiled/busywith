@@ -23,7 +23,7 @@ module ApplicationHelper
     if(user.all_teams.count == 1)
       link_to "My Team", team_url(user.teams.first)
     else
-      "Team: " + select_tag('Team', options_for_select(user.all_teams.map { |e| [e.name, team_url(e)] }), :class => "choose_team")
+      "Team: " + select_tag('Team', options_for_select((user.all_teams.map { |e| [e.name, team_url(e)] } << ["Choose a team...",""]).sort!, ""), :class => "choose_team")
     end
   end
     
