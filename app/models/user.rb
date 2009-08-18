@@ -44,6 +44,10 @@ class User < ActiveRecord::Base
   
   before_create :setup_defaults
   
+  def team_collegues(team)
+    User.all(:joins => :memberships, :conditions => { :memberships => { :team_id => team } } )
+  end
+  
   private
   
   def setup_defaults

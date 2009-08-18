@@ -8,5 +8,5 @@
 
 - if current_user.all_teams.include?(@team)
   #status
-    =render :partial => "status", :collection => current_user.collegues
+    =render :partial => "status", :collection => current_user.team_collegues(@team.id)
 
