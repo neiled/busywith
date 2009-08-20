@@ -41,7 +41,9 @@ end
 Then /^the user "([^\"]*)" should not be a member of the team "([^\"]*)"$/ do |login, team_name|
   user = User.find_by_login(login)
   team = Team.find_by_name(team_name)
-  user.memberships.find_by_team_id(team.id).should be_nil
+  if team
+    user.memberships.find_by_team_id(team.id).should be_nil
+  end
 end
 
 Then /^the user "([^\"]*)" should not have an invite to for the team "([^\"]*)"$/ do |login, team|

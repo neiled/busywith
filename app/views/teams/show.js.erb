@@ -1,0 +1,2 @@
+ // =render :partial => "status", :collection => current_user.team_collegues(@team.id)
+$("#status").html("<%= escape_javascript(render :partial => 'status', :collection => current_user.team_collegues(@team.id)) %>");  

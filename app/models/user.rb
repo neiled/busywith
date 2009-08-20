@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
                                        JOIN memberships mine ON mine.team_id = teams.id
                                        WHERE mine.user_id = #{id} and users.id <> #{id}'
 
-  has_many :memberships, :conditions => "accepted_at IS NOT NULL"
+  has_many :memberships, :conditions => "accepted_at IS NOT NULL", :dependent => :destroy
   
   has_many :invites, :class_name => "Membership", :conditions => {:accepted_at => nil}
 

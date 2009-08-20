@@ -8,6 +8,7 @@ class TeamsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @team }
+      format.js
     end
   end
 
@@ -53,6 +54,9 @@ class TeamsController < ApplicationController
 
   def destroy
     @team = Team.find(params[:id])
+    # @team.memberships.each do |membership|
+    #   membership.destroy
+    # end
     @team.destroy
 
     respond_to do |format|

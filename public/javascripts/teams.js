@@ -26,3 +26,7 @@ $(document).ready(function() {
 });
 
 
+$(this).everyTime(5000, function() {
+  $.get(this.href,null,null,'script');
+  }
+);

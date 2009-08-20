@@ -57,6 +57,13 @@ Feature: Manage teams
     When I follow "Remove"
     Then I should see "Bob has been removed from the team"
     And the user "bob" should not be a member of the team "neils"
+    
+  Scenario: Delete a team
+    Given I am logged in as the user "neiled"
+    And I am on the user account page for "neiled"
+    When I follow "Delete Team"
+    Then I should see "Team Deleted."
+    And the user "neiled" should not be a member of the team "neils"
 
   Scenario: Invite someone who does not exist
     Given I am logged in as the user "neiled"
