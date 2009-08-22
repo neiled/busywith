@@ -1,3 +1,5 @@
+var last_time = Date();
+
 $(document).ready(function() {
   $("#new_project").ajaxForm({
     // target identifies the element(s) to update with the server response 
@@ -26,7 +28,8 @@ $(document).ready(function() {
 });
 
 
-$(this).everyTime(5000, function() {
-  $.get(this.href,null,null,'script');
+$(this).everyTime(10000, function() {
+  $.get(this.href,{last_updated : last_time },null,'script');
+  // alert(last_time)
   }
 );

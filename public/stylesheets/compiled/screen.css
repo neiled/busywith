@@ -499,8 +499,10 @@ fieldset.signup li, fieldset.signin li { margin-bottom: 1em; }
 fieldset.signup label, fieldset.signin label { float: left; width: 10em; text-align: right; padding-right: 1em; }
 fieldset.signup p.submit, fieldset.signin p.submit { text-align: right; margin-right: 9em; }
 
-.user_status { font-size: 0.7em; width: 15em; padding: 1em; margin-top: 1em; padding: .8em; margin-bottom: 1em; border: 2px solid #dddddd; background: #fff6bf; color: #514721; border-color: #ffd324; }
-.user_status a { color: #514721; }
+.user_status, .user_status_changed { font-size: 0.7em; width: 15em; padding: 1em; margin-top: 1em; padding: .8em; margin-bottom: 1em; border: 2px solid #dddddd; background: #fff6bf; color: #514721; border-color: #ffd324; }
+.user_status a, .user_status_changed a { color: #514721; }
+
+.user_status_changed { border-style: solid; border-color: red; border-width: 1px; }
 
 .user_project { font-style: italic; }
 

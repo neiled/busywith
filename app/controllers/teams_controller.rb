@@ -4,6 +4,8 @@ class TeamsController < ApplicationController
   def show
     @team = Team.find(params[:id])
     @project = @team.projects.new
+    previous_time_string = params[:last_updated] || 1.year.from_now.to_s
+    @previous_time = Time.parse(previous_time_string)
 
     respond_to do |format|
       format.html # show.html.erb

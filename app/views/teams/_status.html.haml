@@ -1,5 +1,7 @@
 -unless status.nil?
-  .user_status
+  %div{:class => "#{previous_time < new_time ? 'user_status_changed' : 'user_status'}"}
+    =previous_time
+    =new_time
     .user_name
       = link_to "#{status.first_name} #{status.last_name} (#{status.login})" , profile_url(status.login)
     .user_task
@@ -18,4 +20,3 @@
         = due_date(status)
       -else
         = "No due date"
-        

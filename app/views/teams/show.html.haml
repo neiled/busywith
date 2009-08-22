@@ -8,5 +8,5 @@
 
 - if current_user.all_teams.include?(@team)
   #status
-    =render :partial => "status", :collection => current_user.team_collegues(@team.id)
+    =render :partial => "status", :collection => current_user.team_collegues(@team.id), :locals => { :previous_time => Time.now, :new_time => @team.last_time_a_member_was_updated }
 
