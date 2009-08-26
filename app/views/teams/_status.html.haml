@@ -1,22 +1,22 @@
--unless status.nil?
+-unless status.nil? or status.user_status.nil?
   %div{:class => "#{previous_time < new_time ? 'user_status_changed' : 'user_status'}"}
     =previous_time
-    =new_time
+    =new_time 
     .user_name
       = link_to "#{status.first_name} #{status.last_name} (#{status.login})" , profile_url(status.login)
     .user_task
-      = status.current_task || "No task set"
+      = status.user_status.current_task || "No task set"
     .user_project
-      - unless status.active_project.nil?
-        = status.active_project.name
+      - unless status.user_status.active_project.nil?
+        = status.user_status.active_project.name
       - else
         = "No project set"
-    - unless status.percent_complete.nil?
+    - unless status.user_status.percent_complete.nil?
       .user_percent_complete
-        %img{:class => "percentImage", :src => "/images/percentImage.png", :alt => "#{status.percent_complete}", :style => "background-position: -#{((123/100)*(100-(status.percent_complete)))}px 0pt"}
-        = number_to_percentage(status.percent_complete.to_i, :precision => 0)
+        %img{:class => "percentImage", :src => "/images/percentImage.png", :alt => "#{status.user_status.percent_complete}", :style => "background-position: -#{((123/100)*(100-(status.user_status.percent_complete)))}px 0pt"}
+        = number_to_percentage(status.user_status.percent_complete.to_i, :precision => 0)
     .user_estimated_completion
-      - unless status.estimated_completion.nil?
+      - unless status.user_status.estimated_completion.nil?
         = due_date(status)
       -else
         = "No due date"

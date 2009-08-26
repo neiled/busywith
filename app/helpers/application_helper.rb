@@ -12,10 +12,10 @@ module ApplicationHelper
   end
   
   def due_date(user)
-    if user.estimated_completion.nil?
+    if user.user_status.nil? or user.user_status.estimated_completion.nil?
       ""
     else
-      "#{user.estimated_completion.strftime("%m/%d/%Y")}"
+      "#{user.user_status.estimated_completion.strftime("%m/%d/%Y")}"
     end
   end
   

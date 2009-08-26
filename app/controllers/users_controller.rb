@@ -5,7 +5,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(params[:user])
-    if @user.save
+    @user_status = @user.build_user_status    
+    if @user.save and @user_status.save
       flash[:notice] = "Account Registered"
       redirect_to(profile_path(:login => @user.login))
     else
@@ -18,20 +19,22 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find_by_login(params[:login])
+    @user_status = @user.user_status
     unless @user
       flash[:notice] = "That user does not exist"
       redirect_to root_path
     end
   end
   
-  def update
-    @user = User.find(params[:id])
-    if @user.update_attributes(params[:user])
-      flash[:notice] = "Status Updated"
-    else
-      flash[:error] = "Unable to update status: #{@user.errors.full_messages}"
-    end    
-    redirect_to :back
-  end
+  # def update
+  #   debugger
+  #   @user = User.find(params[:id])
+  #   if @user.update_attributes(params[:user])
+  #     flash[:notice] = "Status Updated"
+  #   else
+  #     flash[:error] = "Unable to update status: #{@user.errors.full_messages}"
+  #   end    
+  #   redirect_to :back
+  # end
 
 end

@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :teams, :has_many => :projects, :shallow => true 
-  map.resources :users, :except => ["index"]
+  map.resources :users, :has_one => :user_status, :except => ["index"]
   map.resources :user_sessions
   map.resources :memberships
   

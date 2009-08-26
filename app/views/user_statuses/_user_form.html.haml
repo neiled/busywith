@@ -1,0 +1,16 @@
+= f.label :current_task, "Current Task"
+= f.text_field :current_task
+%br
+- if  user.all_teams.count > 0 
+  = f.label :project_id
+  = f.collection_select :project_id, user.projects, :id, :name, {:include_blank => true}
+%br
+= f.label :percent_complete, "Percent Complete"
+#progress_slider
+= f.text_field :percent_complete, :id => :percent_complete, :value => user_status.percent_complete.to_i.to_s
+%br
+= f.label :estimated_completion, "Due"
+= f.text_field :estimated_completion, :value => due_date(user)
+%br
+.submit
+  = f.submit "Update", :disable_with => 'Updating Status...'  

@@ -10,5 +10,5 @@ $(document).ready(function(){
   });
   $("#progress_slider").slider("value", $("#percent_complete").val());
   
-  $("#user_estimated_completion").datePicker();
+  $("#user_status_estimated_completion").datePicker();
 });

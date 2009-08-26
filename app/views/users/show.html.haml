@@ -1,11 +1,18 @@
 = content_for :unobtrusive_javascript do
   %script{ 'type' => "text/javascript", :src   => "/javascripts/users.js" }
   
+- unless current_user.nil?
+  #status_update
+    %h3 Update your status
+    - form_for [@user,@user_status] do |f|
+      = render :partial => 'user_statuses/user_form', :locals => {:user => @user, :user_status => @user_status, :f => f}
+-else
+  #status_show
+    %h3= "Status for #{user.login}"
+    = render :partial => 'welcome/status', :locals => {:status => @user}
 
-= render :partial => 'user_form'
 
-
-= render :partial => "history", :locals => {:user => @user}
+= render :partial => "user_statuses/history", :locals => {:user => @user}
 
 
 - unless @user.invites.count == 0
