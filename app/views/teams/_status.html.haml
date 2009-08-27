@@ -1,7 +1,5 @@
 -unless status.nil? or status.user_status.nil?
-  %div{:class => "#{previous_time < new_time ? 'user_status_changed' : 'user_status'}"}
-    =previous_time
-    =new_time 
+  %div{:class => "#{previous_time < status.user_status.updated_at ? 'user_status_changed' : 'user_status'}"}
     .user_name
       = link_to "#{status.first_name} #{status.last_name} (#{status.login})" , profile_url(status.login)
     .user_task

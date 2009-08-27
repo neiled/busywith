@@ -24,7 +24,9 @@ $(document).ready(function() {
         success: function(){deleteLink.parent().remove()}
       });
     return false;
-  })  
+  })
+  
+  $('.user_status_updated').live()  
 });
 
 
