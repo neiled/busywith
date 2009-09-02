@@ -15,7 +15,7 @@ class MembershipsController < ApplicationController
       flash[:error] = "Unknown user."
       redirect_to(@team)
     else
-      @membership = @user.memberships.build(:team_id => @team.id, :user_id => @user.id)
+      @membership = @user.memberships.build(:team_id => @team.id, :user_id => @user.id, :invitor_id => current_user.id)
       if @membership.save
         flash[:notice] = "Invited user."
       else

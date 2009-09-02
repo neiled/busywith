@@ -1,0 +1,9 @@
+Hello <%= @user.first_name %>,
+
+This email is just to let you know that <%= @membership.invitor.nil? ? "someone" : "the user #{@membership.invitor.login}" %> has invited you to the team '<%= @team.name %>'
+
+This could be the start of something wonderful!
+
+-busywith.com
+
+

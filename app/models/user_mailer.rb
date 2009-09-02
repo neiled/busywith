@@ -10,13 +10,15 @@ class UserMailer < ActionMailer::Base
     
   end
 
-  def beta(sent_at = Time.now)
-    subject    'UserMailer#beta'
-    recipients ''
-    from       ''
-    sent_on    sent_at
-    
-    body       :greeting => 'Hi,'
+  def team_invite(membership)
+    user = User.find(membership.user_id)
+    team = Team.find(membership.team_id)
+    subject    'Team Invite - busywith.com'
+    recipients user.email
+    from       'donotreply@busywith.com'
+    sent_on    Time.now    
+    body       :user => user, :team => team, :membership => membership
   end
+
 
 end

@@ -38,9 +38,14 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
   config.action_mailer.raise_delivery_errors = true  
+  config.action_mailer.default_url_options = { :host =>
+  "busywith.com" }
 end
 
 Rubaidh::GoogleAnalytics.tracker_id = 'UA-1098906-5'
+
+
+
 
 ActionMailer::Base.smtp_settings = {
   :address => "smtp.gmail.com",
