@@ -34,3 +34,4 @@ config.gem 'cucumber', :lib => false
 config.gem "thoughtbot-factory_girl",
            :lib    => "factory_girl",
            :source => "http://gems.github.com"
+config.gem 'bmabey-email_spec', :lib => 'email_spec'

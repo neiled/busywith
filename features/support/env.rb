@@ -3,6 +3,7 @@ ENV["RAILS_ENV"] ||= "test"
 require File.expand_path(File.dirname(__FILE__) + '/../../config/environment')
 require File.expand_path(File.dirname(__FILE__) + '/../../spec/factories')
 require 'cucumber/rails/world'
+require 'email_spec/cucumber'
 require 'cucumber/formatter/unicode' # Comment out this line if you don't want Cucumber Unicode support
 Cucumber::Rails.use_transactional_fixtures
 Cucumber::Rails.bypass_rescue # Comment out this line if you want Rails own error handling 
