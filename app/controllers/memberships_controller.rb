@@ -10,19 +10,20 @@ class MembershipsController < ApplicationController
       return
     end
     
-    @user = User.find_by_login(params[:username].downcase)
+    @user = User.find_by_email(params[:email].downcase)
     if @user.nil?
-      flash[:error] = "Unknown user."
-      redirect_to(@team)
-    else
-      @membership = @user.memberships.build(:team_id => @team.id, :user_id => @user.id, :invitor_id => current_user.id)
-      if @membership.save
-        flash[:notice] = "Invited user."
-      else
-        flash[:error] = @membership.errors.full_messages
-      end
-        redirect_to @team
+      @user = User.new(:email => params[:email])
+      @user.save_with_validation(false)
     end
+    
+    @membership = @user.memberships.build(:team_id => @team.id, :user_id => @user.id, :invitor_id => current_user.id)
+    if @membership.save
+      flash[:notice] = "Invited user."
+    else
+      flash[:error] = @membership.errors.full_messages
+    end
+    redirect_to @team
+
   end
 
   def update

@@ -44,10 +44,15 @@ class User < ActiveRecord::Base
     User.all(:joins => :memberships, :conditions => { :memberships => { :team_id => team } } )
   end
   
+  def full_name
+    (first_name + ' ' + last_name).titlecase
+  end
+  
   private
   
   def setup_defaults
-    self.login = self.login.downcase
+    self.login = self.login.downcase unless self.login.nil?
+    self.email = self.email.downcase unless self.login.nil?
     self.user_status = UserStatus.new
   end
 end

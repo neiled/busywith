@@ -7,4 +7,9 @@ it "should save username as lowercase" do
   user.login.should == "bob"  
 end
 
+it "should save email as lowercase" do
+  user = Factory(:user, :email => 'Bob@PlasticWater.com')
+  user.email.should == 'bob@plasticwater.com'
+end
+
 end

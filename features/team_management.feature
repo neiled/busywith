@@ -12,7 +12,7 @@ Feature: Manage teams
   Scenario: Invite new members
     Given I am logged in as the user "neiled"
     And I am on the edit team page for "neils"
-    When I fill in "username" with "Bob"
+    When I fill in "email" with "Bob@plasticwater.com"
     And I press "Invite"
     Then the user "bob" should have an invite to the team "neils"
     
@@ -66,16 +66,16 @@ Feature: Manage teams
     And the user "neiled" should not be a member of the team "neils"
 
   Scenario: Invite someone who does not exist
-    Given I am logged in as the user "neiled"
-    And I am on the edit team page for "neils"
-    When I fill in "username" with "foo"
-    And I press "Invite"
-    Then I should see "Unknown user"
+    # Given I am logged in as the user "neiled"
+    # And I am on the edit team page for "neils"
+    # When I fill in "username" with "foo"
+    # And I press "Invite"
+    # Then I should see "Unknown user"
       
   Scenario: Hack the team_id field
     Given I am logged in as the user "neiled"
     And I am on the edit team page for "neils"
-    When I fill in "username" with "foo"
+    When I fill in "email" with "foo"
     And I change the hidden field "team_id" to "0"
     And I press "Invite"
     Then I should see "You do not own that team"     
