@@ -434,6 +434,8 @@ h1 { font-size: 2em; }
 
 h2 { font-size: 1.2em; }
 
+h3 { font-size: 1em; }
+
 input.text, input.title, input[type="text"], input[type="password"] { margin: 0em; padding: 5px; }
 
 input { border-style: solid; border-color: black; border-width: 1px; }
@@ -517,3 +519,5 @@ img.percentImage { background: white url(/images/percentImage_back.png) top left
 #navbar select { margin: 0; }
 
 .edit_team { color: #666666; }
+
+#members { width: 800px; border-style: solid; border-color: black; border-width: 1px; }

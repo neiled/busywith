@@ -9,7 +9,7 @@ Feature: Manage teams
     | neiled | neils |
     | bob    |       |
 
-  Scenario: Invite new members
+  Scenario: Invite existing members
     Given I am logged in as the user "neiled"
     And I am on the edit team page for "neils"
     When I fill in "email" with "Bob@plasticwater.com"
@@ -58,6 +58,14 @@ Feature: Manage teams
     Then I should see "Bob has been removed from the team"
     And the user "bob" should not be a member of the team "neils"
     
+  Scenario: Remove an invitation from someone who hasn't yet accepted
+    Given I am logged in as the user "neiled"    
+    And the email "foo@example.com" has an invite for the team "neils"
+    And I am on the edit team page for "neils"
+    When I follow "Remove"
+    Then I should see "Invite withdrawn"
+    And the user with the email "foo@example.com" should not have an invite to the team "neils"
+    
   Scenario: Delete a team
     Given I am logged in as the user "neiled"
     And I am on the user account page for "neiled"
@@ -66,11 +74,11 @@ Feature: Manage teams
     And the user "neiled" should not be a member of the team "neils"
 
   Scenario: Invite someone who does not exist
-    # Given I am logged in as the user "neiled"
-    # And I am on the edit team page for "neils"
-    # When I fill in "username" with "foo"
-    # And I press "Invite"
-    # Then I should see "Unknown user"
+    Given I am logged in as the user "neiled"
+     And I am on the edit team page for "neils"
+    When I fill in "email" with "foo@plasticwater.com"
+    And I press "Invite"
+    Then I should see "sent them an email"
       
   Scenario: Hack the team_id field
     Given I am logged in as the user "neiled"

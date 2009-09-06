@@ -15,6 +15,11 @@ Given /^the user "([^\"]*)" has an invite for the team "([^\"]*)"$/ do |login, t
   user.memberships.create(:team_id => team.id)
 end
 
+Given /^the email "([^\"]*)" has an invite for the team "([^\"]*)"$/ do |email, team_name|
+  Given "I am on the edit team page for \"#{team_name}\""
+  When "I fill in \"email\" with \"#{email}\""
+  And "I press \"Invite\""
+end
 
 Given /^the user "([^\"]*)" is a member of the team "([^\"]*)"$/ do |login, team_name|
   User.find_by_login(login).memberships.create(:team_id => Team.find_by_name(team_name), :accepted_at => DateTime.now)
@@ -45,6 +50,17 @@ Then /^the user "([^\"]*)" should not be a member of the team "([^\"]*)"$/ do |l
     user.memberships.find_by_team_id(team.id).should be_nil
   end
 end
+
+
+Then /^the user with the email "([^\"]*)" should not have an invite to the team "([^\"]*)"$/ do |email, team_name|
+  user = User.find_by_email(email)
+  team = Team.find_by_name(team_name)
+  if team
+    user.memberships.find_by_team_id(team.id).should be_nil
+  end
+  
+end
+
 
 Then /^the user "([^\"]*)" should not have an invite to for the team "([^\"]*)"$/ do |login, team|
   User.find_by_login(login).memberships.find_by_team_id(Team.find_by_name(team)).should be_nil

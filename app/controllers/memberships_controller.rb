@@ -18,12 +18,15 @@ class MembershipsController < ApplicationController
     
     @membership = @user.memberships.build(:team_id => @team.id, :user_id => @user.id, :invitor_id => current_user.id)
     if @membership.save
-      flash[:notice] = "Invited user."
+      flash[:notice] = "We've sent them an email inviting them!"
     else
       flash[:error] = @membership.errors.full_messages
     end
-    redirect_to @team
-
+    
+    respond_to do |wants|
+      wants.html { redirect_to @team }
+      wants.js { }
+    end
   end
 
   def update
@@ -53,11 +56,19 @@ class MembershipsController < ApplicationController
       end
     end
     unless @membership.nil?
-      flash[:notice] = @membership.accepted_at.nil? ?
-      "Invite Ignored." :
-      current_user.owned_teams.find_by_id(@membership.team) ?
-      "#{@membership.user.login.capitalize} has been removed from the team" :
-      "You are no longer a member of the team #{@membership.team.name}"
+      if @membership.accepted_at.nil?
+        if current_user.owned_teams.find_by_id(@membership.team)
+          flash[:notice] = "Invite withdrawn"
+        else
+          flash[:notice] = "Invite Ignored."
+        end
+      else
+        if current_user.owned_teams.find_by_id(@membership.team)
+          flash[:notice] = "#{@membership.user.login.capitalize} has been removed from the team"
+        else
+          flash[:notice] = "You are no longer a member of the team #{@membership.team.name}"
+        end
+      end
       @membership.destroy      
     else
       flash[:error] = "That invite does not exist"

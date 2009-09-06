@@ -1,0 +1,5 @@
+$("#flash_notice").remove()
+$("#flash_error").remove()
+$("#members_list").html("<%= escape_javascript(render :partial => '/memberships/members_list', :locals => { :team => @team}) %>");
+$("#members_list").after('<%= if flash[:notice] then "<div id=\"flash_notice\">#{escape_javascript(flash.delete(:notice))}</div>" end %>');
+$("#members_list").after('<%= if flash[:error] then "<div id=\"flash_error\">#{escape_javascript(flash.delete(:error))}</div>" end %>');

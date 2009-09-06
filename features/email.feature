@@ -31,3 +31,4 @@ Feature: Email support
     Then they should see "Someone at busywith.com \(Neil Edwards\) wants you to be in their team" in the email body
     When I follow "Sign up!" in the email
     Then I should be on the registration page
+    And the "email" field should contain "john@plasticwater.com"

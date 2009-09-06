@@ -3,7 +3,7 @@ Hello,
 Someone at busywith.com (<%= @membership.invitor.full_name %>) wants you to be in their team!
 Seriously, how loved do you feel?!
 
-You can sign up to busywith.com by clicking here <%= link_to "Sign up!", new_user_url, :email => @user.email %>.
+You can sign up to busywith.com by clicking here <%= link_to "Sign up!", new_user_url(:email => @user.email) %>.
 
 If you're not sure what this is and you think you may have gotten this in error, don't worry.
 Just ignore this email and we'll never contact you again, promise!
