@@ -35,8 +35,8 @@ class User < ActiveRecord::Base
   has_one :user_status, :class_name => "UserStatus", :foreign_key => "user_id"
     
 
-  validates_length_of :first_name, :within => 1..50, :on => :create, :message => "must be present"
-  validates_length_of :last_name, :within => 1..50, :on => :create, :message => "must be present"
+  validates_length_of :first_name, :within => 1..50, :message => "must be present"
+  validates_length_of :last_name, :within => 1..50, :message => "must be present"
   
   before_create :setup_defaults
   
@@ -44,10 +44,15 @@ class User < ActiveRecord::Base
     User.all(:joins => :memberships, :conditions => { :memberships => { :team_id => team } } )
   end
   
+  def full_name
+    (first_name + ' ' + last_name).titlecase
+  end
+  
   private
   
   def setup_defaults
-    self.login = self.login.downcase
+    self.login = self.login.downcase unless self.login.nil?
+    self.email = self.email.downcase unless self.login.nil?
     self.user_status = UserStatus.new
   end
 end

@@ -17,7 +17,7 @@ Given /^I have a user with the username "([^\"]*)" and the password "([^\"]*)"$/
   visit new_user_url
   fill_in "login", :with => login
   fill_in "email", :with => login + "@plasticwater.com"
-  fill_in "first name", :with => "Neil"
+  fill_in "first name", :with => login
   fill_in "last name", :with => "Edwards"
   fill_in "password", :with => password
   fill_in "password confirmation", :with => password

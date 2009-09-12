@@ -1,12 +1,14 @@
 class UsersController < ApplicationController
   def new
     @user = User.new
+    @user.email = params[:email] || ""
   end
 
   def create
     @user = User.new(params[:user])
     @user_status = @user.build_user_status    
     if @user.save and @user_status.save
+      UserMailer.deliver_signup(@user)
       flash[:notice] = "Account Registered"
       redirect_to(profile_path(:login => @user.login))
     else

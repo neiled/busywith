@@ -10,18 +10,35 @@ class MembershipsController < ApplicationController
       return
     end
     
-    @user = User.find_by_login(params[:username].downcase)
-    if @user.nil?
-      flash[:error] = "Unknown user."
+    @user = User.find_by_email(params[:email].downcase)
+    
+    if @team.users.include?(@user)
+      flash[:notice] = "That user already has an invite to your team!"
       redirect_to(@team)
-    else
-      @membership = @user.memberships.build(:team_id => @team.id, :user_id => @user.id)
+      return
+    end
+    
+    if @user.nil?
+      @user = User.new(:email => params[:email])
+      @user.valid?
+    end
+    
+    if @user.errors.on(:email).nil?
+      @user.save_with_validation(false)
+
+      @membership = @user.memberships.build(:team_id => @team.id, :user_id => @user.id, :invitor_id => current_user.id)
       if @membership.save
-        flash[:notice] = "Invited user."
+        flash[:notice] = "We've sent them an email inviting them!"
       else
-        flash[:error] = @membership.errors.full_messages
+        flash[:error] = @membership.errors.full_messages.to_s
       end
-        redirect_to @team
+    else
+      flash[:error] = "That email address doesn't look right, it:<br/>" + @user.errors.on(:email).join("<br/>")
+    end
+    
+    respond_to do |wants|
+      wants.html { redirect_to @team }
+      wants.js { }
     end
   end
 
@@ -52,11 +69,19 @@ class MembershipsController < ApplicationController
       end
     end
     unless @membership.nil?
-      flash[:notice] = @membership.accepted_at.nil? ?
-      "Invite Ignored." :
-      current_user.owned_teams.find_by_id(@membership.team) ?
-      "#{@membership.user.login.capitalize} has been removed from the team" :
-      "You are no longer a member of the team #{@membership.team.name}"
+      if @membership.accepted_at.nil?
+        if current_user.owned_teams.find_by_id(@membership.team)
+          flash[:notice] = "Invite withdrawn"
+        else
+          flash[:notice] = "Invite Ignored."
+        end
+      else
+        if current_user.owned_teams.find_by_id(@membership.team)
+          flash[:notice] = "#{@membership.user.login.capitalize} has been removed from the team"
+        else
+          flash[:notice] = "You are no longer a member of the team #{@membership.team.name}"
+        end
+      end
       @membership.destroy      
     else
       flash[:error] = "That invite does not exist"

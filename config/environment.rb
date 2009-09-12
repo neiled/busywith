@@ -1,7 +1,8 @@
 # Be sure to restart your server when you modify this file
 
 # Specifies gem version of Rails to use when vendor/rails is not present
-RAILS_GEM_VERSION = '2.3.3' unless defined? RAILS_GEM_VERSION
+RAILS_GEM_VERSION = '2.3.4' unless defined? RAILS_GEM_VERSION
+CAMPAIGN_MONITOR_API_KEY = '952c70caa35c8577c494995978b72b7a'
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
@@ -12,7 +13,9 @@ Rails::Initializer.run do |config|
   config.gem 'haml', :lib => 'haml'
   config.gem "newrelic_rpm"
   config.gem 'validates_timeliness'
-  config.gem 'rubaidh-google_analytics', :lib => 'rubaidh/google_analytics', :source => 'http://gems.github.com'  
+  config.gem 'rubaidh-google_analytics', :lib => 'rubaidh/google_analytics', :source => 'http://gems.github.com'
+  config.gem 'seven1m-campaign_monitor', :lib => 'campaign_monitor'
+  # config.gem 'patientslikeme-campaign_monitor', :lib => 'campaign_monitor', :source => 'http://gems.github.com'  
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.
@@ -36,16 +39,22 @@ Rails::Initializer.run do |config|
 
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
-  # config.i18n.default_locale = :de  
+  # config.i18n.default_locale = :de
+  config.action_mailer.raise_delivery_errors = true  
+  config.action_mailer.default_url_options = { :host =>
+  "busywith.com" }
 end
 
 Rubaidh::GoogleAnalytics.tracker_id = 'UA-1098906-5'
+
+
+
 
 ActionMailer::Base.smtp_settings = {
   :address => "smtp.gmail.com",
   :port => 587,
   :authentication => :plain,
-  :enable_starttls_auto => true
-  :user_name: busyiwth@plasticwater.com
-  :password: 3648Q7
+  :enable_starttls_auto => true,
+  :user_name => "donotreply@busywith.com",
+  :password => "L84587"
 }

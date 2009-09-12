@@ -3,7 +3,7 @@
 %head
   %meta{'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}
   %link{ :rel => "shortcut icon", :href => "/favicon.ico", :type => "image/x-icon"}
-  %title= "#{page_title + ' - ' unless page_title.blank?}#{t(:app_name)}"
+  %title= "#{t(:app_name)} #{(' - ' + page_title unless page_title.blank?)}"
   = stylesheet_link_tag 'cupertino/jquery-ui.css'
   = stylesheet_link_tag 'compiled/screen.css', :media => 'screen, projection'
   = stylesheet_link_tag 'compiled/print.css', :media => 'print'
@@ -22,51 +22,28 @@
   = javascript_tag "var AUTH_TOKEN = #{form_authenticity_token.inspect};" if protect_against_forgery?
   = yield :unobtrusive_javascript
 %body{:class => body_class}
+  #navbar_container
+    #navbar
+      %ul.left
+        %li.busywith
+          = link_to "Busywith.com", root_url
+      %ul.right
+        - unless current_user
+          %li.sign_in
+            = link_to "Sign in", signin_path
+          %li.sign_up
+            = link_to "Sign up", new_user_path 
+        - else
+          %li
+            = team_tag(current_user)
+          %li
+            = link_to "My Status (#{current_user.login})", profile_path(current_user.login)
+          %li
+            = link_to "Sign out", signout_path  
+  #header            
   #container
-    #header
-      %h1
-        = link_to "Busywith.com", root_url
-      #navbar
-        %ul
-          - unless current_user
-            %li
-              = link_to "Sign in", signin_path
-            %li
-              = link_to "Sign up", new_user_path 
-          - else
-            %li
-              = team_tag(current_user)
-            %li
-              = link_to "My Status (#{current_user.login})", profile_path(current_user.login)
-            %li
-              = link_to "Sign out", signout_path  
-      = render :partial => 'layouts/flashes'
-      /[if lt IE 7]
-        %div{ :style => "border: 1px solid #F7941D; background: #FEEFDA; text-align: center; clear: both; height: 75px; position: relative;" }
-          %div{ :style => "position: absolute; right: 3px; top: 3px; font-family: courier new; font-weight: bold;" }
-            %a{ :href => "#", :onclick => "javascript:this.parentNode.parentNode.style.display=\"none\"; return false;" }
-              %img{ :src => "/images/ie6nomore-cornerx.jpg", :alt => "Close this notice", :style => "border: none;" }
-          %div{ :style => "width: 640px; margin: 0 auto; text-align: left; padding: 0; overflow: hidden; color: black;" }
-            %div{ :style => "width: 75px; float: left;" }
-              %img{ :src => "/images/ie6nomore-warning.jpg", :alt => "Warning!" }
-            %div{ :style => "width: 275px; float: left; font-family: Arial, sans-serif;" }
-              %div{ :style => "font-size: 14px; font-weight: bold; margin-top: 12px;" }
-                You are using an outdated browser
-              %div{ :style => "font-size: 12px; margin-top: 6px; line-height: 12px;" }
-                For a better experience using this site, please upgrade to a modern web browser.
-            %div{ :style => "width: 75px; float: left;" }
-              %a{ :href => "http://www.firefox.com", :target => "_blank" }
-                %img{ :src => "/images/ie6nomore-firefox.jpg", :alt => "Get Firefox 3.5", :style => "border: none;" }
-            %div{ :style => "width: 75px; float: left;" }
-              %a{ :href => "http://www.browserforthebetter.com/download.html", :target => "_blank" }
-                %img{ :src => "/images/ie6nomore-ie8.jpg", :alt => "Get Internet Explorer 8", :style => "border: none;" }
-            %div{ :style => "width: 73px; float: left;" }
-              %a{ :href => "http://www.apple.com/safari/download/", :target => "_blank" }
-                %img{ :src => "/images/ie6nomore-safari.jpg", :alt => "Get Safari 4", :style => "border: none;" }
-            %div{ :style => "float: left;" }
-              %a{ :href => "http://www.google.com/chrome", :target => "_blank" }
-                %img{ :src => "/images/ie6nomore-chrome.jpg", :alt => "Get Google Chrome", :style => "border: none;" }
-      
+    = render :partial => 'layouts/flashes'
+    = render :partial => 'layouts/no_more_ie6'      
     #content
       = yield
 

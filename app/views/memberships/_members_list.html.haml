@@ -1,0 +1,7 @@
+#members_list
+  %ul
+    - team.memberships.each do |membership|
+      %li
+        = membership_link(membership)
+        - if current_user.owned_teams.include?(@team) and not membership.is_administrator
+          = link_to "Remove", membership, :method => "delete", :class => "remove_membership"
