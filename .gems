@@ -1,6 +1,7 @@
-authlogic --version 2.1.1
-haml --version 2.2.0
-chriseppstein-compass --version 0.8.5 --source http://gems.github.com
-newrelic_rpm --version 2.9.2
-validates_timeliness --version 2.1.0
+authlogic --version 2.1.2
+haml --version 2.2.3
+chriseppstein-compass --version 0.8.15 --source http://gems.github.com
+newrelic_rpm --version 2.9.4
+validates_timeliness --version 2.2.1
 rubaidh-google_analytics --version 1.1.4 --source http://gems.github.com
+seven1m-campaign_monitor --version 0.1.1 --source http://gems.github.com

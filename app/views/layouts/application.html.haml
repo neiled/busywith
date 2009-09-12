@@ -27,19 +27,19 @@
       %ul.left
         %li.busywith
           = link_to "Busywith.com", root_url
-      %ul.right
-        - unless current_user
-          %li.sign_in
-            = link_to "Sign in", signin_path
-          %li.sign_up
-            = link_to "Sign up", new_user_path 
-        - else
-          %li
-            = team_tag(current_user)
-          %li
-            = link_to "My Status (#{current_user.login})", profile_path(current_user.login)
-          %li
-            = link_to "Sign out", signout_path  
+  /     %ul.right
+  /       - unless current_user
+  /         %li.sign_in
+  /           = link_to "Sign in", signin_path
+  /         %li.sign_up
+  /           = link_to "Sign up", new_user_path 
+  /       - else
+  /         %li
+  /           = team_tag(current_user)
+  /         %li
+  /           = link_to "My Status (#{current_user.login})", profile_path(current_user.login)
+  /         %li
+  /           = link_to "Sign out", signout_path  
   #header            
   #container
     = render :partial => 'layouts/flashes'
