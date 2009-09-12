@@ -35,8 +35,8 @@ class User < ActiveRecord::Base
   has_one :user_status, :class_name => "UserStatus", :foreign_key => "user_id"
     
 
-  validates_length_of :first_name, :within => 1..50, :on => :create, :message => "must be present"
-  validates_length_of :last_name, :within => 1..50, :on => :create, :message => "must be present"
+  validates_length_of :first_name, :within => 1..50, :message => "must be present"
+  validates_length_of :last_name, :within => 1..50, :message => "must be present"
   
   before_create :setup_defaults
   

@@ -1,3 +1,7 @@
+!light_green = #C9D787
+!dark_green = #7D8A2E
+!light_pink = #FFC0A9
+!dark_pink = #FF8598
 
 h1
   :font-size 2em
@@ -19,33 +23,44 @@ input
 
 #container
   +container
-
+  
 #flash_notice
   +notice
 
 #flash_error
   +error
 
-  
-#header
-  +column(24)
-  #navbar
-    +float-right
+#navbar_container
+  :width 100%
+  :height 40px
+  :background-color= !light_green
+  :overflow hidden
+
+#navbar
+  :font-family arial
+  :font-size 2em
+  :width 800px
+  :margin 0 auto
+  :position relative
+  ul
     +horizontal-list
-    :position absolute
-    :top 1em
-    :right 0px
+    li
+      :width 100px
+      a
+        :display block      
+        :text-indent -50000px
+    li.busywith
+      :background url('/images/button_busywith.png') no-repeat scroll
+    li.sign_up
+      :background url('/images/button_sign_up.png') no-repeat scroll
+    li.sign_in
+      :background url('/images/button_sign_in.png') no-repeat scroll
   
 #content
-  +column(24, true)
-  :padding-left 20px
-  :padding-top 20px
-  :padding-bottom 20px
   li
     :margin-left 5px
   h2
     :margin-bottom 0px
-  :font-size 1.8em
   
   
 .rss_feed
@@ -64,3 +79,12 @@ input
 .fieldWithErrors
   input
     :background-color rgb(251, 227, 228)
+    
+.left
+  :float left
+
+.right
+  :float right
+  
+.flash_message
+  :margin-top 1em

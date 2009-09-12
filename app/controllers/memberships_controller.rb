@@ -11,16 +11,29 @@ class MembershipsController < ApplicationController
     end
     
     @user = User.find_by_email(params[:email].downcase)
-    if @user.nil?
-      @user = User.new(:email => params[:email])
-      @user.save_with_validation(false)
+    
+    if @team.users.include?(@user)
+      flash[:notice] = "That user already has an invite to your team!"
+      redirect_to(@team)
+      return
     end
     
-    @membership = @user.memberships.build(:team_id => @team.id, :user_id => @user.id, :invitor_id => current_user.id)
-    if @membership.save
-      flash[:notice] = "We've sent them an email inviting them!"
+    if @user.nil?
+      @user = User.new(:email => params[:email])
+      @user.valid?
+    end
+    
+    if @user.errors.on(:email).nil?
+      @user.save_with_validation(false)
+
+      @membership = @user.memberships.build(:team_id => @team.id, :user_id => @user.id, :invitor_id => current_user.id)
+      if @membership.save
+        flash[:notice] = "We've sent them an email inviting them!"
+      else
+        flash[:error] = @membership.errors.full_messages.to_s
+      end
     else
-      flash[:error] = @membership.errors.full_messages
+      flash[:error] = "That email address doesn't look right, it:<br/>" + @user.errors.on(:email).join("<br/>")
     end
     
     respond_to do |wants|

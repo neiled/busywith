@@ -449,16 +449,20 @@ input { border-style: solid; border-color: black; border-width: 1px; }
 #flash_error { padding: .8em; margin-bottom: 1em; border: 2px solid #dddddd; background: #fbe3e4; color: #8a1f11; border-color: #fbc2c4; }
 #flash_error a { color: #8a1f11; }
 
-#header { display: inline; float: left; margin-right: 10px; width: 950px; }
-* html #header { overflow-x: hidden; }
-#header #navbar { display: inline; float: right; margin: 0; padding: 0; border: 0; outline: 0; overflow: hidden; display: inline-block; position: absolute; top: 1em; right: 0px; }
-#header #navbar { display: block; }
-#header #navbar li { list-style-type: none; margin-left: 0px; white-space: nowrap; display: inline; float: left; padding-left: 4px; padding-right: 4px; }
-#header #navbar li.first { padding-left: 0px; }
-#header #navbar li.last { padding-right: 0px; }
+#navbar_container { width: 100%; height: 40px; background-color: #c9d787; overflow: hidden; }
 
-#content { display: inline; float: left; margin-right: 0; width: 950px; padding-left: 20px; padding-top: 20px; padding-bottom: 20px; font-size: 1.8em; }
-* html #content { overflow-x: hidden; }
+#navbar { font-family: arial; font-size: 2em; width: 800px; margin: 0 auto; position: relative; }
+#navbar ul { margin: 0; padding: 0; border: 0; outline: 0; overflow: hidden; display: inline-block; }
+#navbar ul { display: block; }
+#navbar ul li { list-style-type: none; margin-left: 0px; white-space: nowrap; display: inline; float: left; padding-left: 4px; padding-right: 4px; }
+#navbar ul li.first { padding-left: 0px; }
+#navbar ul li.last { padding-right: 0px; }
+#navbar ul li { width: 100px; }
+#navbar ul li a { display: block; text-indent: -50000px; }
+#navbar ul li.busywith { background: url('/images/button_busywith.png') no-repeat scroll; }
+#navbar ul li.sign_up { background: url('/images/button_sign_up.png') no-repeat scroll; }
+#navbar ul li.sign_in { background: url('/images/button_sign_in.png') no-repeat scroll; }
+
 #content li { margin-left: 5px; }
 #content h2 { margin-bottom: 0px; }
 
@@ -472,6 +476,24 @@ input { border-style: solid; border-color: black; border-width: 1px; }
 .errorExplanation li { font-size: 0.8em; }
 
 .fieldWithErrors input { background-color: rgb(251, 227, 228); }
+
+.left { float: left; }
+
+.right { float: right; }
+
+.flash_message { margin-top: 1em; }
+
+body.welcome_index { font-size: 1.6em; font-family: "Arial Rounded MT Bold", arial, verdana, sans-serif; }
+
+#hello { font-size: 1.2em; }
+
+#pitch { margin-bottom: 1em; }
+
+#beta { margin-bottom: 1em; }
+
+.notify_me_button { border-style: none; vertical-align: middle; }
+
+#email { vertical-align: middle; font-family: "Arial Rounded MT Bold", arial, verdana, sans-serif; font-size: 0.5em; }
 
 .edit_user_status { background-color: lightblue; width: 500px; padding: 0.5em; }
 .edit_user_status label { font-size: 0.7em; width: 10em; float: left; text-align: right; margin-right: 0.5em; display: block; }

@@ -15,4 +15,7 @@ config.action_controller.perform_caching             = false
 
 # Don't care if the mailer can't send
 config.action_mailer.raise_delivery_errors = false
+config.action_mailer.delivery_method = :test
 config.gem 'quietbacktrace'
+
+CAMPAIGN_MONITOR_LIST_ID = '59b7a6cb00a8ff1b20ce1b9c640f75d2'

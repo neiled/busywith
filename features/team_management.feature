@@ -16,6 +16,17 @@ Feature: Manage teams
     And I press "Invite"
     Then the user "bob" should have an invite to the team "neils"
     
+  Scenario: Shouldn't be able to invite an existing team member
+    Given I am logged in as the user "neiled"
+    And I am on the edit team page for "neils"
+    When I fill in "email" with "Bob@plasticwater.com"
+    And I press "Invite"
+    Then the user "bob" should have an invite to the team "neils"    
+    Given I am on the edit team page for "neils"
+    When I fill in "email" with "Bob@plasticwater.com"
+    And I press "Invite"
+    Then I should see "already has an invite to your team"
+        
   Scenario: See invite waiting for user
     Given I am logged in as the user "bob"
     And the user "bob" has an invite for the team "neils"
@@ -75,10 +86,15 @@ Feature: Manage teams
 
   Scenario: Invite someone who does not exist
     Given I am logged in as the user "neiled"
-     And I am on the edit team page for "neils"
+    And I am on the edit team page for "neils"
     When I fill in "email" with "foo@plasticwater.com"
     And I press "Invite"
     Then I should see "sent them an email"
+    
+  Scenario: Shouldn't be able to invite someone onto a team I don't own
+    Given I am logged in as the user "bob"
+    And I am on the edit team page for "neils"
+    Then I should not see "email"
       
   Scenario: Hack the team_id field
     Given I am logged in as the user "neiled"
