@@ -45,7 +45,7 @@ Rails::Initializer.run do |config|
   "busywith.com" }
 end
 
-Rubaidh::GoogleAnalytics.tracker_id = 'UA-1098906-5'
+Rubaidh::GoogleAnalytics.tracker_id = 'UA-1098906-6'
 
 
 
