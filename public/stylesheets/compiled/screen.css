@@ -758,32 +758,35 @@ input { border-style: solid; border-color: black; border-width: 1px; }
 /* line 106, ../../../app/stylesheets/base.sass */
 #footer a:visited { color: #7d8a2e; }
 
-/* line 110, ../../../app/stylesheets/base.sass */
+/* line 109, ../../../app/stylesheets/base.sass */
+#footer_spacer { height: 10em; }
+
+/* line 112, ../../../app/stylesheets/base.sass */
 .rss_feed { display: inline; float: left; margin-right: 10px; width: 590px; float: right; }
 /* line 101, ../../../../../../../../../usr/local/lib/ruby/gems/1.8/gems/chriseppstein-compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
 * html .rss_feed { overflow-x: hidden; }
 
-/* line 114, ../../../app/stylesheets/base.sass */
+/* line 116, ../../../app/stylesheets/base.sass */
 .errorExplanation { padding: .8em; margin-bottom: 1em; border: 2px solid #dddddd; background: #fbe3e4; color: #8a1f11; border-color: #fbc2c4; }
 /* line 30, ../../../../../../../../../usr/local/lib/ruby/gems/1.8/gems/chriseppstein-compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_interaction.sass */
 .errorExplanation a { color: #8a1f11; }
-/* line 116, ../../../app/stylesheets/base.sass */
-.errorExplanation p { margin: 0 0 0.5em; }
 /* line 118, ../../../app/stylesheets/base.sass */
-.errorExplanation h2 { font-size: 1em; }
+.errorExplanation p { margin: 0 0 0.5em; }
 /* line 120, ../../../app/stylesheets/base.sass */
+.errorExplanation h2 { font-size: 1em; }
+/* line 122, ../../../app/stylesheets/base.sass */
 .errorExplanation li { font-size: 0.8em; }
 
-/* line 124, ../../../app/stylesheets/base.sass */
+/* line 126, ../../../app/stylesheets/base.sass */
 .fieldWithErrors input { background-color: rgb(251, 227, 228); }
 
-/* line 127, ../../../app/stylesheets/base.sass */
+/* line 129, ../../../app/stylesheets/base.sass */
 .left { float: left; }
 
-/* line 130, ../../../app/stylesheets/base.sass */
+/* line 132, ../../../app/stylesheets/base.sass */
 .right { float: right; }
 
-/* line 133, ../../../app/stylesheets/base.sass */
+/* line 135, ../../../app/stylesheets/base.sass */
 .flash_message { margin-top: 1em; }
 
 /* line 1, ../../../app/stylesheets/welcome.sass */
@@ -806,9 +809,6 @@ body.welcome_index { font-size: 1.6em; font-family: "Arial Rounded MT Bold", ari
 
 /* line 23, ../../../app/stylesheets/welcome.sass */
 #email_form { text-align: center; }
-
-/* line 26, ../../../app/stylesheets/welcome.sass */
-#footer { width: 100%; text-align: center; background: #c9d787; }
 
 /* line 1, ../../../app/stylesheets/user.sass */
 .edit_user_status { background-color: lightblue; width: 500px; padding: 0.5em; }
