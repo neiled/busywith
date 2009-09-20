@@ -1,20 +1,23 @@
-/* line 1, ../../../app/stylesheets/welcome.sass */
+/* line 2, ../../../app/stylesheets/welcome.sass */
 body.welcome_index { font-size: 1.6em; font-family: "Arial Rounded MT Bold", arial, verdana, sans-serif; }
 
-/* line 5, ../../../app/stylesheets/welcome.sass */
+/* line 6, ../../../app/stylesheets/welcome.sass */
+#logo { margin-top: 1em; }
+
+/* line 9, ../../../app/stylesheets/welcome.sass */
 #hello { font-size: 1.2em; }
 
-/* line 8, ../../../app/stylesheets/welcome.sass */
+/* line 12, ../../../app/stylesheets/welcome.sass */
 #pitch { margin-bottom: 1em; }
 
-/* line 11, ../../../app/stylesheets/welcome.sass */
+/* line 15, ../../../app/stylesheets/welcome.sass */
 #beta { margin-bottom: 1em; }
 
-/* line 14, ../../../app/stylesheets/welcome.sass */
+/* line 18, ../../../app/stylesheets/welcome.sass */
 .notify_me_button { border-style: none; vertical-align: middle; }
 
-/* line 18, ../../../app/stylesheets/welcome.sass */
+/* line 22, ../../../app/stylesheets/welcome.sass */
 #email { vertical-align: middle; font-family: "Arial Rounded MT Bold", arial, verdana, sans-serif; font-size: 0.5em; }
 
-/* line 23, ../../../app/stylesheets/welcome.sass */
+/* line 27, ../../../app/stylesheets/welcome.sass */
 #email_form { text-align: center; }
