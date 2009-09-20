@@ -15,48 +15,27 @@
 = render :partial => "user_statuses/history", :locals => {:user => @user}
 
 
-- unless @user.invites.count == 0
-  #invites
-    %h2 Invitations
-    %ul
-      - @user.invites.each do |invite|
-        %li
-          = invite.team.name
-          = link_to "Accept", invite, :method => "put", :class => "accept_membership"#:controller => "memberships", :action => "accept", :membership_id => invite, :class => "accept_membership"
-          = link_to "Ignore", invite, :method => "delete", :class => "remove_membership"#:membership_id => invite, :class => "remove_membership"
-
-#owned_teams
+- if @user.invites.count > 0
   - if current_user == @user
-    %h2= "Teams that you own"
-  - else
-    %h2
-      = "Teams that #{@user.login} owns"
-
-  - unless @user.owned_teams.count == 0
-    %ul
-      - @user.owned_teams.each  do |team| 
-        %li
-          = link_to team.name, team
-          = link_to "Delete Team", (team_path team), :method => "delete", :class => "remove_membership" unless current_user != @user
-  - else
+    #invites
+      = "You have an invite to the team #{@user.invites.first.team.name}"
+      = link_to "Accept", @user.invites.first, :method => "put", :class => "accept_membership"
+      = link_to "Ignore", @user.invites.first, :method => "delete", :class => "remove_membership"
+- elsif @user.owned_teams.count > 0
+  #owned_teams
     - if current_user == @user
-      = "You're not an administrator of any teams"
+      = "You are currently the administrator of the team"
+      = link_to @user.owned_teams.first.name, team_path(@user.owned_teams.first)
+      = link_to "Disband this team!", (team_path @user.owned_teams.first), :method => "delete", :class => "remove_membership" unless current_user != @user
     - else
-      = "This user is is not an administrator of any teams"
-    %br
-  = link_to "Create a new team", new_team_url unless current_user != @user
+      = "The user #{@user.login} is the administrator of the team #{@user.owned_teams.first.name}"
 
-- unless @user.memberships.count == 0
+- elsif @user.memberships.count > 0
   #memberships
     - if current_user == @user
-      %h2= "Teams that you are a member of"
+      = "You are currently a member of the team #{@user.memberships.first.team.name}" unless @user.memberships.first.team.nil?
+      = link_to "Leave this team!", @user.memberships.first, :method => "delete", :class => "remove_membership"      
     - else
-      %h2
-        = "Teams that #{@user.login} is a member of"  
-    %ul
-      - @user.memberships.each  do |membership|
-        %li
-          = link_to membership.team.name, team_url(membership.team)
-          &nbsp;
-          - unless membership.is_administrator
-            = link_to "Remove", membership, :method => "delete", :class => "remove_membership"#{:controller => "memberships", :action => "delete", :membership_id => membership}, :class => "remove_membership"    
+      = "The user #{@user.login} is currently a member of the team #{@user.memberships.first.team.name}" unless @user.memberships.first.team.nil?
+- else
+  = link_to "Create a new team", new_team_url unless current_user != @user

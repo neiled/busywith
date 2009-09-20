@@ -56,7 +56,7 @@ Feature: Manage teams
     Given I am logged in as the user "bob"
     And the user "bob" is a member of the team "neils"
     When I am on the user account page for "bob"
-    And I follow "Remove"
+    And I follow "Leave this team!"
     Then I should see "You are no longer a member of the team neils"
     And the user "bob" should not be a member of the team "neils"
     And the user "bob" should not have an invite to for the team "neils"
@@ -80,7 +80,7 @@ Feature: Manage teams
   Scenario: Delete a team
     Given I am logged in as the user "neiled"
     And I am on the user account page for "neiled"
-    When I follow "Delete Team"
+    When I follow "Disband this team!"
     Then I should see "Team Deleted."
     And the user "neiled" should not be a member of the team "neils"
 
@@ -90,11 +90,6 @@ Feature: Manage teams
     When I fill in "email" with "foo@plasticwater.com"
     And I press "Invite"
     Then I should see "sent them an email"
-    
-  Scenario: Shouldn't be able to invite someone onto a team I don't own
-    Given I am logged in as the user "bob"
-    And I am on the edit team page for "neils"
-    Then I should not see "email"
       
   Scenario: Hack the team_id field
     Given I am logged in as the user "neiled"
@@ -107,10 +102,10 @@ Feature: Manage teams
   Scenario: See a team whilst not logged in
     Given I am on the edit team page for "neils"
     Then I should see "must be signed in"
-  
-  
-  
-  
-  
 
-  
+  Scenario: Shouldn't be able to add more than one team
+    Given I am logged in as the user "neiled"
+    And I have a team called "neils"
+    And I am on the user account page for "neiled"
+    Then I should not see "Create a new team"
+    

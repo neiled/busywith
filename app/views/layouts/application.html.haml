@@ -36,11 +36,11 @@
           %li.sign_up
             = link_to "Sign up", new_user_path 
         - else
-          %li
+          %li.my_team
             = team_tag(current_user)
-          %li
+          %li.me
             = link_to "My Status (#{current_user.login})", profile_path(current_user.login)
-          %li
+          %li.sign_out
             = link_to "Sign out", signout_path  
   #header            
   #container
@@ -48,4 +48,6 @@
     = render :partial => 'layouts/no_more_ie6'      
     #content
       = yield
+  #footer
+    = yield :footer
 

@@ -10,7 +10,8 @@ Feature: Workers should be able to create a team
   
   Scenario: Create a new team
     Given I am logged in as the user "neiled"
-    And I am on the new team page
+    And I am on the user account page for "neiled"
+    And I follow "Create a new team"
     When I fill in "Team Name" with "Neil's team"
     And I press "Create Team"
     Then the user "neiled" should be an administrator of a team called "Neil's team"

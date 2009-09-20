@@ -12,6 +12,30 @@ h2
 h3
   :font-size 1em
   
+a:link
+  :color= !dark_green
+a:visited
+  :color= !dark_green
+  
+
+
+
+div.hr
+  :margin-top 1em
+  :margin-bottom 1em
+  :height 15px
+  :background #fff url(/images/hr.png) no-repeat scroll center
+  hr
+    :display none
+
+div.hr_footer
+  :margin-top 1em
+  :height 15px
+  :background= !light_green url(/images/footer.png) repeat-x scroll center top
+
+  hr
+    :display none
+  
 input.text, input.title, input[type="text"], input[type="password"]
   :margin 0em
   :padding 5px
@@ -57,13 +81,31 @@ input
       :background url('/images/button_sign_up.png') no-repeat scroll
     li.sign_in
       :background url('/images/button_sign_in.png') no-repeat scroll
+    li.sign_out
+      :background url('/images/button_sign_out.png') no-repeat scroll
+    li.me
+      :background url('/images/button_me.png') no-repeat scroll
+    li.my_team
+      :background url('/images/button_my_team.png') no-repeat scroll
   
 #content
   li
     :margin-left 5px
   h2
     :margin-bottom 0px
-  
+    
+#footer
+  :margin-top 5em
+  :font-size 0.5em
+  :height 20em
+  :width 100%
+  :text-align center
+  :background= !light_green  
+  a:link
+    :color= !dark_green
+  a:visited
+    :color= !dark_green  
+
   
 .rss_feed
   +column(15)

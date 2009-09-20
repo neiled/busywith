@@ -2,7 +2,7 @@ class TeamsController < ApplicationController
   before_filter :require_user
 
   def show
-    @team = Team.find(params[:id])
+    @team = current_user.all_teams.find(params[:id])
     @project = @team.projects.new
     previous_time_string = params[:last_updated] || 1.year.from_now.to_s
     @previous_time = Time.parse(previous_time_string)
@@ -24,7 +24,7 @@ class TeamsController < ApplicationController
   end
 
   def edit
-    @team = Team.find(params[:id])
+    @team = current_user.all_teams.find(params[:id])
     @new_project = @team.projects.new
   end
 
@@ -42,7 +42,7 @@ class TeamsController < ApplicationController
   end
 
   def update
-    @team = Team.find(params[:id])
+    @team = current_user.owned_teams.find(params[:id])
 
     respond_to do |format|
       if @team.update_attributes(params[:team])
@@ -55,7 +55,7 @@ class TeamsController < ApplicationController
   end
 
   def destroy
-    @team = Team.find(params[:id])
+    @team = current_user.owned_teams.find(params[:id])
     # @team.memberships.each do |membership|
     #   membership.destroy
     # end

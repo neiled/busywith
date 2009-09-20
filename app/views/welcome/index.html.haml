@@ -2,7 +2,8 @@
 
 #intro
   %h1
-    %img{:alt=>"What's my team doing?! Find out with busywith.", :src=>"/images/front_title.png"}
+    %img{:alt=>"busywith.com", :src=>"/images/main_logo_big_3.png"}  
+    %img{:alt=>"What's my team doing?! Find out with busywith.", :src=>"/images/subtitle.png"}
 
   #hello
     Hello
@@ -15,3 +16,11 @@
       = label_tag "email", "Email Address"
       = text_field_tag "email"
       = image_submit_tag "/images/button_notify_me.png", :alt => "Keep me informed!", :class => "notify_me_button"
+
+
+= content_for :footer do
+  .hr_footer
+    %hr
+  (c) Copyright 2009 Neil Edwards. All Rights Reserved. |
+  = link_to "contact busywith", "mailto:enquiries@busywith.com"
+  

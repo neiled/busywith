@@ -38,7 +38,7 @@ Feature: Team owner tasks
     And I press "Change Name"
     Then I should see "Team updated."
     And I should see "Another name"
-  
+
     
   # Scenario: Delete an existing team
   #   Given I am logged in as the user "neiled"
