@@ -1,8 +1,15 @@
-%h1 Register
+#logo
+  %img{:alt=>"busywith.com", :src=>"/images/busywith_logo_small.png"}
+
+#intro
+  %p
+    Hello again! Just fill in your details here and we'll get you all set up with a new account in no time!
+  %p.subtitle
+    Once you're signed up you'll be able to add the rest of your team and start to see what everyone is doing.
  
 - form_for @user do |f|
   = f.error_messages
   %fieldset.signup  
     = render :partial => "form", :object => f
-    %p.submit
-      = f.submit "Sign up"
+    .submit
+      = image_submit_tag "/images/button_form_sign_up.png", :alt => "Sign up!", :class => "sign_up_button"
