@@ -1,22 +1,22 @@
 /*
 Sass::SyntaxError: Undefined mixin 'container'.
-on line 49 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/base.sass
+on line 52 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/base.sass
 
-45:   :border-color black
-46:   :border-width 1px
-47: 
-48: #container
-49:   +container
-50:   
-51: #flash_notice
-52:   +notice
-53: 
-54: #flash_error
-55:   +error
+48:   :border-color black
+49:   :border-width 1px
+50: 
+51: #container
+52:   +container
+53:   :min-height 100%
+54:   :height auto !important
+55:   :height 100%
+56:   :margin 0 auto -4em
+57:   :position relative
+58:   
 
 
 Backtrace:
-/Users/neil/Development/Rails/Projects/busywith/app/stylesheets/base.sass:49
+/Users/neil/Development/Rails/Projects/busywith/app/stylesheets/base.sass:52
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/mixin_node.rb:27:in `_perform'
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:156:in `perform'
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:200:in `perform_children'
@@ -91,4 +91,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Sass::SyntaxError: Undefined mixin 'container'.\A on line 49 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/base.sass\A \A 45:   :border-color black\A 46:   :border-width 1px\A 47: \A 48: #container\A 49:   +container\A 50:   \A 51: #flash_notice\A 52:   +notice\A 53: \A 54: #flash_error\A 55:   +error\A "; }
+  content: "Sass::SyntaxError: Undefined mixin 'container'.\A on line 52 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/base.sass\A \A 48:   :border-color black\A 49:   :border-width 1px\A 50: \A 51: #container\A 52:   +container\A 53:   :min-height 100%\A 54:   :height auto !important\A 55:   :height 100%\A 56:   :margin 0 auto -4em\A 57:   :position relative\A 58:   \A "; }

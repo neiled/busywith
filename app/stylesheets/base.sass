@@ -3,6 +3,11 @@
 !light_pink = #FFC0A9
 !dark_pink = #FF8598
 
+body
+  :font-family "Arial Rounded MT Bold", arial, verdana, sans-serif
+  :height 100%
+  :font-size 1.6em
+  
 h1
   :font-size 2em
 
@@ -29,10 +34,8 @@ div.hr
     :display none
 
 div.hr_footer
-  :margin-top 1em
   :height 15px
   :background= !light_green url(/images/footer.png) repeat-x scroll center top
-
   hr
     :display none
   
@@ -47,18 +50,51 @@ input
 
 #container
   +container
+  :min-height 100%
+  :height auto !important
+  :height 100%
+  :margin 0 auto -4em
+  :position relative
+  
+#content
+  :padding-bottom 100px
+  li
+    :margin-left 5px
+  h2
+    :margin-bottom 0px
+
+#footer, #push
+  :height 4em
+
+#footer
+  :font-size 85%
+  :margin-top 5em
+  :width 100%
+  :text-align center
+  :background= !light_green  
+  a:link
+    :color= !dark_green
+  a:visited
+    :color= !dark_green  
+
+  
+#flash
+  :width 50%
+  :text-align center
   
 #flash_notice
   +notice
 
 #flash_error
   +error
+  
 
 #navbar_container
   :width 100%
   :height 40px
   :background-color= !light_green
   :overflow hidden
+  :margin-bottom 1em
 
 #navbar
   :font-family arial
@@ -88,39 +124,17 @@ input
     li.my_team
       :background url('/images/button_my_team.png') no-repeat scroll
   
-#content
-  li
-    :margin-left 5px
-  h2
-    :margin-bottom 0px
-    
-#footer
-  :margin-top 5em
-  :font-size 0.5em
-  :height 20em
-  :width 100%
-  :text-align center
-  :background= !light_green  
-  a:link
-    :color= !dark_green
-  a:visited
-    :color= !dark_green  
 
-#footer_spacer
-  :height 10em
-  
 .rss_feed
   +column(15)
   :float right
   
 .errorExplanation
   +error
+  :width 50%
   p
     margin: 0 0 0.5em
-  h2
-    :font-size 1em
-  li
-    :font-size 0.8em
+
 
 .fieldWithErrors
   input
