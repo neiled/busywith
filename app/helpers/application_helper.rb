@@ -20,10 +20,10 @@ module ApplicationHelper
   end
   
   def team_tag(user)
-    if(user.all_teams.count == 1)
-      link_to "My Team", team_url(user.all_teams.first)
+    if(user.all_teams.count == 0)
+      nil #link_to "My Team", profile_url(user.login)
     else
-      "Team: " + select_tag('Team', options_for_select((user.all_teams.map { |e| [e.name, team_url(e)] } << ["Choose a team...",""]).sort!, ""), :class => "choose_team")
+      link_to "My Team", team_url(user.all_teams.first)
     end
   end
     

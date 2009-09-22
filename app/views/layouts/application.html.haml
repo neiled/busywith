@@ -38,8 +38,9 @@
             %li.sign_up
               = link_to "Sign up", new_user_path 
           - else
-            %li.my_team
-              = team_tag(current_user)
+            -unless team_tag(current_user).nil?
+              %li.my_team
+                = team_tag(current_user)
             %li.me
               = link_to "My Status (#{current_user.login})", profile_path(current_user.login)
             %li.sign_out

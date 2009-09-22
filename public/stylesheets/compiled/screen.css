@@ -786,7 +786,7 @@ fieldset .submit { text-align: right; margin-right: 9em; }
 * html .rss_feed { overflow-x: hidden; }
 
 /* line 146, ../../../app/stylesheets/base.sass */
-.errorExplanation { padding: .8em; margin-bottom: 1em; border: 2px solid #dddddd; background: #fbe3e4; color: #8a1f11; border-color: #fbc2c4; width: 50%; }
+.errorExplanation { padding: .8em; margin-bottom: 1em; border: 2px solid #dddddd; background: #fbe3e4; color: #8a1f11; border-color: #fbc2c4; font-size: 65%; }
 /* line 30, ../../../../../../../../../usr/local/lib/ruby/gems/1.8/gems/chriseppstein-compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_interaction.sass */
 .errorExplanation a { color: #8a1f11; }
 /* line 149, ../../../app/stylesheets/base.sass */

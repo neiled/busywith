@@ -5,7 +5,7 @@ class UserStatus < ActiveRecord::Base
                                         :allow_blank => true
                                         
   validates_presence_of :current_task, :on => :update, :message => "can't be blank"
-  validates_length_of :current_task, :maximum => 50, :allow_blank => false
+  validates_length_of :current_task, :maximum => 50
   
   belongs_to :active_project, :class_name => "Project", :foreign_key => "project_id"
   

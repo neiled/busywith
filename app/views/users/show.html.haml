@@ -1,7 +1,7 @@
 = content_for :unobtrusive_javascript do
   %script{ 'type' => "text/javascript", :src   => "/javascripts/users.js" }
   
-- unless current_user.nil?
+- if current_user == @user
   #status_update
     %h3 Update your status
     - form_for [@user,@user_status] do |f|
@@ -42,4 +42,5 @@
     - else
       = "The user #{@user.login} is currently a member of the team #{@user.memberships.first.team.name}" unless @user.memberships.first.team.nil?
 - else
+  You're all alone... but don't worry you can create a new team and invite whoever you like!
   = link_to "Create a new team", new_team_url unless current_user != @user
