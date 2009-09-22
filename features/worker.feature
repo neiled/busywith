@@ -33,7 +33,7 @@ Feature: Workers should be able to create a team
     And I press "Update"
     Then "Test Project" should be selected for "Project"
     And I should see "Status Updated"
-
+    
   Scenario: Update estimated completion
     Given I am logged in as the user "neiled"
     And I have a team called "Neil's team" with a project called "Test Project"

@@ -5,7 +5,11 @@
   #status_update
     %h3 Update your status
     - form_for [@user,@user_status] do |f|
-      = render :partial => 'user_statuses/user_form', :locals => {:user => @user, :user_status => @user_status, :f => f}
+      = f.error_messages    
+      %fieldset.update_status
+        = render :partial => 'user_statuses/user_form', :locals => {:user => @user, :user_status => @user_status, :f => f}
+        .submit
+          = image_submit_tag "/images/button_update.png", :alt => "Update", :class => "update_button"
 -else
   #status_show
     %h3= "Status for #{user.login}"

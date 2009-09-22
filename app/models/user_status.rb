@@ -4,7 +4,8 @@ class UserStatus < ActiveRecord::Base
                                         :on_or_after_message => 'must be in the future',
                                         :allow_blank => true
                                         
-  validates_length_of :current_task, :maximum => 50, :allow_blank => true
+  validates_presence_of :current_task, :on => :update, :message => "can't be blank"
+  validates_length_of :current_task, :maximum => 50, :allow_blank => false
   
   belongs_to :active_project, :class_name => "Project", :foreign_key => "project_id"
   

@@ -1,23 +1,25 @@
 /*
-Sass::SyntaxError: Undefined mixin 'quiet'.
-on line 65 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/user.sass
+Sass::SyntaxError: Undefined variable: "!light_green".
+on line 5 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/user.sass
 
-61:   ::display inline
-62:   
-63: .history_time
-64:   :font-size 0.7em
-65:   +quiet
-66: 
-67: #status_update, #owned_teams, #memberships, #invites
-68:   :padding 1em
-69:   :border-style solid 
-70:   :border-color = black
-71:   :border-width 1px
+1: #status_update
+2:   :width 70%
+3: 
+4: .edit_user_status
+5:   :background-color= !light_green
+6:   :padding 0.5em
+7:   :border-style solid 
+8:   :border-color = !dark_green
+9:   :border-width 5px
+10:   label
+11:     :font-size 85%
 
 
 Backtrace:
-/Users/neil/Development/Rails/Projects/busywith/app/stylesheets/user.sass:65
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/mixin_node.rb:27:in `_perform'
+/Users/neil/Development/Rails/Projects/busywith/app/stylesheets/user.sass:5
+/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/script/variable.rb:27:in `perform'
+/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/prop_node.rb:87:in `perform!'
+/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:179:in `_perform'
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:156:in `perform'
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:200:in `perform_children'
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:200:in `map'
@@ -91,4 +93,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Sass::SyntaxError: Undefined mixin 'quiet'.\A on line 65 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/user.sass\A \A 61:   ::display inline\A 62:   \A 63: .history_time\A 64:   :font-size 0.7em\A 65:   +quiet\A 66: \A 67: #status_update, #owned_teams, #memberships, #invites\A 68:   :padding 1em\A 69:   :border-style solid \A 70:   :border-color = black\A 71:   :border-width 1px\A "; }
+  content: "Sass::SyntaxError: Undefined variable: \"!light_green\".\A on line 5 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/user.sass\A \A 1: #status_update\A 2:   :width 70%\A 3: \A 4: .edit_user_status\A 5:   :background-color= !light_green\A 6:   :padding 0.5em\A 7:   :border-style solid \A 8:   :border-color = !dark_green\A 9:   :border-width 5px\A 10:   label\A 11:     :font-size 85%\A "; }
