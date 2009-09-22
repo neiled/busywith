@@ -18,29 +18,24 @@
 
 = render :partial => "user_statuses/history", :locals => {:user => @user}
 
-
-- if @user.invites.count > 0
-  - if current_user == @user
+- if current_user == @user
+  - if @user.invites.count > 0
     #invites
       = "You have an invite to the team #{@user.invites.first.team.name}"
       = link_to "Accept", @user.invites.first, :method => "put", :class => "accept_membership"
       = link_to "Ignore", @user.invites.first, :method => "delete", :class => "remove_membership"
-- elsif @user.owned_teams.count > 0
-  #owned_teams
-    - if current_user == @user
+  - elsif @user.owned_teams.count > 0
+    #owned_teams
       = "You are currently the administrator of the team"
       = link_to @user.owned_teams.first.name, team_path(@user.owned_teams.first)
       = link_to "Disband this team!", (team_path @user.owned_teams.first), :method => "delete", :class => "remove_membership" unless current_user != @user
-    - else
-      = "The user #{@user.login} is the administrator of the team #{@user.owned_teams.first.name}"
-
-- elsif @user.memberships.count > 0
-  #memberships
-    - if current_user == @user
+  - elsif @user.memberships.count > 0
+    #memberships
       = "You are currently a member of the team #{@user.memberships.first.team.name}" unless @user.memberships.first.team.nil?
       = link_to "Leave this team!", @user.memberships.first, :method => "delete", :class => "remove_membership"      
-    - else
-      = "The user #{@user.login} is currently a member of the team #{@user.memberships.first.team.name}" unless @user.memberships.first.team.nil?
+  - else
+    You're all alone... but don't worry you can create a new team and invite whoever you like!
+    = link_to "Create a new team", new_team_url unless current_user != @user
 - else
-  You're all alone... but don't worry you can create a new team and invite whoever you like!
-  = link_to "Create a new team", new_team_url unless current_user != @user
+  - if @user.memberships.count > 0
+    = "The user #{@user.login} is currently a member of the team #{@user.memberships.first.team.name}" unless @user.memberships.first.team.nil?
