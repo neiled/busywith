@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  
+  before_filter :require_user, :only => [:show]
+    
   def new
     @user = User.new
     @user.email = params[:email] || ""
@@ -21,22 +24,12 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find_by_login(params[:login])
-    @user_status = @user.user_status
-    unless @user
+    if @user
+      @user_status = @user.user_status    
+    else
       flash[:notice] = "That user does not exist"
-      redirect_to root_path
+      redirect_to profile_path(:login => current_user.login)
     end
   end
   
-  # def update
-  #   debugger
-  #   @user = User.find(params[:id])
-  #   if @user.update_attributes(params[:user])
-  #     flash[:notice] = "Status Updated"
-  #   else
-  #     flash[:error] = "Unable to update status: #{@user.errors.full_messages}"
-  #   end    
-  #   redirect_to :back
-  # end
-
 end
