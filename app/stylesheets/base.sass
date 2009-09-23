@@ -3,9 +3,29 @@
 !light_pink = #FFC0A9
 !dark_pink = #FF8598
 
+.clearfix:after
+  :content "."
+  :display block
+  :clear both
+  :visibility hidden
+  :line-height 0
+  :height 0
+.clearfix
+  :display inline-block
+/* Hides from IE-mac \*/
+* html.clearfix
+  :height 1%
+.clearfix
+  :display block
+/* End hide from IE-mac */
+
+
+
+html, body, #container
+  :height 100%
+
 body
   :font-family "Arial Rounded MT Bold", arial, verdana, sans-serif
-  :height 100%
   :font-size 1.6em
   
 h1
@@ -24,14 +44,6 @@ a:link
 a:visited
   :color= !dark_green
   
-div.hr
-  :margin-top 1em
-  :margin-bottom 1em
-  :height 15px
-  :background #fff url(/images/hr.png) no-repeat scroll center
-  hr
-    :display none
-
 div.hr_footer
   :height 15px
   :background= !light_green url(/images/footer.png) repeat-x scroll center top
@@ -49,25 +61,18 @@ input
 
 #container
   +container
-  :min-height 100%
   :height auto !important
-  :height 100%
-  :margin 0 auto -4em
-  :position relative
-  
+  :min-height 100%  
+
 #content
   :padding-bottom 100px
-  li
-    :margin-left 5px
-  h2
-    :margin-bottom 0px
-
-#footer, #push
-  :height 4em
 
 #footer
+  :height 100px
+  :position relative
+  :margin-top -100px
+  :clear both
   :font-size 85%
-  :margin-top 5em
   :width 100%
   :text-align center
   :background= !light_green  
@@ -109,6 +114,7 @@ fieldset
   :background-color= !light_green
   :overflow hidden
   :margin-bottom 1em
+  :position absolute
 
 #navbar
   :font-family arial
