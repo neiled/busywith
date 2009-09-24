@@ -11,7 +11,7 @@ Feature: Email support
   
   Scenario: When a new person signs up they get an email sent
       When "bob@plasticwater.com" opens the email
-      Then I should see "Hello bob" in the email body
+      Then I should see "Hello Bob" in the email body
 
   Scenario: When a team owner adds an existing user that user should get an email notifying them 
     Given I am logged in as the user "neil"
@@ -28,7 +28,7 @@ Feature: Email support
     When I fill in "email" with "john@plasticwater.com"
     And I press "Invite"
     And "john@plasticwater.com" opens the email with subject "Team Invite from busywith.com"
-    Then they should see "Someone at busywith.com \(Neil Edwards\) wants you to be in their team" in the email body
+    Then they should see "Someone at busywith.com \(Neil\) wants you to be in their team" in the email body
     When I follow "Sign up!" in the email
     Then I should be on the registration page
     And the "email" field should contain "john@plasticwater.com"

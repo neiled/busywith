@@ -34,9 +34,7 @@ class User < ActiveRecord::Base
   
   has_one :user_status, :class_name => "UserStatus", :foreign_key => "user_id"
     
-
-  validates_length_of :first_name, :within => 1..50, :message => "must be present"
-  validates_length_of :last_name, :within => 1..50, :message => "must be present"
+  validates_length_of :display_name, :within => 1..50, :message => "must be present"
   
   before_create :setup_defaults
   
@@ -45,7 +43,7 @@ class User < ActiveRecord::Base
   end
   
   def full_name
-    (first_name + ' ' + last_name).titlecase
+    display_name.titlecase
   end
   
   private

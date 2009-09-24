@@ -5,12 +5,9 @@
   %li.email
     = form.label :email
     = form.text_field :email
-  %li.first_name
-    = form.label :first_name
-    = form.text_field :first_name
-  %li.last_name
-    = form.label :last_name
-    = form.text_field :last_name
+  %li.display_name
+    = form.label :display_name
+    = form.text_field :display_name
   %li.password
     = form.label :password, form.object.new_record? ? nil : "Change password"
     = form.password_field :password
