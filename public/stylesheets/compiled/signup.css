@@ -12,7 +12,6 @@ on line 7 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/sig
 10:   :border-style solid 
 11:   :border-color = !dark_green
 12:   :border-width 5px
-13:   
 
 
 Backtrace:
@@ -93,4 +92,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Sass::SyntaxError: Undefined variable: \"!light_green\".\A on line 7 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/signup.sass\A \A 3:   :margin-bottom 1em\A 4:   :font-size 85%\A 5: #new_user\A 6:   :width 65%\A 7:   :background= !light_green\A 8:   :padding-top 1em\A 9:   :padding-bottom 1em\A 10:   :border-style solid \A 11:   :border-color = !dark_green\A 12:   :border-width 5px\A 13:   \A "; }
+  content: "Sass::SyntaxError: Undefined variable: \"!light_green\".\A on line 7 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/signup.sass\A \A 3:   :margin-bottom 1em\A 4:   :font-size 85%\A 5: #new_user\A 6:   :width 65%\A 7:   :background= !light_green\A 8:   :padding-top 1em\A 9:   :padding-bottom 1em\A 10:   :border-style solid \A 11:   :border-color = !dark_green\A 12:   :border-width 5px\A "; }

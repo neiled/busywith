@@ -696,7 +696,7 @@ h2 { font-size: 1.2em; }
 h3 { font-size: 1em; }
 
 /* line 39, ../../../app/stylesheets/base.sass */
-p { margin: 0; }
+p { margin-bottom: 1em; }
 
 /* line 42, ../../../app/stylesheets/base.sass */
 a:link { color: #7d8a2e; }
@@ -713,7 +713,7 @@ div.hr_footer hr { display: none; }
 input.text, input.title, input[type="text"], input[type="password"] { margin: 0em; padding: 5px; }
 
 /* line 57, ../../../app/stylesheets/base.sass */
-input { border-style: solid; border-color: black; border-width: 1px; }
+input { border-style: solid; border-color: #7d8a2e; border-width: 1px; }
 
 /* line 62, ../../../app/stylesheets/base.sass */
 #container { width: 950px; margin: 0 auto; overflow: hidden; display: inline-block; height: auto !important; min-height: 100%; }
@@ -721,7 +721,7 @@ input { border-style: solid; border-color: black; border-width: 1px; }
 #container { display: block; }
 
 /* line 67, ../../../app/stylesheets/base.sass */
-#content { padding-bottom: 100px; margin-top: 40px; }
+#content { padding-bottom: 100px; margin-top: 50px; }
 
 /* line 71, ../../../app/stylesheets/base.sass */
 #footer { height: 100px; position: relative; margin-top: -100px; clear: both; font-size: 85%; width: 100%; text-align: center; background: #c9d787; }
@@ -785,32 +785,40 @@ fieldset .submit { text-align: right; margin-right: 9em; }
 /* line 145, ../../../app/stylesheets/base.sass */
 #navbar ul li.my_team { background: url('/images/button_my_team.png') no-repeat scroll; }
 
-/* line 149, ../../../app/stylesheets/base.sass */
+/* line 148, ../../../app/stylesheets/base.sass */
+.help { margin-top: 1em; float: left; border-style: dashed; border-color: #7d8a2e; border-width: 2px; background-color: #c9d787; margin-left: 1em; font-size: 0.5em; width: 200px; padding: 0.5em; }
+/* line 159, ../../../app/stylesheets/base.sass */
+.help li { margin-bottom: 1em; }
+
+/* line 163, ../../../app/stylesheets/base.sass */
 .rss_feed { display: inline; float: left; margin-right: 10px; width: 590px; float: right; }
 /* line 101, ../../../../../../../../../usr/local/lib/ruby/gems/1.8/gems/chriseppstein-compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
 * html .rss_feed { overflow-x: hidden; }
 
-/* line 153, ../../../app/stylesheets/base.sass */
+/* line 167, ../../../app/stylesheets/base.sass */
 .errorExplanation { padding: .8em; margin-bottom: 1em; border: 2px solid #dddddd; background: #fbe3e4; color: #8a1f11; border-color: #fbc2c4; font-size: 65%; }
 /* line 30, ../../../../../../../../../usr/local/lib/ruby/gems/1.8/gems/chriseppstein-compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_interaction.sass */
 .errorExplanation a { color: #8a1f11; }
-/* line 156, ../../../app/stylesheets/base.sass */
+/* line 170, ../../../app/stylesheets/base.sass */
 .errorExplanation p { margin: 0 0 0.5em; }
 
-/* line 161, ../../../app/stylesheets/base.sass */
+/* line 175, ../../../app/stylesheets/base.sass */
 .fieldWithErrors input { background-color: rgb(251, 227, 228); }
 
-/* line 164, ../../../app/stylesheets/base.sass */
+/* line 178, ../../../app/stylesheets/base.sass */
 .left { float: left; }
 
-/* line 167, ../../../app/stylesheets/base.sass */
+/* line 181, ../../../app/stylesheets/base.sass */
 .right { float: right; }
 
-/* line 170, ../../../app/stylesheets/base.sass */
-.flash_message { margin-top: 1em; }
+/* line 184, ../../../app/stylesheets/base.sass */
+.flash_message { margin-top: 1em; font-size: 85%; }
 
-/* line 173, ../../../app/stylesheets/base.sass */
+/* line 188, ../../../app/stylesheets/base.sass */
 .subtitle { font-style: oblique; font-size: 85%; }
+
+/* line 192, ../../../app/stylesheets/base.sass */
+.image_button { border-style: none; vertical-align: middle; }
 
 /* line 1, ../../../app/stylesheets/welcome.sass */
 #logo { margin-top: 1em; }
@@ -824,59 +832,71 @@ fieldset .submit { text-align: right; margin-right: 9em; }
 /* line 10, ../../../app/stylesheets/welcome.sass */
 #beta { margin-bottom: 1em; }
 
-/* line 13, ../../../app/stylesheets/welcome.sass */
-.notify_me_button { border-style: none; vertical-align: middle; }
-
-/* line 17, ../../../app/stylesheets/welcome.sass */
+/* line 14, ../../../app/stylesheets/welcome.sass */
 #email { vertical-align: middle; font-family: "Arial Rounded MT Bold", arial, verdana, sans-serif; font-size: 0.5em; }
 
-/* line 22, ../../../app/stylesheets/welcome.sass */
+/* line 19, ../../../app/stylesheets/welcome.sass */
 #email_form { text-align: center; }
 
+/* line 23, ../../../app/stylesheets/welcome.sass */
+#signin_form { float: left; background-color: #c9d787; padding: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 5px; margin: 0 auto; float: none; width: 15em; }
+/* line 25, ../../../app/stylesheets/welcome.sass */
+#signin_form label { width: 5em; }
+/* line 30, ../../../app/stylesheets/welcome.sass */
+#signin_form .submit { margin-left: 6em; }
+
 /* line 1, ../../../app/stylesheets/user.sass */
-#status_update { width: 70%; }
+#create_a_team { padding: .8em; margin-bottom: 1em; border: 2px solid #dddddd; background: #fff6bf; color: #514721; border-color: #ffd324; }
+/* line 38, ../../../../../../../../../usr/local/lib/ruby/gems/1.8/gems/chriseppstein-compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_interaction.sass */
+#create_a_team a { color: #514721; }
 
 /* line 4, ../../../app/stylesheets/user.sass */
-.edit_user_status { background-color: #c9d787; padding: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 5px; }
-/* line 10, ../../../app/stylesheets/user.sass */
-.edit_user_status label { font-size: 85%; width: 10em; float: left; text-align: right; margin-right: 0.5em; display: block; }
-/* line 17, ../../../app/stylesheets/user.sass */
-.edit_user_status select { font-size: 85%; width: 10em; }
-/* line 20, ../../../app/stylesheets/user.sass */
-.edit_user_status .submit { margin-top: 1em; }
+#status_update { width: 70%; }
 
+/* line 7, ../../../app/stylesheets/user.sass */
+.edit_user_status { float: left; background-color: #c9d787; padding: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 5px; }
+
+/* line 11, ../../../app/stylesheets/user.sass */
+.update_status label { margin-top: 0.25em; font-size: 85%; width: 10em; float: left; text-align: right; margin-right: 0.5em; display: block; vertical-align: text-bottom; }
+/* line 20, ../../../app/stylesheets/user.sass */
+.update_status input.text, .update_status input.title, .update_status input[type="text"], .update_status input[type="password"] { font-size: 50%; width: 20em; }
 /* line 23, ../../../app/stylesheets/user.sass */
+.update_status select { font-size: 60%; width: 10em; }
+/* line 26, ../../../app/stylesheets/user.sass */
+.update_status .submit { margin-top: 1em; }
+
+/* line 29, ../../../app/stylesheets/user.sass */
 #progress_slider { width: 20em; font-size: 0.5em; margin-top: 0.5em; display: inline-block; }
 
-/* line 30, ../../../app/stylesheets/user.sass */
+/* line 36, ../../../app/stylesheets/user.sass */
 #percent_complete { width: 3em; margin: 0em 0em 0em 1em; padding: 0px; border-style: none; background-color: inherit; font-size: 0.8em; }
 
-/* line 38, ../../../app/stylesheets/user.sass */
-#user_status_estimated_completion { width: 10em; }
+/* line 44, ../../../app/stylesheets/user.sass */
+#user_status_estimated_completion { width: 15em; }
 
-/* line 41, ../../../app/stylesheets/user.sass */
-.update_button { border-style: none; vertical-align: middle; }
-
-/* line 45, ../../../app/stylesheets/user.sass */
+/* line 47, ../../../app/stylesheets/user.sass */
 a.dp-choose-date { font-size: 0.5em; background-image: url('/images/calendar.png'); text-indent: -2000px; overflow: hidden; margin-left: 1em; margin-top: 0.5em; display: inline-block; height: 16px; width: 16px; }
 
 /* line 58, ../../../app/stylesheets/user.sass */
-#history { font-size: 0.7em; }
+#history { font-size: 0.7em; clear: both; }
 
 
-/* line 64, ../../../app/stylesheets/user.sass */
+/* line 65, ../../../app/stylesheets/user.sass */
 .history_time { font-size: 0.7em; color: #666666; }
 
-/* line 70, ../../../app/stylesheets/user.sass */
+/* line 69, ../../../app/stylesheets/user.sass */
 #owned_teams, #memberships, #invites { padding: 1em; border-style: solid; border-color: black; border-width: 1px; margin-bottom: 1em; width: 600px; }
 
-/* line 78, ../../../app/stylesheets/user.sass */
+/* line 77, ../../../app/stylesheets/user.sass */
 #invites { padding: .8em; margin-bottom: 1em; border: 2px solid #dddddd; background: #fff6bf; color: #514721; border-color: #ffd324; }
 /* line 38, ../../../../../../../../../usr/local/lib/ruby/gems/1.8/gems/chriseppstein-compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_interaction.sass */
 #invites a { color: #514721; }
 
-/* line 81, ../../../app/stylesheets/user.sass */
-.remove_membership, .remove_project { font-size: 0.5em; font-style: italic; color: #CCCCCC; }
+/* line 80, ../../../app/stylesheets/user.sass */
+.accept_membership, .remove_membership, .remove_project { font-size: 0.5em; }
+
+/* line 83, ../../../app/stylesheets/user.sass */
+.remove_membership, .remove_project { font-style: italic; color: #CCCCCC; }
 
 /* line 1, ../../../app/stylesheets/home.sass */
 .user_status, .user_status_changed { font-size: 0.7em; width: 15em; padding: 1em; margin-top: 1em; padding: .8em; margin-bottom: 1em; border: 2px solid #dddddd; background: #fff6bf; color: #514721; border-color: #ffd324; }
@@ -902,13 +922,19 @@ img.percentImage { background: white url(/images/percentImage_back.png) top left
 .edit_team { color: #666666; }
 
 /* line 4, ../../../app/stylesheets/team.sass */
-#members { width: 800px; border-style: solid; border-color: black; border-width: 1px; }
+#members { float: left; background-color: #c9d787; padding: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 5px; clear: both; margin-top: 1em; width: 60%; }
+
+/* line 10, ../../../app/stylesheets/team.sass */
+#team_form { float: left; background-color: #c9d787; padding: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 5px; }
+
+/* line 14, ../../../app/stylesheets/team.sass */
+#change_team_name { float: left; background-color: #c9d787; padding: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 5px; width: 60%; }
+
+/* line 18, ../../../app/stylesheets/team.sass */
+#projects { float: left; background-color: #c9d787; padding: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 5px; clear: both; margin-top: 1em; width: 60%; }
 
 /* line 1, ../../../app/stylesheets/signup.sass */
 #intro { margin-top: 1em; margin-bottom: 1em; font-size: 85%; }
 
 /* line 5, ../../../app/stylesheets/signup.sass */
 #new_user { width: 65%; background: #c9d787; padding-top: 1em; padding-bottom: 1em; border-style: solid; border-color: #7d8a2e; border-width: 5px; }
-
-/* line 14, ../../../app/stylesheets/signup.sass */
-.sign_up_button { border-style: none; vertical-align: middle; }

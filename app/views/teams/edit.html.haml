@@ -4,19 +4,19 @@
 %h1
   = link_to(h(@team.name.capitalize), @team)
   
-- form_for @team do |f|
-  = f.error_messages
-  = f.label :name, "Team Name"
-  = f.text_field :name
-  = f.submit "Change Name", :disable_with => 'Changing Name...'
+#change_team_name
+  - form_for @team do |f|
+    = f.error_messages
+    = f.label :name, "Team Name"
+    = f.text_field :name
+    = f.submit "Change Name", :disable_with => 'Changing Name...'
 
 #members
   %h2 Members
   = render :partial => 'memberships/members_list', :locals => {:team => @team}
 
   -if current_user and current_user.owned_teams.include?(@team)
-    %h3 Invite a new member
-
+    Invite a new member
     - form_tag({:action => "create", :controller => "memberships"}, :id => "new_member") do
       = label_tag "email"
       = text_field_tag "email"
@@ -28,7 +28,7 @@
     %h2 Projects
     = render :partial => "projects/project_list", :locals => {:team => @team}
     
-    %h3 Add a new project
+    Add a new project
     - form_for [@team, @new_project] do |f|
       = f.error_messages
       = f.label :name, "Name"

@@ -47,9 +47,9 @@
               = link_to "Sign out", signout_path  
   #header            
   #container
-    = render :partial => 'layouts/flashes'
-    = render :partial => 'layouts/no_more_ie6'      
     #content.clearfix
+      = render :partial => 'layouts/flashes'
+      = render :partial => 'layouts/no_more_ie6'    
       = yield
   #footer
     .hr_footer

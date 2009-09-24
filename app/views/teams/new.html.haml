@@ -1,8 +1,15 @@
-%h1 New Team
+%h1 Let's create a new team!
+%p Right, it's time to create a new team and start adding members.
 
+#team_form
+  - form_for @team do |f|
+    = f.error_messages
+    = f.label :name, "Team Name"
+    = f.text_field :name
+    = image_submit_tag "/images/button_create.png", :alt => "Create Team", :class => "image_button"
 
-- form_for @team do |f|
-  = f.error_messages
-  = f.label :name, "Team Name"
-  = f.text_field :name
-  = f.submit "Create Team", :disable_with => 'Creating Team...'
+%p.help
+  Trying to join a team instead?
+  Just click the 'me' button at the top and accept the team's invite.
+  %br
+  If you don't see an invite get the team owner to send you another one (but get them to check the email address first, you know what these team owners can be like...)

@@ -1,21 +1,27 @@
+#create_a_team
+  +notice
+
 #status_update
   :width 70%
 
 .edit_user_status
-  :background-color= !light_green
-  :padding 0.5em
-  :border-style solid 
-  :border-color = !dark_green
-  :border-width 5px
+  +green_box
+  
+.update_status
   label
+    :margin-top 0.25em
     :font-size 85%
     :width 10em
     :float left
     :text-align right
     :margin-right 0.5em
     :display block
+    :vertical-align text-bottom
+  input.text, input.title, input[type="text"], input[type="password"]
+    :font-size 50%
+    :width 20em
   select
-    :font-size 85%
+    :font-size 60%
     :width 10em  
   .submit
     :margin-top 1em
@@ -36,12 +42,8 @@
   :font-size 0.8em
   
 #user_status_estimated_completion
-  :width 10em
+  :width 15em
 
-.update_button
-  :border-style none
-  :vertical-align middle
-  
 a.dp-choose-date
   :font-size 0.5em
   :background-image url('/images/calendar.png')
@@ -52,11 +54,10 @@ a.dp-choose-date
   :display inline-block
   :height 16px
   :width 16px
-
-  
     
 #history
   :font-size 0.7em
+  :clear both
 
 .history_time, .history_status_update
   ::display inline
@@ -64,8 +65,6 @@ a.dp-choose-date
 .history_time
   :font-size 0.7em
   +quiet
-  
-
 
 #owned_teams, #memberships, #invites
   :padding 1em
@@ -78,7 +77,9 @@ a.dp-choose-date
 #invites
   +notice
   
-.remove_membership, .remove_project
+.accept_membership, .remove_membership, .remove_project
   :font-size 0.5em
+  
+.remove_membership, .remove_project
   :font-style italic
   :color #CCCCCC

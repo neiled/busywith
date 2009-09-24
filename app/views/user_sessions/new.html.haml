@@ -1,8 +1,18 @@
-%h1 Login
+#logo
+  %img{:alt=>"busywith.com", :src=>"/images/busywith_logo.png"}
+  %img{:alt=>"What's my team doing?! Find out with busywith.", :src=>"/images/subtitle.png"}
+
+#intro
+  #hello
+    Hello,
+  #intro
+    Welcome back to busywith! If you'd just be so kind to fill in the boxes we'll get you signed in quick sharp!
  
-- form_for @user_session do |f|
-  = f.error_messages
-  %fieldset.signin
-    = render :partial => "form", :object => f
-    %p.submit
-      = f.submit "Sign in"
+#signin
+  #signin_form
+    - form_for @user_session do |f|
+      = f.error_messages
+      %fieldset.signin
+        = render :partial => "form", :object => f
+        .submit
+          = image_submit_tag "/images/button_sign_in.png", :alt => "Sign in", :class => "image_button"

@@ -1,4 +1,9 @@
 Date.format = 'mm/dd/yyyy';
+
+setTimeout(function() {
+    $('#flash_notice').fadeOut('slow');
+}, 7000);
+
 $(document).ready(function() {
   var current_color = $(".flash_message").css("color");
   //alert("here");
@@ -7,7 +12,7 @@ $(document).ready(function() {
   $(".choose_team").change ( function() {
     window.location = this.value;
   });
-    
+  
 
 });
 

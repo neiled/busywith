@@ -2,7 +2,7 @@
 Sass::SyntaxError: Undefined mixin 'container'.
 on line 63 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/base.sass
 
-59:   :border-color black
+59:   :border-color= !dark_green
 60:   :border-width 1px
 61: 
 62: #container
@@ -12,7 +12,7 @@ on line 63 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/ba
 66:   
 67: #content
 68:   :padding-bottom 100px
-69:   :margin-top 40px  
+69:   :margin-top 50px  
 
 
 Backtrace:
@@ -91,4 +91,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Sass::SyntaxError: Undefined mixin 'container'.\A on line 63 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/base.sass\A \A 59:   :border-color black\A 60:   :border-width 1px\A 61: \A 62: #container\A 63:   +container\A 64:   :height auto !important\A 65:   :min-height 100%  \A 66:   \A 67: #content\A 68:   :padding-bottom 100px\A 69:   :margin-top 40px  \A "; }
+  content: "Sass::SyntaxError: Undefined mixin 'container'.\A on line 63 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/base.sass\A \A 59:   :border-color= !dark_green\A 60:   :border-width 1px\A 61: \A 62: #container\A 63:   +container\A 64:   :height auto !important\A 65:   :min-height 100%  \A 66:   \A 67: #content\A 68:   :padding-bottom 100px\A 69:   :margin-top 50px  \A "; }
