@@ -35,3 +35,13 @@ config.gem "thoughtbot-factory_girl",
            :lib    => "factory_girl",
            :source => "http://gems.github.com"
 config.gem 'bmabey-email_spec', :lib => 'email_spec'
+
+
+ActionMailer::Base.smtp_settings = {
+  :address => "smtp.gmail.com",
+  :port => 587,
+  :authentication => :plain,
+  :enable_starttls_auto => true,
+  :user_name => "donotreply@busywith.com",
+  :password => "L84587"
+}
