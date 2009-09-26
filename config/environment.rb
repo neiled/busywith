@@ -47,14 +47,11 @@ end
 
 Rubaidh::GoogleAnalytics.tracker_id = 'UA-1098906-6'
 
-
-
-
-ActionMailer::Base.smtp_settings = {
-  :address => "smtp.gmail.com",
-  :port => 587,
-  :authentication => :plain,
-  :enable_starttls_auto => true,
-  :user_name => "donotreply@busywith.com",
-  :password => "L84587"
-}
+# ActionMailer::Base.smtp_settings = {
+#   :address => "smtp.gmail.com",
+#   :port => 587,
+#   :authentication => :plain,
+#   :enable_starttls_auto => true,
+#   :user_name => "donotreply@busywith.com",
+#   :password => "L84587"
+# }
