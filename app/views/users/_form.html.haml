@@ -8,10 +8,11 @@
   %li.display_name
     = form.label :display_name
     = form.text_field :display_name
-  %li.password
-    = form.label :password, form.object.new_record? ? nil : "Change password"
-    = form.password_field :password
-  %li.password_confirmation
-    = form.label :password_confirmation
-    = form.password_field :password_confirmation
-  %br
+  - unless form.object.using_rpx?
+    %li.password
+      = form.label :password, form.object.new_record? ? nil : "Change password"
+      = form.password_field :password
+    %li.password_confirmation
+      = form.label :password_confirmation
+      = form.password_field :password_confirmation
+%br

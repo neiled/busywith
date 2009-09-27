@@ -48,6 +48,15 @@
     #memberships
       = "You are currently a member of the team #{@user.memberships.first.team.name}" unless @user.memberships.first.team.nil?
       = link_to "Leave this team!", @user.memberships.first, :method => "delete", :class => "remove_membership"      
+  #user_details
+    %ul
+      %li
+        = "Username: #{@user.login}"
+      %li
+        = "Email: #{@user.email}"
+      %li
+        = "Display Name: #{@user.display_name}"
+    
 - else
   - if @user.memberships.count > 0
     = "The user #{@user.login} is currently a member of the team #{@user.memberships.first.team.name}" unless @user.memberships.first.team.nil?

@@ -1,22 +1,22 @@
 /*
 Sass::SyntaxError: Undefined mixin 'green_box'.
-on line 24 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/welcome.sass
+on line 23 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/welcome.sass
 
+19: #email_form
 20:   :text-align center
 21: 
-22: 
-23: #signin_form
-24:   +green_box
-25:   label
-26:     :width 5em
-27:   :margin 0 auto
-28:   :float none
-29:   :width 15em
-30:   .submit
+22: #signin
+23:   +green_box
+24:   :margin 0 auto  
+25:   
+26: #rpx_form
+27:   +green_box
+28:   :float left
+29:   :height 250px
 
 
 Backtrace:
-/Users/neil/Development/Rails/Projects/busywith/app/stylesheets/welcome.sass:24
+/Users/neil/Development/Rails/Projects/busywith/app/stylesheets/welcome.sass:23
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/mixin_node.rb:27:in `_perform'
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:156:in `perform'
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:200:in `perform_children'
@@ -91,4 +91,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Sass::SyntaxError: Undefined mixin 'green_box'.\A on line 24 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/welcome.sass\A \A 20:   :text-align center\A 21: \A 22: \A 23: #signin_form\A 24:   +green_box\A 25:   label\A 26:     :width 5em\A 27:   :margin 0 auto\A 28:   :float none\A 29:   :width 15em\A 30:   .submit\A "; }
+  content: "Sass::SyntaxError: Undefined mixin 'green_box'.\A on line 23 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/welcome.sass\A \A 19: #email_form\A 20:   :text-align center\A 21: \A 22: #signin\A 23:   +green_box\A 24:   :margin 0 auto  \A 25:   \A 26: #rpx_form\A 27:   +green_box\A 28:   :float left\A 29:   :height 250px\A "; }

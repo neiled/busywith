@@ -6,6 +6,8 @@
     Hello again! Just fill in your details here and we'll get you all set up with a new account in no time!
   %p.subtitle
     Once you're signed up you'll be able to add the rest of your team and start to see what everyone is doing.
+    
+  = rpx_embed( :link_text => "Register/Sign in with RPX..", :app_name => "busywith", :return_url => user_sessions_url )    
  
 - form_for @user do |f|
   = f.error_messages

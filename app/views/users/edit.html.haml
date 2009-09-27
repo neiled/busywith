@@ -1,0 +1,16 @@
+#logo
+  %img{:alt=>"busywith.com", :src=>"/images/busywith_logo_small.png"}
+
+#intro
+  %p
+    Welcome to busywith!
+  %p.subtitle
+    Please just finish off registration by adding the last few settings we didn't get when you signed up.
+    
+#edit_user_form
+  - form_for @user do |f|
+    = f.error_messages
+    %fieldset.signup
+      = render :partial => "form", :object => f
+      .submit
+      = image_submit_tag "/images/button_save.png", :alt => "Save", :class => "image_button"

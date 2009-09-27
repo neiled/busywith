@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
     c.validates_format_of_login_field_options = {:with => /\A\w[\w\.+\-_@]+\z/, :message => I18n.t('error_messages.login_invalid', :default => "should use only letters, numbers and .-_@ please.")}
   end
 
+  attr_accessible :login, :display_name, :email, :password, :password_confirmation, :rpx_identifier
+
   has_many :projects, :finder_sql => 'SELECT projects.*
                                       FROM projects
                                       JOIN teams ON teams.id = projects.team_id
@@ -50,7 +52,7 @@ class User < ActiveRecord::Base
   
   def setup_defaults
     self.login = self.login.downcase unless self.login.nil?
-    self.email = self.email.downcase unless self.login.nil?
+    self.email = self.email.downcase unless self.email.nil?
     self.user_status = UserStatus.new(:current_task => "Creating Account")
   end
 end

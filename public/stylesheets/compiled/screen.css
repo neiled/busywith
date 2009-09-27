@@ -838,11 +838,19 @@ fieldset .submit { text-align: right; margin-right: 9em; }
 /* line 19, ../../../app/stylesheets/welcome.sass */
 #email_form { text-align: center; }
 
-/* line 23, ../../../app/stylesheets/welcome.sass */
-#signin_form { float: left; background-color: #c9d787; padding: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 5px; margin: 0 auto; float: none; width: 15em; }
-/* line 25, ../../../app/stylesheets/welcome.sass */
+/* line 22, ../../../app/stylesheets/welcome.sass */
+#signin { float: left; background-color: #c9d787; padding: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 5px; margin: 0 auto; }
+
+/* line 26, ../../../app/stylesheets/welcome.sass */
+#rpx_form { float: left; background-color: #c9d787; padding: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 5px; float: left; height: 250px; margin-left: 1em; }
+/* line 31, ../../../app/stylesheets/welcome.sass */
+#rpx_form iframe { border-style: solid; border-color: #7d8a2e; border-width: 2px; }
+
+/* line 36, ../../../app/stylesheets/welcome.sass */
+#signin_form { float: left; background-color: #c9d787; padding: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 5px; height: 250px; float: left; width: 15em; }
+/* line 39, ../../../app/stylesheets/welcome.sass */
 #signin_form label { width: 5em; }
-/* line 30, ../../../app/stylesheets/welcome.sass */
+/* line 43, ../../../app/stylesheets/welcome.sass */
 #signin_form .submit { margin-left: 6em; }
 
 /* line 1, ../../../app/stylesheets/user.sass */
@@ -856,46 +864,52 @@ fieldset .submit { text-align: right; margin-right: 9em; }
 /* line 7, ../../../app/stylesheets/user.sass */
 .edit_user_status { float: left; background-color: #c9d787; padding: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 5px; }
 
-/* line 11, ../../../app/stylesheets/user.sass */
+/* line 10, ../../../app/stylesheets/user.sass */
+#edit_user_form { float: left; background-color: #c9d787; padding: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 5px; }
+
+/* line 14, ../../../app/stylesheets/user.sass */
 .update_status label { margin-top: 0.25em; font-size: 85%; width: 10em; float: left; text-align: right; margin-right: 0.5em; display: block; vertical-align: text-bottom; }
-/* line 20, ../../../app/stylesheets/user.sass */
-.update_status input.text, .update_status input.title, .update_status input[type="text"], .update_status input[type="password"] { font-size: 50%; width: 20em; }
 /* line 23, ../../../app/stylesheets/user.sass */
-.update_status select { font-size: 60%; width: 10em; }
+.update_status input.text, .update_status input.title, .update_status input[type="text"], .update_status input[type="password"] { font-size: 50%; width: 20em; }
 /* line 26, ../../../app/stylesheets/user.sass */
+.update_status select { font-size: 60%; width: 10em; }
+/* line 29, ../../../app/stylesheets/user.sass */
 .update_status .submit { margin-top: 1em; }
 
-/* line 29, ../../../app/stylesheets/user.sass */
+/* line 32, ../../../app/stylesheets/user.sass */
 #progress_slider { width: 20em; font-size: 0.5em; margin-top: 0.5em; display: inline-block; }
 
-/* line 36, ../../../app/stylesheets/user.sass */
+/* line 39, ../../../app/stylesheets/user.sass */
 #percent_complete { width: 3em; margin: 0em 0em 0em 1em; padding: 0px; border-style: none; background-color: inherit; font-size: 0.8em; }
 
-/* line 44, ../../../app/stylesheets/user.sass */
+/* line 47, ../../../app/stylesheets/user.sass */
 #user_status_estimated_completion { width: 15em; }
 
-/* line 47, ../../../app/stylesheets/user.sass */
+/* line 50, ../../../app/stylesheets/user.sass */
 a.dp-choose-date { font-size: 0.5em; background-image: url('/images/calendar.png'); text-indent: -2000px; overflow: hidden; margin-left: 1em; margin-top: 0.5em; display: inline-block; height: 16px; width: 16px; }
 
-/* line 58, ../../../app/stylesheets/user.sass */
+/* line 61, ../../../app/stylesheets/user.sass */
 #history { font-size: 0.7em; clear: both; }
 
 
-/* line 65, ../../../app/stylesheets/user.sass */
+/* line 68, ../../../app/stylesheets/user.sass */
 .history_time { font-size: 0.7em; color: #666666; }
 
-/* line 69, ../../../app/stylesheets/user.sass */
+/* line 72, ../../../app/stylesheets/user.sass */
 #owned_teams, #memberships, #invites { padding: 1em; border-style: solid; border-color: black; border-width: 1px; margin-bottom: 1em; width: 600px; }
 
-/* line 77, ../../../app/stylesheets/user.sass */
+/* line 80, ../../../app/stylesheets/user.sass */
 #invites { padding: .8em; margin-bottom: 1em; border: 2px solid #dddddd; background: #fff6bf; color: #514721; border-color: #ffd324; }
 /* line 38, ../../../../../../../../../usr/local/lib/ruby/gems/1.8/gems/chriseppstein-compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_interaction.sass */
 #invites a { color: #514721; }
 
-/* line 80, ../../../app/stylesheets/user.sass */
+/* line 83, ../../../app/stylesheets/user.sass */
+#user_details { float: left; background-color: #c9d787; padding: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 5px; font-size: 60%; }
+
+/* line 87, ../../../app/stylesheets/user.sass */
 .accept_membership, .remove_membership, .remove_project { font-size: 0.5em; }
 
-/* line 83, ../../../app/stylesheets/user.sass */
+/* line 90, ../../../app/stylesheets/user.sass */
 .remove_membership, .remove_project { font-style: italic; color: #CCCCCC; }
 
 /* line 1, ../../../app/stylesheets/home.sass */
