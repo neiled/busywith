@@ -2,9 +2,9 @@ class MembershipObserver < ActiveRecord::Observer
   
   def after_create(membership)
     unless membership.is_administrator
-      user = User.find(membership.user_id)
+      user = User.find_by_id(membership.user_id)
       team = Team.find(membership.team_id)
-      if(user.login.nil?)
+      if(user.nil?)
         UserMailer.deliver_invite_new_user(membership)
       else
         UserMailer.deliver_team_invite(membership)

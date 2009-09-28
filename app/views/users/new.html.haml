@@ -3,15 +3,19 @@
 
 #intro
   %p
-    Hello again! Just fill in your details here and we'll get you all set up with a new account in no time!
+    Great! Just fill in your details here and we'll get you all set up with a new account in no time!
   %p.subtitle
-    Once you're signed up you'll be able to add the rest of your team and start to see what everyone is doing.
-    
-  = rpx_embed( :link_text => "Register/Sign in with RPX..", :app_name => "busywith", :return_url => user_sessions_url )    
- 
-- form_for @user do |f|
-  = f.error_messages
-  %fieldset.signup  
-    = render :partial => "form", :object => f
-    .submit
-      = image_submit_tag "/images/button_form_sign_up.png", :alt => "Sign up!", :class => "image_button"
+    Once you're signed up you'll be able to add the rest of your team and start to see what everyone is doing.  
+#signup
+  .subtitle
+    Please use one of the two ways below of creating an account.
+  #rpx_form
+    = rpx_embed( :app_name => "busywith", :return_url => user_sessions_url )
+  #signup_form
+    - form_for @user do |f|
+      = f.error_messages
+      %fieldset.signup  
+        = render :partial => "form", :object => f
+        .submit
+          = image_submit_tag "/images/button_form_sign_up.png", :alt => "Sign up!", :class => "image_button"    
+

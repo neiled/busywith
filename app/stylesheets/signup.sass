@@ -2,11 +2,39 @@
   :margin-top 1em
   :margin-bottom 1em
   :font-size 85%
+
+#signin, #signup
+  +green_box
+  :margin 0 auto
+
+#signin
+  label
+    :width 5em
+  
+#rpx_form
+  +green_box
+  :background-color white
+  :float left
+  :height 250px
+  :margin-right 1em
+  :padding 12px
+
+#signin_form, #signup_form
+  +green_box
+  :float left
+  .submit
+    :margin-left 6em
+  :height 250px
+
+#signin_form
+  :width 15em  
+
+#signup_form
+  :font-size 0.5em
+  :padding 12px
+
 #new_user
-  :width 65%
-  :background= !light_green
-  :padding-top 1em
-  :padding-bottom 1em
-  :border-style solid 
+  :height 240px
+  :border-style none 
   :border-color = !dark_green
-  :border-width 5px
+  :border-width 2px

@@ -74,7 +74,7 @@ Feature: Manage teams
     And the email "foo@example.com" has an invite for the team "neils"
     And I am on the edit team page for "neils"
     When I follow "Remove"
-    Then I should see "Invite withdrawn"
+    Then I should see "You've withdrawn your invite"
     And the user with the email "foo@example.com" should not have an invite to the team "neils"
     
   Scenario: Delete a team

@@ -838,21 +838,6 @@ fieldset .submit { text-align: right; margin-right: 9em; }
 /* line 19, ../../../app/stylesheets/welcome.sass */
 #email_form { text-align: center; }
 
-/* line 22, ../../../app/stylesheets/welcome.sass */
-#signin { float: left; background-color: #c9d787; padding: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 5px; margin: 0 auto; }
-
-/* line 26, ../../../app/stylesheets/welcome.sass */
-#rpx_form { float: left; background-color: #c9d787; padding: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 5px; float: left; height: 250px; margin-left: 1em; }
-/* line 31, ../../../app/stylesheets/welcome.sass */
-#rpx_form iframe { border-style: solid; border-color: #7d8a2e; border-width: 2px; }
-
-/* line 36, ../../../app/stylesheets/welcome.sass */
-#signin_form { float: left; background-color: #c9d787; padding: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 5px; height: 250px; float: left; width: 15em; }
-/* line 39, ../../../app/stylesheets/welcome.sass */
-#signin_form label { width: 5em; }
-/* line 43, ../../../app/stylesheets/welcome.sass */
-#signin_form .submit { margin-left: 6em; }
-
 /* line 1, ../../../app/stylesheets/user.sass */
 #create_a_team { padding: .8em; margin-bottom: 1em; border: 2px solid #dddddd; background: #fff6bf; color: #514721; border-color: #ffd324; }
 /* line 38, ../../../../../../../../../usr/local/lib/ruby/gems/1.8/gems/chriseppstein-compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_interaction.sass */
@@ -950,5 +935,25 @@ img.percentImage { background: white url(/images/percentImage_back.png) top left
 /* line 1, ../../../app/stylesheets/signup.sass */
 #intro { margin-top: 1em; margin-bottom: 1em; font-size: 85%; }
 
-/* line 5, ../../../app/stylesheets/signup.sass */
-#new_user { width: 65%; background: #c9d787; padding-top: 1em; padding-bottom: 1em; border-style: solid; border-color: #7d8a2e; border-width: 5px; }
+/* line 6, ../../../app/stylesheets/signup.sass */
+#signin, #signup { float: left; background-color: #c9d787; padding: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 5px; margin: 0 auto; }
+
+/* line 11, ../../../app/stylesheets/signup.sass */
+#signin label { width: 5em; }
+
+/* line 14, ../../../app/stylesheets/signup.sass */
+#rpx_form { float: left; background-color: #c9d787; padding: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 5px; background-color: white; float: left; height: 250px; margin-right: 1em; padding: 12px; }
+
+/* line 22, ../../../app/stylesheets/signup.sass */
+#signin_form, #signup_form { float: left; background-color: #c9d787; padding: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 5px; float: left; height: 250px; }
+/* line 25, ../../../app/stylesheets/signup.sass */
+#signin_form .submit, #signup_form .submit { margin-left: 6em; }
+
+/* line 29, ../../../app/stylesheets/signup.sass */
+#signin_form { width: 15em; }
+
+/* line 32, ../../../app/stylesheets/signup.sass */
+#signup_form { font-size: 0.5em; padding: 12px; }
+
+/* line 36, ../../../app/stylesheets/signup.sass */
+#new_user { height: 240px; border-style: none; border-color: #7d8a2e; border-width: 2px; }

@@ -12,6 +12,8 @@
 #signin
   .subtitle
     Please use one of the two ways below of signing in.
+  #rpx_form
+    = rpx_embed( :app_name => "busywith", :return_url => user_sessions_url )    
   #signin_form
     - form_for @user_session do |f|
       = f.error_messages
@@ -19,6 +21,5 @@
         = render :partial => "form", :object => f
         .submit
           = image_submit_tag "/images/button_sign_in.png", :alt => "Sign in", :class => "image_button"
-  #rpx_form
-    = rpx_embed( :app_name => "busywith", :return_url => user_sessions_url )
+
           

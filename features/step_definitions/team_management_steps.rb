@@ -53,14 +53,9 @@ end
 
 
 Then /^the user with the email "([^\"]*)" should not have an invite to the team "([^\"]*)"$/ do |email, team_name|
-  user = User.find_by_email(email)
-  if user
-    team = Team.find_by_name(team_name)
-    if team
-      user.memberships.find_by_team_id(team.id).should be_nil
-    end
-  end
-  
+  team = Team.find_by_name(team_name)
+  membership = team.memberships.find_by_target_email(email)
+  membership.should be_nil  
 end
 
 

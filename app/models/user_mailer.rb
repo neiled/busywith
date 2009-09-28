@@ -21,13 +21,11 @@ class UserMailer < ActionMailer::Base
   end
   
   def invite_new_user(membership)
-    user = User.find(membership.user_id)
-    team = Team.find(membership.team_id)
     subject    'Team Invite from busywith.com'
-    recipients user.email
+    recipients  membership.target_email
     from       'donotreply@busywith.com'
-    sent_on    Time.now    
-    body       :user => user, :team => team, :membership => membership    
+    sent_on    Time.now
+    body       :membership => membership
   end
 
 end

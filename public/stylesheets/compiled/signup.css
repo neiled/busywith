@@ -1,24 +1,23 @@
 /*
-Sass::SyntaxError: Undefined variable: "!light_green".
+Sass::SyntaxError: Undefined mixin 'green_box'.
 on line 7 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/signup.sass
 
 3:   :margin-bottom 1em
 4:   :font-size 85%
-5: #new_user
-6:   :width 65%
-7:   :background= !light_green
-8:   :padding-top 1em
-9:   :padding-bottom 1em
-10:   :border-style solid 
-11:   :border-color = !dark_green
-12:   :border-width 5px
+5: 
+6: #signin, #signup
+7:   +green_box
+8:   :margin 0 auto
+9: 
+10: #signin
+11:   label
+12:     :width 5em
+13:   
 
 
 Backtrace:
 /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/signup.sass:7
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/script/variable.rb:27:in `perform'
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/prop_node.rb:87:in `perform!'
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:179:in `_perform'
+/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/mixin_node.rb:27:in `_perform'
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:156:in `perform'
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:200:in `perform_children'
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:200:in `map'
@@ -92,4 +91,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Sass::SyntaxError: Undefined variable: \"!light_green\".\A on line 7 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/signup.sass\A \A 3:   :margin-bottom 1em\A 4:   :font-size 85%\A 5: #new_user\A 6:   :width 65%\A 7:   :background= !light_green\A 8:   :padding-top 1em\A 9:   :padding-bottom 1em\A 10:   :border-style solid \A 11:   :border-color = !dark_green\A 12:   :border-width 5px\A "; }
+  content: "Sass::SyntaxError: Undefined mixin 'green_box'.\A on line 7 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/signup.sass\A \A 3:   :margin-bottom 1em\A 4:   :font-size 85%\A 5: \A 6: #signin, #signup\A 7:   +green_box\A 8:   :margin 0 auto\A 9: \A 10: #signin\A 11:   label\A 12:     :width 5em\A 13:   \A "; }

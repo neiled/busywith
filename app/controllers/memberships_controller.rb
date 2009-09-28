@@ -24,9 +24,11 @@ class MembershipsController < ApplicationController
     end
     
     if @user.errors.on(:email).nil?
-      @user.save_with_validation(false)
-
-      @membership = @user.memberships.build(:team_id => @team.id, :user_id => @user.id, :invitor_id => current_user.id)
+      if @user.login.nil?
+        @membership = Membership.new(:team_id => @team.id, :invitor_id => current_user.id, :target_email => params[:email])
+      else
+        @membership = @user.memberships.build(:team_id => @team.id, :invitor_id => current_user.id)
+      end
       if @membership.save
         flash[:notice] = "We've sent them an email inviting them!"
       else
@@ -71,7 +73,7 @@ class MembershipsController < ApplicationController
     unless @membership.nil?
       if @membership.accepted_at.nil?
         if current_user.owned_teams.find_by_id(@membership.team)
-          flash[:notice] = "Invite withdrawn"
+          flash[:notice] = "You've withdrawn your invite."
         else
           flash[:notice] = "Invite Ignored."
         end
