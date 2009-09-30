@@ -20,12 +20,27 @@ class ApplicationController < ActionController::Base
     end
     
     def require_user
+      require_signed_in_user
+      require_active_user
+    end
+    
+    def require_signed_in_user
       unless current_user
         store_location
         flash[:notice] = "You must be signed in to access this page"
         redirect_to signin_url
         return false
-      end
+      end      
+    end
+    
+    def require_active_user
+      @user_session = UserSession.find
+      if @user_session and @user_session.registration_complete? == false
+        store_location
+        flash[:notice] = "I'm sorry but we just need a few more details first!"
+        redirect_to edit_user_url(current_user)
+        return false        
+      end      
     end
 
     def require_no_user

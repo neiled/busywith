@@ -1,17 +1,17 @@
 /* line 1, ../../../app/stylesheets/welcome.sass */
-#logo { margin-top: 1em; }
+#logo { width: 100%; margin-top: 1em; text-align: center; }
 
-/* line 4, ../../../app/stylesheets/welcome.sass */
+/* line 6, ../../../app/stylesheets/welcome.sass */
 #hello { font-size: 1.2em; }
 
-/* line 7, ../../../app/stylesheets/welcome.sass */
+/* line 9, ../../../app/stylesheets/welcome.sass */
 #pitch { margin-bottom: 1em; }
 
-/* line 10, ../../../app/stylesheets/welcome.sass */
+/* line 12, ../../../app/stylesheets/welcome.sass */
 #beta { margin-bottom: 1em; }
 
-/* line 14, ../../../app/stylesheets/welcome.sass */
+/* line 16, ../../../app/stylesheets/welcome.sass */
 #email { vertical-align: middle; font-family: "Arial Rounded MT Bold", arial, verdana, sans-serif; font-size: 0.5em; }
 
-/* line 19, ../../../app/stylesheets/welcome.sass */
+/* line 21, ../../../app/stylesheets/welcome.sass */
 #email_form { text-align: center; }

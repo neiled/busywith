@@ -17,8 +17,6 @@
   = javascript_include_tag 'jquery-rails_authenticity'  
   = javascript_include_tag 'jquery.timers'  
   = javascript_include_tag 'application'
-  /[if IE]
-    = stylesheet_link_tag 'compiled/ie.css', :media => 'screen, projection'
   = javascript_tag "var AUTH_TOKEN = #{form_authenticity_token.inspect};" if protect_against_forgery?
   = yield :unobtrusive_javascript
   %meta{'name' => "verify-v1", :content => '5sD8T61OQDV7PQnROBLbTZoU8iqV3+96sC+RruHOOJc='}
