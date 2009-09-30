@@ -32,8 +32,8 @@
       %li The more information you put, the more useful your updates are.    
 -else
   #status_show
-    %h3= "Status for #{user.login}"
-    = render :partial => 'welcome/status', :locals => {:status => @user}
+    %h3= "Status for #{@user.login}"
+    = render :partial => 'teams/status', :locals => {:status => @user, :previous_time => Time.now} #, :locals => { :previous_time => Time.now}
 
 
 = render :partial => "user_statuses/history", :locals => {:user => @user}
