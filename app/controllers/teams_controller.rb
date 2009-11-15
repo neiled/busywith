@@ -56,9 +56,6 @@ class TeamsController < ApplicationController
 
   def destroy
     @team = current_user.owned_teams.find(params[:id])
-    # @team.memberships.each do |membership|
-    #   membership.destroy
-    # end
     @team.destroy
 
     respond_to do |format|
