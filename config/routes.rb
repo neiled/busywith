@@ -14,6 +14,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.beta_signup 'beta_signup', :controller => "welcome", :action => 'email_signup'
   
+  map.thanks 'thanks', :controller => "welcome", :action => "thanks"
+  
   map.root :controller => "welcome"
   
 end
