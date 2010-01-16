@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   
-  before_filter :require_signed_in_user, :only => [:edit]
-  before_filter :require_user, :except => [:new, :create, :edit]
+  before_filter :require_signed_in_user, :only => [:edit, :update]
+  before_filter :require_user, :except => [:new, :create, :edit, :update]
   
   def new
     @user = User.new
@@ -37,7 +37,7 @@ class UsersController < ApplicationController
   end
   
   def update
-    @user = User.find(params[:id])
+    @user = current_user
     if @user.update_attributes(params[:user])
       flash[:notice] = "Details Updated"
       redirect_to(profile_path(current_user.login))

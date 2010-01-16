@@ -38,8 +38,8 @@ Feature: Workers should be able to create a team
     Given I am logged in as the user "neiled"
     And I have a team called "Neil's team" with a project called "Test Project"
     And I am on the user account page for "neiled"    
-    When I fill in "Due" with "01/01/2010"
+    When I fill in "Due" with "01/01/2020"
     And I press "Update"
-    Then the "Due" field should contain "01/01/2010"    
+    Then the "Due" field should contain "01/01/2020"    
     And I should see "Status Updated"  
   

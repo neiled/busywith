@@ -16,3 +16,4 @@ coverage.data
 .sass-cache/
 tmp/restart.txt
 rerun.txt
+*.db-journal
