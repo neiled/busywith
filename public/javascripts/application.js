@@ -7,7 +7,7 @@ setTimeout(function() {
 $(document).ready(function() {
   var current_color = $(".flash_message").css("color");
   //alert("here");
-  $(".flash_message").animate({color:"#3C3"}, 1000).animate({color:current_color}, 1000);
+  $(".flash_message").animate({color:"black"}, 1000).animate({color:current_color}, 1000);
   
   $(".choose_team").change ( function() {
     window.location = this.value;
