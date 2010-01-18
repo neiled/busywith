@@ -864,37 +864,40 @@ fieldset .submit { text-align: right; margin-right: 9em; }
 /* line 32, ../../../app/stylesheets/user.sass */
 #progress_slider { width: 20em; font-size: 0.5em; margin-top: 0.5em; display: inline-block; }
 
-/* line 39, ../../../app/stylesheets/user.sass */
-.bar_wrapper { width: 75%; display: inline-block; }
-
-/* line 43, ../../../app/stylesheets/user.sass */
-#user_status_estimated_completion { width: 15em; }
+/* line 38, ../../../app/stylesheets/user.sass */
+#percent_complete { width: 3em; margin: 0em 0em 0em 1em; padding: 0px; border-style: none; background-color: inherit; font-size: 0.8em; }
 
 /* line 46, ../../../app/stylesheets/user.sass */
+.bar_wrapper { width: 75%; display: inline-block; }
+
+/* line 50, ../../../app/stylesheets/user.sass */
+#user_status_estimated_completion { width: 15em; }
+
+/* line 53, ../../../app/stylesheets/user.sass */
 a.dp-choose-date { font-size: 0.5em; background-image: url('/images/calendar.png'); text-indent: -2000px; overflow: hidden; margin-left: 1em; margin-top: 0.5em; display: inline-block; height: 16px; width: 16px; }
 
-/* line 57, ../../../app/stylesheets/user.sass */
+/* line 64, ../../../app/stylesheets/user.sass */
 #history { font-size: 0.7em; clear: both; }
 
 
-/* line 64, ../../../app/stylesheets/user.sass */
+/* line 71, ../../../app/stylesheets/user.sass */
 .history_time { font-size: 0.7em; color: #666666; }
 
-/* line 68, ../../../app/stylesheets/user.sass */
+/* line 75, ../../../app/stylesheets/user.sass */
 #owned_teams, #memberships, #invites { padding: 1em; border-style: solid; border-color: black; border-width: 1px; margin-bottom: 1em; width: 600px; }
 
-/* line 76, ../../../app/stylesheets/user.sass */
+/* line 83, ../../../app/stylesheets/user.sass */
 #invites { padding: .8em; margin-bottom: 1em; border: 2px solid #dddddd; background: #fff6bf; color: #514721; border-color: #ffd324; }
 /* line 38, ../../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_interaction.sass */
 #invites a { color: #514721; }
 
-/* line 79, ../../../app/stylesheets/user.sass */
+/* line 86, ../../../app/stylesheets/user.sass */
 #user_details { float: left; background-color: #c9d787; padding: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 5px; font-size: 60%; }
 
-/* line 83, ../../../app/stylesheets/user.sass */
+/* line 90, ../../../app/stylesheets/user.sass */
 .accept_membership, .remove_membership, .remove_project { font-size: 0.5em; }
 
-/* line 86, ../../../app/stylesheets/user.sass */
+/* line 93, ../../../app/stylesheets/user.sass */
 .remove_membership, .remove_project { font-style: italic; color: #CCCCCC; }
 
 /* line 1, ../../../app/stylesheets/home.sass */
