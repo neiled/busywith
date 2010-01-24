@@ -46,4 +46,10 @@ a:link { color: black; }
 a:visited { color: #C9D787; }
 
 /* line 68, ../../../app/stylesheets/welcome.sass */
-#footer { font-size: 15px; margin: 0em; }
+#footer { font-size: 15px; margin: 0em; margin-top: 1em; }
+
+/* line 73, ../../../app/stylesheets/welcome.sass */
+#thanks { font-size: 40px; clear: both; }
+
+/* line 77, ../../../app/stylesheets/welcome.sass */
+#flash_error { text-align: center; color: rgb(129,29,15); background: rgb(251,227,228); border: 2px solid rgb(251,194,196); }

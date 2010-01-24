@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
 
-  layout nil, :except => ["thanks"]
+  layout nil
   
   def index
   end
