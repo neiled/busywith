@@ -9,3 +9,4 @@ seven1m-campaign_monitor --version 0.1.1 --source http://gems.github.com
 grosser-rpx_now --version 0.5.10 --source http://gems.github.com
 tardate-authlogic_rpx --version 1.0.2 --source http://gems.github.com
 friendly_id --version 2.2.7 --source http://gems.github.com
+hoptoad_notifier --version 2.1.2 --source http://gems.github.com

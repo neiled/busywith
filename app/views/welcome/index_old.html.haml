@@ -1,0 +1,19 @@
+- @page_title = "What's my team doing?! find out! use busywith"
+
+#logo
+  %img{:alt=>"busywith.com", :src=>"/images/busywith_logo_smaller.png"}
+  %img{:alt=>"What's my team doing?! Find out with busywith.", :src=>"/images/subtitle.png"}
+
+#intro
+  #hello
+    Hello,
+  #pitch
+    Busywith allows you to see at a glance what each member of your team is working on, how far they are through it and when they think they'll be finished!
+  #beta
+    We're still working on getting everything ready for you, but if you'd like to receive a pretty little message when we're all done pop your email in the box below. We promise we won't use your email for anything other than to let you know we've launched.
+  #email_form
+    - form_tag beta_signup_path do
+      = label_tag "email", "Email Address"
+      = text_field_tag "email"
+      = image_submit_tag "/images/button_notify_me.png", :alt => "Keep me informed!", :class => "image_button"
+  

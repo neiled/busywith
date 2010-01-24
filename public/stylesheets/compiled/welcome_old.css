@@ -1,0 +1,17 @@
+/* line 1, ../../../app/stylesheets/welcome_old.sass */
+#logo { width: 100%; margin-top: 1em; text-align: center; }
+
+/* line 6, ../../../app/stylesheets/welcome_old.sass */
+#hello { font-size: 1.2em; }
+
+/* line 9, ../../../app/stylesheets/welcome_old.sass */
+#pitch { margin-bottom: 1em; }
+
+/* line 12, ../../../app/stylesheets/welcome_old.sass */
+#beta { margin-bottom: 1em; }
+
+/* line 16, ../../../app/stylesheets/welcome_old.sass */
+#email { vertical-align: middle; font-family: "Arial Rounded MT Bold", arial, verdana, sans-serif; font-size: 0.5em; }
+
+/* line 21, ../../../app/stylesheets/welcome_old.sass */
+#email_form { text-align: center; }
