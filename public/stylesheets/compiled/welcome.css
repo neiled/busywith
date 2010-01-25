@@ -1,55 +1,38 @@
 /* line 1, ../../../app/stylesheets/welcome.sass */
-body { background: #000 url('/images/bw_textured_background.png') repeat fixed center; font-family: "Arial Rounded MT Bold", "Arial", "Verdana"; }
-
+body.welcome { background: #000 url('/images/bw_textured_background.png') repeat scroll center; font-family: "Arial Rounded MT Bold", "Arial", "Verdana"; }
 /* line 5, ../../../app/stylesheets/welcome.sass */
-#logo { float: left; margin-left: 20px; }
-
+body.welcome #logo { float: left; margin-left: 20px; }
 /* line 9, ../../../app/stylesheets/welcome.sass */
-h1, h2, ul { float: none; display: block; }
-
+body.welcome h1, body.welcome h2, body.welcome ul { float: none; display: block; }
 /* line 13, ../../../app/stylesheets/welcome.sass */
-h1 { font-size: 75px; margin-left: 300px; margin-bottom: 10px; }
-
+body.welcome h1 { font-size: 75px; margin-left: 300px; margin-bottom: 10px; }
 /* line 17, ../../../app/stylesheets/welcome.sass */
-h2 { font-size: 30px; margin-left: 200px; }
-
+body.welcome h2 { font-size: 30px; margin-left: 200px; }
 /* line 20, ../../../app/stylesheets/welcome.sass */
-ul { font-size: 34px; margin-left: 300px; }
-
+body.welcome ul { font-size: 34px; margin-left: 300px; }
 /* line 23, ../../../app/stylesheets/welcome.sass */
-li { padding-bottom: 5px; }
-
+body.welcome li { padding-bottom: 5px; }
 /* line 26, ../../../app/stylesheets/welcome.sass */
-#box { background-color: white; padding: 50px; width: 900px; height: 600px; margin-left: auto; margin-right: auto; margin-top: 50px; border-style: solid; border-color: #999; border-width: 1px; }
-
+body.welcome #box { background-color: white; padding: 50px; width: 900px; height: 600px; margin-left: auto; margin-right: auto; margin-top: 50px; border-style: solid; border-color: #999; border-width: 1px; }
 /* line 38, ../../../app/stylesheets/welcome.sass */
-#notify_me { font-size: 20px; margin: 0px auto; padding: 0px; margin-bottom: 2em; }
+body.welcome #notify_me { font-size: 20px; margin: 0px auto; padding: 0px; margin-bottom: 2em; }
 /* line 43, ../../../app/stylesheets/welcome.sass */
-#notify_me form { text-align: center; }
-
+body.welcome #notify_me form { text-align: center; }
 /* line 46, ../../../app/stylesheets/welcome.sass */
-#email_notify { font-size: 30px; }
-
+body.welcome #email_notify { font-size: 30px; }
 /* line 49, ../../../app/stylesheets/welcome.sass */
-.image_button { vertical-align: middle; *vertical-align: text-bottom; }
-
+body.welcome .image_button { vertical-align: middle; *vertical-align: text-bottom; }
 /* line 53, ../../../app/stylesheets/welcome.sass */
-label { vertical-align: middle; *vertical-align: text-bottom; }
-
+body.welcome label { vertical-align: middle; *vertical-align: text-bottom; }
 /* line 57, ../../../app/stylesheets/welcome.sass */
-#subtitle { display: block; clear: both; text-align: center; margin-bottom: 20px; }
-
+body.welcome #subtitle { display: block; clear: both; text-align: center; margin-bottom: 20px; }
 /* line 63, ../../../app/stylesheets/welcome.sass */
-a:link { color: black; }
-
+body.welcome a:link { color: black; }
 /* line 65, ../../../app/stylesheets/welcome.sass */
-a:visited { color: #C9D787; }
-
+body.welcome a:visited { color: #C9D787; }
 /* line 68, ../../../app/stylesheets/welcome.sass */
-#footer { font-size: 15px; margin: 0em; margin-top: 1em; }
-
+body.welcome #footer { font-size: 12px; margin: 0em; margin-top: 1em; }
 /* line 73, ../../../app/stylesheets/welcome.sass */
-#thanks { font-size: 40px; clear: both; }
-
+body.welcome #thanks { font-size: 40px; clear: both; }
 /* line 77, ../../../app/stylesheets/welcome.sass */
-#flash_error { text-align: center; color: rgb(129,29,15); background: rgb(251,227,228); border: 2px solid rgb(251,194,196); }
+body.welcome #flash_error { text-align: center; color: rgb(129,29,15); background: rgb(251,227,228); border: 2px solid rgb(251,194,196); }

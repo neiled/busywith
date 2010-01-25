@@ -10,7 +10,7 @@
   = javascript_tag "var AUTH_TOKEN = #{form_authenticity_token.inspect};" if protect_against_forgery?
   %meta{'name' => "verify-v1", :content => '5sD8T61OQDV7PQnROBLbTZoU8iqV3+96sC+RruHOOJc='}
 
-%body{:class => body_class}  
+%body{:class => "welcome"}  
   #box
     = render :partial => 'layouts/flashes'
     #logo
@@ -25,7 +25,10 @@
       %img{:alt=>"Busywith.com - What's my team doing?!", :src=>"/images/subtitle.png"}
   
     #notify_me
-      %p Hello, it's not quite ready yet. If you'd like to be notified when the site launches then please fill in your email address. I'll only email you when we launch, promise.
+      %p
+        Hello,
+        %br
+        I'm sorry but it isn't quite ready yet. If you'd like to be notified when the site launches then please fill in your email address. I'll only email you when we launch, promise.
       - form_tag beta_signup_path, :id => "email_notify" do
         = label_tag "email", "Email Address"
         = text_field_tag "email"

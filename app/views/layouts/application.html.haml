@@ -10,6 +10,7 @@
   = stylesheet_link_tag 'datePicker.css'
   %script{:src => 'http://www.google.com/jsapi?key=ABQIAAAA9PVdi6OTkajQVyMoI3hv6RTPte5IkMv6YO0Qn70prbC3lXMUQBSnG8VdqcEiCOJ23nYjwHx_iJb9uQ'}
   %script{:src => 'http://www.google.com/jsapi?key=ABQIAAAA9PVdi6OTkajQVyMoI3hv6RREih2AnShy9hMJC_8gVX6vDz0I5xS14rYAFBQxUz6VT_bvcheaFWP6ZQ'}  
+  = javascript_tag "google.load('jquery', '1.4.0');"
   = javascript_tag "var AUTH_TOKEN = #{form_authenticity_token.inspect};" if protect_against_forgery?
   %meta{'name' => "verify-v1", :content => '5sD8T61OQDV7PQnROBLbTZoU8iqV3+96sC+RruHOOJc='}
 %body{:class => body_class}
@@ -48,7 +49,6 @@
     = link_to "contact busywith", "mailto:enquiries@busywith.com"
     = yield :footer
     
-  = javascript_tag "google.load('jquery', '1.4.0');"
   = javascript_tag "google.load('jqueryui', '1.7.2');"    
   = javascript_include_tag 'jquery-color'
   = javascript_include_tag 'jquery-form'  
