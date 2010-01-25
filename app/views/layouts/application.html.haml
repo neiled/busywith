@@ -21,21 +21,20 @@
           = link_to "Busywith.com", root_url
         %li.blog
           = link_to "blog", "http://blog.busywith.com"
-      - unless RAILS_ENV == 'production' then
-        %ul.right
-          - unless current_user
-            %li.sign_in
-              = link_to "Sign in", signin_path
-            %li.sign_up
-              = link_to "Sign up", new_user_path 
-          - else
-            -unless team_tag(current_user).nil?
-              %li.my_team
-                = team_tag(current_user)
-            %li.me
-              = link_to "My Status (#{current_user.login})", profile_path(current_user.login)
-            %li.sign_out
-              = link_to "Sign out", signout_path  
+      %ul.right
+        - unless current_user
+          %li.sign_in
+            = link_to "Sign in", signin_path
+          %li.sign_up
+            = link_to "Sign up", new_user_path 
+        - else
+          -unless team_tag(current_user).nil?
+            %li.my_team
+              = team_tag(current_user)
+          %li.me
+            = link_to "My Status (#{current_user.login})", profile_path(current_user.login)
+          %li.sign_out
+            = link_to "Sign out", signout_path  
   #header            
   #container
     #content.clearfix
