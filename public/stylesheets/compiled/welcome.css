@@ -1,55 +1,58 @@
-/* line 1, ../../../app/stylesheets/welcome.sass */
-body { background: #000 url('/images/bw_textured_background.png') repeat fixed center; font-family: "Arial Rounded MT Bold", "Arial", "Verdana"; }
+/* line 4, ../../../app/stylesheets/welcome.sass */
+html, body { height: 100%; }
 
-/* line 5, ../../../app/stylesheets/welcome.sass */
-#logo { float: left; margin-left: 20px; }
+/* line 7, ../../../app/stylesheets/welcome.sass */
+body { font-family: "Arial Rounded MT Bold", "Arial"; margin: 0em; }
 
-/* line 9, ../../../app/stylesheets/welcome.sass */
-h1, h2, ul { float: none; display: block; }
+/* line 11, ../../../app/stylesheets/welcome.sass */
+#navbar_container { width: 100%; height: 40px; background-color: rgb(150,150,150); overflow: hidden; margin: 0em; }
 
-/* line 13, ../../../app/stylesheets/welcome.sass */
-h1 { font-size: 75px; margin-left: 300px; margin-bottom: 10px; }
+/* line 18, ../../../app/stylesheets/welcome.sass */
+#navbar { font-family: arial; font-size: 2em; width: 800px; margin: 0 auto; position: relative; }
 
-/* line 17, ../../../app/stylesheets/welcome.sass */
-h2 { font-size: 30px; margin-left: 200px; }
+/* line 25, ../../../app/stylesheets/welcome.sass */
+#headlines { background: #fff url(/images/bg_intro.png) repeat-x scroll 0 0; width: 100%; text-align: center; }
+/* line 29, ../../../app/stylesheets/welcome.sass */
+#headlines h1, #headlines h2 { margin: 0em; padding-top: 0.5em; }
 
-/* line 20, ../../../app/stylesheets/welcome.sass */
-ul { font-size: 34px; margin-left: 300px; }
+/* line 33, ../../../app/stylesheets/welcome.sass */
+#intro { margin: 0 auto 1em; overflow: hidden; padding-bottom: 0em; width: 70em; }
 
-/* line 23, ../../../app/stylesheets/welcome.sass */
-li { padding-bottom: 5px; }
-
-/* line 26, ../../../app/stylesheets/welcome.sass */
-#box { background-color: white; padding: 50px; width: 900px; height: 600px; margin-left: auto; margin-right: auto; margin-top: 50px; border-style: solid; border-color: #999; border-width: 1px; }
-
-/* line 38, ../../../app/stylesheets/welcome.sass */
-#notify_me { font-size: 20px; margin: 0px auto; padding: 0px; margin-bottom: 2em; }
+/* line 40, ../../../app/stylesheets/welcome.sass */
+#screenshots { width: 30em; float: left; }
 /* line 43, ../../../app/stylesheets/welcome.sass */
-#notify_me form { text-align: center; }
+#screenshots img { margin: 0.5em; }
 
 /* line 46, ../../../app/stylesheets/welcome.sass */
-#email_notify { font-size: 30px; }
+#bullets { float: left; margin-left: 1em; font-size: 2em; width: 15em; }
+/* line 51, ../../../app/stylesheets/welcome.sass */
+#bullets ul { margin-top: 1em; margin-bottom: 2em; }
+/* line 54, ../../../app/stylesheets/welcome.sass */
+#bullets ul li { margin-bottom: 1em; }
+/* line 56, ../../../app/stylesheets/welcome.sass */
+#bullets p { text-align: center; }
 
-/* line 49, ../../../app/stylesheets/welcome.sass */
-.image_button { vertical-align: middle; *vertical-align: text-bottom; }
+/* line 59, ../../../app/stylesheets/welcome.sass */
+#cta { margin-top: 2em; }
 
-/* line 53, ../../../app/stylesheets/welcome.sass */
-label { vertical-align: middle; *vertical-align: text-bottom; }
+/* line 62, ../../../app/stylesheets/welcome.sass */
+#features_container { background-color: #c9d787; font-size: 1.5em; width: 100%; }
 
-/* line 57, ../../../app/stylesheets/welcome.sass */
-#subtitle { display: block; clear: both; text-align: center; margin-bottom: 20px; }
-
-/* line 63, ../../../app/stylesheets/welcome.sass */
-a:link { color: black; }
-
-/* line 65, ../../../app/stylesheets/welcome.sass */
-a:visited { color: #C9D787; }
-
-/* line 68, ../../../app/stylesheets/welcome.sass */
-#footer { font-size: 15px; margin: 0em; margin-top: 1em; }
-
-/* line 73, ../../../app/stylesheets/welcome.sass */
-#thanks { font-size: 40px; clear: both; }
-
+/* line 67, ../../../app/stylesheets/welcome.sass */
+#features { width: 40em; margin: 0 auto; }
+/* line 70, ../../../app/stylesheets/welcome.sass */
+#features li { vertical-align: text-top; display: inline-block; padding: 0em 1em 1.5em 0em; width: 20em; font-size: 85%; text-align: justify; }
 /* line 77, ../../../app/stylesheets/welcome.sass */
-#flash_error { text-align: center; color: rgb(129,29,15); background: rgb(251,227,228); border: 2px solid rgb(251,194,196); }
+#features li h2 { font-size: 110%; }
+
+/* line 80, ../../../app/stylesheets/welcome.sass */
+#signup_container { width: 100%; margin-top: 10em; margin-bottom: 2em; font-size: 1.5em; }
+/* line 85, ../../../app/stylesheets/welcome.sass */
+#signup_container #signup { width: 50em; margin: 0 auto; }
+/* line 88, ../../../app/stylesheets/welcome.sass */
+#signup_container #signup #email_form { width: 20em; margin: 0 auto; }
+/* line 91, ../../../app/stylesheets/welcome.sass */
+#signup_container #signup #email_form .image_button { vertical-align: text-bottom; }
+
+/* line 96, ../../../app/stylesheets/welcome.sass */
+#footer { height: 100px; position: relative; clear: both; font-size: 1em; width: 100%; text-align: center; background: rgb(0,0,0); color: rgb(255,255,255); }

@@ -1,82 +1,104 @@
+!light_green = #C9D787
+!dark_green = #7D8A2E
+
+html, body
+  :height 100%
+  
 body
-  :background #000 url('/images/bw_textured_background.png') repeat fixed center
-  :font-family "Arial Rounded MT Bold", "Arial", "Verdana"
-
-#logo
-  :float left
-  :margin-left 20px
-  
-h1, h2, ul
-  :float none
-  :display block
-
-h1
-  :font-size 75px
-  :margin-left 300px 
-  :margin-bottom 10px  
-h2
-  :font-size 30px
-  :margin-left 200px  
-ul
-  :font-size 34px
-  :margin-left 300px  
-li
-  :padding-bottom 5px
-  
-#box
-  :background-color white
-  :padding 50px
-  :width 900px
-  :height 600px
-  :margin-left auto
-  :margin-right auto
-  :margin-top 50px
-  :border-style solid 
-  :border-color #999
-  :border-width 1px
-  
-#notify_me
-  :font-size 20px
-  :margin 0px auto
-  :padding 0px
-  :margin-bottom 2em
-  form
-    :text-align center
-  
-#email_notify
-  :font-size 30px
-  
-.image_button
-  :vertical-align middle
-  :*vertical-align text-bottom
-  
-label
-  :vertical-align middle
-  :*vertical-align text-bottom
-  
-#subtitle
-  :display block
-  :clear both
-  :text-align center
-  :margin-bottom 20px
-  
-a:link
-  :color black
-a:visited
-  :color #C9D787
-  
-#footer
-  :font-size 15px
+  :font-family "Arial Rounded MT Bold", "Arial"
   :margin 0em
-  :margin-top 1em
-  
-#thanks
-  :font-size 40px
-  :clear both
-  
-#flash_error
+
+#navbar_container
+  :width 100%
+  :height 40px
+  :background-color rgb(150,150,150)
+  :overflow hidden
+  :margin 0em
+
+#navbar
+  :font-family arial
+  :font-size 2em
+  :width 800px
+  :margin 0 auto
+  :position relative
+
+#headlines
+  :background #fff url(/images/bg_intro.png) repeat-x scroll 0 0
+  :width 100%
   :text-align center
-  :color rgb(129,29,15)
-  :background rgb(251,227,228)
-  :border 2px solid rgb(251,194,196)
+  h1, h2
+    :margin 0em
+    :padding-top 0.5em
+    
+#intro
+  :margin 0 auto 1em
+  :overflow hidden
+  :padding-bottom 0em
+  :width 70em
+
   
+#screenshots
+  :width 30em
+  :float left
+  img
+    :margin 0.5em
+  
+#bullets
+  :float left
+  :margin-left 1em
+  :font-size 2em
+  :width 15em
+  ul
+    :margin-top 1em
+    :margin-bottom 2em
+    li
+      :margin-bottom 1em
+  p
+    :text-align center
+
+#cta
+  :margin-top 2em
+  
+#features_container
+  :background-color = !light_green
+  :font-size 1.5em
+  :width 100%
+
+#features
+  :width 40em
+  :margin 0 auto
+  li
+    :vertical-align text-top
+    :display inline-block
+    :padding 0em 1em 1.5em 0em
+    :width 20em
+    :font-size 85%
+    :text-align justify
+    h2
+      :font-size 110%
+
+#signup_container
+  :width 100%
+  :margin-top 10em
+  :margin-bottom 2em
+  :font-size 1.5em
+  #signup
+    :width 50em
+    :margin 0 auto
+    #email_form
+      :width 20em
+      :margin 0 auto
+      .image_button
+        :vertical-align text-bottom
+        *:vertical-align text-bottom
+  
+
+#footer
+  :height 100px
+  :position relative
+  :clear both
+  :font-size 1em
+  :width 100%
+  :text-align center
+  :background rgb(0,0,0)
+  :color rgb(255,255,255)
