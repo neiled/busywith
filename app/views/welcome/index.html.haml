@@ -1,76 +1,56 @@
-!!!
-%html{html_attrs}
-%head
-  %meta{'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}
-  %link{ :rel => "shortcut icon", :href => "/favicon.ico", :type => "image/x-icon"}
-  %title= "Busywith.com - What's my team doing?!"
-  = stylesheet_link_tag 'compiled/welcome.css'
-  %script{:src => 'http://www.google.com/jsapi?key=ABQIAAAA9PVdi6OTkajQVyMoI3hv6RTPte5IkMv6YO0Qn70prbC3lXMUQBSnG8VdqcEiCOJ23nYjwHx_iJb9uQ'}
-  %script{:src => 'http://www.google.com/jsapi?key=ABQIAAAA9PVdi6OTkajQVyMoI3hv6RREih2AnShy9hMJC_8gVX6vDz0I5xS14rYAFBQxUz6VT_bvcheaFWP6ZQ'}  
-  = javascript_tag "var AUTH_TOKEN = #{form_authenticity_token.inspect};" if protect_against_forgery?
-  %meta{'name' => "verify-v1", :content => '5sD8T61OQDV7PQnROBLbTZoU8iqV3+96sC+RruHOOJc='}
+#intro
+  #screenshots
+    %a{:href=>"/images/ss_set_status.png", :class=>"lightbox"}
+      %img{:src=>"/images/tn_set_status.png", :alt=>"Set Status Screenshot"}
+    %a{:href=>"/images/ss_team_status.png", :class=>"lightbox"}
+      %img{:src=>"/images/tn_team_status.png", :alt=>"Set Status Screenshot"}
+    %a{:href=>"/images/ss_adding_projects.png", :class=>"lightbox"}
+      %img{:src=>"/images/tn_adding_projects.png", :alt=>"Set Status Screenshot"}
+    %a{:href=>"/images/ss_sign_in.png", :class=>"lightbox"}
+      %img{:src=>"/images/tn_sign_in.png", :alt=>"Set Status Screenshot"}
+  #bullets
+    %ul
+      %li Who is doing what?
+      %li What is their progress?
+      %li When will they finish?
+    %p
+      See all this on one screen for your entire team FREE!
+      %a{:id=>"cta", :href=>"#email"}
+        %img{:src=>"/images/button_gloss_sign_up.png", :alt=>"Sign up!"}
+#features_container
+  #features
+    %ul
+      %li{:id=>"feature1"}
+        %h2 Keep Track
+        If your team is scattered across all four corners of the globe, hidden in their cubicles or even if you're all
+        working out of your mother's basement then busywith will help you keep track of what everyone is working on.
+      %li{:id=>"feature2"}
+        %h2 One Screen is all you need
+        Bookmark your team's screen and just have it running in the background, busywith updates it automatically so
+        you know every time you look at it that it's up to date!
+      %li{:id=>"feature3"}
+        %h2 Quick and Easy
+        Each member of the team only has to update a few fields each time they change task. Updates take seconds with no
+        long forms to fill-in. It's quick, simple and easy to update which means it gets used more, but it still has a
+        lot of useful information to help you plan the next stages of the project.
+      %li{:id=>"feature4"}
+        %h2 Simple, but effective
+        Twitter, IM and Email all have their place, we love them! But sometimes you just want to be able to
+        see at a glance what everyone is doing, this is where busywith can help. Give it a try.
+#signup_container
+  #signup
+    = render :partial => 'layouts/flashes'      
+    #logo
+      %img{:src=>"/images/busywith_logo_smaller.png", :alt=>"Busywith.com logo"}
+    %p
+      We're still currently in private testing at the moment, but do put your email in
+      this box and we'll let you know when we launch.
+    %br
+      I promise we won't use your email address for anything other than that!
+    #email_form
+      - form_tag beta_signup_path do
+        = label_tag "email", "Email Address"
+        = text_field_tag "email"
+        = image_submit_tag "/images/button_gloss_notify_me.png", :alt => "Keep me informed!", :class => "image_button"
 
-%body{:class => body_class}  
-  #wrapper
-    #navbar_container
-      #navbar
-        Link1 | Link2
-    #headlines
-      %h1 Extremely Simple Project Management
-      %h2 Busywith let's you keep track of your team
-    #intro
-      #screenshots
-        %img{:src=>"http://dummyimage.com/200x200", :alt=>"A Dummy Image"}
-        %img{:src=>"http://dummyimage.com/200x200", :alt=>"A Dummy Image"}
-        %img{:src=>"http://dummyimage.com/200x200", :alt=>"A Dummy Image"}
-        %img{:src=>"http://dummyimage.com/200x200", :alt=>"A Dummy Image"}
-      #bullets
-        %ul
-          %li Who is doing what?
-          %li What is their progress?
-          %li When will they finish?
-        %p
-          See all this on one screen for your entire team FREE!
-          %a{:id=>"cta", :href=>"#email"}
-            %img{:src=>"http://dummyimage.com/350x60", :alt=>"Sign up!"}
-    #features_container
-      #features
-        %ul
-          %li{:id=>"feature1"}
-            %h2 Keep track of your team
-            If your team is scattered across all four corners of the globe, hidden in their cubicles or even if you're all
-            working out of your mother's basement then busywith will help you keep track of what everyone is working on.
-          %li{:id=>"feature2"}
-            %h2 Automatic Updates
-            Bookmark your team's screen and just have it running in the background, busywith updates automatically so
-            you know every time you look at it that it's up to date.
-          %li{:id=>"feature3"}
-            %h2 Very Simple to Use
-            Each member of the team only has to update a few fields each time they change task. Updates take seconds with no
-            long forms to fill-in. It's quick, simple and easy to update which means it gets used more, but it still has a
-            lot of useful information to help you plan the next stages of the project.
-          %li{:id=>"feature4"}
-            %h2 Simple, but effective
-            Twitter, IM and Email all have their place, we love them! But sometimes you just want to be able to
-            see at a glance what everyone is doing, this is where busywith can help. Give it a try.
-    #signup_container
-      #signup
-        %p
-          We're still currently in private testing at the moment, but do put your email in
-          this box and we'll let you know when we launch. I promise we won't use your email
-          address for anything other than that!
-        #email_form
-          - form_tag beta_signup_path do
-            = label_tag "email", "Email Address"
-            = text_field_tag "email"
-            = image_submit_tag "/images/button_notify_me.png", :alt => "Keep me informed!", :class => "image_button"
-    #footer
-      %p{:id=>"copyright"}(C) Copyright 2009-2010
-      %p blog | sitemap | privacy | contact us
-        
 
-  = javascript_tag "google.load('jquery', '1.4.0');"
-  = javascript_tag "google.load('jqueryui', '1.7.2');"    
-  = javascript_include_tag 'jquery-color'
-  = javascript_include_tag 'application'
-  

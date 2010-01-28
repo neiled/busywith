@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
 
-  layout nil
+  layout "welcome"
   
   def index
   end
@@ -13,7 +13,7 @@ class WelcomeController < ApplicationController
       redirect_to :action => "thanks"
     else
       flash[:error] = "Are you sure that's your email address? It seems blank!"
-      redirect_to :action => "index"
+      redirect_to :action => "index", :anchor => "email"
     end
   end
   

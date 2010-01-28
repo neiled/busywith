@@ -1,26 +1,50 @@
 !light_green = #C9D787
 !dark_green = #7D8A2E
 
-html, body
+html, body, #wrapper
   :height 100%
   
 body
   :font-family "Arial Rounded MT Bold", "Arial"
   :margin 0em
 
+img
+  :border-style none
+
 #navbar_container
   :width 100%
   :height 40px
-  :background-color rgb(150,150,150)
+  :background-color= !light_green
   :overflow hidden
   :margin 0em
 
 #navbar
-  :font-family arial
-  :font-size 2em
   :width 800px
   :margin 0 auto
-  :position relative
+  ul
+    :margin 0
+    :display block
+    li
+      :height 76.8px
+      :display inline
+      :float left
+      :list-style-type none
+      :padding-left 4px
+      :padding-right 4px
+      :white-space nowrap
+      :width 100px
+      a
+        :height 76.8px
+        :display block      
+        :text-indent -50000px
+    li.busywith
+      :background url('/images/button_busywith.png') no-repeat scroll
+    li.blog
+      :background url('/images/button_blog.png') no-repeat scroll      
+
+#wrapper
+  :height auto !important
+  :min-height 100%  
 
 #headlines
   :background #fff url(/images/bg_intro.png) repeat-x scroll 0 0
@@ -34,7 +58,7 @@ body
   :margin 0 auto 1em
   :overflow hidden
   :padding-bottom 0em
-  :width 70em
+  :width 60em
 
   
 #screenshots
@@ -42,11 +66,15 @@ body
   :float left
   img
     :margin 0.5em
+    :border-style solid 
+    :border-color = !dark_green
+    :border-width 1px    
   
 #bullets
   :float left
   :margin-left 1em
-  :font-size 2em
+  :margin-bottom 1em
+  :font-size 1.8em
   :width 15em
   ul
     :margin-top 1em
@@ -55,11 +83,11 @@ body
       :margin-bottom 1em
   p
     :text-align center
-
-#cta
-  :margin-top 2em
   
+
 #features_container
+  :border-top 1px solid #999
+  :border-bottom 1px solid #999
   :background-color = !light_green
   :font-size 1.5em
   :width 100%
@@ -74,31 +102,61 @@ body
     :width 20em
     :font-size 85%
     :text-align justify
+    :background-position 0 0
+    :background-repeat no-repeat    
     h2
       :font-size 110%
-
+      :margin-left 3em
+      
+#feature1
+  :background-image url(/images/li_team.png)
+#feature2
+  :background-image url(/images/li_screen.png)
+#feature3
+  :background-image url(/images/li_updates.png)
+#feature4
+  :background-image url(/images/li_simple.png)
+  
+#flash_error
+  :background #FBE3E4 none repeat scroll 0 0
+  :border 2px solid #FBC2C4
+  :color #8A1F11
+  :margin-bottom 1em
+  :padding 0.8em
+  
 #signup_container
   :width 100%
-  :margin-top 10em
+  :margin-top 4em
   :margin-bottom 2em
   :font-size 1.5em
+  #logo
+    :text-align center
   #signup
-    :width 50em
+    :width 30em
     :margin 0 auto
     #email_form
+      :font-size 1.5em
       :width 20em
       :margin 0 auto
+      input
+        :font-size 0.5em
       .image_button
         :vertical-align text-bottom
         *:vertical-align text-bottom
+        
   
 
 #footer
-  :height 100px
+  :height 50px
   :position relative
   :clear both
   :font-size 1em
   :width 100%
   :text-align center
-  :background rgb(0,0,0)
-  :color rgb(255,255,255)
+  :background-color= !light_green
+  :border-style solid 
+  :border-color #999
+  :border-width 1px
+  
+#thanks
+  :font-size 2em

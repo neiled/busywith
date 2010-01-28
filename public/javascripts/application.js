@@ -13,6 +13,7 @@ $(document).ready(function() {
     window.location = this.value;
   });
   
+  $('a.lightbox').lightBox();  
 
 });
 
