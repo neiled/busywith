@@ -74,20 +74,20 @@ img { border-style: none; }
 #flash_error { background: #FBE3E4 none repeat scroll 0 0; border: 2px solid #FBC2C4; color: #8A1F11; margin-bottom: 1em; padding: 0.8em; }
 
 /* line 129, ../../../app/stylesheets/welcome.sass */
-#signup_container { width: 100%; margin-top: 4em; margin-bottom: 2em; font-size: 1.5em; }
+#signup_container { width: 100%; margin-top: 4em; margin-bottom: 2em; font-size: 1.4em; }
 /* line 134, ../../../app/stylesheets/welcome.sass */
 #signup_container #logo { text-align: center; }
 /* line 136, ../../../app/stylesheets/welcome.sass */
-#signup_container #signup { width: 30em; margin: 0 auto; }
+#signup_container #signup { width: 35em; margin: 0 auto; }
 /* line 139, ../../../app/stylesheets/welcome.sass */
-#signup_container #signup #email_form { font-size: 1.5em; width: 20em; margin: 0 auto; }
-/* line 143, ../../../app/stylesheets/welcome.sass */
-#signup_container #signup #email_form input { font-size: 0.5em; }
+#signup_container #signup #email_form { height: 3em; font-size: 1.3em; width: 25em; margin: 1em auto; vertical-align: baseline; }
 /* line 145, ../../../app/stylesheets/welcome.sass */
+#signup_container #signup #email_form input { font-size: 0.7em; }
+/* line 147, ../../../app/stylesheets/welcome.sass */
 #signup_container #signup #email_form .image_button { vertical-align: text-bottom; }
 
-/* line 151, ../../../app/stylesheets/welcome.sass */
+/* line 153, ../../../app/stylesheets/welcome.sass */
 #footer { height: 50px; position: relative; clear: both; font-size: 1em; width: 100%; text-align: center; background-color: #c9d787; border-style: solid; border-color: #999; border-width: 1px; }
 
-/* line 163, ../../../app/stylesheets/welcome.sass */
+/* line 165, ../../../app/stylesheets/welcome.sass */
 #thanks { font-size: 2em; }
