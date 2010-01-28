@@ -10,6 +10,7 @@
   = stylesheet_link_tag 'datePicker.css'
   %script{:src => 'http://www.google.com/jsapi?key=ABQIAAAA9PVdi6OTkajQVyMoI3hv6RTPte5IkMv6YO0Qn70prbC3lXMUQBSnG8VdqcEiCOJ23nYjwHx_iJb9uQ'}
   %script{:src => 'http://www.google.com/jsapi?key=ABQIAAAA9PVdi6OTkajQVyMoI3hv6RREih2AnShy9hMJC_8gVX6vDz0I5xS14rYAFBQxUz6VT_bvcheaFWP6ZQ'}  
+  = javascript_tag "google.load('jquery', '1.4.0');"
   = javascript_tag "var AUTH_TOKEN = #{form_authenticity_token.inspect};" if protect_against_forgery?
   %meta{'name' => "verify-v1", :content => '5sD8T61OQDV7PQnROBLbTZoU8iqV3+96sC+RruHOOJc='}
 %body{:class => body_class}
@@ -20,21 +21,20 @@
           = link_to "Busywith.com", root_url
         %li.blog
           = link_to "blog", "http://blog.busywith.com"
-      - unless RAILS_ENV == 'production' then
-        %ul.right
-          - unless current_user
-            %li.sign_in
-              = link_to "Sign in", signin_path
-            %li.sign_up
-              = link_to "Sign up", new_user_path 
-          - else
-            -unless team_tag(current_user).nil?
-              %li.my_team
-                = team_tag(current_user)
-            %li.me
-              = link_to "My Status (#{current_user.login})", profile_path(current_user.login)
-            %li.sign_out
-              = link_to "Sign out", signout_path  
+      %ul.right
+        - unless current_user
+          %li.sign_in
+            = link_to "Sign in", signin_path
+          %li.sign_up
+            = link_to "Sign up", new_user_path 
+        - else
+          -unless team_tag(current_user).nil?
+            %li.my_team
+              = team_tag(current_user)
+          %li.me
+            = link_to "My Status (#{current_user.login})", profile_path(current_user.login)
+          %li.sign_out
+            = link_to "Sign out", signout_path  
   #header            
   #container
     #content.clearfix
@@ -48,7 +48,6 @@
     = link_to "contact busywith", "mailto:enquiries@busywith.com"
     = yield :footer
     
-  = javascript_tag "google.load('jquery', '1.4.0');"
   = javascript_tag "google.load('jqueryui', '1.7.2');"    
   = javascript_include_tag 'jquery-color'
   = javascript_include_tag 'jquery-form'  
