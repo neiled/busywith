@@ -46,7 +46,7 @@ img { border-style: none; }
 /* line 82, ../../../app/stylesheets/welcome.sass */
 #bullets ul li { margin-bottom: 1em; text-align: left; }
 /* line 85, ../../../app/stylesheets/welcome.sass */
-#bullets p { text-align: center; }
+#bullets #cta { text-align: center; }
 
 /* line 89, ../../../app/stylesheets/welcome.sass */
 #features_container { border-top: 1px solid #999; background-color: #c9d787; font-size: 1.5em; width: 100%; }
