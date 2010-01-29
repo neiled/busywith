@@ -88,7 +88,7 @@ img
 
 #features_container
   :border-top 1px solid #999
-  :border-bottom 1px solid #999
+  / :border-bottom 1px solid #999
   :background-color = !light_green
   :font-size 1.5em
   :width 100%
@@ -96,6 +96,8 @@ img
 #features
   :width 40em
   :margin 0 auto
+  ul
+    :margin-bottom 0
   li
     :vertical-align text-top
     :display inline-block
@@ -127,8 +129,10 @@ img
   :padding 0.8em
   
 #signup_container
+  :background #fff url(/images/bg_intro.png) repeat-x scroll 0 0
   :width 100%
-  :margin-top 4em
+  :margin-top 0em
+  :padding-top 4em
   :margin-bottom 2em
   :font-size 1.4em
   #logo
