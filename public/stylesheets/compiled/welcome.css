@@ -92,4 +92,4 @@ img { border-style: none; }
 #footer { height: 50px; position: relative; clear: both; font-size: 1em; width: 100%; text-align: center; background-color: #c9d787; border-style: solid; border-color: #999; border-width: 1px; }
 
 /* line 169, ../../../app/stylesheets/welcome.sass */
-#thanks { font-size: 2em; }
+#thanks { float: none; text-align: center; font-size: 2em; }

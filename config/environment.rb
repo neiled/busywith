@@ -4,6 +4,7 @@
 RAILS_GEM_VERSION = '2.3.4' unless defined? RAILS_GEM_VERSION
 CAMPAIGN_MONITOR_API_KEY = '952c70caa35c8577c494995978b72b7a'
 RPX_API_KEY = "9c8858925c198fee73e8ef0cd492b6f91cc5ed0c"
+PROWL_API_KEY = "1e6a51e64611e845b3fa9c2e54b9871cfc93b4f3"
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
@@ -19,7 +20,8 @@ Rails::Initializer.run do |config|
   config.gem "grosser-rpx_now", :lib => "rpx_now", :source => "http://gems.github.com/"  
   config.gem "tardate-authlogic_rpx", :lib => "authlogic_rpx", :source => 'http://gems.github.com'  
   config.gem "friendly_id"
-  config.gem "hoptoad_notifier"  
+  config.gem "hoptoad_notifier"
+  config.gem "prowl"
   # config.gem 'patientslikeme-campaign_monitor', :lib => 'campaign_monitor', :source => 'http://gems.github.com'  
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
