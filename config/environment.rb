@@ -13,7 +13,6 @@ Rails::Initializer.run do |config|
   config.gem 'authlogic'
   config.gem 'chriseppstein-compass', :lib => 'compass', :source => 'http://gems.github.com'
   config.gem 'haml', :lib => 'haml'
-  config.gem "newrelic_rpm"
   config.gem 'validates_timeliness'
   config.gem 'rubaidh-google_analytics', :lib => 'rubaidh/google_analytics', :source => 'http://gems.github.com'
   config.gem 'seven1m-campaign_monitor', :lib => 'campaign_monitor'

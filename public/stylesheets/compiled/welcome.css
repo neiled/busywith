@@ -51,45 +51,47 @@ img { border-style: none; }
 /* line 89, ../../../app/stylesheets/welcome.sass */
 #features_container { border-top: 1px solid #999; background-color: #c9d787; font-size: 1.5em; width: 100%; }
 
-/* line 96, ../../../app/stylesheets/welcome.sass */
-#features { width: 40em; margin: 0 auto; }
+/* line 95, ../../../app/stylesheets/welcome.sass */
+#features { width: 850px; margin: 0 auto; overflow: hidden; }
 /* line 99, ../../../app/stylesheets/welcome.sass */
-#features ul { margin-bottom: 0; }
-/* line 101, ../../../app/stylesheets/welcome.sass */
-#features li { vertical-align: text-top; display: inline-block; padding: 0em 1em 1.5em 0em; width: 20em; font-size: 85%; text-align: justify; background-position: 0 0; background-repeat: no-repeat; }
-/* line 110, ../../../app/stylesheets/welcome.sass */
-#features li h2 { font-size: 110%; margin-left: 3em; margin-bottom: 1em; }
+#features ul { margin: 1em 0 0 0; padding: 0; list-style-type: none; overflow: hidden; }
+/* line 104, ../../../app/stylesheets/welcome.sass */
+#features li { list-style-type: none; vertical-align: text-top; display: inline; float: left; padding: 0em 1em 1em 0em; width: 400px; height: 10em; font-size: 75%; text-align: justify; background-position: 100 0; background-repeat: no-repeat; }
+/* line 116, ../../../app/stylesheets/welcome.sass */
+#features li h2 { font-size: 110%; margin-left: 3.5em; margin-bottom: 30px; }
+/* line 120, ../../../app/stylesheets/welcome.sass */
+#features li p { font-size: 90%; }
 
-/* line 115, ../../../app/stylesheets/welcome.sass */
+/* line 123, ../../../app/stylesheets/welcome.sass */
 #feature1 { background-image: url(/images/li_team.png); }
 
-/* line 117, ../../../app/stylesheets/welcome.sass */
+/* line 125, ../../../app/stylesheets/welcome.sass */
 #feature2 { background-image: url(/images/li_screen.png); }
 
-/* line 119, ../../../app/stylesheets/welcome.sass */
+/* line 127, ../../../app/stylesheets/welcome.sass */
 #feature3 { background-image: url(/images/li_updates.png); }
 
-/* line 121, ../../../app/stylesheets/welcome.sass */
+/* line 129, ../../../app/stylesheets/welcome.sass */
 #feature4 { background-image: url(/images/li_simple.png); }
 
-/* line 124, ../../../app/stylesheets/welcome.sass */
+/* line 132, ../../../app/stylesheets/welcome.sass */
 #flash_error { background: #FBE3E4 none repeat scroll 0 0; border: 2px solid #FBC2C4; color: #8A1F11; margin-bottom: 1em; padding: 0.8em; }
 
-/* line 131, ../../../app/stylesheets/welcome.sass */
+/* line 139, ../../../app/stylesheets/welcome.sass */
 #signup_container { background: #fff url(/images/bg_intro.png) repeat-x scroll 0 0; width: 100%; margin-top: 0em; padding-top: 4em; margin-bottom: 2em; font-size: 1.4em; }
-/* line 138, ../../../app/stylesheets/welcome.sass */
+/* line 146, ../../../app/stylesheets/welcome.sass */
 #signup_container #logo { text-align: center; }
-/* line 140, ../../../app/stylesheets/welcome.sass */
+/* line 148, ../../../app/stylesheets/welcome.sass */
 #signup_container #signup { width: 35em; margin: 0 auto; }
-/* line 143, ../../../app/stylesheets/welcome.sass */
-#signup_container #signup #email_form { height: 3em; font-size: 1.3em; width: 25em; margin: 1em auto; vertical-align: baseline; }
-/* line 149, ../../../app/stylesheets/welcome.sass */
-#signup_container #signup #email_form input { font-size: 0.7em; }
 /* line 151, ../../../app/stylesheets/welcome.sass */
+#signup_container #signup #email_form { height: 3em; font-size: 1.3em; width: 25em; margin: 1em auto; vertical-align: baseline; }
+/* line 157, ../../../app/stylesheets/welcome.sass */
+#signup_container #signup #email_form input { font-size: 0.7em; }
+/* line 159, ../../../app/stylesheets/welcome.sass */
 #signup_container #signup #email_form .image_button { vertical-align: text-bottom; }
 
-/* line 157, ../../../app/stylesheets/welcome.sass */
+/* line 165, ../../../app/stylesheets/welcome.sass */
 #footer { height: 50px; position: relative; clear: both; font-size: 1em; width: 100%; text-align: center; background-color: #c9d787; border-style: solid; border-color: #999; border-width: 1px; }
 
-/* line 169, ../../../app/stylesheets/welcome.sass */
+/* line 177, ../../../app/stylesheets/welcome.sass */
 #thanks { float: none; text-align: center; font-size: 2em; }
