@@ -1,97 +1,102 @@
 /* line 4, ../../../app/stylesheets/welcome.sass */
-html, body, #wrapper { height: 100%; }
+* { margin: 0em; }
 
 /* line 7, ../../../app/stylesheets/welcome.sass */
+html, body, #wrapper { height: 100%; }
+
+/* line 10, ../../../app/stylesheets/welcome.sass */
 body { font-family: "Arial Rounded MT Bold", "Arial"; margin: 0em; }
 
-/* line 11, ../../../app/stylesheets/welcome.sass */
+/* line 14, ../../../app/stylesheets/welcome.sass */
 img { border-style: none; }
 
-/* line 14, ../../../app/stylesheets/welcome.sass */
+/* line 17, ../../../app/stylesheets/welcome.sass */
 #navbar_container { width: 100%; height: 40px; background-color: #c9d787; overflow: hidden; margin: 0em; }
 
-/* line 21, ../../../app/stylesheets/welcome.sass */
-#navbar { width: 800px; margin: 0 auto; }
 /* line 24, ../../../app/stylesheets/welcome.sass */
-#navbar ul { margin: 5px 0em; display: block; }
+#navbar { width: 800px; margin: 0 auto; }
 /* line 27, ../../../app/stylesheets/welcome.sass */
+#navbar ul { margin: 5px 0em; display: block; }
+/* line 30, ../../../app/stylesheets/welcome.sass */
 #navbar ul li { height: 76.8px; display: inline; float: left; list-style-type: none; padding-left: 4px; padding-right: 4px; white-space: nowrap; width: 100px; }
-/* line 36, ../../../app/stylesheets/welcome.sass */
+/* line 39, ../../../app/stylesheets/welcome.sass */
 #navbar ul li a { height: 76.8px; display: block; text-indent: -50000px; }
-/* line 40, ../../../app/stylesheets/welcome.sass */
+/* line 43, ../../../app/stylesheets/welcome.sass */
 #navbar ul li.busywith { background: url('/images/button_gloss_busywith.png') no-repeat scroll; }
-/* line 42, ../../../app/stylesheets/welcome.sass */
+/* line 45, ../../../app/stylesheets/welcome.sass */
 #navbar ul li.blog { background: url('/images/button_gloss_blog.png') no-repeat scroll; }
 
-/* line 45, ../../../app/stylesheets/welcome.sass */
-#wrapper { height: auto !important; min-height: 100%; }
+/* line 48, ../../../app/stylesheets/welcome.sass */
+#wrapper { height: auto !important; min-height: 100%; margin: 0 auto -4em; }
 
-/* line 49, ../../../app/stylesheets/welcome.sass */
-#headlines { background: #fff url(/images/bg_intro.png) repeat-x scroll 0 0; width: 100%; text-align: center; }
 /* line 53, ../../../app/stylesheets/welcome.sass */
+#headlines { background: #fff url(/images/bg_intro.png) repeat-x scroll 0 0; width: 100%; text-align: center; }
+/* line 57, ../../../app/stylesheets/welcome.sass */
 #headlines h1, #headlines h2 { margin: 0em; padding-top: 0.5em; }
 
-/* line 57, ../../../app/stylesheets/welcome.sass */
+/* line 61, ../../../app/stylesheets/welcome.sass */
 #intro { margin: 0 auto 1em; overflow: hidden; padding-bottom: 0em; width: 60em; }
 
-/* line 64, ../../../app/stylesheets/welcome.sass */
+/* line 68, ../../../app/stylesheets/welcome.sass */
 #screenshots { width: 30em; float: left; }
-/* line 67, ../../../app/stylesheets/welcome.sass */
+/* line 71, ../../../app/stylesheets/welcome.sass */
 #screenshots img { margin: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 1px; }
 
-/* line 73, ../../../app/stylesheets/welcome.sass */
+/* line 77, ../../../app/stylesheets/welcome.sass */
 #bullets { float: left; margin-left: 1em; margin-bottom: 1em; font-size: 1.8em; width: 15em; }
-/* line 79, ../../../app/stylesheets/welcome.sass */
+/* line 83, ../../../app/stylesheets/welcome.sass */
 #bullets ul { margin-top: 1em; margin-bottom: 2em; }
-/* line 82, ../../../app/stylesheets/welcome.sass */
+/* line 86, ../../../app/stylesheets/welcome.sass */
 #bullets ul li { margin-bottom: 1em; text-align: left; }
-/* line 85, ../../../app/stylesheets/welcome.sass */
-#bullets #cta { text-align: center; }
-
 /* line 89, ../../../app/stylesheets/welcome.sass */
+#bullets #cta { text-align: center; }
+/* line 91, ../../../app/stylesheets/welcome.sass */
+#bullets #cta p { margin-bottom: 1.5em; }
+
+/* line 96, ../../../app/stylesheets/welcome.sass */
 #features_container { border-top: 1px solid #999; background-color: #c9d787; font-size: 1.5em; width: 100%; }
 
-/* line 95, ../../../app/stylesheets/welcome.sass */
+/* line 102, ../../../app/stylesheets/welcome.sass */
 #features { width: 850px; margin: 0 auto; overflow: hidden; }
-/* line 99, ../../../app/stylesheets/welcome.sass */
+/* line 106, ../../../app/stylesheets/welcome.sass */
 #features ul { margin: 1em 0 0 0; padding: 0; list-style-type: none; overflow: hidden; }
-/* line 104, ../../../app/stylesheets/welcome.sass */
+/* line 111, ../../../app/stylesheets/welcome.sass */
 #features li { list-style-type: none; vertical-align: text-top; display: inline; float: left; padding: 0em 1em 1em 0em; width: 400px; height: 10em; font-size: 75%; text-align: justify; background-position: 100 0; background-repeat: no-repeat; }
-/* line 116, ../../../app/stylesheets/welcome.sass */
-#features li h2 { font-size: 110%; margin-left: 3.5em; margin-bottom: 30px; }
-/* line 120, ../../../app/stylesheets/welcome.sass */
+/* line 123, ../../../app/stylesheets/welcome.sass */
+#features li h2 { font-size: 110%; margin-left: 3.5em; margin-bottom: 30px; margin-top: 1em; }
+/* line 128, ../../../app/stylesheets/welcome.sass */
 #features li p { font-size: 90%; }
 
-/* line 123, ../../../app/stylesheets/welcome.sass */
+/* line 131, ../../../app/stylesheets/welcome.sass */
 #feature1 { background-image: url(/images/li_team.png); }
 
-/* line 125, ../../../app/stylesheets/welcome.sass */
+/* line 133, ../../../app/stylesheets/welcome.sass */
 #feature2 { background-image: url(/images/li_screen.png); }
 
-/* line 127, ../../../app/stylesheets/welcome.sass */
+/* line 135, ../../../app/stylesheets/welcome.sass */
 #feature3 { background-image: url(/images/li_updates.png); }
 
-/* line 129, ../../../app/stylesheets/welcome.sass */
+/* line 137, ../../../app/stylesheets/welcome.sass */
 #feature4 { background-image: url(/images/li_simple.png); }
 
-/* line 132, ../../../app/stylesheets/welcome.sass */
+/* line 140, ../../../app/stylesheets/welcome.sass */
 #flash_error { background: #FBE3E4 none repeat scroll 0 0; border: 2px solid #FBC2C4; color: #8A1F11; margin-bottom: 1em; padding: 0.8em; }
 
-/* line 139, ../../../app/stylesheets/welcome.sass */
+/* line 147, ../../../app/stylesheets/welcome.sass */
 #signup_container { background: #fff url(/images/bg_intro.png) repeat-x scroll 0 0; width: 100%; margin-top: 0em; padding-top: 4em; margin-bottom: 2em; font-size: 1.4em; }
-/* line 146, ../../../app/stylesheets/welcome.sass */
-#signup_container #logo { text-align: center; }
-/* line 148, ../../../app/stylesheets/welcome.sass */
-#signup_container #signup { width: 35em; margin: 0 auto; }
-/* line 151, ../../../app/stylesheets/welcome.sass */
-#signup_container #signup #email_form { height: 3em; font-size: 1.3em; width: 25em; margin: 1em auto; vertical-align: baseline; }
+/* line 154, ../../../app/stylesheets/welcome.sass */
+#signup_container #logo { text-align: center; margin-bottom: 1em; }
 /* line 157, ../../../app/stylesheets/welcome.sass */
+#signup_container #signup { width: 35em; margin: 0 auto; }
+/* line 160, ../../../app/stylesheets/welcome.sass */
+#signup_container #signup #email_form { height: 3em; font-size: 1.3em; width: 25em; margin: 1em auto; vertical-align: baseline; }
+/* line 166, ../../../app/stylesheets/welcome.sass */
 #signup_container #signup #email_form input { font-size: 0.7em; }
-/* line 159, ../../../app/stylesheets/welcome.sass */
+/* line 168, ../../../app/stylesheets/welcome.sass */
 #signup_container #signup #email_form .image_button { vertical-align: text-bottom; }
 
-/* line 165, ../../../app/stylesheets/welcome.sass */
-#footer { height: 50px; position: relative; clear: both; font-size: 1em; width: 100%; text-align: center; background-color: #c9d787; border-style: solid; border-color: #999; border-width: 1px; }
+/* line 174, ../../../app/stylesheets/welcome.sass */
+#footer { margin: 0em; height: 4em; clear: both; font-size: 1em; text-align: center; background-color: #c9d787; border-top: 1px solid #999; }
 
-/* line 177, ../../../app/stylesheets/welcome.sass */
+/* line 183, ../../../app/stylesheets/welcome.sass */
 #thanks { float: none; text-align: center; font-size: 2em; }

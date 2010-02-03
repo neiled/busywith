@@ -1,6 +1,9 @@
 !light_green = #C9D787
 !dark_green = #7D8A2E
 
+*
+  :margin 0em
+
 html, body, #wrapper
   :height 100%
   
@@ -44,7 +47,8 @@ img
 
 #wrapper
   :height auto !important
-  :min-height 100%  
+  :min-height 100%
+  :margin 0 auto -4em  
 
 #headlines
   :background #fff url(/images/bg_intro.png) repeat-x scroll 0 0
@@ -84,6 +88,9 @@ img
       :text-align left
   #cta
     :text-align center
+    p
+      :margin-bottom 1.5em
+    
   
 
 #features_container
@@ -117,6 +124,7 @@ img
       :font-size 110%
       :margin-left 3.5em
       :margin-bottom 30px
+      :margin-top 1em
     p
       :font-size 90%
       
@@ -145,6 +153,7 @@ img
   :font-size 1.4em
   #logo
     :text-align center
+    :margin-bottom 1em
   #signup
     :width 35em
     :margin 0 auto
@@ -163,16 +172,13 @@ img
   
 
 #footer
-  :height 50px
-  :position relative
+  :margin 0em
+  :height 4em
   :clear both
   :font-size 1em
-  :width 100%
   :text-align center
   :background-color= !light_green
-  :border-style solid 
-  :border-color #999
-  :border-width 1px
+  :border-top 1px solid #999
   
 #thanks
   :float none
