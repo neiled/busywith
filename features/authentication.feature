@@ -21,13 +21,13 @@ Feature: Authentication
     And I fill in "password" with "secret"
     And I press "Sign in"
     Then I should be on the user account page for "neiled"
-    And I should see "You are now signed in"
+    And I should see "Welcome back Neiled"
     And I should see "Sign out"
     
   Scenario: Logging out
     Given I have a user with the username "neiled" and the password "secret"
     And I am logged in as the user "neiled"
-    And I am on the homepage
+    And I am on the user account page for "neiled"
     When I follow "Sign out"
     Then I should be logged out
     

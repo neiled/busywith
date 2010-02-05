@@ -1,3 +1,7 @@
+= content_for :unobtrusive_javascript do
+  %script{ 'type' => "text/javascript"}
+    $('a.lightbox').lightBox();  
+
 #intro
   #screenshots
     %a{:href=>"/images/ss_set_status.png", :class=>"lightbox"}

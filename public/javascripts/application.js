@@ -12,9 +12,6 @@ $(document).ready(function() {
   $(".choose_team").change ( function() {
     window.location = this.value;
   });
-  
-  $('a.lightbox').lightBox();  
-
 });
 
 // Always send the authenticity_token with ajax

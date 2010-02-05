@@ -12,7 +12,7 @@ class UserSessionsController < ApplicationController
               redirect_to edit_user_path( current_user )
       else
               if @user_session.registration_complete?
-                      flash[:notice] = "You are now signed in"
+                      flash[:notice] = "Welcome back #{current_user.full_name}!"
                       redirect_back_or_default profile_path(current_user.login)
               else
                       flash[:notice] = "Welcome back! Please complete required registration details before continuing.."
