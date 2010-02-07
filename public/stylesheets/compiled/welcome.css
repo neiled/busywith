@@ -5,98 +5,125 @@
 html, body, #wrapper { height: 100%; }
 
 /* line 10, ../../../app/stylesheets/welcome.sass */
+a:link { color: #7d8a2e; }
+
+/* line 12, ../../../app/stylesheets/welcome.sass */
+a:visited { color: #7d8a2e; }
+
+/* line 15, ../../../app/stylesheets/welcome.sass */
 body { font-family: "Arial Rounded MT Bold", "Arial"; margin: 0em; }
 
-/* line 14, ../../../app/stylesheets/welcome.sass */
+/* line 19, ../../../app/stylesheets/welcome.sass */
 img { border-style: none; }
 
-/* line 17, ../../../app/stylesheets/welcome.sass */
+/* line 22, ../../../app/stylesheets/welcome.sass */
 #navbar_container { width: 100%; height: 40px; background-color: #c9d787; overflow: hidden; margin: 0em; }
 
-/* line 24, ../../../app/stylesheets/welcome.sass */
+/* line 29, ../../../app/stylesheets/welcome.sass */
 #navbar { width: 800px; margin: 0 auto; }
-/* line 27, ../../../app/stylesheets/welcome.sass */
+/* line 32, ../../../app/stylesheets/welcome.sass */
 #navbar ul { margin: 5px 0em; display: block; }
-/* line 30, ../../../app/stylesheets/welcome.sass */
+/* line 35, ../../../app/stylesheets/welcome.sass */
 #navbar ul li { height: 76.8px; display: inline; float: left; list-style-type: none; padding-left: 4px; padding-right: 4px; white-space: nowrap; width: 100px; }
-/* line 39, ../../../app/stylesheets/welcome.sass */
+/* line 44, ../../../app/stylesheets/welcome.sass */
 #navbar ul li a { height: 76.8px; display: block; text-indent: -50000px; }
-/* line 43, ../../../app/stylesheets/welcome.sass */
+/* line 48, ../../../app/stylesheets/welcome.sass */
 #navbar ul li.busywith { background: url('/images/button_gloss_busywith.png') no-repeat scroll; }
-/* line 45, ../../../app/stylesheets/welcome.sass */
+/* line 50, ../../../app/stylesheets/welcome.sass */
 #navbar ul li.blog { background: url('/images/button_gloss_blog.png') no-repeat scroll; }
 
-/* line 48, ../../../app/stylesheets/welcome.sass */
-#wrapper { height: auto !important; min-height: 100%; margin: 0 auto -4em; }
-
 /* line 53, ../../../app/stylesheets/welcome.sass */
+#wrapper { min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -4em; position: relative; }
+
+/* line 60, ../../../app/stylesheets/welcome.sass */
 #headlines { background: #fff url(/images/bg_intro.png) repeat-x scroll 0 0; width: 100%; text-align: center; }
-/* line 57, ../../../app/stylesheets/welcome.sass */
+/* line 64, ../../../app/stylesheets/welcome.sass */
 #headlines h1, #headlines h2 { margin: 0em; padding-top: 0.5em; }
 
-/* line 61, ../../../app/stylesheets/welcome.sass */
+/* line 68, ../../../app/stylesheets/welcome.sass */
 #intro { margin: 0 auto 1em; overflow: hidden; padding-bottom: 0em; width: 60em; }
 
-/* line 68, ../../../app/stylesheets/welcome.sass */
+/* line 75, ../../../app/stylesheets/welcome.sass */
 #screenshots { width: 30em; float: left; }
-/* line 71, ../../../app/stylesheets/welcome.sass */
+/* line 78, ../../../app/stylesheets/welcome.sass */
 #screenshots img { margin: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 1px; }
 
-/* line 77, ../../../app/stylesheets/welcome.sass */
+/* line 84, ../../../app/stylesheets/welcome.sass */
 #bullets { float: left; margin-left: 1em; margin-bottom: 1em; font-size: 1.8em; width: 15em; }
-/* line 83, ../../../app/stylesheets/welcome.sass */
+/* line 90, ../../../app/stylesheets/welcome.sass */
 #bullets ul { margin-top: 1em; margin-bottom: 2em; }
-/* line 86, ../../../app/stylesheets/welcome.sass */
+/* line 93, ../../../app/stylesheets/welcome.sass */
 #bullets ul li { margin-bottom: 1em; text-align: left; }
-/* line 89, ../../../app/stylesheets/welcome.sass */
+/* line 96, ../../../app/stylesheets/welcome.sass */
 #bullets #cta { text-align: center; }
-/* line 91, ../../../app/stylesheets/welcome.sass */
+/* line 98, ../../../app/stylesheets/welcome.sass */
 #bullets #cta p { margin-bottom: 1.5em; }
 
-/* line 96, ../../../app/stylesheets/welcome.sass */
+/* line 103, ../../../app/stylesheets/welcome.sass */
 #features_container { border-top: 1px solid #999; background-color: #c9d787; font-size: 1.5em; width: 100%; }
 
-/* line 102, ../../../app/stylesheets/welcome.sass */
+/* line 109, ../../../app/stylesheets/welcome.sass */
 #features { width: 850px; margin: 0 auto; overflow: hidden; }
-/* line 106, ../../../app/stylesheets/welcome.sass */
+/* line 113, ../../../app/stylesheets/welcome.sass */
 #features ul { margin: 1em 0 0 0; padding: 0; list-style-type: none; overflow: hidden; }
-/* line 111, ../../../app/stylesheets/welcome.sass */
+/* line 118, ../../../app/stylesheets/welcome.sass */
 #features li { list-style-type: none; vertical-align: text-top; display: inline; float: left; padding: 0em 1em 1em 0em; width: 400px; height: 10em; font-size: 75%; text-align: justify; background-position: 100 0; background-repeat: no-repeat; }
-/* line 123, ../../../app/stylesheets/welcome.sass */
+/* line 130, ../../../app/stylesheets/welcome.sass */
 #features li h2 { font-size: 110%; margin-left: 3.5em; margin-bottom: 30px; margin-top: 1em; }
-/* line 128, ../../../app/stylesheets/welcome.sass */
+/* line 135, ../../../app/stylesheets/welcome.sass */
 #features li p { font-size: 90%; }
 
-/* line 131, ../../../app/stylesheets/welcome.sass */
+/* line 138, ../../../app/stylesheets/welcome.sass */
 #feature1 { background-image: url(/images/li_team.png); }
 
-/* line 133, ../../../app/stylesheets/welcome.sass */
+/* line 140, ../../../app/stylesheets/welcome.sass */
 #feature2 { background-image: url(/images/li_screen.png); }
 
-/* line 135, ../../../app/stylesheets/welcome.sass */
+/* line 142, ../../../app/stylesheets/welcome.sass */
 #feature3 { background-image: url(/images/li_updates.png); }
 
-/* line 137, ../../../app/stylesheets/welcome.sass */
+/* line 144, ../../../app/stylesheets/welcome.sass */
 #feature4 { background-image: url(/images/li_simple.png); }
 
-/* line 140, ../../../app/stylesheets/welcome.sass */
+/* line 147, ../../../app/stylesheets/welcome.sass */
 #flash_error { background: #FBE3E4 none repeat scroll 0 0; border: 2px solid #FBC2C4; color: #8A1F11; margin-bottom: 1em; padding: 0.8em; }
 
-/* line 147, ../../../app/stylesheets/welcome.sass */
-#signup_container { background: #fff url(/images/bg_intro.png) repeat-x scroll 0 0; width: 100%; margin-top: 0em; padding-top: 4em; margin-bottom: 2em; font-size: 1.4em; }
 /* line 154, ../../../app/stylesheets/welcome.sass */
+#signup_container { background: #fff url(/images/bg_intro.png) repeat-x scroll 0 0; width: 100%; margin-top: 0em; padding-top: 4em; margin-bottom: 2em; font-size: 1.4em; }
+/* line 161, ../../../app/stylesheets/welcome.sass */
 #signup_container #logo { text-align: center; margin-bottom: 1em; }
-/* line 157, ../../../app/stylesheets/welcome.sass */
+/* line 164, ../../../app/stylesheets/welcome.sass */
 #signup_container #signup { width: 35em; margin: 0 auto; }
-/* line 160, ../../../app/stylesheets/welcome.sass */
+/* line 167, ../../../app/stylesheets/welcome.sass */
 #signup_container #signup #email_form { height: 3em; font-size: 1.3em; width: 25em; margin: 1em auto; vertical-align: baseline; }
-/* line 166, ../../../app/stylesheets/welcome.sass */
+/* line 173, ../../../app/stylesheets/welcome.sass */
 #signup_container #signup #email_form input { font-size: 0.7em; }
-/* line 168, ../../../app/stylesheets/welcome.sass */
+/* line 175, ../../../app/stylesheets/welcome.sass */
 #signup_container #signup #email_form .image_button { vertical-align: text-bottom; }
 
-/* line 174, ../../../app/stylesheets/welcome.sass */
-#footer { margin: 0em; height: 4em; clear: both; font-size: 1em; text-align: center; background-color: #c9d787; border-top: 1px solid #999; }
+/* line 181, ../../../app/stylesheets/welcome.sass */
+#footer { margin: 0em; height: 4em; clear: both; font-size: 1em; text-align: center; background-color: #c9d787; border-top: 1px solid #999; position: relative; }
 
-/* line 183, ../../../app/stylesheets/welcome.sass */
+/* line 191, ../../../app/stylesheets/welcome.sass */
 #thanks { float: none; text-align: center; font-size: 2em; }
+
+/* line 196, ../../../app/stylesheets/welcome.sass */
+#contact_intro { width: 50em; margin: 0 auto; text-align: center; margin-bottom: 3em; }
+
+/* line 202, ../../../app/stylesheets/welcome.sass */
+#contact_box { margin: 0 auto; width: 25em; background: #C9D787 none repeat scroll 0 0; border: 2px solid #7D8A2E; color: black; margin-bottom: 5em; padding: 0em; font-size: 1.5em; }
+/* line 211, ../../../app/stylesheets/welcome.sass */
+#contact_box ul { margin: 1em 0 0 1em; padding: 0; list-style-type: none; overflow: hidden; }
+/* line 216, ../../../app/stylesheets/welcome.sass */
+#contact_box li { list-style-type: none; padding: 0em 0em 0em 2em; height: 3em; width: 25em; background-repeat: no-repeat; }
+/* line 222, ../../../app/stylesheets/welcome.sass */
+#contact_box #contact_email { background-image: url(/images/email_32.png); }
+/* line 224, ../../../app/stylesheets/welcome.sass */
+#contact_box #contact_blog { background-image: url(/images/rss_32.png); }
+/* line 226, ../../../app/stylesheets/welcome.sass */
+#contact_box #contact_facebook { background-image: url(/images/facebook_32.png); }
+/* line 228, ../../../app/stylesheets/welcome.sass */
+#contact_box #contact_twitter { background-image: url(/images/twitter_32.png); }
+
+/* line 230, ../../../app/stylesheets/welcome.sass */
+#ps { font-size: 0.8em; margin-left: 5em; }

@@ -7,6 +7,11 @@
 html, body, #wrapper
   :height 100%
   
+a:link
+  :color= !dark_green
+a:visited
+  :color= !dark_green
+  
 body
   :font-family "Arial Rounded MT Bold", "Arial"
   :margin 0em
@@ -46,9 +51,11 @@ img
       :background url('/images/button_gloss_blog.png') no-repeat scroll      
 
 #wrapper
-  :height auto !important
   :min-height 100%
+  :height auto !important
+  :height 100%
   :margin 0 auto -4em  
+  :position relative
 
 #headlines
   :background #fff url(/images/bg_intro.png) repeat-x scroll 0 0
@@ -179,8 +186,47 @@ img
   :text-align center
   :background-color= !light_green
   :border-top 1px solid #999
+  :position relative
   
 #thanks
   :float none
   :text-align center
   :font-size 2em
+  
+#contact_intro
+  :width 50em
+  :margin 0 auto
+  :text-align center
+  :margin-bottom 3em
+  
+#contact_box
+  :margin 0 auto
+  :width 25em
+  :background #C9D787 none repeat scroll 0 0
+  :border 2px solid #7D8A2E
+  :color black
+  :margin-bottom 5em
+  :padding 0em
+  :font-size 1.5em
+  ul
+    :margin 1em 0 0 1em
+    :padding 0
+    :list-style-type none
+    :overflow hidden
+  li
+    :list-style-type none
+    :padding 0em 0em 0em 2em
+    :height 3em
+    :width 25em
+    :background-repeat no-repeat  
+  #contact_email
+    :background-image url(/images/email_32.png)
+  #contact_blog
+    :background-image url(/images/rss_32.png)
+  #contact_facebook
+    :background-image url(/images/facebook_32.png)
+  #contact_twitter
+    :background-image url(/images/twitter_32.png)  
+#ps
+  :font-size 0.8em
+  :margin-left 5em
