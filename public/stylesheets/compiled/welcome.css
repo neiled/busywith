@@ -33,97 +33,97 @@ img { border-style: none; }
 #navbar ul li.blog { background: url('/images/button_gloss_blog.png') no-repeat scroll; }
 
 /* line 53, ../../../app/stylesheets/welcome.sass */
-#wrapper { min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -4em; position: relative; }
+#wrapper { min-height: 100%; height: auto !important; height: 100%; position: relative; }
 
-/* line 60, ../../../app/stylesheets/welcome.sass */
+/* line 59, ../../../app/stylesheets/welcome.sass */
 #headlines { background: #fff url(/images/bg_intro.png) repeat-x scroll 0 0; width: 100%; text-align: center; }
-/* line 64, ../../../app/stylesheets/welcome.sass */
+/* line 63, ../../../app/stylesheets/welcome.sass */
 #headlines h1, #headlines h2 { margin: 0em; padding-top: 0.5em; }
 
-/* line 68, ../../../app/stylesheets/welcome.sass */
+/* line 67, ../../../app/stylesheets/welcome.sass */
 #intro { margin: 0 auto 1em; overflow: hidden; padding-bottom: 0em; width: 60em; }
 
-/* line 75, ../../../app/stylesheets/welcome.sass */
+/* line 74, ../../../app/stylesheets/welcome.sass */
 #screenshots { width: 30em; float: left; }
-/* line 78, ../../../app/stylesheets/welcome.sass */
+/* line 77, ../../../app/stylesheets/welcome.sass */
 #screenshots img { margin: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 1px; }
 
-/* line 84, ../../../app/stylesheets/welcome.sass */
+/* line 83, ../../../app/stylesheets/welcome.sass */
 #bullets { float: left; margin-left: 1em; margin-bottom: 1em; font-size: 1.8em; width: 15em; }
-/* line 90, ../../../app/stylesheets/welcome.sass */
+/* line 89, ../../../app/stylesheets/welcome.sass */
 #bullets ul { margin-top: 1em; margin-bottom: 2em; }
-/* line 93, ../../../app/stylesheets/welcome.sass */
+/* line 92, ../../../app/stylesheets/welcome.sass */
 #bullets ul li { margin-bottom: 1em; text-align: left; }
-/* line 96, ../../../app/stylesheets/welcome.sass */
+/* line 95, ../../../app/stylesheets/welcome.sass */
 #bullets #cta { text-align: center; }
-/* line 98, ../../../app/stylesheets/welcome.sass */
+/* line 97, ../../../app/stylesheets/welcome.sass */
 #bullets #cta p { margin-bottom: 1.5em; }
 
-/* line 103, ../../../app/stylesheets/welcome.sass */
+/* line 102, ../../../app/stylesheets/welcome.sass */
 #features_container { border-top: 1px solid #999; background-color: #c9d787; font-size: 1.5em; width: 100%; }
 
-/* line 109, ../../../app/stylesheets/welcome.sass */
+/* line 108, ../../../app/stylesheets/welcome.sass */
 #features { width: 850px; margin: 0 auto; overflow: hidden; }
-/* line 113, ../../../app/stylesheets/welcome.sass */
+/* line 112, ../../../app/stylesheets/welcome.sass */
 #features ul { margin: 1em 0 0 0; padding: 0; list-style-type: none; overflow: hidden; }
-/* line 118, ../../../app/stylesheets/welcome.sass */
+/* line 117, ../../../app/stylesheets/welcome.sass */
 #features li { list-style-type: none; vertical-align: text-top; display: inline; float: left; padding: 0em 1em 1em 0em; width: 400px; height: 10em; font-size: 75%; text-align: justify; background-position: 100 0; background-repeat: no-repeat; }
-/* line 130, ../../../app/stylesheets/welcome.sass */
+/* line 129, ../../../app/stylesheets/welcome.sass */
 #features li h2 { font-size: 110%; margin-left: 3.5em; margin-bottom: 30px; margin-top: 1em; }
-/* line 135, ../../../app/stylesheets/welcome.sass */
+/* line 134, ../../../app/stylesheets/welcome.sass */
 #features li p { font-size: 90%; }
 
-/* line 138, ../../../app/stylesheets/welcome.sass */
+/* line 137, ../../../app/stylesheets/welcome.sass */
 #feature1 { background-image: url(/images/li_team.png); }
 
-/* line 140, ../../../app/stylesheets/welcome.sass */
+/* line 139, ../../../app/stylesheets/welcome.sass */
 #feature2 { background-image: url(/images/li_screen.png); }
 
-/* line 142, ../../../app/stylesheets/welcome.sass */
+/* line 141, ../../../app/stylesheets/welcome.sass */
 #feature3 { background-image: url(/images/li_updates.png); }
 
-/* line 144, ../../../app/stylesheets/welcome.sass */
+/* line 143, ../../../app/stylesheets/welcome.sass */
 #feature4 { background-image: url(/images/li_simple.png); }
 
-/* line 147, ../../../app/stylesheets/welcome.sass */
+/* line 146, ../../../app/stylesheets/welcome.sass */
 #flash_error { background: #FBE3E4 none repeat scroll 0 0; border: 2px solid #FBC2C4; color: #8A1F11; margin-bottom: 1em; padding: 0.8em; }
 
-/* line 154, ../../../app/stylesheets/welcome.sass */
+/* line 153, ../../../app/stylesheets/welcome.sass */
 #signup_container { background: #fff url(/images/bg_intro.png) repeat-x scroll 0 0; width: 100%; margin-top: 0em; padding-top: 4em; margin-bottom: 2em; font-size: 1.4em; }
-/* line 161, ../../../app/stylesheets/welcome.sass */
+/* line 160, ../../../app/stylesheets/welcome.sass */
 #signup_container #logo { text-align: center; margin-bottom: 1em; }
-/* line 164, ../../../app/stylesheets/welcome.sass */
+/* line 163, ../../../app/stylesheets/welcome.sass */
 #signup_container #signup { width: 35em; margin: 0 auto; }
-/* line 167, ../../../app/stylesheets/welcome.sass */
+/* line 166, ../../../app/stylesheets/welcome.sass */
 #signup_container #signup #email_form { height: 3em; font-size: 1.3em; width: 25em; margin: 1em auto; vertical-align: baseline; }
-/* line 173, ../../../app/stylesheets/welcome.sass */
+/* line 172, ../../../app/stylesheets/welcome.sass */
 #signup_container #signup #email_form input { font-size: 0.7em; }
-/* line 175, ../../../app/stylesheets/welcome.sass */
+/* line 174, ../../../app/stylesheets/welcome.sass */
 #signup_container #signup #email_form .image_button { vertical-align: text-bottom; }
 
-/* line 181, ../../../app/stylesheets/welcome.sass */
+/* line 180, ../../../app/stylesheets/welcome.sass */
 #footer { margin: 0em; height: 4em; clear: both; font-size: 1em; text-align: center; background-color: #c9d787; border-top: 1px solid #999; position: relative; }
 
-/* line 191, ../../../app/stylesheets/welcome.sass */
+/* line 190, ../../../app/stylesheets/welcome.sass */
 #thanks { float: none; text-align: center; font-size: 2em; }
 
-/* line 196, ../../../app/stylesheets/welcome.sass */
+/* line 195, ../../../app/stylesheets/welcome.sass */
 #contact_intro { width: 50em; margin: 0 auto; text-align: center; margin-bottom: 3em; }
 
-/* line 202, ../../../app/stylesheets/welcome.sass */
-#contact_box { margin: 0 auto; width: 25em; background: #C9D787 none repeat scroll 0 0; border: 2px solid #7D8A2E; color: black; margin-bottom: 5em; padding: 0em; font-size: 1.5em; }
-/* line 211, ../../../app/stylesheets/welcome.sass */
+/* line 201, ../../../app/stylesheets/welcome.sass */
+#contact_box { margin: 0 auto; width: 25em; background: #C9D787 none repeat scroll 0 0; border: 2px solid #7D8A2E; color: black; margin-bottom: 2em; padding: 0em; font-size: 1.5em; }
+/* line 210, ../../../app/stylesheets/welcome.sass */
 #contact_box ul { margin: 1em 0 0 1em; padding: 0; list-style-type: none; overflow: hidden; }
-/* line 216, ../../../app/stylesheets/welcome.sass */
+/* line 215, ../../../app/stylesheets/welcome.sass */
 #contact_box li { list-style-type: none; padding: 0em 0em 0em 2em; height: 3em; width: 25em; background-repeat: no-repeat; }
-/* line 222, ../../../app/stylesheets/welcome.sass */
+/* line 221, ../../../app/stylesheets/welcome.sass */
 #contact_box #contact_email { background-image: url(/images/email_32.png); }
-/* line 224, ../../../app/stylesheets/welcome.sass */
+/* line 223, ../../../app/stylesheets/welcome.sass */
 #contact_box #contact_blog { background-image: url(/images/rss_32.png); }
-/* line 226, ../../../app/stylesheets/welcome.sass */
+/* line 225, ../../../app/stylesheets/welcome.sass */
 #contact_box #contact_facebook { background-image: url(/images/facebook_32.png); }
-/* line 228, ../../../app/stylesheets/welcome.sass */
+/* line 227, ../../../app/stylesheets/welcome.sass */
 #contact_box #contact_twitter { background-image: url(/images/twitter_32.png); }
 
-/* line 230, ../../../app/stylesheets/welcome.sass */
-#ps { font-size: 0.8em; margin-left: 5em; }
+/* line 229, ../../../app/stylesheets/welcome.sass */
+#ps { font-size: 0.8em; margin-left: 5em; margin-bottom: 1em; }
