@@ -27,5 +27,13 @@ class UserMailer < ActionMailer::Base
     sent_on    Time.now
     body       :membership => membership
   end
+  
+  def password_reset_instructions(user)
+    subject     "Busywith.com - Reset your password"
+    recipients  user.email
+    from        "donotreply@busywith.com"
+    sent_on     Time.now
+    body        :edit_password_reset_url => edit_password_reset_url(user.perishable_token)
+  end
 
 end

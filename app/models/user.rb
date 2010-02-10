@@ -48,6 +48,11 @@ class User < ActiveRecord::Base
     display_name.titlecase
   end
   
+  def deliver_password_reset_instructions!  
+    reset_perishable_token!  
+    UserMailer.deliver_password_reset_instructions(self)  
+  end  
+  
   private
   
   def setup_defaults

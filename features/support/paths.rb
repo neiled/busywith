@@ -28,6 +28,9 @@ module NavigationHelpers
       
     when /the team page for "(.*)"/
       team_path(Team.find_by_name($1))
+      
+    when /the forgotten password page/
+      new_password_reset_path
     # Add more mappings here.
     # Here is a more fancy example:
     #
