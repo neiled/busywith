@@ -103,33 +103,33 @@ img { border-style: none; }
 /* line 176, ../../../app/stylesheets/welcome.sass */
 #signup_container #signup #email_form form label { vertical-align: middle; }
 /* line 178, ../../../app/stylesheets/welcome.sass */
-#signup_container #signup #email_form form #email { padding: 0.1em 1em; height: 40px; font-size: 0.7em; }
-/* line 182, ../../../app/stylesheets/welcome.sass */
+#signup_container #signup #email_form form #email { padding: 0.1em 1em; height: 40px; font-size: 0.7em; vertical-align: middle; }
+/* line 183, ../../../app/stylesheets/welcome.sass */
 #signup_container #signup #email_form form .image_button { vertical-align: middle; }
 
-/* line 188, ../../../app/stylesheets/welcome.sass */
+/* line 189, ../../../app/stylesheets/welcome.sass */
 #footer { padding: 0.5em 0px 0px 0px; height: 4em; clear: both; font-size: 1em; text-align: center; background-color: #c9d787; border-top: 1px solid #999; position: relative; }
 
-/* line 198, ../../../app/stylesheets/welcome.sass */
+/* line 199, ../../../app/stylesheets/welcome.sass */
 #thanks { float: none; text-align: center; font-size: 2em; }
 
-/* line 203, ../../../app/stylesheets/welcome.sass */
+/* line 204, ../../../app/stylesheets/welcome.sass */
 #contact_intro { width: 50em; margin: 0 auto; text-align: center; margin-bottom: 3em; }
 
-/* line 209, ../../../app/stylesheets/welcome.sass */
+/* line 210, ../../../app/stylesheets/welcome.sass */
 #contact_box { margin: 0 auto; width: 25em; background: #C9D787 none repeat scroll 0 0; border: 2px solid #7D8A2E; color: black; margin-bottom: 2em; padding: 0em; font-size: 1.5em; }
-/* line 218, ../../../app/stylesheets/welcome.sass */
+/* line 219, ../../../app/stylesheets/welcome.sass */
 #contact_box ul { margin: 1em 0 0 1em; padding: 0; list-style-type: none; overflow: hidden; }
-/* line 223, ../../../app/stylesheets/welcome.sass */
+/* line 224, ../../../app/stylesheets/welcome.sass */
 #contact_box li { list-style-type: none; padding: 0em 0em 0em 2em; height: 3em; width: 25em; background-repeat: no-repeat; }
-/* line 229, ../../../app/stylesheets/welcome.sass */
+/* line 230, ../../../app/stylesheets/welcome.sass */
 #contact_box #contact_email { background-image: url(/images/email_32.png); }
-/* line 231, ../../../app/stylesheets/welcome.sass */
+/* line 232, ../../../app/stylesheets/welcome.sass */
 #contact_box #contact_blog { background-image: url(/images/rss_32.png); }
-/* line 233, ../../../app/stylesheets/welcome.sass */
+/* line 234, ../../../app/stylesheets/welcome.sass */
 #contact_box #contact_facebook { background-image: url(/images/facebook_32.png); }
-/* line 235, ../../../app/stylesheets/welcome.sass */
+/* line 236, ../../../app/stylesheets/welcome.sass */
 #contact_box #contact_twitter { background-image: url(/images/twitter_32.png); }
 
-/* line 237, ../../../app/stylesheets/welcome.sass */
+/* line 238, ../../../app/stylesheets/welcome.sass */
 #ps { font-size: 0.8em; margin-left: 5em; margin-bottom: 1em; }
