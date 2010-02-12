@@ -6,7 +6,6 @@
   %title= "Busywith.com - What's my team doing?!"
   = stylesheet_link_tag 'compiled/welcome.css'
   = stylesheet_link_tag 'compiled/jquery.lightbox-0.5.css'
-  = stylesheet_link_tag 'compiled/ie6_png.css'  
   %script{:src => 'http://www.google.com/jsapi?key=ABQIAAAA9PVdi6OTkajQVyMoI3hv6RTPte5IkMv6YO0Qn70prbC3lXMUQBSnG8VdqcEiCOJ23nYjwHx_iJb9uQ'}
   %script{:src => 'http://www.google.com/jsapi?key=ABQIAAAA9PVdi6OTkajQVyMoI3hv6RREih2AnShy9hMJC_8gVX6vDz0I5xS14rYAFBQxUz6VT_bvcheaFWP6ZQ'}  
   = javascript_tag "var AUTH_TOKEN = #{form_authenticity_token.inspect};" if protect_against_forgery?
