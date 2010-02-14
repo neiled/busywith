@@ -924,21 +924,23 @@ img.percentImage { background: white url(/images/percentImage_back.png) top left
 #signin, #signup { float: left; background-color: #c9d787; padding: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 5px; margin: 0 auto; }
 
 /* line 11, ../../../app/stylesheets/signup.sass */
-#signin label { width: 4em; font-size: 85%; }
+#signin li { height: 2em; }
+/* line 13, ../../../app/stylesheets/signup.sass */
+#signin li label { width: 5em; }
 
-/* line 15, ../../../app/stylesheets/signup.sass */
+/* line 16, ../../../app/stylesheets/signup.sass */
 #rpx_form { float: left; background-color: #c9d787; padding: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 5px; background-color: white; float: left; height: 250px; margin-right: 1em; padding: 12px; }
 
-/* line 23, ../../../app/stylesheets/signup.sass */
+/* line 24, ../../../app/stylesheets/signup.sass */
 #signin_form, #signup_form { float: left; background-color: #c9d787; padding: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 5px; float: left; }
-/* line 26, ../../../app/stylesheets/signup.sass */
+/* line 27, ../../../app/stylesheets/signup.sass */
 #signin_form .submit, #signup_form .submit { margin-left: 6em; }
 
-/* line 30, ../../../app/stylesheets/signup.sass */
-#signin_form { width: 15em; }
+/* line 31, ../../../app/stylesheets/signup.sass */
+#signin_form { min-height: 250px; width: 15em; }
 
-/* line 33, ../../../app/stylesheets/signup.sass */
+/* line 35, ../../../app/stylesheets/signup.sass */
 #signup_form { font-size: 0.5em; padding: 12px; }
 
-/* line 37, ../../../app/stylesheets/signup.sass */
-#new_user { height: 240px; border-style: none; border-color: #7d8a2e; border-width: 2px; }
+/* line 39, ../../../app/stylesheets/signup.sass */
+#new_user { min-height: 250px; border-style: none; border-color: #7d8a2e; border-width: 2px; }

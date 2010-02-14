@@ -68,3 +68,4 @@ end
 When /^I change the hidden field "([^\"]*)" to "([^\"]*)"$/ do |field, value|
   set_hidden_field field, :to => value 
 end
+
