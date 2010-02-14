@@ -10,9 +10,9 @@ on line 7 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/sig
 8:   :margin 0 auto
 9: 
 10: #signin
-11:   label
-12:     :width 4em
-13:     :font-size 85%
+11:   li
+12:     :height 2em
+13:     label
 
 
 Backtrace:
@@ -92,4 +92,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Sass::SyntaxError: Undefined mixin 'green_box'.\A on line 7 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/signup.sass\A \A 3:   :margin-bottom 1em\A 4:   :font-size 85%\A 5: \A 6: #signin, #signup\A 7:   +green_box\A 8:   :margin 0 auto\A 9: \A 10: #signin\A 11:   label\A 12:     :width 4em\A 13:     :font-size 85%\A "; }
+  content: "Sass::SyntaxError: Undefined mixin 'green_box'.\A on line 7 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/signup.sass\A \A 3:   :margin-bottom 1em\A 4:   :font-size 85%\A 5: \A 6: #signin, #signup\A 7:   +green_box\A 8:   :margin 0 auto\A 9: \A 10: #signin\A 11:   li\A 12:     :height 2em\A 13:     label\A "; }

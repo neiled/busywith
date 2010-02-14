@@ -1,6 +1,8 @@
 class UserSession < Authlogic::Session::Base
   rpx_key RPX_API_KEY
   
+  generalize_credentials_error_messages "Sorry, that's not a correct login."
+  
   private
       # map_rpx_data maps additional fields from the RPX response into the user object
       # override this in your session controller to change the field mapping

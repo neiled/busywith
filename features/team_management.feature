@@ -51,6 +51,7 @@ Feature: Manage teams
     Then I should see "Invite Ignored"
     And the user "bob" should not be a member of the team "neils"
     And the user "bob" should not have an invite to for the team "neils"
+    And the user "bob" should not have an event message "left the team"
     
   Scenario: Leave a team
     Given I am logged in as the user "bob"
