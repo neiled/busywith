@@ -1,6 +1,6 @@
 #history
   %h2
-    = link_to image_tag("/images/feed_icon.jpg", :border=>0), history_url(user.login)
+    /= link_to image_tag("/images/feed_icon.jpg", :border=>0), history_url(user.login)
     Recent Updates
   %ul
     - if user.histories.count == 0
