@@ -31,6 +31,9 @@ module NavigationHelpers
       
     when /the forgotten password page/
       new_password_reset_path
+      
+    when /the password reset page for "(.*)"/
+      edit_password_reset_path(User.find_by_login($1).perishable_token)
     # Add more mappings here.
     # Here is a more fancy example:
     #

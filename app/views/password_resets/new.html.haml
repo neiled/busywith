@@ -5,14 +5,12 @@
   Don't worry, we all do it. I'm sure it was because it was so super secure wasn't it?
   
 %p
-  Just enter your email address in the box below and we'll send you an email with everything you need to change it to something else.
-  %br
-  Try and remember it this time though eh?
+  Just enter your email address and we'll send you everything you need to change it!
   
 #email_form
   - form_tag(:controller=>"password_resets", :action => "create") do
     = label_tag "email"
     = text_field_tag "email"
-    = image_submit_tag "/images/button_sign_in.png", :alt => "Submit", :class => "image_button"
+    = image_submit_tag "/images/button_gloss_submit.png", :alt => "Submit", :class => "image_button"
     
   

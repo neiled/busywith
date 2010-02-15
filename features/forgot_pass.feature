@@ -28,12 +28,13 @@ Feature: Forgotten Password Resetting
     And "neiled@plasticwater.com" opens the email with subject "Busywith.com - Reset your password"
     Then they should see "tried to get your password reset on busywith.com." in the email body
     
-  Scenario: Going to rest url should allow user to reset their password
+  Scenario: Going to reset url should allow user to reset their password
     Given the user "neiled" has forgotten their password
-    When they go to the password reset page for "neiled"
-    And they fill in "password" with "test123"
-    And they press "Submit"
-    Then they should have their password changed to "test123"
+    When I go to the password reset page for "neiled"
+    And I fill in "password" with "test123"
+    And I fill in "password confirmation" with "test123"
+    And I press "Submit"
+    Then I should see "We've updated your password"
   
   
   
