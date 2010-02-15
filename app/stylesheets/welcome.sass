@@ -59,7 +59,7 @@ img
   :position relative
 
 #headlines
-  :background #fff url(/images/bg_intro.png) repeat-x scroll 0 0
+  :background #fff url(/images/bg_intro_v2.jpg) repeat-x scroll 0 0
   :width 100%
   :text-align center
   h1, h2
@@ -104,6 +104,7 @@ img
 #features_container
   :border-top 1px solid #999
   :background-color = !light_green
+  :background-image url(/images/busywith_background_textured_light.jpg)
   :font-size 1.5em
   :width 100%
 
@@ -153,7 +154,7 @@ img
   :padding 0.8em
   
 #signup_container
-  :background #fff url(/images/bg_intro.png) repeat-x scroll 0 0
+  :background #fff url(/images/bg_intro_v2.jpg) repeat-x scroll 0 0
   :width 100%
   :margin-top 0em
   :padding-top 4em
@@ -168,19 +169,25 @@ img
     #email_form
       :height 3em
       :font-size 1.3em
-      :width 25em
+      :width 30em
       :margin 1em auto
-      :vertical-align baseline      
-      input
-        :font-size 0.7em
-      .image_button
-        :vertical-align text-bottom
-        *:vertical-align text-bottom
+      form
+        :height 60px
+        label
+          :vertical-align middle
+        #email
+          :padding 0.1em 1em
+          :height 40px
+          :font-size 0.7em
+          :vertical-align middle
+        .image_button
+          :vertical-align middle
+          *:vertical-align middle
         
   
 
 #footer
-  :margin 0em
+  :padding 0.5em 0px 0px 0px
   :height 4em
   :clear both
   :font-size 1em

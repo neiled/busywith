@@ -10,37 +10,38 @@ on line 7 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/sig
 8:   :margin 0 auto
 9: 
 10: #signin
-11:   label
-12:     :width 5em
-13:   
+11:   li
+12:     :height 2em
+13:     label
 
 
 Backtrace:
 /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/signup.sass:7
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/mixin_node.rb:27:in `_perform'
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:156:in `perform'
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:200:in `perform_children'
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:200:in `map'
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:200:in `perform_children'
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:191:in `perform!'
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/rule_node.rb:156:in `perform!'
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:179:in `_perform'
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:156:in `perform'
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:200:in `perform_children'
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:200:in `map'
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:200:in `perform_children'
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:191:in `perform!'
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:179:in `_perform'
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:156:in `perform'
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:103:in `render'
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/plugin.rb:83:in `update_stylesheet'
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/plugin.rb:69:in `update_stylesheets'
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/plugin.rb:64:in `each'
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/plugin.rb:64:in `update_stylesheets'
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/plugin.rb:62:in `each'
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/plugin.rb:62:in `update_stylesheets'
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/plugin/rails.rb:16:in `process_without_compass'
-/usr/local/lib/ruby/gems/1.8/gems/chriseppstein-compass-0.8.15/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/lib/sass/tree/mixin_node.rb:27:in `_perform'
+/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/lib/sass/tree/node.rb:158:in `perform'
+/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/lib/sass/tree/node.rb:202:in `perform_children'
+/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/lib/sass/tree/node.rb:202:in `map'
+/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/lib/sass/tree/node.rb:202:in `perform_children'
+/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/lib/sass/tree/node.rb:193:in `perform!'
+/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/lib/sass/tree/rule_node.rb:159:in `perform!'
+/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/lib/sass/tree/node.rb:181:in `_perform'
+/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/lib/sass/tree/node.rb:158:in `perform'
+/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/lib/sass/tree/node.rb:202:in `perform_children'
+/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/lib/sass/tree/node.rb:202:in `map'
+/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/lib/sass/tree/node.rb:202:in `perform_children'
+/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/lib/sass/tree/node.rb:193:in `perform!'
+/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/lib/sass/tree/node.rb:181:in `_perform'
+/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/lib/sass/tree/node.rb:158:in `perform'
+/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/lib/sass/tree/node.rb:103:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/lib/sass/plugin.rb:96:in `update_stylesheet'
+/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/lib/sass/plugin.rb:82:in `update_stylesheets'
+/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/lib/sass/plugin.rb:77:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/lib/sass/plugin.rb:77:in `update_stylesheets'
+/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/lib/sass/plugin.rb:75:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/lib/sass/plugin.rb:75:in `update_stylesheets'
+/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/lib/sass/plugin.rb:62:in `check_for_updates'
+/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/lib/sass/plugin/rails.rb:18:in `process_without_compass'
+/usr/local/lib/ruby/gems/1.8/gems/chriseppstein-compass-0.8.17/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
 /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
 /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
 /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
@@ -91,4 +92,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Sass::SyntaxError: Undefined mixin 'green_box'.\A on line 7 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/signup.sass\A \A 3:   :margin-bottom 1em\A 4:   :font-size 85%\A 5: \A 6: #signin, #signup\A 7:   +green_box\A 8:   :margin 0 auto\A 9: \A 10: #signin\A 11:   label\A 12:     :width 5em\A 13:   \A "; }
+  content: "Sass::SyntaxError: Undefined mixin 'green_box'.\A on line 7 of /Users/neil/Development/Rails/Projects/busywith/app/stylesheets/signup.sass\A \A 3:   :margin-bottom 1em\A 4:   :font-size 85%\A 5: \A 6: #signin, #signup\A 7:   +green_box\A 8:   :margin 0 auto\A 9: \A 10: #signin\A 11:   li\A 12:     :height 2em\A 13:     label\A "; }

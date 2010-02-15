@@ -63,8 +63,11 @@ Then /^the user "([^\"]*)" should not have an invite to for the team "([^\"]*)"$
   User.find_by_login(login).memberships.find_by_team_id(Team.find_by_name(team)).should be_nil
 end
 
-
+Then /^the user "([^\"]*)" should not have an event message "([^\"]*)"$/ do |login, message|
+  User.find_by_login(login).histories.should be_empty
+end
 
 When /^I change the hidden field "([^\"]*)" to "([^\"]*)"$/ do |field, value|
   set_hidden_field field, :to => value 
 end
+
