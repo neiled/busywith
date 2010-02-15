@@ -7,9 +7,14 @@
 #change_password_form
   - form_for @user, :url => password_reset_path, :method => :put do |f|
     = f.error_messages
-    = f.label :password
-    = f.password_field :password
-    = f.label :password_confirmation
-    = f.password_field :password_confirmation
-    = image_submit_tag "/images/button_sign_in.png", :alt => "Submit", :class => "image_button"
+    %fieldset.signin    
+      %ul
+        %li.password
+          = f.label :password
+          = f.password_field :password
+        %li.password
+          = f.label :password_confirmation
+          = f.password_field :password_confirmation
+        .submit
+          = image_submit_tag "/images/button_gloss_submit.png", :alt => "Submit", :class => "image_button"
   
