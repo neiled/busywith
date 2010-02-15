@@ -6,7 +6,7 @@ class HistoriesController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.rss # Add this line so we can respond in RSS format.
+      # format.rss # Add this line so we can respond in RSS format.
     end
   end
 
