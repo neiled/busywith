@@ -11,7 +11,7 @@ class UserStatusObserver < ActiveRecord::Observer
       History.create(:user_id => user_status.user.id, :message => "updated their percentage complete to #{user_status.percent_complete}%", :message_type => "status_update")
     end
     if user_status.estimated_completion_changed?
-      message = user_status.estimated_completion.nil? ? "cleared their due date" : "updated their due date to #{user_status.estimated_completion.strftime("%m/%d/%Y")}"
+      message = user_status.estimated_completion.nil? ? "cleared their due date" : "updated their due date to #{user_status.estimated_completion.strftime(DATE_TIME_FORMAT)}"
       History.create(:user_id => user_status.user.id, :message => message, :message_type => "status_update")
     end    
     if user_status.project_id_changed?

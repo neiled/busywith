@@ -1,4 +1,4 @@
-Date.format = 'mm/dd/yyyy';
+Date.format = 'dd mmm yyyy';
 
 setTimeout(function() {
     $('#flash_notice').fadeOut('slow');
