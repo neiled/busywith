@@ -26,5 +26,5 @@ module ApplicationHelper
       link_to "My Team", team_url(user.all_teams.first)
     end
   end
-    
+      
 end

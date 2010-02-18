@@ -1,2 +1,1 @@
- // =render :partial => "status", :collection => current_user.team_collegues(@team.id)
-$("#status").html("<%= escape_javascript(render :partial => 'status', :collection => current_user.team_collegues(@team.id), :locals => {:previous_time => @previous_time}) %>");  
+$("#status").html("<%= escape_javascript(render :partial => 'status', :collection => current_user.team_collegues(@team.id)) %>");  

@@ -7,6 +7,7 @@ Feature: Manage teams
     Given the following users
     | login  | team  |
     | neiled | neils |
+    | fred   |       |
     | bob    |       |
 
   Scenario: Invite existing members
@@ -109,4 +110,21 @@ Feature: Manage teams
     And I have a team called "neils"
     And I am on the user account page for "neiled"
     Then I should not see "Create a new team"
+
+  Scenario: Non members shouldn't be able to see members pages
+    Given I am logged in as the user "bob"
+    When I am on the user account page for "neiled"
+    Then I should see "do not have permission"
+    
+  Scenario: Members should see the users status
+    Given I am logged in as the user "fred"
+    And the user "fred" is a member of the team "neils"
+    When I am on the user account page for "neiled"
+    Then I should see "Status for"
+  
+  
+  
+  
+  
+  
     

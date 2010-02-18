@@ -1,12 +1,14 @@
+= content_for :unobtrusive_javascript do
+  %script{ 'type' => "text/javascript", :src   => "/javascripts/getsatisfaction.js" }
+
 #logo
   %img{:alt=>"busywith.com", :src=>"/images/busywith_logo.png"}
-  %img{:alt=>"What's my team doing?! Find out with busywith.", :src=>"/images/subtitle.png"}
 
 #intro
   #hello
     Hello,
-  #intro
-    Welcome back to busywith! If you'd just be so kind to fill in the boxes we'll get you signed in quick sharp!
+  %p
+    Welcome back! If you'd just like to fill in the boxes we'll get you signed in right away!
     
  
 #signin

@@ -1,3 +1,6 @@
+= content_for :unobtrusive_javascript do
+  %script{ 'type' => "text/javascript", :src   => "/javascripts/getsatisfaction.js" }
+  
 Add Project
 
 - form_for [@team, @project] do |f|

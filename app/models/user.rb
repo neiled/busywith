@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
                                        JOIN memberships ON memberships.user_id = users.id
                                        JOIN teams ON teams.id = memberships.team_id
                                        JOIN memberships mine ON mine.team_id = teams.id
-                                       WHERE mine.user_id = #{id} and users.id <> #{id}'
+                                       WHERE mine.user_id = #{id} and users.id <> #{id} and mine.accepted_at IS NOT NULL'
 
   has_many :memberships, :conditions => "accepted_at IS NOT NULL", :dependent => :destroy
   
@@ -42,6 +42,10 @@ class User < ActiveRecord::Base
   
   def team_collegues(team)
     User.all(:joins => :memberships, :conditions => { :memberships => { :team_id => team } } )
+  end
+  
+  def collegues_with?(user)
+    self == user || collegues.include?(user)
   end
   
   def full_name

@@ -1,5 +1,3 @@
-var last_time = Date();
-
 $(document).ready(function() {
   $("#new_project").ajaxForm({
     dataType: 'script'
