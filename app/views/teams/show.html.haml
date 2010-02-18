@@ -4,8 +4,6 @@
 
 %h1
   = h(@team.name.capitalize)
-  - if current_user and current_user.owned_teams.include?(@team)
-    = link_to "Edit", edit_team_url(@team), :class => "edit_team"
 
 - if current_user.all_teams.include?(@team)
   #status

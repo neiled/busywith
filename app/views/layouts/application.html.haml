@@ -29,6 +29,9 @@
             %li.sign_up
               = link_to "Sign up", new_user_path 
           - else
+            -unless overview_tag(current_user).nil?
+              %li.overview
+                = overview_tag(current_user)          
             -unless team_tag(current_user).nil?
               %li.my_team
                 = team_tag(current_user)
