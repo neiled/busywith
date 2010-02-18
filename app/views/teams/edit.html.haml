@@ -5,11 +5,13 @@
   = link_to(h(@team.name.capitalize), @team)
   
 #change_team_name
-  - form_for @team do |f|
+  - form_for @team, :id => "change_team_name" do |f|
     = f.error_messages
     = f.label :name, "Team Name"
     = f.text_field :name
-    = f.submit "Change Name", :disable_with => 'Changing Name...'
+    .submit
+      = image_submit_tag "/images/button_change.png", :alt => "Change Name", :class => "image_button"    
+
 
 #members
   %h2 Members
@@ -18,10 +20,14 @@
   -if current_user and current_user.owned_teams.include?(@team)
     Invite a new member
     - form_tag({:action => "create", :controller => "memberships"}, :id => "new_member") do
-      = label_tag "email"
-      = text_field_tag "email"
-      = hidden_field_tag "team_id", @team.id
-      = submit_tag "Invite"
+      %fieldset
+        = label_tag "email"
+        = text_field_tag "email"
+        = hidden_field_tag "team_id", @team.id
+        .submit
+          = image_submit_tag "/images/button_invite.png", :alt => "Invite", :class => "image_button"
+    or...
+    = link_to "Disband this team", (team_path current_user.owned_teams.first), :method => "delete", :class => "remove_membership"
 
 -if current_user and current_user.owned_teams.include?(@team)
   #projects
@@ -29,9 +35,10 @@
     = render :partial => "projects/project_list", :locals => {:team => @team}
     
     Add a new project
-    - form_for [@team, @new_project] do |f|
+    - form_for [@team, @new_project], :id => "new_project" do |f|
       = f.error_messages
       = f.label :name, "Name"
       = f.text_field :name
-      = f.submit "Add Project"
+      .submit
+        = image_submit_tag "/images/button_add.png", :alt => "Add Project", :class => "image_button"
 

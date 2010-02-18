@@ -818,7 +818,7 @@ fieldset .submit { text-align: right; margin-right: 9em; }
 .subtitle { font-style: oblique; font-size: 85%; }
 
 /* line 192, ../../../app/stylesheets/base.sass */
-.image_button { border-style: none; vertical-align: middle; }
+.image_button { border-style: none; vertical-align: middle; width: 100px; height: 40px; }
 
 /* line 1, ../../../app/stylesheets/user.sass */
 #create_a_team { padding: .8em; margin-bottom: 1em; border: 2px solid #dddddd; background: #fff6bf; color: #514721; border-color: #ffd324; }
@@ -909,12 +909,21 @@ img.percentImage { background: white url(/images/percentImage_back.png) top left
 #members { float: left; background-color: #c9d787; padding: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 5px; clear: both; margin-top: 1em; width: 60%; }
 
 /* line 10, ../../../app/stylesheets/team.sass */
+#new_member, #new_project, #change_team_name { width: 100%; }
+/* line 12, ../../../app/stylesheets/team.sass */
+#new_member label, #new_project label, #change_team_name label { font-size: 0.8em; width: 3em; display: inline; float: none; vertical-align: middle; margin-right: 0.1em; }
+/* line 19, ../../../app/stylesheets/team.sass */
+#new_member input, #new_project input, #change_team_name input { display: inline; float: none; }
+/* line 22, ../../../app/stylesheets/team.sass */
+#new_member .submit, #new_project .submit, #change_team_name .submit { margin-left: 0em; vertical-align: bottom; display: inline; }
+
+/* line 29, ../../../app/stylesheets/team.sass */
 #team_form { float: left; background-color: #c9d787; padding: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 5px; }
 
-/* line 14, ../../../app/stylesheets/team.sass */
+/* line 33, ../../../app/stylesheets/team.sass */
 #change_team_name { float: left; background-color: #c9d787; padding: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 5px; width: 60%; }
 
-/* line 18, ../../../app/stylesheets/team.sass */
+/* line 37, ../../../app/stylesheets/team.sass */
 #projects { float: left; background-color: #c9d787; padding: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 5px; clear: both; margin-top: 1em; width: 60%; }
 
 /* line 1, ../../../app/stylesheets/signup.sass */

@@ -44,7 +44,7 @@ class ApplicationController < ActionController::Base
     end
 
     def require_no_user
-      if current_user
+      if current_user and not current_user.is_admin
         store_location
         flash[:notice] = "You must be signed out to access this page"
         redirect_to :back

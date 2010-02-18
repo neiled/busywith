@@ -15,7 +15,7 @@ module ApplicationHelper
     if user.user_status.nil? or user.user_status.estimated_completion.nil?
       ""
     else
-      "#{user.user_status.estimated_completion.strftime("%m/%d/%Y")}"
+      "#{user.user_status.estimated_completion.strftime(DATE_TIME_FORMAT)}"
     end
   end
   
@@ -25,6 +25,10 @@ module ApplicationHelper
     else
       link_to "My Team", team_url(user.all_teams.first)
     end
+  end
+  
+  def require_stylesheet(name)
+    stylesheet_link_tag "compiled/#{name}.css"
   end
     
 end

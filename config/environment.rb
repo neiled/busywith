@@ -5,6 +5,7 @@ RAILS_GEM_VERSION = '2.3.5' unless defined? RAILS_GEM_VERSION
 CAMPAIGN_MONITOR_API_KEY = '952c70caa35c8577c494995978b72b7a'
 RPX_API_KEY = "9c8858925c198fee73e8ef0cd492b6f91cc5ed0c"
 PROWL_API_KEY = "1e6a51e64611e845b3fa9c2e54b9871cfc93b4f3"
+DATE_TIME_FORMAT = "%d %b %Y"
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
