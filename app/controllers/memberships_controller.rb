@@ -20,15 +20,20 @@ class MembershipsController < ApplicationController
     
     if @user.nil?
       @user = User.new(:email => params[:email])
-      @user.valid?
+      @user.valid? #this is so the errors.on array is filled
     end
     
+    #was there a problem with the email address?
     if @user.errors.on(:email).nil?
+      #does this user exist already?
       if @user.login.nil?
+        #no, so create a membership for that email address
         @membership = Membership.new(:team_id => @team.id, :invitor_id => current_user.id, :target_email => params[:email])
       else
+        #yes, so point the invite directly at the user
         @membership = @user.memberships.build(:team_id => @team.id, :invitor_id => current_user.id)
       end
+      
       if @membership.save
         flash[:notice] = "We've sent them an email inviting them!"
       else

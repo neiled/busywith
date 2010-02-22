@@ -92,6 +92,11 @@ Feature: Manage teams
     When I fill in "email" with "foo@plasticwater.com"
     And I press "Invite"
     Then I should see "sent them an email"
+    Given I have a user with the username "foo" and the password "password"
+    And I am logged in as the user "foo"
+    When I am on the user account page for "foo"
+    Then I should see "You have an invite to the team neils"
+
       
   Scenario: Hack the team_id field
     Given I am logged in as the user "neiled"

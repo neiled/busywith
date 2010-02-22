@@ -713,7 +713,7 @@ div.hr_footer hr { display: none; }
 input.text, input.title, input[type="text"], input[type="password"] { margin: 0em; padding: 5px; }
 
 /* line 57, ../../../app/stylesheets/base.sass */
-input { border-style: solid; border-color: #7d8a2e; border-width: 1px; }
+input[type="text"], input[type="password"] { border-style: solid; border-color: #7d8a2e; border-width: 1px; }
 
 /* line 62, ../../../app/stylesheets/base.sass */
 #container { width: 950px; margin: 0 auto; overflow: hidden; display: inline-block; height: auto !important; min-height: 100%; }
@@ -890,23 +890,23 @@ a.dp-choose-date { font-size: 0.5em; background-image: url('/images/calendar.png
 .remove_membership, .remove_project { font-style: italic; color: #CCCCCC; }
 
 /* line 1, ../../../app/stylesheets/home.sass */
-.user_status, .user_status_changed { font-size: 0.7em; width: 15em; padding: 1em; margin-top: 1em; margin-left: 0.5em; padding: .8em; margin-bottom: 1em; border: 2px solid #dddddd; background: #fff6bf; color: #514721; border-color: #ffd324; }
+.user_status, .user_status_changed { font-size: 0.7em; width: 15em; padding: 1em; margin-top: 1em; margin-left: 0.5em; float: left; height: 10em; padding: .8em; margin-bottom: 1em; border: 2px solid #dddddd; background: #fff6bf; color: #514721; border-color: #ffd324; }
 /* line 38, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_interaction.sass */
 .user_status a, .user_status_changed a { color: #514721; }
 
-/* line 9, ../../../app/stylesheets/home.sass */
+/* line 11, ../../../app/stylesheets/home.sass */
 .user_status_changed { border-color: red; }
 
-/* line 13, ../../../app/stylesheets/home.sass */
+/* line 15, ../../../app/stylesheets/home.sass */
 .user_project { font-style: italic; }
 
-/* line 16, ../../../app/stylesheets/home.sass */
+/* line 18, ../../../app/stylesheets/home.sass */
 .user_estimated_completion { font-size: 0.8em; font-style: italic; color: #666666; }
 
-/* line 21, ../../../app/stylesheets/home.sass */
+/* line 23, ../../../app/stylesheets/home.sass */
 img.percentImage { background: white url(/images/percentImage_back.png) top left no-repeat; padding: 0; margin: 5px 0 0 0; background-position: 1px 0; }
 
-/* line 27, ../../../app/stylesheets/home.sass */
+/* line 29, ../../../app/stylesheets/home.sass */
 #navbar select { margin: 0; }
 
 /* line 1, ../../../app/stylesheets/team.sass */

@@ -13,6 +13,8 @@ class UserStatus < ActiveRecord::Base
   
   before_create :setup_defaults
   
+  attr_accessible :current_task, :estimated_completion, :percent_complete, :project_id
+  
   private
   
   def setup_defaults

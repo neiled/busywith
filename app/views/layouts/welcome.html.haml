@@ -29,11 +29,13 @@
       = yield
 
     #footer
-      %p{:id=>"copyright"}(C) Copyright 2009-2010
       %p{:id=>"footer_links"}
         = link_to "Contact Us", :contact_us
         |
         = link_to "Blog", "http://blog.busywith.com"
+      %p{:id=>"copyright"}
+        (C) Copyright 2009-2010
+        =link_to "Plasticwater LTD", "http://plasticwater.com"        
 
 
     = javascript_tag "google.load('jquery', '1.4.0');"

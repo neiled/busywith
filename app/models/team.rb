@@ -6,4 +6,5 @@ class Team < ActiveRecord::Base
   has_friendly_id :name, :use_slug => true
   
   validates_presence_of :name, :on => :create, :message => "can't be blank"
+  
 end
