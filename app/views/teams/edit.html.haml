@@ -28,7 +28,7 @@
         .submit
           = image_submit_tag "/images/button_invite.png", :alt => "Invite", :class => "image_button"
     or...
-    = link_to "Disband this team", (team_path current_user.owned_teams.first), :method => "delete", :class => "remove_membership"
+    = link_to "Disband this team", (team_path current_user.owned_teams.first), :method => "delete", :class => "remove_membership", :confirm => "Are you sure you wish to disband this team?"
 
 -if current_user and current_user.owned_teams.include?(@team)
   #projects

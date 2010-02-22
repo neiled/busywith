@@ -47,7 +47,7 @@
       #owned_teams
         = "You are currently the administrator of the team"
         = link_to @user.owned_teams.first.name, team_path(@user.owned_teams.first)
-        = link_to "Disband this team!", (team_path @user.owned_teams.first), :method => "delete", :class => "remove_membership" unless current_user != @user
+        = link_to "Disband this team!", (team_path @user.owned_teams.first), :method => "delete", :class => "remove_membership", :confirm => "Are you sure you wish to disband this team?" unless current_user != @user
     - elsif @user.memberships.count > 0
       #memberships
         = "You are currently a member of the team #{@user.memberships.first.team.name}" unless @user.memberships.first.team.nil?
