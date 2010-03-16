@@ -7,7 +7,7 @@ class UserMailer < ActionMailer::Base
     from       'donotreply@busywith.com'
     sent_on    Time.now    
     body       :user => user
-    
+    content_type "text/html"
   end
 
   def team_invite(membership)
@@ -18,6 +18,7 @@ class UserMailer < ActionMailer::Base
     from       'donotreply@busywith.com'
     sent_on    Time.now    
     body       :user => user, :team => team, :membership => membership
+    content_type "text/html"
   end
   
   def invite_new_user(membership)
@@ -26,6 +27,7 @@ class UserMailer < ActionMailer::Base
     from       'donotreply@busywith.com'
     sent_on    Time.now
     body       :membership => membership
+    content_type "text/html"
   end
   
   def password_reset_instructions(user)
@@ -34,6 +36,7 @@ class UserMailer < ActionMailer::Base
     from        "donotreply@busywith.com"
     sent_on     Time.now
     body        :edit_password_reset_url => edit_password_reset_url(user.perishable_token)
+    content_type "text/html"
   end
 
 end
