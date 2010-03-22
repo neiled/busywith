@@ -2,12 +2,12 @@
   %img{:alt=>"busywith.com", :src=>"/images/busywith_logo_small.png"}
 
 #intro
-  %p
-    Welcome to busywith!
   - if current_user_session.registration_complete?
     %p.subtitle
       You can edit your details below
   - else
+    %p
+      Welcome to busywith!  
     %p.subtitle
       Please just finish off registration by adding the last few settings we didn't get when you signed up.
     

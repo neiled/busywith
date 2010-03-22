@@ -15,4 +15,7 @@
     %li.password_confirmation
       = form.label :password_confirmation
       = form.password_field :password_confirmation
+  - else
+    #no_password_to_change
+      There's no password for you to change as you're logging in through another provider
 %br

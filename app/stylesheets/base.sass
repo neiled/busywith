@@ -19,14 +19,41 @@
   :display block
 /* End hide from IE-mac */
 
-
-
-html, body, #container
+html, body
   :height 100%
+  
+#wrapper
+  :min-height 100%
+  :position relative
+  :margin-bottom 60px
+  
+#push_footer
+  :height 60px
+  :clear both
+  
+#footer
+  :padding 0.5em 0px 0px 0px
+  :height 60px
+  :text-align center
+  :background-color= !light_green
+  :border-top 1px solid #999
+  :position relative
+  :font-size 0.8em
+  a:link
+    :color= !dark_green
+  a:visited
+    :color= !dark_green
+    
+#container
+  :width 960px
+  :margin 0 auto    
+  :margin-top 20px
 
 body
   :font-family "Arial Rounded MT Bold", arial, verdana, sans-serif
   :font-size 1.6em
+.welcome_index
+  :font-size 1em
   
 h1
   :font-size 1.5em
@@ -44,12 +71,6 @@ a:link
 a:visited
   :color= !dark_green
   
-div.hr_footer
-  :height 15px
-  :background= !light_green url("/images/footer.png") repeat-x scroll center top
-  hr
-    :display none
-  
 input.text, input.title, input[type="text"], input[type="password"]
   :margin 0em
   :padding 5px
@@ -58,29 +79,6 @@ input[type="text"], input[type="password"]
   :border-style solid 
   :border-color= !dark_green
   :border-width 1px
-
-#container
-  +container
-  :height auto !important
-  :min-height 100%  
-  
-#content
-  :padding-bottom 100px
-  :margin-top 50px  
-
-#footer
-  :height 100px
-  :position relative
-  :margin-top -100px
-  :clear both
-  :font-size 65%
-  :width 100%
-  :text-align center
-  :background= !light_green  
-  a:link
-    :color= !dark_green
-  a:visited
-    :color= !dark_green  
 
 fieldset
   :margin 0
@@ -117,8 +115,6 @@ fieldset
   :height 40px
   :background-color= !light_green
   :overflow hidden
-  :margin-bottom 1em
-  :position absolute
 
 #navbar
   :font-family arial
@@ -186,6 +182,9 @@ fieldset
 
 .right
   :float right
+
+.center
+  :margin 0 auto
   
 .flash_message
   :margin-top 1em

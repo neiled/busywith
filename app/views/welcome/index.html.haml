@@ -1,9 +1,14 @@
 = content_for :unobtrusive_javascript do
   %script{ 'type' => "text/javascript"}
     $('a.lightbox').lightBox();  
+    
+= content_for :header do
+  #welcome_headlines
+    %h1 Extremely Simple Project Management
+    %h2 Busywith lets you keep track of your team    
 
-#intro
-  #screenshots
+#welcome_intro
+  #welcome_screenshots
     %a{:href=>"/images/ss_set_status.png", :class=>"lightbox"}
       %img{:src=>"/images/tn_set_status.png", :alt=>"Set Status Screenshot"}
     %a{:href=>"/images/ss_team_status.png", :class=>"lightbox"}
@@ -13,54 +18,51 @@
     %a{:href=>"/images/ss_sign_in.png", :class=>"lightbox"}
       %img{:src=>"/images/tn_sign_in.png", :alt=>"Set Status Screenshot"}
     Screenshots - Click to see the larger image
-  #bullets
+  #welcome_bullets
     %ul
       %li Who is doing what?
       %li What is their progress?
       %li When will they finish?
-    #cta
+    #welcome_cta
       %p
-        See all this on one screen for your entire team FREE!
-      %a{:href=>"#email", :onClick=>"pageTracker._trackEvent('Landing', 'SignUp');"}
+        See all this on one screen, for your entire team!
+      %a{:href=>"#{new_user_url}"}
         %img{:src=>"/images/button_gloss_sign_up.png", :alt=>"Sign up!"}
-#features_container
-  #features
-    %ul
-      %li{:id=>"feature1"}
-        %h2 Keep Track
-        %p
-          If your team is scattered across all four corners of the globe, hidden in their cubicles or even if you're all
-          working out of your mother's basement then busywith will help you keep track of what everyone is working on.
-      %li{:id=>"feature2"}
-        %h2 One Screen is all you need
-        %p
-          Bookmark your team's screen and just have it running in the background, busywith updates it automatically so
-          you know every time you look at it that it's up to date!
-      %li{:id=>"feature3"}
-        %h2 Quick and Easy
-        %p
-          Each member of the team only has to update a few fields each time they change task. Updates take seconds with no
-          long forms to fill-in. It's quick, simple and easy to update which means it gets used more, but it still has a
-          lot of useful information to help you plan the next stages of the project.
-      %li{:id=>"feature4"}
-        %h2 Simple, but effective
-        %p
-          Twitter, IM and Email all have their place, we love them! But sometimes you just want to be able to
-          see at a glance what everyone is doing, this is where busywith can help. Give it a try.
-#signup_container
-  #signup
-    = render :partial => 'layouts/flashes'      
-    #logo
-      %img{:src=>"/images/busywith_logo_smaller.png", :alt=>"Busywith.com logo"}
-    %p
-      We're still currently in private testing at the moment, but do put your email in
-      this box and we'll let you know when we launch.
-    %br
-      I promise we won't use your email address for anything other than that!
-    #email_form
-      - form_tag beta_signup_path do
-        = label_tag "email", "Email Address"
-        = text_field_tag "email"
-        = image_submit_tag "/images/button_gloss_notify_me.png", :alt => "Keep me informed!", :class => "image_button"
+
+= content_for :post_container do        
+  #welcome_features_container
+    #welcome_features
+      %ul
+        %li{:id=>"welcome_feature1"}
+          %h2 Keep Track
+          %p
+            If your team is scattered across all four corners of the globe, hidden in their cubicles or even if you're all
+            working out of your mother's basement then busywith will help you keep track of what everyone is working on.
+        %li{:id=>"welcome_feature2"}
+          %h2 One Screen is all you need
+          %p
+            Bookmark your team's screen and just have it running in the background, busywith updates it automatically so
+            you know every time you look at it that it's up to date!
+        %li{:id=>"welcome_feature3"}
+          %h2 Quick and Easy
+          %p
+            Each member of the team only has to update a few fields each time they change task. Updates take seconds with no
+            long forms to fill-in. It's quick, simple and easy to update which means it gets used more, but it still has a
+            lot of useful information to help you plan the next stages of the project.
+        %li{:id=>"welcome_feature4"}
+          %h2 Simple, but effective
+          %p
+            Twitter, IM and Email all have their place, we love them! But sometimes you just want to be able to
+            see at a glance what everyone is doing, this is where busywith can help. Give it a try.
+  #welcome_signup_container
+    #welcome_signup
+      %p
+        I thought I'd leave the best news until last!
+      %h1
+        Busywith is completely free during this launch period!
+      %p.center
+        %a{:href=>"#{new_user_url}", :onClick=>"pageTracker._trackEvent('Landing', 'SignUp');"}
+          %img{:src=>"/images/button_gloss_sign_up.png", :alt=>"Sign up!"}        
+
 
 
