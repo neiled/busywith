@@ -690,7 +690,7 @@ html, body { height: 100%; }
 #push_footer { height: 60px; clear: both; }
 
 /* line 34, ../../../app/stylesheets/base.sass */
-#footer { padding: 0.5em 0px 0px 0px; height: 60px; text-align: center; background-color: #c9d787; border-top: 1px solid #999; position: relative; font-size: 0.8em; }
+#footer { padding: 0.5em 0px 0px 0px; height: 60px; text-align: center; background-color: #c9d787; border-top: 1px solid #999; position: relative; font-size: 16px; }
 /* line 42, ../../../app/stylesheets/base.sass */
 #footer a:link { color: #7d8a2e; }
 /* line 44, ../../../app/stylesheets/base.sass */

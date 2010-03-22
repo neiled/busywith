@@ -28,6 +28,10 @@ class WelcomeController < ApplicationController
     
   end
   
+  def help
+    
+  end
+  
   private
   
   def add_email(email_address)

@@ -17,6 +17,7 @@ ActionController::Routing::Routes.draw do |map|
   map.thanks 'thanks', :controller => "welcome", :action => "thanks"
   map.contact_us 'contact-us', :controller => "welcome", :action => "contact_us"
   map.terms 'terms', :controller => "welcome", :action => "terms"
+  map.help 'help', :controller => "welcome", :action => "help"
   
   map.admin 'admin', :controller => 'administration', :action => 'show'
   
