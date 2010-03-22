@@ -48,10 +48,12 @@
     #footer
       .hr_footer
         %hr
-      (c) Copyright 2009-2010. All Rights Reserved
+      (c) Copyright 2009-2010
       = link_to "Plasticwater LTD", "http://plasticwater.com"
       |
       = link_to "Contact Us", contact_us_url
+      |
+      = link_to "Terms & Conditions", terms_url
       = yield :footer
     
     = javascript_tag "google.load('jqueryui', '1.7.2');"    

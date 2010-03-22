@@ -4,8 +4,12 @@
 #intro
   %p
     Welcome to busywith!
-  %p.subtitle
-    Please just finish off registration by adding the last few settings we didn't get when you signed up.
+  - if current_user_session.registration_complete?
+    %p.subtitle
+      You can edit your details below
+  - else
+    %p.subtitle
+      Please just finish off registration by adding the last few settings we didn't get when you signed up.
     
 #edit_user_form
   - form_for @user do |f|

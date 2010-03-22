@@ -18,4 +18,7 @@
         = render :partial => "form", :object => f
         .submit
           = image_submit_tag "/images/button_form_sign_up.png", :alt => "Sign up!", :class => "image_button"    
+  .terms
+    By signing up to busywith you're agreeing to our
+    = link_to "Terms & Conditions", terms_url
 

@@ -724,7 +724,7 @@ input[type="text"], input[type="password"] { border-style: solid; border-color: 
 #content { padding-bottom: 100px; margin-top: 50px; }
 
 /* line 71, ../../../app/stylesheets/base.sass */
-#footer { height: 100px; position: relative; margin-top: -100px; clear: both; font-size: 85%; width: 100%; text-align: center; background: #c9d787; }
+#footer { height: 100px; position: relative; margin-top: -100px; clear: both; font-size: 65%; width: 100%; text-align: center; background: #c9d787; }
 /* line 80, ../../../app/stylesheets/base.sass */
 #footer a:link { color: #7d8a2e; }
 /* line 82, ../../../app/stylesheets/base.sass */
@@ -792,39 +792,39 @@ fieldset .submit { text-align: right; margin-right: 9em; }
 /* line 150, ../../../app/stylesheets/base.sass */
 #navbar ul li.overview { background: url('/images/button_overview.png') no-repeat scroll; }
 
-/* line 153, ../../../app/stylesheets/base.sass */
+/* line 154, ../../../app/stylesheets/base.sass */
 .help { margin-top: 1em; float: left; border-style: dashed; border-color: #7d8a2e; border-width: 2px; background-color: #c9d787; margin-left: 1em; font-size: 0.5em; width: 200px; padding: 0.5em; }
-/* line 164, ../../../app/stylesheets/base.sass */
+/* line 165, ../../../app/stylesheets/base.sass */
 .help li { margin-bottom: 1em; }
 
-/* line 168, ../../../app/stylesheets/base.sass */
+/* line 169, ../../../app/stylesheets/base.sass */
 .rss_feed { display: inline; float: left; margin-right: 10px; width: 590px; float: right; }
 /* line 101, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
 * html .rss_feed { overflow-x: hidden; }
 
-/* line 172, ../../../app/stylesheets/base.sass */
+/* line 173, ../../../app/stylesheets/base.sass */
 .errorExplanation { padding: .8em; margin-bottom: 1em; border: 2px solid #dddddd; background: #fbe3e4; color: #8a1f11; border-color: #fbc2c4; font-size: 65%; }
 /* line 30, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_interaction.sass */
 .errorExplanation a { color: #8a1f11; }
-/* line 175, ../../../app/stylesheets/base.sass */
+/* line 176, ../../../app/stylesheets/base.sass */
 .errorExplanation p { margin: 0 0 0.5em; }
 
-/* line 180, ../../../app/stylesheets/base.sass */
+/* line 181, ../../../app/stylesheets/base.sass */
 .fieldWithErrors input { background-color: rgb(251, 227, 228); }
 
-/* line 183, ../../../app/stylesheets/base.sass */
+/* line 184, ../../../app/stylesheets/base.sass */
 .left { float: left; }
 
-/* line 186, ../../../app/stylesheets/base.sass */
+/* line 187, ../../../app/stylesheets/base.sass */
 .right { float: right; }
 
-/* line 189, ../../../app/stylesheets/base.sass */
+/* line 190, ../../../app/stylesheets/base.sass */
 .flash_message { margin-top: 1em; font-size: 85%; }
 
-/* line 193, ../../../app/stylesheets/base.sass */
+/* line 194, ../../../app/stylesheets/base.sass */
 .subtitle { font-style: oblique; font-size: 85%; }
 
-/* line 197, ../../../app/stylesheets/base.sass */
+/* line 198, ../../../app/stylesheets/base.sass */
 .image_button { border-style: none; vertical-align: middle; width: 100px; height: 40px; }
 
 /* line 1, ../../../app/stylesheets/user.sass */

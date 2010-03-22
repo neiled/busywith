@@ -62,6 +62,6 @@ class User < ActiveRecord::Base
   def setup_defaults
     self.login = self.login.downcase unless self.login.nil?
     self.email = self.email.downcase unless self.email.nil?
-    self.user_status = UserStatus.new(:current_task => "Creating Account")
+    self.user_status = UserStatus.new(:current_task => "Joined Busywith")
   end
 end

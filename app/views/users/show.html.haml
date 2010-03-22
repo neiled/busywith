@@ -60,6 +60,7 @@
           = "Email: #{@user.email}"
         %li
           = "Display Name: #{@user.display_name}"
+      = link_to "Edit my details", edit_user_path(@user)
     
   - else
     - if @user.memberships.count > 0
