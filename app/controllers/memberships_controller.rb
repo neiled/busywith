@@ -16,6 +16,14 @@ class MembershipsController < ApplicationController
       flash[:notice] = "That user already has an invite to your team!"
       redirect_to(@team)
       return
+    elsif @user.invites.count > 0
+      flash[:notice] = "That user already has an invite to a different team!"
+      redirect_to(@team)
+      return
+    elsif @user.memberships.count > 0
+      flash[:notice] = "That user is already a member of a different team!"
+      redirect_to(@team)
+      return
     end
     
     if @user.nil?

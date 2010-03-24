@@ -1,7 +1,13 @@
+<p>
 Hello <%= @user.full_name %>,
+</p>
 
+<p>
 This email is just to let you know that <%= @membership.invitor.nil? ? "someone" : "the user #{@membership.invitor.login}" %> has invited you to the team '<%= @team.name %>'
-
+</p>
+<p>
 This could be the start of something wonderful!
-
+</p>
+<p>
 -<%= link_to "busywith.com", root_url %>
+</p>

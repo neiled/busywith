@@ -9,6 +9,7 @@ Feature: Manage teams
     | neiled | neils |
     | fred   |       |
     | bob    |       |
+    | mark   | marks |
 
   Scenario: Invite existing members
     Given I am logged in as the user "neiled"
@@ -17,7 +18,25 @@ Feature: Manage teams
     And I press "Invite"
     Then the user "bob" should have an invite to the team "neils"
     
-  Scenario: Shouldn't be able to invite an existing team member
+  Scenario: Can't invite someone who is a member of a team already
+    Given I am logged in as the user "neiled"
+    And I am on the edit team page for "neils"
+    When I fill in "email" with "mark@plasticwater.com"
+    And I press "Invite"
+    Then I should see "is already a member of a different team"
+    
+  Scenario: Can't invite someone who has an invite to a different team
+    Given I am logged in as the user "neiled"
+    And I am on the edit team page for "neils"
+    When I fill in "email" with "fred@plasticwater.com"
+    And I press "Invite"
+    Given I am logged in as the user "mark"
+    And I am on the edit team page for "marks"
+    When I fill in "email" with "fred@plasticwater.com"
+    And I press "Invite"
+    Then I should see "already has an invite to a different team"    
+    
+  Scenario: Shouldn't be able to invite the same person twice
     Given I am logged in as the user "neiled"
     And I am on the edit team page for "neils"
     When I fill in "email" with "Bob@plasticwater.com"
