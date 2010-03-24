@@ -969,7 +969,89 @@ img.percentImage { background: white url(/images/percentImage_back.png) top left
 /* line 39, ../../../app/stylesheets/signup.sass */
 #new_user { min-height: 250px; border-style: none; border-color: #7d8a2e; border-width: 2px; }
 
-/* line 45, ../../../app/stylesheets/signup.sass */
-#welcome_terms { float: left; background-color: #c9d787; padding: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 5px; font-size: 50%; width: 800px; margin: 0 auto; padding: 50px; }
-/* line 51, ../../../app/stylesheets/signup.sass */
-#welcome_terms p { margin-bottom: 10px; }
+/* line 1, ../../../app/stylesheets/welcome.sass */
+#welcome_headlines { font-family: "Arial Rounded MT Bold", Arial; background: #fff url(/images/bg_intro_v2.jpg) repeat-x scroll 0 0; width: 100%; text-align: center; font-size: 1.4em; }
+/* line 7, ../../../app/stylesheets/welcome.sass */
+#welcome_headlines h1, #welcome_headlines h2 { margin: 0em; padding-top: 0.5em; }
+
+/* line 11, ../../../app/stylesheets/welcome.sass */
+#welcome_intro { margin: 0 auto 1em; overflow: hidden; padding-bottom: 0em; width: 60em; }
+
+/* line 18, ../../../app/stylesheets/welcome.sass */
+#welcome_screenshots { width: 30em; float: left; }
+/* line 21, ../../../app/stylesheets/welcome.sass */
+#welcome_screenshots img { margin: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 1px; }
+
+/* line 27, ../../../app/stylesheets/welcome.sass */
+#welcome_bullets { float: left; margin-left: 1em; margin-bottom: 1em; width: 15em; font-size: 1.6em; }
+/* line 33, ../../../app/stylesheets/welcome.sass */
+#welcome_bullets ul { margin-top: 1em; margin-bottom: 2em; }
+/* line 36, ../../../app/stylesheets/welcome.sass */
+#welcome_bullets ul li { margin-bottom: 1em; text-align: left; }
+/* line 39, ../../../app/stylesheets/welcome.sass */
+#welcome_bullets #welcome_cta { text-align: center; }
+/* line 41, ../../../app/stylesheets/welcome.sass */
+#welcome_bullets #welcome_cta p { margin-bottom: 1.5em; }
+
+/* line 46, ../../../app/stylesheets/welcome.sass */
+#welcome_features_container { border-top: 1px solid #999; background-color: #c9d787; background-image: url(/images/busywith_background_textured_light.jpg); width: 100%; font-size: 1.5em; }
+
+/* line 53, ../../../app/stylesheets/welcome.sass */
+#welcome_features { width: 850px; margin: 0 auto; overflow: hidden; padding-bottom: 1em; }
+/* line 58, ../../../app/stylesheets/welcome.sass */
+#welcome_features ul { margin: 1em 0 0 0; padding: 0; list-style-type: none; overflow: hidden; }
+/* line 63, ../../../app/stylesheets/welcome.sass */
+#welcome_features li { list-style-type: none; vertical-align: text-top; display: inline; float: left; padding: 0em 1em 1em 0em; width: 400px; height: 10em; text-align: justify; background-position: 100 0; background-repeat: no-repeat; font-size: 75%; }
+/* line 75, ../../../app/stylesheets/welcome.sass */
+#welcome_features li h2 { margin-left: 3.5em; margin-bottom: 30px; margin-top: 1em; font-size: 110%; }
+/* line 80, ../../../app/stylesheets/welcome.sass */
+#welcome_features li p { margin: 0; font-size: 90%; }
+
+/* line 84, ../../../app/stylesheets/welcome.sass */
+#welcome_feature1 { background-image: url(/images/li_team.png); }
+
+/* line 86, ../../../app/stylesheets/welcome.sass */
+#welcome_feature2 { background-image: url(/images/li_screen.png); }
+
+/* line 88, ../../../app/stylesheets/welcome.sass */
+#welcome_feature3 { background-image: url(/images/li_updates.png); }
+
+/* line 90, ../../../app/stylesheets/welcome.sass */
+#welcome_feature4 { background-image: url(/images/li_simple.png); }
+
+/* line 93, ../../../app/stylesheets/welcome.sass */
+#welcome_flash_error { background: #FBE3E4 none repeat scroll 0 0; border: 2px solid #FBC2C4; color: #8A1F11; margin-bottom: 1em; padding: 0.8em; }
+
+/* line 100, ../../../app/stylesheets/welcome.sass */
+#welcome_signup_container { background: #fff url(/images/bg_intro_v2.jpg) repeat-x scroll 0 0; width: 100%; margin-top: 0em; padding-top: 4em; margin-bottom: 2em; }
+/* line 106, ../../../app/stylesheets/welcome.sass */
+#welcome_signup_container #welcome_signup { width: 50em; margin: 0 auto; text-align: center; }
+
+/* line 111, ../../../app/stylesheets/welcome.sass */
+#welcome_thanks { float: none; text-align: center; }
+
+/* line 116, ../../../app/stylesheets/welcome.sass */
+#welcome_contact_intro { margin: 0 auto; text-align: center; margin-bottom: 3em; }
+
+/* line 121, ../../../app/stylesheets/welcome.sass */
+#welcome_contact_box { margin: 0 auto; width: 25em; background: #C9D787 none repeat scroll 0 0; border: 2px solid #7D8A2E; color: black; margin-bottom: 2em; padding: 0em; }
+/* line 129, ../../../app/stylesheets/welcome.sass */
+#welcome_contact_box ul { margin: 1em 0 0 1em; padding: 0; list-style-type: none; overflow: hidden; }
+/* line 134, ../../../app/stylesheets/welcome.sass */
+#welcome_contact_box li { list-style-type: none; padding: 0em 0em 0em 2em; height: 3em; width: 25em; background-repeat: no-repeat; }
+/* line 140, ../../../app/stylesheets/welcome.sass */
+#welcome_contact_box #welcome_contact_email { background-image: url(/images/email_32.png); }
+/* line 142, ../../../app/stylesheets/welcome.sass */
+#welcome_contact_box #welcome_contact_blog { background-image: url(/images/rss_32.png); }
+/* line 144, ../../../app/stylesheets/welcome.sass */
+#welcome_contact_box #welcome_contact_facebook { background-image: url(/images/facebook_32.png); }
+/* line 146, ../../../app/stylesheets/welcome.sass */
+#welcome_contact_box #welcome_contact_twitter { background-image: url(/images/twitter_32.png); }
+
+/* line 149, ../../../app/stylesheets/welcome.sass */
+#welcome_ps { margin-left: 5em; margin-bottom: 1em; font-size: 50%; }
+
+/* line 154, ../../../app/stylesheets/welcome.sass */
+#welcome_terms, #welcome_privacy { float: left; background-color: #c9d787; padding: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 5px; font-size: 50%; width: 800px; margin: 0 auto; padding: 50px; }
+/* line 160, ../../../app/stylesheets/welcome.sass */
+#welcome_terms p, #welcome_privacy p { margin-bottom: 10px; }

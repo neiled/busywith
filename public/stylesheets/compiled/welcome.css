@@ -1,98 +1,104 @@
+/*
+Sass::SyntaxError: Undefined variable: "!dark_green".
+on line 24 of /Users/Edwards/Development/Rails/Projects/busywith/app/stylesheets/welcome.sass
+
+20:   :float left
+21:   img
+22:     :margin 0.5em
+23:     :border-style solid 
+24:     :border-color = !dark_green
+25:     :border-width 1px    
+26:   
+27: #welcome_bullets
+28:   :float left
+29:   :margin-left 1em
+30:   :margin-bottom 1em
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* line 22, ../../../app/stylesheets/welcome.sass */
-#welcome_headlines { font-family: "Arial Rounded MT Bold", Arial; background: #fff url(/images/bg_intro_v2.jpg) repeat-x scroll 0 0; width: 100%; text-align: center; font-size: 1.4em; }
-/* line 28, ../../../app/stylesheets/welcome.sass */
-#welcome_headlines h1, #welcome_headlines h2 { margin: 0em; padding-top: 0.5em; }
-
-/* line 32, ../../../app/stylesheets/welcome.sass */
-#welcome_intro { margin: 0 auto 1em; overflow: hidden; padding-bottom: 0em; width: 60em; }
-
-/* line 39, ../../../app/stylesheets/welcome.sass */
-#welcome_screenshots { width: 30em; float: left; }
-/* line 42, ../../../app/stylesheets/welcome.sass */
-#welcome_screenshots img { margin: 0.5em; border-style: solid; border-color: #7d8a2e; border-width: 1px; }
-
-/* line 48, ../../../app/stylesheets/welcome.sass */
-#welcome_bullets { float: left; margin-left: 1em; margin-bottom: 1em; width: 15em; font-size: 1.6em; }
-/* line 54, ../../../app/stylesheets/welcome.sass */
-#welcome_bullets ul { margin-top: 1em; margin-bottom: 2em; }
-/* line 57, ../../../app/stylesheets/welcome.sass */
-#welcome_bullets ul li { margin-bottom: 1em; text-align: left; }
-/* line 60, ../../../app/stylesheets/welcome.sass */
-#welcome_bullets #welcome_cta { text-align: center; }
-/* line 62, ../../../app/stylesheets/welcome.sass */
-#welcome_bullets #welcome_cta p { margin-bottom: 1.5em; }
-
-/* line 67, ../../../app/stylesheets/welcome.sass */
-#welcome_features_container { border-top: 1px solid #999; background-color: #c9d787; background-image: url(/images/busywith_background_textured_light.jpg); width: 100%; font-size: 1.5em; }
-
-/* line 74, ../../../app/stylesheets/welcome.sass */
-#welcome_features { width: 850px; margin: 0 auto; overflow: hidden; padding-bottom: 1em; }
-/* line 79, ../../../app/stylesheets/welcome.sass */
-#welcome_features ul { margin: 1em 0 0 0; padding: 0; list-style-type: none; overflow: hidden; }
-/* line 84, ../../../app/stylesheets/welcome.sass */
-#welcome_features li { list-style-type: none; vertical-align: text-top; display: inline; float: left; padding: 0em 1em 1em 0em; width: 400px; height: 10em; text-align: justify; background-position: 100 0; background-repeat: no-repeat; font-size: 75%; }
-/* line 96, ../../../app/stylesheets/welcome.sass */
-#welcome_features li h2 { margin-left: 3.5em; margin-bottom: 30px; margin-top: 1em; font-size: 110%; }
-/* line 101, ../../../app/stylesheets/welcome.sass */
-#welcome_features li p { margin: 0; font-size: 90%; }
-
-/* line 105, ../../../app/stylesheets/welcome.sass */
-#welcome_feature1 { background-image: url(/images/li_team.png); }
-
-/* line 107, ../../../app/stylesheets/welcome.sass */
-#welcome_feature2 { background-image: url(/images/li_screen.png); }
-
-/* line 109, ../../../app/stylesheets/welcome.sass */
-#welcome_feature3 { background-image: url(/images/li_updates.png); }
-
-/* line 111, ../../../app/stylesheets/welcome.sass */
-#welcome_feature4 { background-image: url(/images/li_simple.png); }
-
-/* line 114, ../../../app/stylesheets/welcome.sass */
-#welcome_flash_error { background: #FBE3E4 none repeat scroll 0 0; border: 2px solid #FBC2C4; color: #8A1F11; margin-bottom: 1em; padding: 0.8em; }
-
-/* line 121, ../../../app/stylesheets/welcome.sass */
-#welcome_signup_container { background: #fff url(/images/bg_intro_v2.jpg) repeat-x scroll 0 0; width: 100%; margin-top: 0em; padding-top: 4em; margin-bottom: 2em; }
-/* line 127, ../../../app/stylesheets/welcome.sass */
-#welcome_signup_container #welcome_signup { width: 50em; margin: 0 auto; text-align: center; }
-
-/* line 132, ../../../app/stylesheets/welcome.sass */
-#welcome_thanks { float: none; text-align: center; }
-
-/* line 137, ../../../app/stylesheets/welcome.sass */
-#welcome_contact_intro { margin: 0 auto; text-align: center; margin-bottom: 3em; }
-
-/* line 142, ../../../app/stylesheets/welcome.sass */
-#welcome_contact_box { margin: 0 auto; width: 25em; background: #C9D787 none repeat scroll 0 0; border: 2px solid #7D8A2E; color: black; margin-bottom: 2em; padding: 0em; }
-/* line 150, ../../../app/stylesheets/welcome.sass */
-#welcome_contact_box ul { margin: 1em 0 0 1em; padding: 0; list-style-type: none; overflow: hidden; }
-/* line 155, ../../../app/stylesheets/welcome.sass */
-#welcome_contact_box li { list-style-type: none; padding: 0em 0em 0em 2em; height: 3em; width: 25em; background-repeat: no-repeat; }
-/* line 161, ../../../app/stylesheets/welcome.sass */
-#welcome_contact_box #welcome_contact_email { background-image: url(/images/email_32.png); }
-/* line 163, ../../../app/stylesheets/welcome.sass */
-#welcome_contact_box #welcome_contact_blog { background-image: url(/images/rss_32.png); }
-/* line 165, ../../../app/stylesheets/welcome.sass */
-#welcome_contact_box #welcome_contact_facebook { background-image: url(/images/facebook_32.png); }
-/* line 167, ../../../app/stylesheets/welcome.sass */
-#welcome_contact_box #welcome_contact_twitter { background-image: url(/images/twitter_32.png); }
-
-/* line 170, ../../../app/stylesheets/welcome.sass */
-#welcome_ps { margin-left: 5em; margin-bottom: 1em; font-size: 50%; }
+Backtrace:
+/Users/Edwards/Development/Rails/Projects/busywith/app/stylesheets/welcome.sass:24
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/script/variable.rb:27:in `perform'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/tree/prop_node.rb:87:in `perform!'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:179:in `_perform'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:156:in `perform'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:200:in `perform_children'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:200:in `map'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:200:in `perform_children'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:191:in `perform!'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/tree/rule_node.rb:156:in `perform!'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:179:in `_perform'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:156:in `perform'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:200:in `perform_children'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:200:in `map'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:200:in `perform_children'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:191:in `perform!'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/tree/rule_node.rb:156:in `perform!'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:179:in `_perform'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:156:in `perform'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:200:in `perform_children'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:200:in `map'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:200:in `perform_children'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:191:in `perform!'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:179:in `_perform'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:156:in `perform'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:103:in `render'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/plugin.rb:83:in `update_stylesheet'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/plugin.rb:69:in `update_stylesheets'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/plugin.rb:64:in `each'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/plugin.rb:64:in `update_stylesheets'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/plugin.rb:62:in `each'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/plugin.rb:62:in `update_stylesheets'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.3/lib/sass/plugin/rails.rb:16:in `process_without_compass'
+/Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.15/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/abstract_store.rb:122:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/passenger-2.2.9/lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+/Library/Ruby/Gems/1.8/gems/passenger-2.2.9/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+/Library/Ruby/Gems/1.8/gems/passenger-2.2.9/lib/phusion_passenger/railz/application_spawner.rb:400:in `start_request_handler'
+/Library/Ruby/Gems/1.8/gems/passenger-2.2.9/lib/phusion_passenger/railz/application_spawner.rb:351:in `handle_spawn_application'
+/Library/Ruby/Gems/1.8/gems/passenger-2.2.9/lib/phusion_passenger/utils.rb:184:in `safe_fork'
+/Library/Ruby/Gems/1.8/gems/passenger-2.2.9/lib/phusion_passenger/railz/application_spawner.rb:349:in `handle_spawn_application'
+/Library/Ruby/Gems/1.8/gems/passenger-2.2.9/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+/Library/Ruby/Gems/1.8/gems/passenger-2.2.9/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+/Library/Ruby/Gems/1.8/gems/passenger-2.2.9/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+/Library/Ruby/Gems/1.8/gems/passenger-2.2.9/lib/phusion_passenger/abstract_server.rb:163:in `start'
+/Library/Ruby/Gems/1.8/gems/passenger-2.2.9/lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+/Library/Ruby/Gems/1.8/gems/passenger-2.2.9/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+/Library/Ruby/Gems/1.8/gems/passenger-2.2.9/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+/Library/Ruby/Gems/1.8/gems/passenger-2.2.9/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+/Library/Ruby/Gems/1.8/gems/passenger-2.2.9/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/passenger-2.2.9/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/passenger-2.2.9/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+/Library/Ruby/Gems/1.8/gems/passenger-2.2.9/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+/Library/Ruby/Gems/1.8/gems/passenger-2.2.9/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+/Library/Ruby/Gems/1.8/gems/passenger-2.2.9/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+/Library/Ruby/Gems/1.8/gems/passenger-2.2.9/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+/Library/Ruby/Gems/1.8/gems/passenger-2.2.9/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+/Library/Ruby/Gems/1.8/gems/passenger-2.2.9/bin/passenger-spawn-server:61
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Sass::SyntaxError: Undefined variable: \"!dark_green\".\A on line 24 of /Users/Edwards/Development/Rails/Projects/busywith/app/stylesheets/welcome.sass\A \A 20:   :float left\A 21:   img\A 22:     :margin 0.5em\A 23:     :border-style solid \A 24:     :border-color = !dark_green\A 25:     :border-width 1px    \A 26:   \A 27: #welcome_bullets\A 28:   :float left\A 29:   :margin-left 1em\A 30:   :margin-bottom 1em\A "; }

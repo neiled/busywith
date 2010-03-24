@@ -1,24 +1,3 @@
-!light_green = #C9D787
-!dark_green = #7D8A2E
-
-/ *
-/   :margin 0em
-/ 
-/ html, body, #welcome_wrapper
-/   :height 100%
-/   
-/ a:link
-/   :color= !dark_green
-/ a:visited
-/   :color= !dark_green
-/   
-/ body
-/   :font-family "Arial Rounded MT Bold", "Arial"
-/   :margin 0em
-/ 
-/ img
-/   :border-style none
-
 #welcome_headlines
   :font-family "Arial Rounded MT Bold", Arial
   :background #fff url(/images/bg_intro_v2.jpg) repeat-x scroll 0 0
@@ -171,3 +150,12 @@
   :margin-left 5em
   :margin-bottom 1em
   :font-size 50%
+
+#welcome_terms, #welcome_privacy
+  +green_box
+  :font-size 50%
+  :width 800px
+  :margin 0 auto
+  :padding 50px  
+  p
+    :margin-bottom 10px  
