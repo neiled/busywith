@@ -23,7 +23,7 @@ Feature: Forgotten Password Resetting
     Given I am on the forgotten password page
     When I fill in "email" with "neiled@plasticwater.com"
     And I press "Submit"
-    Then I should see "We've emailed you some password reset instructions!"
+    Then I should see "I've emailed you some password reset instructions!"
     And I should be on the login page
     And "neiled@plasticwater.com" opens the email with subject "Busywith.com - Reset your password"
     Then they should see "tried to get your password reset on busywith.com." in the email body
@@ -34,7 +34,7 @@ Feature: Forgotten Password Resetting
     And I fill in "password" with "test123"
     And I fill in "password confirmation" with "test123"
     And I press "Submit"
-    Then I should see "We've updated your password"
+    Then I should see "I've updated your password"
   
   
   

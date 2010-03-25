@@ -19,6 +19,7 @@ config.action_mailer.delivery_method = :test
 config.gem 'quietbacktrace'
 
 CAMPAIGN_MONITOR_LIST_ID = '59b7a6cb00a8ff1b20ce1b9c640f75d2'
+CM_SUBSCRIBERS_LIST_ID = 'bb0f3470c383276b306ac02366a5b2cc'
 
 ActionMailer::Base.smtp_settings = {
   :address => "smtp.gmail.com",
@@ -28,3 +29,4 @@ ActionMailer::Base.smtp_settings = {
   :user_name => "donotreply@busywith.com",
   :password => "L84587"
 }
+

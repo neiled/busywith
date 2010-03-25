@@ -11,14 +11,14 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      UserMailer.deliver_signup(@user)
+      setup_mail(@user)
       flash[:notice] = "Account Registered"
       redirect_to(profile_path(:login => @user.login))
     else
       render :action => "new"
     end
   end
-
+  
   def destroy
   end
   
@@ -46,5 +46,26 @@ class UsersController < ApplicationController
     end    
     
   end
+  
+  private
+  
+  def setup_mail(user)
+    UserMailer.deliver_signup(user)
+    if Rails.env.production? || Rails.env.development?
+      debugger
+      list = CampaignMonitor::List.new(CM_SUBSCRIBERS_LIST_ID)
+      list.add_subscriber_with_custom_fields(user.email, user.full_name, {:user_id => user.id})
+      notify_prowl(user.email)
+    end
+  end
+  
+  def notify_prowl(email_address)
+    Prowl.add(
+      :apikey => PROWL_API_KEY,
+      :application => "Busywith.com",
+      :event => "Signed up",
+      :description => email_address
+    )
+  end  
   
 end

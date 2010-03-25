@@ -12,6 +12,11 @@ class MembershipsController < ApplicationController
     
     @user = User.find_by_email(params[:email].downcase)
     
+    if @user.nil?
+      @user = User.new(:email => params[:email])
+      @user.valid? #this is so the errors.on array is filled
+    end    
+    
     if @team.users.include?(@user)
       flash[:notice] = "That user already has an invite to your team!"
       redirect_to(@team)
@@ -26,11 +31,6 @@ class MembershipsController < ApplicationController
       return
     end
     
-    if @user.nil?
-      @user = User.new(:email => params[:email])
-      @user.valid? #this is so the errors.on array is filled
-    end
-    
     #was there a problem with the email address?
     if @user.errors.on(:email).nil?
       #does this user exist already?
@@ -43,7 +43,7 @@ class MembershipsController < ApplicationController
       end
       
       if @membership.save
-        flash[:notice] = "We've sent them an email inviting them!"
+        flash[:notice] = "I've sent them an email inviting them!"
       else
         flash[:error] = @membership.errors.full_messages.to_s
       end

@@ -27,3 +27,4 @@ config.action_view.cache_template_loading            = true
 # Enable threaded mode
 # config.threadsafe!
 CAMPAIGN_MONITOR_LIST_ID = '1c05b90661342f82022cde61c18a818e'
+CM_SUBSCRIBERS_LIST_ID = '808a0aefe2bd611633692d85a2148dba'

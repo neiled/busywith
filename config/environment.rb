@@ -16,13 +16,12 @@ Rails::Initializer.run do |config|
   config.gem 'haml', :lib => 'haml'
   config.gem 'validates_timeliness'
   config.gem 'rubaidh-google_analytics', :lib => 'rubaidh/google_analytics', :source => 'http://gems.github.com'
-  config.gem 'seven1m-campaign_monitor', :lib => 'campaign_monitor'
   config.gem "grosser-rpx_now", :lib => "rpx_now", :source => "http://gems.github.com/"  
   config.gem "tardate-authlogic_rpx", :lib => "authlogic_rpx", :source => 'http://gems.github.com'  
   config.gem "friendly_id"
   config.gem "hoptoad_notifier"
   config.gem "prowl"
-  # config.gem 'patientslikeme-campaign_monitor', :lib => 'campaign_monitor', :source => 'http://gems.github.com'  
+  config.gem 'patientslikeme-campaign_monitor', :lib => 'campaign_monitor', :source => 'http://gems.github.com'
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.

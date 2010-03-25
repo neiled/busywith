@@ -10,8 +10,9 @@
       #create_a_team
         You're all alone... but don't worry you can
         = link_to "Create a new team", new_team_url unless current_user != @user
-        and invite anyone you like!
-
+        and invite people to join you!
+      %h2
+        = link_to "Create a new team", new_team_url unless current_user != @user
     - else
       #invites
         = "You have an invite to the team #{@user.invites.first.team.name}"
