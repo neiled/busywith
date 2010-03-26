@@ -1,7 +1,8 @@
 = content_for :stylesheets do
   = require_stylesheet("admin")
 
-%h1 Users
+%h1
+  = "Users (#{@users.size})"
 #user_table
   %table
     %tr
@@ -21,6 +22,7 @@
           %ul
             - user.all_teams.each do |team|
               %li
-                = team.name + ("*" unless not user.owned_teams.include?(team))
+                = team.name 
+                = "*" unless not user.owned_teams.include?(team)
         %td= link_to 'Reset Password', password_resets_path(:email => user.email), :method => :post
 
