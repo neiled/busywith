@@ -16,7 +16,7 @@
         %td= user.email
         %td= user.login
         %td= user.full_name
-        %td= user.rpx_identifier
+        %td= user.rpx_identifier unless user.rpx_identifier.nil?
         %td
           %ul
             - user.all_teams.each do |team|
