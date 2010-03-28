@@ -6,14 +6,16 @@
 #user_table
   %table
     %tr
+      %th ID
       %th Email
       %th Login
       %th Display Name
-      %th rpx
-      %th team
+      %th RPX ID
+      %th Team Name
       %th Reset Password?
     - @users.each do |user|  
       %tr
+        %td= user.id
         %td= user.email
         %td= user.login
         %td= user.full_name

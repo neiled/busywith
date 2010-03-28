@@ -1,4 +1,6 @@
 /* line 1, ../../../app/stylesheets/admin.sass */
 #user_table { font-size: 10px; font-family: Verdana, sans-serif; }
 /* line 2, ../../../app/stylesheets/admin.sass */
-#user_table th, #user_table td, #user_table tr { border: 1px solid #999; }
+#user_table th { text-align: center; }
+/* line 4, ../../../app/stylesheets/admin.sass */
+#user_table th, #user_table td, #user_table tr { border: 1px solid #999; padding: 2px; }
