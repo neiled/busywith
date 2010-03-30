@@ -1,6 +1,12 @@
+= content_for :stylesheets do
+  = stylesheet_link_tag 'compiled/jquery.tooltip.css'
+
 = content_for :unobtrusive_javascript do
+  / %script{ 'type' => "text/javascript", :src   => "/javascripts/jquery.dimensions.js" }  
+  / %script{ 'type' => "text/javascript", :src   => "/javascripts/jquery.tooltip.min.js" }  
   %script{ 'type' => "text/javascript", :src   => "/javascripts/teams_status.js" }
   %script{ 'type' => "text/javascript", :src   => "/javascripts/getsatisfaction.js" }  
+
 
 %h1
   = h(@team.name.capitalize)

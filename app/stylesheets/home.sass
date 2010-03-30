@@ -1,4 +1,4 @@
-.user_status, .user_status_changed
+.user_status
   :font-size 0.7em
   :width 15em
   :padding 1em
@@ -6,11 +6,16 @@
   :margin-left 0.5em
   :float left
   :height 10em
+  :overflow hidden
   +notice
 
 .user_status_changed
   :border-color = red
 
+.user_task
+  :width 100%
+  :height 3em
+  :overflow hidden
   
 .user_project
   :font-style italic

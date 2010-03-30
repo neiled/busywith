@@ -5,7 +5,7 @@ class UserStatus < ActiveRecord::Base
                                         :allow_blank => true
                                         
   validates_presence_of :current_task, :on => :update, :message => "can't be blank"
-  validates_length_of :current_task, :maximum => 50
+  validates_length_of :current_task, :maximum => 1000
   
   belongs_to :active_project, :class_name => "Project", :foreign_key => "project_id"
   
@@ -14,6 +14,14 @@ class UserStatus < ActiveRecord::Base
   before_create :setup_defaults
   
   attr_accessible :current_task, :estimated_completion, :percent_complete, :project_id
+  
+  def current_task_trimmed
+    unless current_task.empty? || current_task.nil?
+      result = current_task.length < 45 ? current_task : current_task[0,45] + "..."
+    else
+      "No Task Set"
+    end    
+  end
   
   private
   
