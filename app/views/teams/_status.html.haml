@@ -3,6 +3,8 @@
   %div{:class => "user_status"}
     .user_name
       = link_to "#{status.full_name} (#{status.login})" , profile_url(status.login)
+      %a{:href=>"mailto:#{status.email}"}
+        %img{:src => "/images/email.png", :title=>"Send them an email"}
     .user_task
       = user_task_snippet(status)
     .user_project
