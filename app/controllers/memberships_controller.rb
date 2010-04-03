@@ -48,7 +48,9 @@ class MembershipsController < ApplicationController
         flash[:error] = @membership.errors.full_messages.to_s
       end
     else
-      flash[:error] = "That email address doesn't look right, it:<br/>" + @user.errors.on(:email).join("<br/>")
+      error_messages = @user.errors.on(:email)
+      error_messages_text = error_messages.respond_to?(:join) ? error_messages.join("<br/>") : error_messages
+      flash[:error] = "That email address doesn't look right, it:<br/>" + error_messages_text
     end
     
     respond_to do |wants|
