@@ -49,7 +49,7 @@ class User < ActiveRecord::Base
   end
   
   def full_name
-    display_name.titlecase
+    display_name.nil? ? "None" :display_name.titlecase
   end
   
   def deliver_password_reset_instructions!  
