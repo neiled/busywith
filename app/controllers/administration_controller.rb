@@ -3,7 +3,7 @@ class AdministrationController < ApplicationController
   before_filter :is_admin?
   
   def show
-    @users = User.find(:all, :order => "last_action_at DESC") 
+    @users = User.find(:all, :order => "last_request_at DESC") 
   end
   
   private
