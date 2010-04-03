@@ -12,6 +12,7 @@
       %th Display Name
       %th RPX ID
       %th Team Name
+      %th Last Action
       %th Reset Password?
     - @users.each do |user|  
       %tr
@@ -26,5 +27,6 @@
               %li
                 = team.name 
                 = "*" unless not user.owned_teams.include?(team)
+        %td= user.last_request_at || "never"
         %td= link_to 'Reset Password', password_resets_path(:email => user.email), :method => :post
 
