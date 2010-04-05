@@ -21,7 +21,7 @@
         #navbar
           %ul.left
             %li.busywith
-              = link_to "Busywith.com", root_url
+              = link_to "Busywith.com", (request.request_uri == "/" ? new_user_path : root_url)
             %li.blog
               = link_to "blog", "http://blog.busywith.com"
           %ul.right
