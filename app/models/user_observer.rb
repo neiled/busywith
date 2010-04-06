@@ -17,6 +17,7 @@ class UserObserver < ActiveRecord::Observer
     @memberships = Membership.find_all_by_target_email(user.email)
     @memberships.each { |m| 
       if m.user_id.nil?
+        m.target_email = nil
         m.user_id = user.id
         m.save!
       end

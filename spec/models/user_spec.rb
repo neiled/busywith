@@ -6,12 +6,12 @@ describe User do
     Factory.create(:user)
   end
   it "should save username as lowercase" do
-    user = Factory(:user, :login => 'Bob')
-    user.login.should == "bob"  
+    user = Factory.create(:user, :login => 'Neil')
+    user.login.should == "neil"  
   end
-
+  
   it "should save email as lowercase" do
-    user = Factory(:user, :email => 'Bob@PlasticWater.com')
+    user = Factory.create(:user, :email => 'Bob@PlasticWater.com')
     user.email.should == 'bob@plasticwater.com'
   end
 
