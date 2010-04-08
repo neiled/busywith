@@ -4,57 +4,16 @@ class MembershipsController < ApplicationController
   
   def create
     @team = current_user.owned_teams.find_by_id(params[:team_id])
-    if @team.nil?
-      flash[:error] = "You do not own that team."
-      redirect_to :back
-      return
-    end
-    
-    @user = User.find_by_email(params[:email].downcase)
-    
-    if @user.nil?
-      @user = User.new(:email => params[:email])
-      @user.valid? #this is so the errors.on array is filled
-    end    
-    
-    if @team.users.include?(@user)
-      flash[:notice] = "That user already has an invite to your team!"
-      redirect_to(@team)
-      return
-    elsif @user.invites.count > 0
-      flash[:notice] = "That user already has an invite to a different team!"
-      redirect_to(@team)
-      return
-    elsif @user.memberships.count > 0
-      flash[:notice] = "That user is already a member of a different team!"
-      redirect_to(@team)
-      return
-    end
-    
-    #was there a problem with the email address?
-    if @user.errors.on(:email).nil?
-      #does this user exist already?
-      if @user.login.nil?
-        #no, so create a membership for that email address
-        @membership = Membership.new(:team_id => @team.id, :invitor_id => current_user.id, :target_email => params[:email])
-      else
-        #yes, so point the invite directly at the user
-        @membership = @user.memberships.build(:team_id => @team.id, :invitor_id => current_user.id)
-      end
-      
-      if @membership.save
-        flash[:notice] = "I've sent them an email inviting them!"
-      else
-        flash[:error] = @membership.errors.full_messages.to_s
-      end
+    # @user = User.find_by_email(params[:email].downcase)
+    @membership = Membership.new(:team => @team, :invitor => current_user, :target_email => params[:email].downcase)
+    if @membership.save
+      flash[:notice] ="I've invited them to the team."
     else
-      error_messages = @user.errors.on(:email)
-      error_messages_text = error_messages.respond_to?(:join) ? error_messages.join("<br/>") : error_messages
-      flash[:error] = "That email address doesn't look right, it:<br/>" + error_messages_text
+      flash[:error] = @membership.errors.full_messages.to_s
     end
     
     respond_to do |wants|
-      wants.html { redirect_to @team }
+      wants.html { redirect_to @team || root_url }
       wants.js { }
     end
   end

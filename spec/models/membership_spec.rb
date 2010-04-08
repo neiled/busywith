@@ -53,4 +53,9 @@ describe Membership do
     membership.user.should == user
   end
   
+  it "should not let a user invite themselves" do
+    membership = Membership.new(:invitor => @owner, :target_email=>@owner.email, :team => @team)
+    membership.should_not be_valid
+  end
+  
 end

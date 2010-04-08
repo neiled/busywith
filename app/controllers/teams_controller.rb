@@ -31,7 +31,7 @@ class TeamsController < ApplicationController
   def create
     @team = Team.new(params[:team])
     if @team.save
-      @membership = Membership.new(:user_id => current_user.id, :team_id => @team.id, :is_administrator => true, :accepted_at => DateTime.now)
+      @membership = Membership.new(:target_email => current_user.email, :team_id => @team.id, :is_administrator => true, :accepted_at => DateTime.now)
       if @membership.save        
         flash[:notice] = "Team was successfully created"
         redirect_to(edit_team_path(@team))

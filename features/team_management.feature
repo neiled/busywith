@@ -23,7 +23,7 @@ Feature: Manage teams
     And I am on the edit team page for "neils"
     When I fill in "email" with "mark@plasticwater.com"
     And I press "Invite"
-    Then I should see "is already a member of a different team"
+    Then I should see "That user already has an invite to a different team!"
     
   Scenario: Can't invite someone who has an invite to a different team
     Given I am logged in as the user "neiled"
@@ -110,7 +110,7 @@ Feature: Manage teams
     And I am on the edit team page for "neils"
     When I fill in "email" with "foo@plasticwater.com"
     And I press "Invite"
-    Then I should see "sent them an email"
+    Then I should see "invited them to the team"
     Given I have a user with the username "foo" and the password "password"
     And I am logged in as the user "foo"
     When I am on the user account page for "foo"
