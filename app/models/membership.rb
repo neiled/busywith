@@ -37,15 +37,15 @@ class Membership < ActiveRecord::Base
   
   def test_invitiation_does_not_already_exist
     found_user = User.find_by_email(self.target_email)
-    if Membership.find(:all, :conditions=>["team_id = ? and target_email = ?", self.team.id, self.target_email]).count > 0
+    if Membership.count(:all, :conditions=>["team_id = ? and target_email = ?", self.team.id, self.target_email]) > 0
       errors.add(:user_id, "That user already has an invite to your team!")
     elsif found_user.nil? == false
-      if Membership.find(:all, :conditions=>["team_id = ? and user_id = ?", self.team.id, found_user.id]).count > 0
+      if Membership.count(:all, :conditions=>["team_id = ? and user_id = ?", self.team.id, found_user.id]) > 0
         errors.add(:user_id, "That user already has an invite to your team!")
-      elsif Membership.find(:all, :conditions => ["team_id <> ? and user_id = ?", self.team.id, found_user.id]).count > 0
+      elsif Membership.count(:all, :conditions => ["team_id <> ? and user_id = ?", self.team.id, found_user.id]) > 0
         errors.add(:user_id, "That user already has an invite to a different team!")      
       end
-    elsif Membership.find(:all, :conditions => ["team_id <> ? and target_email = ?", self.team.id, self.target_email]).count > 0
+    elsif Membership.count(:all, :conditions => ["team_id <> ? and target_email = ?", self.team.id, self.target_email]) > 0
       errors.add(:user_id, "That user already has an invite to a different team!")      
     end      
   end
