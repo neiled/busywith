@@ -35,6 +35,14 @@ describe UsersController do
       response.should render_template(:edit)
     end
   end
+
+  describe "handling GET index" do
+    it "should redirect to users own profile page" do
+      UserSession.create(@user)
+      get :index
+      response.should redirect_to(profile_path(@user.login))
+    end
+  end
   
   describe "handling PUT update" do
     
@@ -44,7 +52,6 @@ describe UsersController do
     end
     
     def do_unauthenticated_put
-      # @user.should_receive(:update_attributes).and_return(true)
       put :update, :id => 6, :user => {:email => "test@example.com"}      
     end
     

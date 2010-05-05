@@ -8,6 +8,10 @@ class UsersController < ApplicationController
     @user.email = params[:email] || ""
   end
 
+  def index
+    redirect_to(profile_path(current_user.login))
+  end
+
   def create
     @user = User.new(params[:user])
     if @user.save

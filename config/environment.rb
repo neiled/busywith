@@ -15,7 +15,7 @@ Rails::Initializer.run do |config|
   config.gem 'chriseppstein-compass', :lib => 'compass', :source => 'http://gems.github.com'
   config.gem 'haml', :lib => 'haml'
   config.gem 'validates_timeliness'
-  config.gem 'rubaidh-google_analytics', :lib => 'rubaidh/google_analytics', :source => 'http://gems.github.com'
+  config.gem 'google_analytics', :lib => 'rubaidh/google_analytics', :source => 'http://gems.github.com'
   config.gem "grosser-rpx_now", :lib => "rpx_now", :source => "http://gems.github.com/"  
   config.gem "tardate-authlogic_rpx", :lib => "authlogic_rpx", :source => 'http://gems.github.com'  
   config.gem "friendly_id"

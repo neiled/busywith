@@ -17,3 +17,4 @@ coverage.data
 tmp/restart.txt
 rerun.txt
 *.db-journal
+*.swp
